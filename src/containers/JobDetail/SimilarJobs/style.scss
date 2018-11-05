@@ -1,0 +1,122 @@
+.similar-jobs-wrapper {
+  margin-top: 3rem;
+
+  @media (max-width: 767px) {
+    .block-wrapper {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+
+      .job-item-wrapper {
+        padding-right: 0.5rem;
+      }
+
+      .detail-link-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        a {
+          margin-top: 1rem;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  .slide-group-items {
+    display: flex;
+    flex-wrap: wrap;
+
+    .slide-item-wrapper {
+      width: 50%;
+      border-bottom: solid 0.5px #e3e3e3;
+      box-sizing: border-box;
+
+      .job-item-wrapper {
+        justify-content: center;
+        align-items: center;
+      }
+
+      .info-wrapper {
+        margin-left: 1.5rem;
+        .job-info {
+          padding: 0;
+          flex: 1;
+
+          .company-name {
+            width: calc(50vw - 30rem);
+          }
+        }
+
+        .extra-info {
+          margin-left: initial;
+          .location,
+          .salary {
+            margin-bottom: 0;
+          }
+
+          .location {
+            margin-right: 3rem;
+          }
+        }
+      }
+
+      &:nth-child(2n + 1) {
+        border-right: solid 0.5px #e3e3e3;
+        // padding: 0 1.8rem;
+        padding-right: 1.8rem;
+      }
+
+      &:nth-child(2n + 2) {
+        padding-left: 1.8rem;
+      }
+
+      @media (max-width: 76.7rem) {
+        width: 100%;
+
+        &:nth-child(2n + 1) {
+          border-right: none;
+          // padding: 0 1.8rem;
+          padding-right: 0;
+        }
+
+        &:nth-child(2n + 2) {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+
+  .title {
+    font-family: Roboto;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fc5830;
+    text-transform: uppercase;
+  }
+
+  .content {
+    margin-top: 1.2rem;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 10px 0 rgba(219, 219, 219, 0.5);
+  }
+
+  .detail-link-wrapper {
+    padding: 2rem 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4a4a4a;
+    text-align: center;
+    .highlight-number {
+      color: #fc5830;
+    }
+
+    a,
+    a:hover,
+    a:active,
+    a:focus {
+      text-transform: uppercase;
+      color: #fc5830;
+      margin-left: 0.8rem;
+    }
+  }
+}

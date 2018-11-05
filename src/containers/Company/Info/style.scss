@@ -1,0 +1,152 @@
+.company-info-page {
+  .company-info-wrapper {
+    margin-left: 15px;
+    flex: 1;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 10px 0 rgba(219, 219, 219, 0.5);
+  }
+
+  .form-header {
+    border-bottom: solid 1px #e3e3e3;
+    padding: 20px 36px;
+
+    h2 {
+      font-size: 25px;
+      color: #444444;
+      margin-top: 0;
+    }
+
+    .legend {
+      font-size: 15px;
+      font-weight: 300;
+      color: #212529;
+    }
+  }
+  .content-wrapper {
+    display: flex;
+    form {
+      flex: 1;
+      padding-left: 23px;
+      padding-right: 40px;
+      padding-bottom: 20px;
+
+      .field-wrapper,
+      .jn-input-wrapper,
+      .form-group.address-field,
+      .form-submit-wrapper {
+        label {
+          width: 160px;
+          flex: none;
+          padding-right: 10px;
+
+          .required {
+            margin-left: 10px;
+          }
+        }
+      }
+
+      .jn-input-wrapper {
+        .input-wrapper {
+          flex: 1;
+          .form-control {
+            width: auto;
+          }
+        }
+      }
+
+      .form-group.address-field {
+        .wrapp {
+          flex: 1;
+          .inputs-wrapper {
+            width: auto;
+          }
+        }
+      }
+
+      .company-size {
+        display: flex;
+        align-items: center;
+        label {
+          flex: none;
+          width: 160px;
+          font-size: 14px;
+          font-weight: normal;
+          color: #212529;
+
+          .required {
+            font-size: 17px;
+            font-weight: 300;
+            color: #d0021b;
+          }
+        }
+        .jn-select.dropdown {
+          flex: 1;
+          margin-top: 0;
+          padding-bottom: 0;
+        }
+      }
+
+      .form-submit-wrapper {
+        display: flex;
+        .jn-btn {
+          width: 190px;
+        }
+      }
+    }
+
+    .right-col {
+      margin-top: 25px;
+      border-left: solid 1px #f2f2f2;
+      padding: 0 40px;
+
+      .jn-image-picker {
+        margin-bottom: 50px;
+      }
+
+      .selected-file a {
+        color: #979797;
+
+        &:hover {
+          color: #d0021b;
+        }
+      }
+    }
+  }
+
+  .popup-wrapper {
+    .modal-body {
+      padding: 40px 40px 20px 40px;
+    }
+    .message {
+      display: flex;
+      .msg-icon {
+        font-size: 20px;
+        margin-right: 10px;
+
+        &.icon-close {
+          color: #d0021b;
+        }
+        &.icon-jn-checked {
+          border: 1px solid #1ebea5;
+          border-radius: 10px;
+        }
+      }
+      .msg {
+        font-size: 16px;
+        font-weight: normal;
+        color: #444444;
+      }
+    }
+    .button-wrap {
+      display: flex;
+      justify-content: flex-end;
+
+      .jn-btn {
+        border: 1px solid #979797;
+        a {
+          padding: 10px 25px;
+        }
+      }
+    }
+  }
+}

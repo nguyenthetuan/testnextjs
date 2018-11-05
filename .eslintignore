@@ -1,0 +1,13 @@
+# service worker 
+
+/src/registerServiceWorker.js
+
+# others
+
+/scripts
+/config
+
+# test file
+/src/**/*.test.js
+
+/src/utils/validate.js

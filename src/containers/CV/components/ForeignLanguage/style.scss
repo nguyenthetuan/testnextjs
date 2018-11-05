@@ -1,0 +1,343 @@
+// .edit-cv-page {
+.main-content {
+  .page-wrapper {
+    .foreign-language-info {
+      margin-top: 1rem;
+
+      .optional {
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: #9b9b9b;
+        margin-left: 2.6rem;
+      }
+
+      .block-container {
+        .block-body {
+          padding: 0 !important;
+          box-shadow: none !important;
+          border: none !important;
+
+          .language-item {
+            padding: 2.4rem 3.5rem;
+            border-bottom: solid 0.1rem #e3e3e3;
+
+            &:not(.editing):hover {
+              box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.5);
+              border: solid 0.1rem #c5c5c5;
+            }
+
+            &:last-child {
+              border-bottom: none;
+            }
+
+            .language-view-info {
+              display: flex;
+            }
+
+            .info-wrapper {
+              display: flex;
+              flex: 1;
+              font-size: 1.4rem;
+              color: #4a4a4a;
+
+              .name {
+                text-transform: uppercase;
+                font-weight: bold;
+                margin-right: 4rem;
+              }
+
+              .line-info {
+                display: flex;
+                font-weight: 300;
+
+                .info-value {
+                  font-weight: bold;
+                  margin-left: 0.8rem;
+                }
+              }
+            }
+
+            .actions-wrapper {
+              display: flex;
+              align-items: flex-end;
+              width: auto;
+
+              .jn-btn {
+                position: relative;
+                bottom: initial;
+
+                a span {
+                  margin-right: 0.6rem;
+                }
+
+                &.btn-delete a {
+                  color: #4a4a4a;
+                  margin-right: 4rem;
+                }
+              }
+            }
+
+            &:hover {
+              .actions-wrapper .jn-btn {
+                opacity: 1;
+                visibility: visible;
+              }
+            }
+          }
+
+          .language-form-wrapper {
+            .language-form {
+              display: flex;
+
+              > div {
+                flex: 1;
+
+                .jn-select.dropdown {
+                  margin-top: 1.6rem;
+                  align-items: flex-start;
+                  width: 50%;
+                  min-width: 30rem;
+                  justify-content: space-around;
+
+                  .field-body {
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 3rem;
+
+                    .select-display{
+                      flex: none;
+                    }
+                    > .select-display-wrapper > .dropdown-menu {
+                      top: 4rem;
+                    }
+                  }
+
+                  label {
+                    line-height: 4rem;
+                    margin-bottom: 0;
+                    font-size: 1.4rem;
+                    font-weight: normal;
+                    color: #4a4a4a;
+
+                    span.required {
+                      color: #d0021b;
+                      display: inline-block;
+                      margin-left: 0.3rem;
+                    }
+                  }
+
+                  .select-display {
+                    border-radius: 0.2rem;
+                    input {
+                      height: 3.8rem;
+                    }
+                  }
+                }
+              }
+
+              .skills-level {
+                .label-wrapper {
+                  display: flex;
+                  font-size: 1.4rem;
+                  font-weight: bold;
+                  line-height: 3.14;
+                  color: #4a4a4a;
+
+                  .col {
+                    width: 6rem;
+                    text-align: center;
+
+                    &:first-child {
+                      text-align: left;
+                      width: 6rem;
+                    }
+
+                    &:nth-child(4) {
+                      width: 10rem;
+                    }
+                  }
+                }
+
+                .jn-radios {
+                  > label {
+                    width: 6rem;
+                    text-align: center;
+                    margin-bottom: 0;
+                  }
+
+                  label {
+                    font-size: 1.4rem;
+                    font-weight: bold;
+                    line-height: 3.14;
+                    color: #4a4a4a;
+                  }
+
+                  .radio {
+                    margin-right: 0;
+                    width: 6rem;
+                    justify-content: center;
+                    margin-bottom: 0;
+                    &:nth-child(3) {
+                      width: 10rem;
+                    }
+
+                    label {
+                      margin-left: 0.6rem;
+                    }
+
+                    span.circle,
+                    span.check {
+                      top: initial;
+                    }
+                  }
+
+                  .control-wrapper {
+                    align-items: center;
+                    display: flex;
+                  }
+                  .controls {
+                    display: flex;
+                  }
+                }
+              }
+            }
+          }
+
+          .add-btn-wrapper {
+            margin-top: 0.3rem;
+
+            .jn-btn a {
+              padding: 0;
+              line-height: 4rem;
+              background-color: #e3e3e3;
+              color: #212529;
+
+              span.icon-jn-plus {
+                font-size: 1.4rem;
+                margin-right: 0.6rem;
+                &:before {
+                  color: #4a4a4a;
+                }
+              }
+            }
+          }
+        }
+
+        .update-actions-wrapper {
+          display: flex;
+          margin-top: 3.5rem;
+
+          .jn-btn {
+            a {
+              padding: 0;
+              line-height: 4rem;
+              border-radius: 2px;
+              width: 12.8rem;
+              font-size: 1.4rem;
+
+              span {
+                margin-right: 0.8rem;
+                &:before {
+                  color: #4a4a4a;
+                }
+              }
+            }
+            &.jn-btn__normal {
+              margin-left: 1.6rem;
+              a {
+                background-color: #e3e3e3;
+                color: #4a4a4a;
+                font-weight: 300;
+              }
+            }
+          }
+        }
+      }
+
+      &:hover {
+        .block-container .block-body .actions-wrapper .jn-btn {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+
+      &.empty-list .add-btn-wrapper {
+        margin-top: 0 !important;
+      }
+
+      .update-actions-wrapper {
+        padding-left: 3rem;
+        padding-bottom: 2rem;
+      }
+
+      @media (max-width: 767px) {
+        .block-container {
+          .header-text {
+            display: flex;
+            flex-wrap: wrap;
+
+            .optional {
+              margin-left: .8rem;
+            }
+          }
+          .block-body {
+            .language-item {
+              padding: 1rem 1.4rem;
+
+              .language-form {
+                flex-direction: column;
+
+                > div .jn-select.dropdown {
+                  min-width: 0;
+                  width: 100%;
+
+                  .field-body {
+                    margin-left: 0; 
+                  }
+                }
+
+                .skills-level {
+                  margin-top: 1.6rem;
+                  .label-wrapper {
+                    justify-content: space-between;
+                    line-height: 1.2;
+
+                    .col {
+                      width: initial;
+
+                      &:not(:first-child) {
+                        flex: 1
+                      }
+                    }
+                  }
+
+                  .skills .jn-radios .control-wrapper {
+                    flex: 1;
+
+                    .controls {
+                      flex: 1;
+                      justify-content: space-between;
+
+                    }
+
+                    .radio {
+                      width: initial;
+                      flex: 1
+                    }
+                  }
+                }
+              }
+            }
+
+            .update-actions-wrapper {
+              margin-top: 2rem;
+              padding-left: 0;
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// }

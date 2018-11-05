@@ -1,0 +1,55 @@
+.field-wrapper.address-field {
+  display: flex;
+  align-items: center;
+
+  .jn-select-wrapper,
+  .jn-select,
+  .jn-input-wrapper {
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+
+  label {
+    flex: 1;
+    font-family: Roboto;
+    font-size: 1.4rem;
+    color: #212529;
+    font-weight: normal;
+    .required {
+      font-size: 1.7rem;
+      color: #d0021b;
+    }
+  }
+
+  .help-block {
+    font-weight: 300;
+    margin-top: .6rem;
+    right: 0;
+  }
+
+  .jn-select .dropdown-menu {
+    width: 20rem;
+  }
+
+  .inputs-wrapper {
+    display: flex;
+    width: 63.2rem;
+
+    .select-display {
+      margin-right: 0.5rem;
+      input {
+        width: 14.6rem;
+      }
+    }
+    .field-wrapper:last-child {
+      flex: 1;
+    }
+    .jn-input-wrapper {
+      flex: 1;
+      margin: 0;
+      input[name='address[street]'] {
+        width: auto;
+      }
+    }
+  }
+}

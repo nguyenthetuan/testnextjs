@@ -1,0 +1,77 @@
+.jn-radios {
+  &.has-label {
+    display: flex;
+
+    > label {
+      width: 15rem;
+      font-size: 14px;
+      color: #4a4a4a;
+      font-weight: normal;
+
+      .required {
+        font-size: 1.7rem;
+        color: #d0021b;
+        margin-left: 0.6rem;
+      }
+    }
+    .radio {
+      margin-top: 0;
+      margin-right: 2.4rem;
+    }
+
+    .error-msg {
+      position: relative;
+      margin-bottom: 0;
+      margin-top: 1.2rem;
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: #d0021b !important;
+    }
+  }
+
+  .circle {
+    border: solid 0.1rem #d4d9dd;
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .check {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .radio {
+    display: flex;
+    margin-bottom: 2rem;
+    height: 1.8rem;
+
+    input[type=radio]:focus:checked~.check:after,label.radio-inline input[type=radio]:focus:checked~.check:after {
+      animation: none;
+    }
+
+    input {
+      margin-top: 0;
+    }
+
+    input[type='radio']:checked ~ .circle,
+    label.radio-inline input[type='radio']:checked ~ .circle {
+      border-color: #fc5830;
+      border-width: 0.15rem;
+    }
+
+    input[type='radio']:checked ~ .check {
+      background-color: #fc5830;
+    }
+
+    .check:after {
+      background-color: transparent;
+    }
+  }
+
+  .main-text {
+    font-family: Roboto;
+    font-size: 1.6rem;
+    font-weight: normal;
+    color: #444444;
+  }
+}

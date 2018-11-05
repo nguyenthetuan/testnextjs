@@ -1,0 +1,36 @@
+.user-information-page {
+  .user-information-container {
+    margin-top: 1rem;
+    flex: 1;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 10px 0 rgba(219, 219, 219, 0.5);
+
+    .header-page {
+      border-bottom: solid 1px #e3e3e3;
+      height: 4.8rem;
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      font-weight: bold;
+      color: #4a4a4a;
+      padding: 0 3.5rem;
+    }
+
+    .success-msg {
+      font-size: 1.4rem;
+      color: #1ebea5;
+      text-align: center;
+    }
+    .error-msg {
+      font-size: 1.4rem;
+      color: #d0021b;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .modal-dialog {
+      width: auto;
+    }
+  }
+}

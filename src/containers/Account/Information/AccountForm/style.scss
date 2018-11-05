@@ -1,0 +1,192 @@
+.account-form.input-section {
+  display: flex;
+  padding: 3rem 3.5rem;
+  justify-content: space-around;
+  max-width: 130rem;
+
+  .left-section {
+    flex: 1;
+    max-width: 72rem;
+    margin-right: 2.4rem;
+
+    .jn-input-wrapper {
+      margin-bottom: 2.4rem;
+
+      label {
+        flex: none;
+        width: 15rem;
+        padding: 0;
+        line-height: 4rem;
+        height: 4rem;
+      }
+
+      .input-wrapper {
+        flex: 1;
+        flex-direction: column;
+        align-items: flex-start;
+        input {
+          height: 4rem;
+        }
+      }
+
+      .help-block {
+        position: relative;
+        margin-bottom: 0;
+        margin-top: 1.2rem;
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: #d0021b !important;
+      }
+    }
+
+    .jn-datepicker {
+      margin-bottom: 2.4rem;
+      label {
+        flex: none;
+        width: 15rem;
+      }
+      > span {
+        height: 4rem;
+        border-radius: 0.2rem;
+      }
+      input.form-control {
+        height: 4rem;
+      }
+    }
+
+    .jn-radios {
+      display: flex;
+      margin-bottom: 2.4rem;
+      .controls {
+        display: flex;
+      }
+
+      .radio {
+        margin-bottom: 0;
+        margin-top: 0;
+        margin-right: 4.5rem;
+
+        label {
+          padding-left: 2.4rem;
+        }
+
+        .circle,
+        .check {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+
+        .main-text {
+          font-size: 14px;
+          font-weight: 300;
+          color: #4a4a4a;
+        }
+      }
+    }
+
+    .jn-select {
+      > label {
+        width: 15rem;
+        font-size: 14px;
+        color: #4a4a4a;
+        font-weight: normal;
+
+        .required {
+          font-size: 1.7rem;
+          color: #d0021b;
+          margin-left: 0.6rem;
+        }
+      }
+      input {
+        height: 3.8rem;
+      }
+
+      .field-body > .select-display-wrapper > .dropdown-menu {
+        top: 4rem;
+      }
+    }
+    .buttons-wrapper {
+      display: flex;
+      .jn-btn {
+        margin-top: 2.4rem;
+        margin-left: 15rem;
+        width: 18.6rem;
+
+        a {
+          padding: 0;
+          line-height: 4rem;
+          font-size: 1.4rem;
+          font-size: 14px;
+          font-weight: bold;
+        }
+
+        &.btn-cancel {
+          margin-left: 0.9rem;
+          a {
+            background-color: #e3e3e3;
+            border: solid 0.1rem #e3e3e3;
+            font-weight: 300;
+            color: #4a4a4a;
+          }
+        }
+      }
+    }
+  }
+
+  .right-section {
+    .jn-image-picker {
+      display: flex;
+      flex-direction: column-reverse;
+      
+      .picker-wrapper .placeholder,
+      .selected-file {
+        width: 21.2rem;
+        height: 21.2rem;
+        overflow: hidden;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    padding: 1rem 2rem;
+    flex-direction: column-reverse;
+    align-items: center;
+
+    .right-section .jn-image-picker .selected-file {
+      width: 15rem;
+      height: 15rem;
+    }
+
+    .left-section {
+      margin-right: 0;
+
+      .buttons-wrapper {
+        .jn-btn {
+          margin-left: 0;
+        }
+      }
+
+      .jn-radios .radio {
+        margin-right: 1rem;
+      }
+    }
+
+    .jn-input-wrapper,
+    .jn-radios,
+    .jn-select,
+    .jn-datepicker {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .jn-input-wrapper {
+      .input-wrapper {
+        width: 100%;
+      }
+    }
+
+    .field-body {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+.edit-cv-page {
+  .main-content {
+    .page-wrapper {
+      flex: 1;
+      margin-top: 1rem;
+
+      .block-container {
+        background-color: #ffffff;
+        box-shadow: 1px 1px 10px 0 rgba(219, 219, 219, 0.5);
+        position: relative;
+
+        .block-header {
+          height: 4.8rem;
+          border-bottom: solid 1px #e3e3e3;
+          display: flex;
+          align-items: center;
+          padding: 0 3.5rem;
+
+          .header-text {
+            font-family: Roboto;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #4a4a4a;
+          }
+        }
+
+        .block-body {
+          padding: 0 2rem 0 3.5rem;
+        }
+
+        .actions-wrapper {
+          width: 6rem;
+          .jn-btn {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            bottom: 2rem;
+            a {
+              font-size: 1.4rem;
+              font-weight: 300;
+              font-style: normal;
+              font-stretch: normal;
+              line-height: normal;
+              letter-spacing: normal;
+              color: #fc5830;
+
+              .btn-title {
+                margin-left: 0.8rem;
+              }
+            }
+          }
+        }
+
+        &:hover {
+          .block-body {
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+            border: solid 1px #c5c5c5;
+          }
+          .actions-wrapper {
+            .jn-btn {
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+#app_topnavbar-wrapper {
+  .jn-search-input {
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex: 1;
+    flex-direction: column;
+
+    > span {
+      font-size: 1.5rem;
+      position: absolute;
+      left: 1rem;
+      top: 1rem;
+      z-index: 1;
+      color: #9b9b9b;
+    }
+
+    .jn-input-wrapper {
+      position: relative;
+      display: flex;
+      flex: 1;
+      width: 100%;
+      flex-direction: column;
+
+      label.control-label {
+        left: 2.5rem;
+        top: -0.4rem;
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: #9b9b9b;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: calc(100% - 2.5rem);
+      }
+
+      > .input-wrapper {
+        flex: 1;
+        input {
+          padding-left: 3.8rem;
+          font-size: 1.5rem;
+          font-weight: 300;
+          color: #9b9b9b;
+          flex: 1;
+          box-shadow: none !important;
+        }
+      }
+    }
+
+    .dropdown {
+      width: 100%;
+      position: relative;
+      ul.dropdown-menu {
+        top: 100% !important;
+        left: 0;
+        border-radius: 0.2rem;
+        background-color: #ffffff;
+        box-shadow: 0 0.1rem 0.2rem 0 rgba(146, 146, 146, 0.5);
+        width: 100%;
+        transform: none;
+        z-index: 99;
+
+        li {
+          padding: 0;
+          a {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

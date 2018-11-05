@@ -1,0 +1,40 @@
+.card.card-data-tables.product-table-wrapper {
+  h2.card-title {
+    font-size: 3rem;
+  }
+  .dropdown {
+    &.filtered {
+      > a::before {
+        background-color: transparent;
+      }
+    }
+    &.date-filter {
+      .dropdown-menu {
+        width: 31.5rem;
+        > li {
+          &:hover,
+          &:focus {
+            background-color: #fff;
+            box-shadow: none;
+          }
+          .form-group span {
+            color: #607188 !important;
+            font-weight: 700;
+            display: inline-block;
+            &.date-label {
+              width: 5rem;
+            }
+          }
+          .jn-datepicker {
+            .rdtPicker {
+              width: 20rem;
+            }
+            > span.date-picker > span {
+              width: 15rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

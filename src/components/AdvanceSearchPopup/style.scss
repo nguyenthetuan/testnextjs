@@ -1,0 +1,201 @@
+#app_topnavbar-wrapper {
+  .popup-wrapper.advance-search-wrapper {
+    .modal-dialog {
+      width: 45rem;
+    }
+
+    .modal-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2rem 4rem 4rem 4rem;
+
+      .close-btn {
+        display: inline;
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+
+        a {
+          font-size: 1.6rem;
+          font-weight: bold;
+          color: #9b9b9b;
+
+          &:hover,
+          &:focus,
+          &:active {
+            color: #fc5830;
+          }
+        }
+      }
+
+      .header {
+        height: 2.4rem;
+        font-family: Roboto;
+        font-size: 2rem;
+        font-weight: bold;
+        line-height: 2.4rem;
+        color: #4a4a4a;
+        text-align: center;
+      }
+
+      .jn-select {
+        .dropdown-menu {
+          transform: none;
+          box-shadow: none;
+          border: solid 0.1rem #e3e3e3;
+          top: 4rem;
+        }
+
+        &.experience-filter .dropdown-menu > ul {
+          height: 15rem;
+        }
+
+        &:last-child .dropdown-menu > ul {
+          height: 10rem;
+        }
+      }
+    }
+
+    .form-control {
+      height: 4rem !important;
+    }
+
+    .jn-search-input,
+    .jn-select {
+      margin-top: 1.6rem;
+      label,
+      input {
+        font-size: 1.4rem;
+        font-weight: 300;
+        color: #9b9b9b;
+      }
+
+      .select-display {
+        height: 4rem;
+        a {
+          color: #9b9b9b;
+        }
+      }
+    }
+
+    .clear-filters {
+      text-align: center;
+      margin-top: 1rem;
+      margin-bottom: 2.4rem;
+
+      a {
+        font-size: 1.4rem;
+        font-weight: 300;
+        color: #fc5830;
+        &:hover,
+        &:active,
+        &:focus {
+          color: #fc5830;
+        }
+      }
+    }
+
+    .jn-search-input {
+      .jn-input-wrapper {
+        width: 100%;
+
+        label {
+          top: 0;
+          padding: 0;
+          height: 4rem;
+          line-height: 4rem;
+          left: 3rem;
+        }
+
+        .input-wrapper {
+          flex: 1;
+
+          input {
+            max-width: initial !important;
+            height: 4rem;
+            padding-left: 3rem;
+          }
+        }
+      }
+    }
+
+    .search-suggestion-menu {
+      li {
+        a {
+          font-size: 1.4rem;
+          font-weight: 300;
+          color: #4a4a4a;
+          &:hover,
+          &:active,
+          &:active {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: #4a4a4a;
+          }
+
+          i {
+            margin-right: 1.2rem;
+          }
+        }
+      }
+    }
+    .jn-btn__yellow a {
+      height: 4rem;
+      padding: 0;
+      line-height: 4rem;
+      text-transform: none;
+      font-size: 14px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    @media (max-width: 767px) {
+      .modal-dialog {
+        margin: 10px auto;
+
+        .modal-body {
+          padding: 2rem 0;
+
+          .form-wrapper {
+            padding: 0 2rem 1rem 2rem;
+            max-height: calc(100vh - 17rem);
+            overflow-x: hidden;
+            overflow-y: auto;
+
+            .jn-select {
+              .selected-wrapper {
+                flex-direction: column;
+              }
+              .dropdown-menu {
+                display: none;
+              }
+
+              &.open {
+                .dropdown-menu {
+                  display: block;
+                }
+              }
+            }
+          }
+
+          .jn-btn.jn-btn__yellow {
+            background: transparent;
+            padding: 0 2rem;
+
+            a {
+              background-color: #fc5830;
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: 480px) {
+      .modal-dialog {
+        width: auto;
+        margin: 10px;
+      }
+    }
+  }
+}

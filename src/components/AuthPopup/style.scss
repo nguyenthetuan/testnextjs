@@ -1,0 +1,491 @@
+.auth-pop-wrapper {
+  .modal-dialog {
+    width: 45rem;
+  }
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2.4rem 3.6rem;
+
+    .close-btn {
+      display: inline;
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+
+      a {
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: #9b9b9b;
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: #fc5830;
+        }
+      }
+    }
+
+    .header {
+      height: 2.4rem;
+      font-family: Roboto;
+      font-size: 2rem;
+      font-weight: bold;
+      line-height: 2.4rem;
+      color: #4a4a4a;
+      text-align: center;
+    }
+
+    .success-message {
+      text-align: center;
+      line-height: 2.5rem;
+      font-size: 1.8rem;
+      color: #4a4a4a;
+
+      span {
+        width: 2.5rem;
+        height: 2.5rem;
+        border: 0.1rem solid #1ebea5;
+        border-radius: 1.3rem;
+        display: inline-block;
+        text-align: center;
+        line-height: 2.5rem;
+        margin-right: 0.8rem;
+      }
+    }
+
+    .socials-wrapper {
+      .jn-btn {
+        position: relative;
+        margin: 1.5rem 0;
+        a {
+          display: flex;
+          padding: 0;
+          align-items: center;
+          height: 4rem;
+
+          .title {
+            text-transform: none;
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-align: center;
+            color: #ffffff;
+            flex: 1;
+          }
+
+          .icon-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 4rem;
+            height: 4rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+
+        &.zalo-login {
+          background-color: #008fe5;
+          .icon-image {
+            img {
+              width: 2.2rem;
+              height: 2.2rem;
+            }
+          }
+        }
+
+        &.fb-login {
+          background-color: #4468b0;
+          .icon-image {
+            img {
+              width: 2rem;
+              height: 2rem;
+            }
+          }
+        }
+
+        &.google-login {
+          background-color: #fafafa;
+          border: solid 0.05rem #e3e3e3;
+
+          .icon-image {
+            padding: 1.2rem;
+            img {
+              width: 2rem;
+              max-width: 2rem;
+            }
+          }
+
+          .title {
+            color: #4a4a4a;
+          }
+        }
+      }
+    }
+
+    .separator-wrapper {
+      display: flex;
+      align-items: center;
+      margin-top: 3.6rem;
+      margin-bottom: 2rem;
+
+      .separator-line {
+        height: 0.1rem;
+        flex: 1;
+        background-color: #e3e3e3;
+      }
+      .separator-text {
+        padding: 0 1.2rem;
+        font-size: 1.4rem;
+        font-weight: 300;
+        color: #4a4a4a;
+      }
+    }
+
+    .login-form-wrapper {
+      &.has-error-msg {
+        .error-message {
+          text-align: center;
+          margin-bottom: 0.8rem;
+          margin-top: 0;
+          font-size: 1.4rem;
+          font-weight: 300;
+          color: #d0021d;
+        }
+      }
+
+      .jn-input-wrapper {
+        margin-bottom: 1.5rem;
+
+        &:nth-child(2) {
+          margin-bottom: 1.2rem;
+        }
+      }
+
+      .extra-options {
+        display: flex;
+        margin-bottom: 1.8rem;
+
+        .jn-checkbox {
+          a {
+            font-size: 1.4rem;
+            font-weight: normal;
+            color: #444444;
+          }
+          .checkbox .checkbox-material .check,
+          label.checkbox-inline .checkbox-material .check {
+            width: 1.8rem;
+            height: 1.8rem;
+          }
+        }
+
+        .forgot-pwd {
+          flex: 1;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+
+          a,
+          a:hover,
+          a:active,
+          a:focus {
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: #fc5830;
+          }
+        }
+      }
+
+      .jn-btn__yellow a {
+        font-size: 1.4rem;
+        font-weight: bold;
+        padding: 0;
+        line-height: 4rem;
+      }
+    }
+
+    .register-legend {
+      margin-top: 2.8rem;
+      margin-bottom: 1.2rem;
+      display: flex;
+      justify-content: center;
+      span.legend {
+        font-family: Roboto;
+        font-size: 1.4rem;
+        color: #464646;
+      }
+
+      a,
+      a:hover,
+      a:active,
+      a:focus {
+        text-transform: uppercase;
+        color: #fc5830;
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin-left: 0.6rem;
+      }
+    }
+
+    .jn-input-wrapper {
+      .input-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+
+        a {
+          top: 1.5rem;
+        }
+      }
+
+      .help-block {
+        position: relative;
+        margin-bottom: 0;
+        margin-top: 0.8rem;
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: #d0021b !important;
+      }
+    }
+  }
+
+  .register-form-container {
+    margin: 0 0 3rem 0;
+    .header {
+      margin-bottom: 2.4rem;
+    }
+
+    &.has-error-msg {
+      .header {
+        margin-bottom: 1.4rem;
+      }
+    }
+
+    .error-message {
+      text-align: center;
+      margin-bottom: 1.6rem;
+      margin-top: 0;
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: #d0021d;
+    }
+
+    .get-sms-code {
+      width: 14.2rem;
+      height: 4rem;
+      a {
+        font-size: 1.4rem;
+        text-transform: none;
+        padding: 0;
+        line-height: 4rem;
+      }
+
+      &.inactive {
+        a {
+          background-color: #e0e0e0;
+          color: #979797;
+        }
+      }
+    }
+
+    .phone-wrapper {
+      margin-bottom: 2.4rem;
+      .jn-btn {
+        position: absolute;
+        right: 0;
+      }
+      .jn-input-wrapper.form-group {
+        margin-bottom: 0;
+
+        input {
+          padding-right: 15.7rem;
+        }
+      }
+
+      .sent-code-success {
+        margin-bottom: 0;
+        margin-top: 0.8rem;
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: #17ac7f !important;
+      }
+    }
+
+    .jn-input-wrapper {
+      margin-bottom: 2rem;
+      label {
+        font-size: 1.4rem;
+        font-weight: 300;
+        color: #4a4a4a;
+        padding-top: 1.2rem;
+      }
+
+      input {
+        height: 4rem;
+        line-height: 4rem;
+      }
+
+      .input-wrapper {
+        a {
+          top: 1rem;
+        }
+      }
+    }
+
+    .register-btn {
+      a {
+        text-transform: none;
+        line-height: 4rem;
+        padding: 0;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+    }
+
+    &.step-2 {
+      .header {
+        margin-bottom: 1.4rem;
+      }
+      .annotation {
+        font-size: 1.4rem;
+        font-weight: 300;
+        text-align: center;
+        color: #4a4a4a;
+      }
+
+      .buttons-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 4rem;
+        a {
+          padding: 0;
+          line-height: 4rem;
+        }
+        .jn-btn__yellow {
+          height: 4rem;
+          width: 18.6rem;
+          margin-left: 6rem;
+
+          &.inactive {
+            background-color: #d8d8d8;
+          }
+        }
+      }
+    }
+  }
+
+  .jn-input-wrapper.form-group {
+    input.form-control {
+      height: 4rem;
+      line-height: 4rem;
+      font-weight: 300;
+      color: #4a4a4a;
+      font-size: 1.4rem;
+      padding: 0 1.5rem;
+    }
+    label {
+      padding: 0 1.5rem;
+      font-weight: 300;
+      color: #4a4a4a;
+      font-size: 1.4rem;
+      line-height: 4rem;
+    }
+  }
+
+  .forgot-form-container {
+    margin: 0 0 2.4rem 0;
+
+    &.has-error-msg {
+      .form-wrapper {
+        margin-top: 1.6rem;
+      }
+      .error-message {
+        text-align: center;
+        margin-bottom: 0.8rem;
+        margin-top: 1.6rem;
+        font-size: 1.4rem;
+        font-weight: 300;
+        color: #d0021d;
+      }
+    }
+
+    .sent-mail-msg p {
+      font-size: 1.4rem;
+      font-weight: normal;
+      text-align: justify;
+      color: #4a4a4a;
+    }
+
+    .form-wrapper {
+      margin-top: 2.5rem;
+
+      .jn-input-wrapper:nth-child(2) {
+        margin-top: 3rem;
+      }
+
+      .invalid-code-msg {
+        .message {
+          font-size: 1.4rem;
+          font-weight: normal;
+          color: #4a4a4a;
+          display: flex;
+          .icon-close {
+            color: #d0021d;
+            font-size: 2rem;
+            margin-right: 0.6rem;
+          }
+
+          span.text {
+            text-align: center;
+            display: inline-block;
+            margin-top: 0.3rem;
+          }
+        }
+      }
+    }
+
+    .jn-btn {
+      margin-top: 3rem;
+      a {
+        height: 4rem;
+        padding: 0;
+        line-height: 4rem;
+        text-transform: none;
+        font-weight: bold;
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .modal-dialog {
+      margin: 10px auto;
+
+      .separator-wrapper {
+        margin-top: 2.4rem;
+        margin-bottom: 1.2rem;
+      }
+      .register-legend {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 1.8rem;
+
+        .register-link {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .modal-dialog {
+      width: auto;
+      margin: 10px;
+
+      .modal-body {
+        padding: 2rem;
+      }
+    }
+  }
+}

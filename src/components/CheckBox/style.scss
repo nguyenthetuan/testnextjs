@@ -1,0 +1,30 @@
+.jn-checkbox {
+  display: flex;
+  align-items: center;
+  .checkbox-material:before,
+  label.checkbox-inline .checkbox-material:before {
+    width: 0;
+    height: 0;
+  }
+
+  .checkbox-material .check {
+    border-color: #999;
+  }
+
+  input[type='checkbox']:checked + .checkbox-material .check,
+  label.checkbox-inline input[type='checkbox']:checked + .checkbox-material .check,
+  input[type='checkbox']:checked + .checkbox-material .check:before,
+  label.checkbox-inline input[type='checkbox']:checked + .checkbox-material .check:before {
+    color: #fc5830;
+    border-color: #fc5830;
+  }
+
+  > a,
+  > a:hover,
+  > a:active,
+  > a:focus {
+    color: #444444;
+    display: inline-block;
+    font-family: 'Roboto';
+  }
+}

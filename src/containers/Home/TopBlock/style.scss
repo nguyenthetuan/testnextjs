@@ -1,0 +1,253 @@
+.home-page {
+  .home-top-block {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: #ffffff;
+    box-shadow: 0 0.1rem 0.4rem 0 rgba(0, 0, 0, 0.5);
+    margin-bottom: 2.6rem;
+
+    &.loggedin {
+      .actions-menu .items-wrapper {
+        max-width: 50rem;
+      }
+    }
+
+    .actions-menu {
+      padding: 1.5rem 0;
+      border-bottom: solid 1px #e3e3e3;
+
+      .items-wrapper {
+        display: flex;
+        justify-content: space-between;
+        max-width: 60rem;
+      }
+
+      a {
+        flex: none;
+        font-size: 1.4rem;
+        font-weight: 300;
+        color: #4a4a4a;
+        margin-right: 2rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: #fc5830;
+        }
+      }
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+
+    .main-block {
+      padding: 1.4rem 3rem;
+    }
+
+    .banner-wrapper {
+      margin-bottom: 3rem;
+
+      .slick-slider {
+         .slick-arrow {
+          width: 4.7rem;
+          height: 4.7rem;
+          border-radius: 2.4rem;
+          background-color: rgba(159, 159, 159, 0.4);
+          z-index: 1;
+
+          &:hover {
+            background-color: rgba(159, 159, 159, 0.8);
+          }
+
+          &::before {
+            font-size: 2.5rem
+          }
+
+          &.slick-next {
+            right: -2rem;
+          }
+
+          &.slick-prev {
+            left: -2rem;
+          }
+
+          @media (max-width: 800px) {
+            width: 3.6rem;
+            height: 3.6rem;
+            &.slick-next {
+              right: -1rem;
+            }
+  
+            &.slick-prev {
+              left: -1rem;
+            }
+            &::before {
+              font-size: 1.8rem
+            }
+          }
+        }
+
+        .slick-slide.slick-active {
+          .banner-img {
+            margin-left: 1.2rem;
+          }
+          &.slick-current {
+            .banner-img {
+              margin-left: 0;
+            }
+          }
+        }
+      }
+
+      .banner-img {
+        flex: 1;
+        // margin-right: 1.2rem;
+        overflow: hidden;
+        height: 24rem;
+        border: solid 0.1rem #e3e3e3;
+        display: inline-block;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .job-types {
+      display: flex;
+      align-items: center;
+
+      .col {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        width: calc(12.5vw - 2.75rem);
+        margin-right: 2rem;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        .item-wrapper {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+        }
+
+        .icon-wrapper {
+          display: flex;
+          width: 4rem;
+          height: 4rem;
+          border-radius: 2.4rem;
+          justify-content: center;
+          align-items: center;
+          color: #fff;
+          font-size: 2.5rem;
+          margin-bottom: 1.4rem;
+        }
+
+        &.nearest-jobs .icon-wrapper {
+          background-image: linear-gradient(to left, #2d99d3, #2c84d3, #2a66d2);
+        }
+        &.cat-jobs .icon-wrapper {
+          background-image: linear-gradient(to bottom, #6e66d0, #d63546);
+        }
+        &.loc-jobs .icon-wrapper {
+          background-image: linear-gradient(to bottom, #f7cc4e, #ed9d26);
+        }
+        &.hot-jobs .icon-wrapper {
+          background-image: linear-gradient(to bottom, #f5515f, #9f041b);
+        }
+        &.fast-jobs .icon-wrapper {
+          background-image: linear-gradient(to bottom, #6bd893, #39b05a);
+        }
+        &.new-jobs .icon-wrapper {
+          background-image: linear-gradient(to bottom, #fb4949, #f5a623);
+        }
+        &.note-job .icon-wrapper {
+          background-image: linear-gradient(135deg, #3023ae, #c86dd7);
+        }
+        &.video-job .icon-wrapper {
+          background-image: linear-gradient(to left, #2d99d3, #2c84d3, #2a66d2);
+        }
+
+        .title {
+          font-size: 1.4rem;
+          font-weight: 300;
+          color: #4a4a4a;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+    @media (max-width: 767px) {
+      .main-block {
+        padding: 1.2rem !important;
+      }
+
+      .banner-wrapper {
+        margin-bottom: 0;
+
+        a:nth-child(2) {
+          margin-right: 0;
+        }
+        a:nth-child(3) {
+          display: none;
+        }
+      }
+
+      .job-types {
+        flex-wrap: wrap;
+        .col {
+          flex: none;
+          width: 25%;
+          margin-right: 0;
+          margin-top: 1.5rem;
+
+          .item-wrapper {
+            justify-content: flex-start;
+
+            .icon-wrapper {
+              width: 4rem;
+              height: 4rem;
+              margin-bottom: 0.6rem;
+            }
+
+            .title {
+              font-size: 1.2rem;
+              white-space: initial;
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: 374px) {
+      .job-types .col {
+        &.cat-jobs, &.loc-jobs, &.nearest-jobs, &.hot-jobs {
+          height: 8.8rem;
+        }
+
+        &.fast-jobs, &.new-jobs, &.note-job, &.video-job {
+          height: 7.4rem;
+        }
+      }
+    }
+  }
+}

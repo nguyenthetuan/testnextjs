@@ -1,0 +1,152 @@
+.jn-input-wrapper.form-group {
+  margin-top: 0;
+  padding-bottom: 0;
+  &.left-label {
+    display: flex;
+    label {
+      flex: 1;
+      text-align: left;
+      display: block !important;
+      padding-left: 0 !important;
+    }
+  }
+
+  .error-msg {
+    margin-top: .8rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #d0021d;
+  }
+
+  textarea.form-control,
+  input.form-control {
+    background: none;
+    width: 100%;
+    height: 4rem;
+    border-radius: 0.2rem;
+    background-color: #fffefe;
+    border: solid 0.1rem #e0e0e0;
+    padding: 0 2rem;
+    flex: 1;
+    font-family: Roboto;
+    &[type='password'] {
+      padding-right: 3rem;
+    }
+    margin: 0;
+    &[type=number]::-webkit-inner-spin-button, 
+    &[type=number]::-webkit-outer-spin-button { 
+      -webkit-appearance: none; 
+      margin: 0; 
+    }
+  }
+
+  textarea.form-control {
+    padding: 20px;
+    overflow: hidden;
+  }
+
+  label.control-label {
+    height: 1.6rem;
+    font-family: Roboto;
+    font-size: 1.4rem;
+    font-weight: normal;
+    color: #464646;
+    margin: 0;
+    display: none;
+    z-index: 10;
+    line-height: 4rem;
+    padding: 0 2rem;
+
+    .required {
+      color: #d0021b !important;
+      font-size: 1.7rem;
+      padding-left: 0.5rem;
+    }
+  }
+
+  &.is-empty {
+    label {
+      display: block;
+    }
+  }
+
+  &.is-focused {
+    input {
+      border-radius: 0.3rem;
+      box-shadow: inset 0.1rem 0.1rem 0.5rem 0 #979797;
+      border: solid 0.2rem #fc5830;
+      background-color: #fffefe;
+    }
+    label {
+      display: none;
+    }
+  }
+  .input-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &.input-number input {
+      padding-right: 1.8rem !important;
+    }
+
+    .step-controls {
+      position: absolute;
+      right: .5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      a {
+        display: block;
+        height: 1.4rem;
+        color: #464646;
+
+        &:hover, &:active {
+          color: #fc5830
+        }
+
+        span {
+          display: inline-block;
+        }
+      }
+    }
+
+    > a {
+      position: absolute;
+      right: 1rem;
+      top: 2rem;
+
+      i {
+        font-size: 2rem;
+        color: #979797;
+        font-weight: normal;
+        &.active {
+          color: #fc5830;
+        }
+      }
+    }
+  }
+  &.has-error {
+    .help-block {
+      color: #ff0000 !important;
+    }
+
+    &.is-focused {
+      .form-control {
+        background-image: none;
+      }
+    }
+  }
+
+  &.has-right-col {
+    display: flex;
+    .input-wrapper {
+      flex: 1;
+    }
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+}

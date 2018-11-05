@@ -1,0 +1,90 @@
+.jn-work-location {
+  display: flex;
+  > label {
+    font-size: 14px;
+    font-weight: normal;
+    color: #464646;
+
+    .required {
+      color: #d0021b;
+      font-size: 17px;
+      padding-left: 5px;
+    }
+  }
+
+  .field-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    // border: solid 1px #e0e0e0;
+    // padding: 20px;
+
+    .company-address {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+
+      > span:last-child {
+        font-size: 14px;
+        font-weight: 300;
+        color: #979797;
+        margin-left: 25px;
+      }
+      .jn-checkbox a.checkbox-label {
+        font-size: 14px;
+        font-weight: normal;
+        color: #444444;
+      }
+    }
+
+    .location-item {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      margin-bottom: 25px;
+
+      a {
+        margin-left: 10px;
+      }
+    }
+
+    .form-group {
+      margin-top: 0;
+      padding-bottom: 0;
+      &.address-field {
+        flex: 1;
+        display: flex;
+        .wrapp {
+          flex: 1;
+
+          .inputs-wrapper {
+            width: 100%;
+            .field-wrapper:last-child {
+              flex: 1;
+            }
+          }
+        }
+      }
+    }
+    .add-more-wrapper {
+      a,
+      a:hover,
+      a:active {
+        font-size: 14px;
+        font-weight: 300;
+        color: #fc5830;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+
+    .inputs-wrapper {
+      flex-direction: column;
+      .field-wrapper:first-child {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}

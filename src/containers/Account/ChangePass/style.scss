@@ -1,0 +1,169 @@
+.account-page {
+  .content-wrapper {
+    flex: 1;
+    background-color: #ffffff;
+    box-shadow: 0.1rem 0.1rem 1rem 0 rgba(219, 219, 219, 0.5);
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+
+    .form-header {
+      border-bottom: solid 0.1rem #e3e3e3;
+      padding: 1.2rem 2.1rem;
+
+      h2 {
+        font-size: 2rem;
+        color: #444444;
+        margin-top: 0;
+      }
+
+      .legend {
+        font-size: 1.4rem;
+        font-weight: 300;
+        color: #212529;
+      }
+    }
+
+    .form-wrapper {
+      display: flex;
+      flex-direction: column;
+      padding: 3.5rem 10% 2rem 10%;
+
+      @media (min-width: 992px) and (max-width: 1200px) {
+        display: flex;
+        padding: 3.5rem 10% 2rem 10%;
+        justify-content: center;
+      }
+
+      .jn-input-wrapper {
+        max-width: 73rem;
+        margin-bottom: 2rem;
+        label {
+          flex: none;
+          width: 17rem;
+        }
+
+        & .control-label {
+          padding: 1.5rem;
+          color: #212529;
+        }
+
+        .input-wrapper {
+          flex: 1;
+          align-items: flex-start;
+          flex-direction: column;
+          & a {
+            top: 1.3rem;
+          }
+
+          input {
+            width: 100%;
+            height: 4.5rem;
+          }
+
+          .help-block {
+            position: relative;
+            margin-bottom: 0;
+            margin-top: 1.2rem;
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: #d0021b !important;
+          }
+        }
+      }
+
+      .button-wrapper {
+        display: flex;
+        margin-top: 2rem;
+
+        .jn-btn {
+          width: 18.6rem;
+
+          margin-left: 17rem;
+          & a {
+            padding: 1.2rem;
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+
+  .popup-wrapper {
+    .modal-dialog {
+      width: 45rem;
+    }
+    .modal-body {
+      padding: 2rem 4rem;
+    }
+    .message {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+
+      .msg-icon {
+        font-size: 2rem;
+        margin-right: 1rem;
+
+        &.icon-close {
+          color: #d0021b;
+        }
+        &.icon-jn-checked {
+          border: 0.1rem solid #1ebea5;
+          border-radius: 1rem;
+        }
+      }
+      .msg {
+        font-size: 1.6rem;
+        font-weight: normal;
+        color: #444444;
+      }
+    }
+    .button-wrap {
+      display: flex;
+      justify-content: flex-end;
+
+      .jn-btn {
+        border: 0.1rem solid #979797;
+        a {
+          padding: 1rem 2.5rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .content-wrapper .form-wrapper {
+      padding: 2rem;
+      .button-wrapper .jn-btn {
+        margin-left: 0;
+      }
+      .jn-input-wrapper {
+        flex-direction: column;
+        label.control-label {
+          padding: 0;
+          margin-bottom: 0.8rem;
+        }
+      }
+    }
+
+    .form-header {
+      h2 {
+        margin-bottom: 0;
+      }
+      .legend {
+        display: none;
+      }
+    }
+  }
+
+  .popup-wrapper {
+    .modal-dialog {
+      width: auto;
+
+      .modal-body {
+        padding: 2rem 0;
+      }
+    }
+  }
+}

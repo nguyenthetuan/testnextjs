@@ -1,0 +1,183 @@
+.cv-info-item {
+  display: flex;
+  flex-direction: column;
+  padding: 1.8rem 3.5rem 3.5rem 3.5rem;
+  background-color: #ffffff;
+  line-height: 2rem;
+  margin-bottom: 0.7rem;
+  box-shadow: 0.1rem 0.1rem 1rem 0 rgba(219, 219, 219, 0.5);
+  font-size: 1.4rem;
+
+  .refresh-msg {
+    height: 3.3rem;
+    background-color: #fc5830;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #ffffff;
+    text-align: center;
+    line-height: 3.3rem;
+    margin-top: 2rem;
+    max-width: 60rem;
+  }
+
+  .title {
+    font-size: 1.6rem;
+    color: #fc5830;
+    font-weight: 500;
+    margin-bottom: 1.1rem;
+  }
+  .info-container {
+    display: flex;
+    .left-column {
+      flex: 1;
+
+      .resume-type-label {
+        margin-right: 0.6rem;
+        display: inline-block;
+      }
+    }
+    .right-column {
+      flex: 1;
+    }
+  }
+  .jn-checkbox {
+    & .check {
+      border-color: #e3e3e3;
+    }
+    & input[type='checkbox']:checked + .checkbox-material .check,
+    label.checkbox-inline input[type='checkbox']:checked + .checkbox-material .check,
+    input[type='checkbox']:checked + .checkbox-material .check:before,
+    label.checkbox-inline input[type='checkbox']:checked + .checkbox-material .check:before {
+      color: white;
+      border-color: #e3e3e3;
+      background: #fc5830;
+    }
+  }
+  .btn-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3.2rem;
+    flex-wrap: wrap;
+
+    .line {
+      display: flex;
+      // &:first-child {
+      //   margin-right: 1rem;
+      // }
+    }
+
+    .jn-btn {
+      min-width: 14rem;
+      border-radius: 0.2rem;
+      border: solid 1px #e3e3e3;
+      font-size: 1.4rem;
+      margin-right: 1rem;
+
+      > a {
+        padding: 0.8rem 2rem;
+        display: inline-block;
+        color: #4a4a4a;
+        font-weight: bold;
+        > span {
+          margin-right: 0.7rem;
+        }
+      }
+    }
+  }
+
+  .delete-resume-popup {
+    .modal-body {
+      padding: 4.5rem 4rem;
+    }
+    .delete-msg {
+      font-family: Roboto;
+      font-size: 1.8rem;
+      color: #212529;
+      margin-bottom: 1.8rem;
+
+      > span {
+        display: none;
+      }
+    }
+
+    .cv-title {
+      font-family: Roboto;
+      font-size: 1.6rem;
+      color: #fc5830;
+    }
+
+    .btn-wrapper {
+      display: flex;
+      margin-top: 5rem;
+      justify-content: flex-end;
+
+      .jn-btn {
+        a {
+          padding: 0;
+          line-height: 4rem;
+        }
+
+        &:first-child {
+          margin-right: 5rem;
+        }
+
+        &.jn-btn__yellow {
+          width: 18rem;
+        }
+      }
+    }
+
+    &.refresh-failed {
+      .delete-msg {
+        color: #d0021b;
+        text-align: center;
+
+        > span {
+          display: inline-block;
+          margin-right: .8rem
+        }
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    padding-left: 0;
+    padding-right: 0;
+
+    .title,
+    .jn-checkbox,
+    .info-container {
+      padding-left: 1.6rem;
+      padding-right: 1.6rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    padding-bottom: 2rem;
+
+    .jn-checkbox {
+      align-items: flex-start;
+      margin-top: 1rem;
+      .checkbox {
+        margin-right: 0.6rem;
+        margin-top: 0;
+      }
+    }
+    .btn-container {
+      margin-top: 2rem;
+
+      .line {
+        width: 100%;
+        justify-content: space-around;
+
+        .jn-btn {
+          margin-right: 0;
+        }
+
+        &:last-child {
+          margin-top: 1.6rem;
+        }
+      }
+    }
+  }
+}

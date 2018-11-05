@@ -1,0 +1,38 @@
+.year-filter.dropdown.jn-select {
+  > .dropdown-menu {
+    overflow-y: inherit;
+    min-height: 0;
+    padding-bottom: 30px;
+    > li {
+      display: flex;
+      justify-content: center;
+      padding: 10px 25px;
+
+      .year-select-wrapper {
+        &:first-child {
+          margin-right: 30px;
+        }
+        .jn-select {
+          width: 100%;
+
+          .select-display {
+            border: 1px solid #cccccc;
+            input {
+              margin: 0 -20px 0 0;
+            }
+            span {
+              font-size: 10px;
+              margin-right: 10px;
+              width: 10px;
+              height: 10px;
+            }
+          }
+        }
+        .dropdown-menu {
+          position: absolute;
+          z-index: 99;
+        }
+      }
+    }
+  }
+}

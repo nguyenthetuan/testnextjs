@@ -1,0 +1,80 @@
+.edit-cv-page {
+  .filecv-info {
+    .block-body {
+      display: flex;
+      justify-content: center;
+
+      .file-preview {
+        width: 17.2rem;
+        height: 24rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .file-info-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .selected-file {
+          font-size: 1.4rem;
+          font-weight: bold;
+          color: #fc5830;
+        }
+
+        a.filename {
+          font-size: 1.4rem;
+          font-weight: bold;
+          color: #fc5830;
+        }
+
+        .change-file-btn {
+          width: 18.6rem;
+          border-radius: 1px;
+          background-color: #ffffff;
+          border: solid 1px #e3e3e3;
+          margin-top: 2rem;
+          a {
+            padding: 0;
+            line-height: 4rem;
+            text-transform: none;
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #fc5830;
+          }
+        }
+      }
+
+      .update-actions-wrapper {
+        display: flex;
+        margin-top: 3.5rem;
+
+        .jn-btn {
+          a {
+            padding: 0;
+            line-height: 4rem;
+            border-radius: 2px;
+            width: 12.8rem;
+            font-size: 1.4rem;
+
+            span {
+              margin-right: 0.8rem;
+              &:before {
+                color: #4a4a4a;
+              }
+            }
+          }
+          &.jn-btn__normal {
+            margin-left: 1.6rem;
+            a {
+              background-color: #e3e3e3;
+              color: #4a4a4a;
+              font-weight: 300;
+            }
+          }
+        }
+      }
+    }
+  }
+}

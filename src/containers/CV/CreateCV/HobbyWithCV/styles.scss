@@ -1,0 +1,183 @@
+.create-cv-container {
+  .header-page {
+    width: 100%;
+
+    border-bottom: 0.1rem solid #e0e0e0;
+    .header-content {
+      display: flex;
+      background-color: #ffffff;
+      align-items: center;
+      flex: 1 1 rem;
+      .label-text {
+        font-size: 2rem;
+        font-weight: 500;
+        color: #444444;
+      }
+
+      .right-button {
+        justify-content: flex-end;
+        display: flex;
+        flex: 1;
+
+        .jn-btn {
+          margin-right: 3rem;
+          height: 4rem;
+          min-width: 25.6rem;
+
+          & a,
+          & a:focus {
+            padding: 1.2rem;
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+  .hobby-content-wrapper {
+    flex: 1;
+    width: 100%;
+
+    .error-message-wrapper {
+      color: #d0021b;
+      font-size: 1.6rem;
+      font-weight: 300;
+      margin-left: 21rem;
+      margin-bottom: 2rem;
+    }
+
+    .input-section {
+      flex: 1;
+      display: flex;
+      padding: 0rem 1.3rem;
+
+      form {
+        width: 100%;
+      }
+      .jn-input-wrapper {
+        margin-bottom: 2.4rem;
+
+        label {
+          flex: none;
+          width: 20rem;
+          padding: 0;
+          line-height: 4rem;
+          height: 4rem;
+        }
+
+        .input-wrapper {
+          flex: 1;
+          flex-direction: column;
+          align-items: flex-start;
+          input {
+            height: 4rem;
+          }
+          max-width: 58rem;
+        }
+
+        .help-block {
+          position: relative;
+          margin-bottom: 0;
+          margin-top: 1.2rem;
+          font-size: 1.2rem;
+          font-weight: 300;
+          color: #d0021b !important;
+        }
+      }
+
+      .jn-select {
+        > label {
+          width: 20rem;
+          font-size: 14px;
+          color: #4a4a4a;
+          font-weight: normal;
+
+          .required {
+            font-size: 1.7rem;
+            color: #d0021b;
+            margin-left: 0.6rem;
+          }
+        }
+        .field-body {
+          flex: 1;
+          max-width: 58rem;
+          display: flex;
+          flex-direction: column;
+
+          > .select-display-wrapper > .dropdown-menu {
+            top: 4rem;
+          }
+        }
+
+        input {
+          height: 3.8rem;
+        }
+
+        &.dropdown.multi-select.select-empty {
+          .select-display {
+            height: 4rem;
+          }
+        }
+        &.jn-select.dropdown.multi-select {
+          .select-display-wrapper {
+            padding-bottom: 0;
+          }
+          .selected-wrapper {
+            align-items: center;
+          }
+        }
+      }
+
+      .jn-work-location {
+        > label {
+          flex: none;
+          width: 20rem;
+        }
+        .location-item {
+          max-width: 58rem;
+          .field-wrapper {
+            flex: none;
+          }
+        }
+
+        .field-body .location-item a {
+          font-size: 2rem;
+        }
+      }
+
+      .jn-btn__yellow {
+        margin-top: 2.4rem;
+        margin-left: 20rem;
+        width: 18.6rem;
+
+        a {
+          padding: 0;
+          line-height: 4rem;
+          font-size: 1.4rem;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .edit-footer-wrapper {
+    display: flex;
+    margin-top: 2rem;
+    padding-left: 21.3rem;
+
+    .jn-btn {
+      a {
+        padding: 0 4rem;
+        line-height: 4rem;
+      }
+
+      &.jn-btn__normal {
+        background-color: #e3e3e3;
+        margin-left: 1.5rem;
+        a {
+          color: #4a4a4a;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}

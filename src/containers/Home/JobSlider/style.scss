@@ -1,0 +1,32 @@
+.job-slider-block {
+  padding-bottom: 25px;
+
+  .slide-group-items {
+    display: flex;
+    flex-wrap: wrap;
+
+    .slide-item-wrapper {
+      width: 50%;
+    }
+  }
+  .slick-dots {
+    li {
+      button {
+        &:before {
+          color: #e3e3e3;
+          font-size: 12px;
+          opacity: 1;
+        }
+      }
+
+      &.slick-active {
+        button {
+          &:before {
+            color: #fc5830;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
