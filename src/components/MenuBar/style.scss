@@ -53,6 +53,9 @@
               font-weight: 300;
               color: #9b9b9b;
               max-width: 20rem;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
               
               span {
                 margin-right: .5rem;

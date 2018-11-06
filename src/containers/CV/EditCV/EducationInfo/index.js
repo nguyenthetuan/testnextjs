@@ -122,6 +122,7 @@ class EducationInfo extends Base {
               data={editData}
               resume_id={this.props.resumeID}
               showFooter={false}
+              updateMode
               info={this.props.info}
               constants={this.props.constants}
               onSuccess={response => {

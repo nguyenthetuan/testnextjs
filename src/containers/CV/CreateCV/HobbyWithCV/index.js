@@ -178,7 +178,7 @@ class HobbyWithCV extends Base {
       label: opt.title,
       value: opt._id
     }));
-    const { salary, type, experience } = this.props.constants.jobs || {};
+    const { salary, experience } = this.props.constants.jobs || {};
 
     const salaryOpts = Object.keys(salary || {}).map(opt => ({
       label: salary[opt],
@@ -189,8 +189,10 @@ class HobbyWithCV extends Base {
       label: this.props.constants.jobs.rank[opt],
       value: opt
     }));
-    const typeOptions = Object.keys(type || {}).map(opt => ({
-      label: type[opt],
+
+    const { resume_type } = this.props.constants.resumes || {};
+    const typeOptions = Object.keys(resume_type || {}).map(opt => ({
+      label: resume_type[opt],
       value: opt
     }));
     const expOptions = Object.keys(experience || {}).map(opt => ({
