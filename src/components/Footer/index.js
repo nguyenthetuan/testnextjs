@@ -98,7 +98,7 @@ export default class Footer extends Base {
           </div>
           <div className="col">
             <div className="col-title">{this.t('Tải ứng dụng')}</div>
-            <a className="col-content apps" href="https://hr.jobnow.com.vn/info/ung-dung-mobile/" target="_blank" rel="noopener noreferrer">
+            <a className="col-content apps" href="https://hr.jobnow.com.vn/app" target="_blank" rel="noopener noreferrer">
               <div className="qr-img">
                 <img src="/assets/img/qr-code.png" alt="" />
               </div>
