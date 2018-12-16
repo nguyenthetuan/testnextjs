@@ -105,7 +105,7 @@ class AdvanceSearchPopup extends Base {
     }
 
     this.props.history.push({
-      pathname: '/search',
+      pathname: '/tim-kiem',
       search: queries.length ? `?${queries.join('&')}` : '',
       state: { resetQueryURL: queries.length === 0 }
     });

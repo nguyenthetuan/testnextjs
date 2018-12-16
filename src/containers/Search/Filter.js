@@ -2,8 +2,32 @@ import React from 'react';
 import { Base, Select } from '../../components';
 
 export default class Filter extends Base {
+  _onSelectChange = (name, value) => {
+    this.props.onChange({ [name]: (value[0].value !== null && value) || [] });
+  };
+
+  _addDefaultOpt = opts => {
+    return [{ value: null, label: this.t('Tất cả') }, ...opts];
+  };
+
+  _updateLabel = (value, opts) => {
+    if (value[0] && !value[0].label) {
+      let itemLabel = '';
+      for (let i = 0; i < opts.length; i++) {
+        if (opts[i].value === value[0].value) {
+          itemLabel = opts[i].label;
+          break;
+        }
+      }
+
+      return [{ value: value[0].value, label: itemLabel }];
+    }
+
+    return value;
+  };
+
   render() {
-    const { categories, salary, experience, level, type, constants, sort, sortOpts, categoryOpts } = this.props;
+    const { categories, salary, experience, level, type, constants, sort, sortOpts, categoryOpts, provinces, selectedProvince } = this.props;
     const catOpts = categoryOpts.map(cat => ({ value: cat._id, label: cat.title }));
     const salaryOpts = Object.keys(constants.salary || {}).map(key => ({
       value: key,
@@ -23,55 +47,64 @@ export default class Filter extends Base {
       value: key,
       label: constants.type[key]
     }));
+    const provinceOpts = provinces.map(province => ({ label: province.city, value: province.city }));
 
     return (
       <div className="filters-wrapper">
         <Select
           placeholder={this.t('Chọn ngành nghề')}
-          options={catOpts}
+          options={this._addDefaultOpt(catOpts)}
           value={categories}
           onChange={value => {
-            this.props.onChange({ categories: value });
+            this._onSelectChange('categories', value);
+          }}
+        />
+        <Select
+          placeholder={this.t('Chọn địa điểm')}
+          options={this._addDefaultOpt(provinceOpts)}
+          value={selectedProvince}
+          onChange={value => {
+            this._onSelectChange('province', value);
           }}
         />
         <Select
           placeholder={this.t('Chọn mức lương')}
-          options={salaryOpts}
-          value={salary}
+          options={this._addDefaultOpt(salaryOpts)}
+          value={this._updateLabel(salary, salaryOpts)}
           onChange={value => {
-            this.props.onChange({ salary: value });
+            this._onSelectChange('salary', value);
           }}
         />
         <Select
           placeholder={this.t('Chọn cấp bậc')}
-          options={levelOpts}
-          value={level}
+          options={this._addDefaultOpt(levelOpts)}
+          value={this._updateLabel(level, levelOpts)}
           onChange={value => {
-            this.props.onChange({ level: value });
+            this._onSelectChange('level', value);
           }}
         />
         <Select
           placeholder={this.t('Chọn kinh nghiệm')}
-          options={expOpts}
-          value={experience}
+          options={this._addDefaultOpt(expOpts)}
+          value={this._updateLabel(experience, expOpts)}
           onChange={value => {
-            this.props.onChange({ experience: value });
+            this._onSelectChange('experience', value);
           }}
         />
         <Select
           placeholder={this.t('Chọn hình thức làm việc')}
-          options={typeOpts}
-          value={type}
+          options={this._addDefaultOpt(typeOpts)}
+          value={this._updateLabel(type, typeOpts)}
           onChange={value => {
-            this.props.onChange({ type: value });
+            this._onSelectChange('type', value);
           }}
         />
         <Select
           placeholder={this.t('Sắp xếp kết quả')}
-          options={sortOpts}
-          value={sort}
+          options={this._addDefaultOpt(sortOpts)}
+          value={this._updateLabel(sort, sortOpts)}
           onChange={value => {
-            this.props.onChange({ sort: value });
+            this._onSelectChange('sort', value);
           }}
         />
         <div className="clear-filters">
@@ -87,7 +120,8 @@ export default class Filter extends Base {
                   level: [],
                   experience: [],
                   type: [],
-                  sort: []
+                  sort: [],
+                  province: []
                 },
                 true
               );

@@ -1,6 +1,6 @@
 /*
  * File: undefined
- * Desc: 
+ * Desc:
  * Author: DuyNg (duy@megadrupal.com)
  * Created: 2018-08-26 22:54:55
  */
@@ -102,7 +102,7 @@ class TopBlock extends Base {
 
           <div className="job-types">
             <div className="col cat-jobs">
-              <a className="item-wrapper" href="/jobs/by-categories" title={this.t('Việc làm theo ngành nghề')}>
+              <a className="item-wrapper" href="/viec-lam/tim-viec-lam" title={this.t('Việc làm theo ngành nghề')}>
                 <div className="icon-wrapper">
                   <i className="icon-briefcase" />
                 </div>
@@ -110,7 +110,7 @@ class TopBlock extends Base {
               </a>
             </div>
             <div className="col loc-jobs">
-              <a className="item-wrapper" href="/jobs/by-provinces" title={this.t('Việc làm theo địa điểm')}>
+              <a className="item-wrapper" href="/viec-lam/tim-viec-lam-theo-dia-diem" title={this.t('Việc làm theo địa điểm')}>
                 <div className="icon-wrapper">
                   <i className="icon-location-pin" />
                 </div>
@@ -118,7 +118,7 @@ class TopBlock extends Base {
               </a>
             </div>
             <div className="col nearest-jobs">
-              <a className="item-wrapper" href="/search?sort=distance">
+              <a className="item-wrapper" href="/viec-lam/tim-viec-gan-nha">
                 <div className="icon-wrapper">
                   <i className="icon-map" />
                 </div>
@@ -126,7 +126,7 @@ class TopBlock extends Base {
               </a>
             </div>
             <div className="col hot-jobs">
-              <a className="item-wrapper" href="/search?salary=3">
+              <a className="item-wrapper" href="/viec-lam/viec-lam-hap-dan">
                 <div className="icon-wrapper">
                   <i className="icon-fire" />
                 </div>
@@ -134,7 +134,7 @@ class TopBlock extends Base {
               </a>
             </div>
             <div className="col fast-jobs">
-              <a className="item-wrapper" href="/jobs/apply-now" title={this.t('Việc làm tuyển gấp')}>
+              <a className="item-wrapper" href="/viec-lam/viec-lam-tuyen-gap" title={this.t('Việc làm tuyển gấp')}>
                 <div className="icon-wrapper">
                   <i className="icon-rocket" />
                 </div>
@@ -142,7 +142,7 @@ class TopBlock extends Base {
               </a>
             </div>
             <div className="col new-jobs">
-              <a className="item-wrapper" href="/search?sort=latest">
+              <a className="item-wrapper" href="/viec-lam/viec-lam-moi-nhat">
                 <div className="icon-wrapper">
                   <i className="icon-tag" />
                 </div>

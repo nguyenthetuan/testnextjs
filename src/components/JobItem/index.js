@@ -41,7 +41,7 @@ class JobItem extends Base {
 
     if (linkWrapper) {
       return (
-        <a className={wrapperClasses.join(' ')} href={`/job/${slug || _id}`} style={style}>
+        <a className={wrapperClasses.join(' ')} href={`/viec-lam/${slug || _id}`} style={style}>
           {!showJobInfoOnly && <div className="company-logo">{data && <CompanyLogo src={logo} displayFull={flashJob} />}</div>}
           <div className="info-wrapper">
             <div className="job-info">
@@ -50,29 +50,28 @@ class JobItem extends Base {
                 <span>{company && company.name}</span>
               </div>
             </div>
-            {data &&
-              !showJobInfoOnly && (
-                <div className={`extra-info${(flashJob && ' has-slot-number') || ''}`}>
-                  {location && (
-                    <div className="location">
-                      <span className="icon-jn-map-marker" />
-                      <span className="distance">{location}</span>
-                    </div>
-                  )}
-                  <div className="salary">
-                    <span className="icon-jn-dollar" />
-                    <span className="salary-level">{salaryLevel.replace(/^(Từ\s?)/g, '')}</span>
+            {data && !showJobInfoOnly && (
+              <div className={`extra-info${(flashJob && ' has-slot-number') || ''}`}>
+                {location && (
+                  <div className="location">
+                    <span className="icon-jn-map-marker" />
+                    <span className="distance">{location}</span>
                   </div>
-
-                  {flashJob && (
-                    <div className="slot-number-wrapper">
-                      <span className="jn-awesome-user-o" />
-                      <span className="text">{this.t('còn tuyển')}</span>
-                      <span className="number">{quantity || 0}</span>
-                    </div>
-                  )}
+                )}
+                <div className="salary">
+                  <span className="icon-jn-dollar" />
+                  <span className="salary-level">{salaryLevel.replace(/^(Từ\s?)/g, '')}</span>
                 </div>
-              )}
+
+                {flashJob && (
+                  <div className="slot-number-wrapper">
+                    <span className="jn-awesome-user-o" />
+                    <span className="text">{this.t('còn tuyển')}</span>
+                    <span className="number">{quantity || 0}</span>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         </a>
       );
@@ -85,53 +84,51 @@ class JobItem extends Base {
         {!showJobInfoOnly && <div className="company-logo">{data && <img src={logo} alt="" />}</div>}
         <div className="info-wrapper">
           <div className="job-info">
-            <a href={`/job/${slug || _id}`}>
+            <a href={`/viec-lam/${slug || _id}`}>
               <div className="job-title">{title}</div>
               <div className="company-name">
                 <span>{company && company.name}</span>
               </div>
             </a>
           </div>
-          {data &&
-            !showJobInfoOnly && (
-              <div className="extra-info">
-                {!flashJob &&
-                  location && (
-                    <div className="location">
-                      <span className="icon-jn-map-marker" />
-                      <span className="distance">{location}</span>
-                    </div>
-                  )}
-                {!flashJob && (
+          {data && !showJobInfoOnly && (
+            <div className="extra-info">
+              {!flashJob && location && (
+                <div className="location">
+                  <span className="icon-jn-map-marker" />
+                  <span className="distance">{location}</span>
+                </div>
+              )}
+              {!flashJob && (
+                <div className="salary">
+                  <span className="icon-jn-dollar" />
+                  <span className="salary-level">{salaryLevel.replace(/^(Từ\s?)/g, '')}</span>
+                </div>
+              )}
+              {flashJob && (
+                <div className="ex-info-wrapper">
+                  <div className="location">
+                    <span className="icon-jn-map-marker" />
+                    <span className="distance">{location}</span>
+                  </div>
                   <div className="salary">
                     <span className="icon-jn-dollar" />
                     <span className="salary-level">{salaryLevel.replace(/^(Từ\s?)/g, '')}</span>
                   </div>
-                )}
-                {flashJob && (
-                  <div className="ex-info-wrapper">
-                    <div className="location">
-                      <span className="icon-jn-map-marker" />
-                      <span className="distance">{location}</span>
-                    </div>
-                    <div className="salary">
-                      <span className="icon-jn-dollar" />
-                      <span className="salary-level">{salaryLevel.replace(/^(Từ\s?)/g, '')}</span>
-                    </div>
-                    <div className="slot-number-wrapper">
-                      <span className="jn-awesome-user-o" />
-                      <span className="text">{this.t('còn tuyển')}</span>
-                      <span className="number">{quantity || 0}</span>
-                    </div>
+                  <div className="slot-number-wrapper">
+                    <span className="jn-awesome-user-o" />
+                    <span className="text">{this.t('còn tuyển')}</span>
+                    <span className="number">{quantity || 0}</span>
                   </div>
-                )}
-                {flashJob && (
-                  <div className="button-wrapper">
-                    <Button className="jn-btn__yellow">{this.t('Xem ngay')}</Button>
-                  </div>
-                )}
-              </div>
-            )}
+                </div>
+              )}
+              {flashJob && (
+                <div className="button-wrapper">
+                  <Button className="jn-btn__yellow">{this.t('Xem ngay')}</Button>
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </div>
     );

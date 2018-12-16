@@ -1,14 +1,17 @@
 /*
  * File: undefined
- * Desc: 
+ * Desc:
  * Author: DuyNg (duy@megadrupal.com)
  * Created: 2018-08-31 08:16:25
  */
 import React from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
+import Helmet from 'react-helmet';
 import { Base, Countdown, JobItem, Loading, Input } from '../../components';
+import SEOConfig from '../../constants/SEOConfig.json';
 import { jobApi } from '../../services';
+import { convertViCharToEngChar } from '../../utils/commonFunctions';
 import createPage from '../createPage';
 import './style.scss';
 
@@ -17,10 +20,10 @@ class JobsTypePage extends Base {
 
   constructor(props) {
     super(props);
-    this._filter = props.match.params.type;
+    this._filter = props.match.params.id;
     this.state = {
       loading: true,
-      data: null,
+      data: {},
       message: null,
       filterText: ''
     };
@@ -44,7 +47,7 @@ class JobsTypePage extends Base {
     let response;
 
     switch (this._filter) {
-      case 'apply-now':
+      case 'flash-jobs':
         response = await jobApi.fetchMaketingJobs();
         if (response && response.code === undefined && response.result === undefined) {
           this.setState({ data: response, loading: false });
@@ -53,7 +56,7 @@ class JobsTypePage extends Base {
         }
         break;
 
-      case 'by-provinces':
+      case 'tim-viec-lam-theo-dia-diem':
         response = await jobApi.fetchJobsByLocation();
         if (response && response.code === undefined && response.result === undefined) {
           this.setState({ data: response.cities, loading: false });
@@ -62,7 +65,7 @@ class JobsTypePage extends Base {
         }
         break;
 
-      case 'by-categories':
+      case 'tim-viec-lam':
         response = await jobApi.fetchJobsByCategory();
         if (response && response.code === undefined && response.result === undefined) {
           this.setState({ data: response.categories, loading: false });
@@ -76,16 +79,15 @@ class JobsTypePage extends Base {
     }
   };
 
-  _renderMaketingJobs = () => {
+  _renderMaketingJobs = seoContent => {
     const { data } = this.state;
     const jobs = (data && data.marketing_jobs) || [];
     const countdown = (data && data.countDown) || {};
-    const banner =
-      (data && data.banner) ||
-      'https://jobnow-data.s3.amazonaws.com/events/5bb1da8e6dc9fc7556fc403e/NiyfkDgCDom1MNSCTPBcRbPM1t58amoXK0rwEDpZKquRSbapvUYiZr2rXkFD8OCcFLASH-02-02-02-02.jpg?AWSAccessKeyId=AKIAI4KHS3W3CLBRJEUQ&Expires=1539049671&Signature=PkoLHOiYteqnbWmGqjgdH4cFTAY%3D';
+    const banner = (data && data.banner) || false;
 
     return (
       <div className="main-content block-wrapper marketing-jobs">
+        {seoContent}
         <div className="title">
           <div className="main-title">
             <span className="jn-awesome-bolt" />
@@ -111,7 +113,7 @@ class JobsTypePage extends Base {
   };
 
   _formatItemData = item => {
-    if (this._filter === 'by-provinces') {
+    if (this._filter === 'tim-viec-lam-theo-dia-diem') {
       return item;
     }
 
@@ -120,35 +122,41 @@ class JobsTypePage extends Base {
 
   _renderPageContent = () => {
     const { loading, data, filterText } = this.state;
+
+    // return null if is loading
     if (loading) return null;
 
-    if (this._filter === 'apply-now') return this._renderMaketingJobs();
+    const { pathname } = this.props.location;
+    const otherSEOMap = {};
+    SEOConfig.others.map(item => {
+      otherSEOMap[item.url] = item;
+    });
+    const pageSEOConf = otherSEOMap[pathname.trim().replace('/viec-lam/', '')];
+    const seoContent = (
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{pageSEOConf.title}</title>
+        <meta name="description" content={pageSEOConf.description} />
+      </Helmet>
+    );
 
-    // render page with list style
-    let blockTitle;
-    switch (this._filter) {
-      case 'by-provinces':
-        blockTitle = 'Việc làm theo tỉnh thành';
-        break;
-
-      case 'by-categories':
-        blockTitle = 'Việc làm theo ngành nghề';
-
-        break;
-
-      default:
-        break;
-    }
+    if (this._filter === 'flash-jobs') return this._renderMaketingJobs(seoContent);
 
     let renderData = [...data];
     if (filterText) {
       renderData = renderData.filter(item => item.title.indexOf(filterText) > -1);
     }
 
+    const categoriesSEOData = {};
+    SEOConfig.categories.map(cat => {
+      categoriesSEOData[cat.id] = cat;
+    });
+
     return (
       <div className="main-content list-style">
+        {seoContent}
         <div className="block-header">
-          <div className="title">{this.t(blockTitle)}</div>
+          {this._filter !== 'flash-jobs' && <div className="title">{this.t(pageSEOConf.heading)}</div>}
           <div className="filter-wrapper">
             <span className="icon-magnifier" />
             <Input
@@ -163,9 +171,22 @@ class JobsTypePage extends Base {
         </div>
         <div className="block-content">
           {renderData.map((item, index) => {
-            const queryString = (this._filter === 'by-categories' && `categories[]=${item._id}`) || `province=${item.title}`;
+            const queryString = (this._filter === 'tim-viec-lam' && `categories[]=${item._id}`) || `province=${item.title}`;
+            if (this._filter === 'tim-viec-lam') {
+              return (
+                <a
+                  href={(categoriesSEOData[item._id] && categoriesSEOData[item._id].url && `/${categoriesSEOData[item._id].url}`) || `/tim-kiem?${queryString}`}
+                  className={`list-item${item.highlight ? ' hot-item' : ''}`}
+                  key={`list-job-item-${index}`}
+                >
+                  <span className="item-title">{item.title}</span>
+                  <span className="item-count">({item.count})</span>
+                </a>
+              );
+            }
+
             return (
-              <a href={`/search?${queryString}`} className={`list-item${item.highlight ? ' hot-item' : ''}`} key={`list-job-item-${index}`}>
+              <a href={`/viec-lam-tai-${convertViCharToEngChar(item.title)}`} className={`list-item${item.highlight ? ' hot-item' : ''}`} key={`list-job-item-${index}`}>
                 <span className="item-title">{item.title}</span>
                 <span className="item-count">({item.count})</span>
               </a>
@@ -177,7 +198,7 @@ class JobsTypePage extends Base {
   };
 
   render() {
-    if (['apply-now', 'by-provinces', 'by-categories'].indexOf(this._filter.trim()) === -1) {
+    if (['flash-jobs', 'tim-viec-lam-theo-dia-diem', 'tim-viec-lam'].indexOf(this._filter.trim()) === -1) {
       return <Redirect to="/404" />;
     }
     const { loading } = this.state;

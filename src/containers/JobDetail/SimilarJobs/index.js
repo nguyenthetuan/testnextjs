@@ -32,7 +32,7 @@ export default class SimilarJobs extends Base {
                 )
               }}
             />
-            <a href={`/search${similarCategory && `?categories[]=${similarCategory._id}`}`}>{this.t('Bấm xem ngay !')}</a>
+            <a href={`/tim-kiem${similarCategory && `?categories[]=${similarCategory._id}`}`}>{this.t('Bấm xem ngay !')}</a>
           </div>
         </div>
       </div>

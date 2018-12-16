@@ -103,6 +103,14 @@
         width: 60%;
         margin-top: 7.8rem;
 
+        .page-title {
+          margin: 1.6rem 1rem 1.6rem 3rem;
+          font-size: 1.8rem;
+          color: #fc5830;
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+
         .pagination-wrap {
           display: flex;
           justify-content: center;
@@ -182,7 +190,7 @@
                 width: 10rem;
               }
               .job-info {
-                flex: 1
+                flex: 1;
               }
               &:last-child {
                 border-bottom: none;
