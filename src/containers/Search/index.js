@@ -227,7 +227,7 @@ class SearchPage extends Base {
 
     const queryString = [];
     Object.keys(queryObj).map(key => {
-      if (key !== 'categories[]' && key !== 'province') {
+      if (key !== 'categories[]' && key !== 'province' && queryMap[key]) {
         queryString.push(`${queryMap[key]}${queryObj[key]}`);
       }
     });
