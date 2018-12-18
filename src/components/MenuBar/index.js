@@ -98,7 +98,7 @@ class MenuBar extends Base {
       queries.push(`province=${text}`);
     }
     this.props.history.push({
-      pathname: '/search',
+      pathname: '/tim-kiem',
       search: `?${queries.join('&')}`
     });
   };

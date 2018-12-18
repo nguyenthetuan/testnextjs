@@ -124,7 +124,7 @@ class JobListContainer extends Component {
     location = km ? `${km}km` : location;
 
     return (
-      <Link to={`/job/${item.slug || item._id}`} className="job-suitable-item">
+      <Link to={`/viec-lam/${item.slug || item._id}`} className="job-suitable-item">
         <div className="col col-avatar">
           <img src={(company && company.logo) || '/assets/img/logo-full.png'} alt="" />
         </div>
@@ -164,7 +164,7 @@ class JobListContainer extends Component {
     }
     location = km ? `${km}km` : location;
     return (
-      <Link to={`/job/${item.slug || item._id}`} className="job-suitable-item">
+      <Link to={`/viec-lam/${item.slug || item._id}`} className="job-suitable-item">
         <div className="col col-avatar">
           <img src={(company && company.logo) || '/assets/img/logo-full.png'} alt="" />
         </div>
@@ -208,7 +208,7 @@ class JobListContainer extends Component {
     }
     location = km ? `${km}km` : location;
     return (
-      <Link to={`/job/${item.slug || item._id}`} className="job-suitable-item">
+      <Link to={`/viec-lam/${item.slug || item._id}`} className="job-suitable-item">
         <div className="col col-avatar">
           <img src={(company && company.logo) || '/assets/img/logo-full.png'} alt="" />
         </div>

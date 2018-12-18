@@ -31,7 +31,7 @@ class CandidateItem extends Base {
         <div className="col other-info">
           <span className="job-info">
             <div className="job-title">{job.title}</div>
-            <Link to={`/job/${job.slug || job._id}`}>{this.t('Xem tin')}</Link>
+            <Link to={`/viec-lam/${job.slug || job._id}`}>{this.t('Xem tin')}</Link>
           </span>
         </div>
         <div className="col other-info">

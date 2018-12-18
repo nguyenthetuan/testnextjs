@@ -1,7 +1,7 @@
 /*
- * @Author: CuongHx 
- * @Date: 2018-07-08 17:43:28 
- * @Last Modified by: 
+ * @Author: CuongHx
+ * @Date: 2018-07-08 17:43:28
+ * @Last Modified by:
  * @Last Modified time: 2018-09-11 23:44:48
  */
 import React from 'react';
@@ -24,6 +24,7 @@ import {
   CreateCVPage,
   ZaloRedirectPage
 } from '../containers';
+import SEOConf from './SEOConfig.json';
 
 export default {
   notfound: { path: '/404', component: NotFoundPage },
@@ -33,14 +34,17 @@ export default {
     exact: true,
     title: 'Trang chủ'
   },
-  jobsType: {
-    path: '/jobs/:type',
-    component: JobsTypePage,
-    title: 'Việc làm'
-  },
   jobDetail: {
-    path: '/job/:id',
-    component: JobDetailPage,
+    path: '/viec-lam/:id',
+    component: props => {
+      const { id } = props.match.params;
+      const types = ['tim-viec-lam-theo-dia-diem', 'tim-viec-lam', 'flash-jobs'];
+      if (id && types.indexOf(id.trim()) > -1) return JobsTypePage;
+
+      if (id && ['viec-lam-moi-nhat', 'tim-viec-gan-nha', 'viec-lam-hap-dan', 'viec-lam-tuyen-gap'].indexOf(id.trim()) > -1) return SearchPage;
+      return JobDetailPage;
+    },
+    componentFunction: true,
     exact: true
   },
   jobs: {
@@ -127,9 +131,40 @@ export default {
   },
   search: {
     title: 'Tìm kiếm công việc',
-    path: '/search',
+    path: '/tim-kiem',
     component: SearchPage,
     exact: true
+  },
+  jobByCatgory: {
+    title: 'Tìm kiếm công việc',
+    path: '/viec-lam:slug',
+    component: SearchPage,
+    exact: true,
+    extraMatch: props => {
+      const { match } = props;
+      const mapSEOConf = {};
+      SEOConf.categories.map(catx => {
+        mapSEOConf[catx.url] = catx;
+      });
+      const { slug } = match.params;
+      let matchCategory;
+      let matchProvince;
+      let othersMatch;
+
+      if (slug.indexOf('-tai-') > -1) {
+        const slugArr = slug.split('--');
+        const matches = slugArr[0].match(/([a-z-]+)?-tai-([a-z-]+)/);
+        if (matches) {
+          matchCategory = matches[1];
+          matchProvince = matches[2];
+          othersMatch = slugArr[1];
+        }
+      } else {
+        matchCategory = slug.trim();
+      }
+
+      return { matchCategory, matchProvince, othersMatch };
+    }
   },
   printCVPage: {
     title: 'Tìm kiếm công việc',

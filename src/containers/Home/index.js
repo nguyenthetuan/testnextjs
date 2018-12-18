@@ -1,6 +1,6 @@
 /*
  * File: undefined
- * Desc: 
+ * Desc:
  * Author: DuyNg (duy@megadrupal.com)
  * Created: 2018-08-26 12:12:07
  */
@@ -166,7 +166,7 @@ class HomePage extends Base {
           <div className="title">{title}</div>
           <div className="block-content">
             <div className="view-all-marketing-jobs">
-              <a href="/jobs/apply-now">
+              <a href="/viec-lam/flash-jobs">
                 <span>{this.t('Xem tất cả')}</span>
                 <span className="icon-arrow-right" />
               </a>
@@ -187,7 +187,7 @@ class HomePage extends Base {
       flashJob: true,
       top: (
         <div className="view-all-marketing-jobs">
-          <a href="/jobs/apply-now">
+          <a href="/viec-lam/flash-jobs">
             <span>{this.t('Xem tất cả')}</span>
             <span className="icon-arrow-right" />
           </a>
@@ -283,7 +283,7 @@ class HomePage extends Base {
     const attractiveJobs = {
       message: data && data.attractiveJobs.count !== undefined && this.t('XEM THÊM CÁC VIỆC LÀM HẤP DẪN'),
       jobs: (data && data.attractiveJobs.jobs) || [],
-      redirectURL: '/search?salary=3',
+      redirectURL: '/viec-lam/viec-lam-hap-dan',
       title: this.t('Việc làm hấp dẫn'),
       groupSize: this.state.isMobileMode ? 6 : 12,
       itemsPerLine: this.state.isMobileMode ? 1 : 2
@@ -292,7 +292,7 @@ class HomePage extends Base {
     const fastJobs = {
       message: data && data.featuredJobs.count !== undefined && this.t('XEM THÊM CÁC VIỆC LÀM TUYỂN GẤP'),
       jobs: (data && data.featuredJobs.jobs) || [],
-      redirectURL: '/search?sort=featured',
+      redirectURL: '/viec-lam/viec-lam-tuyen-gap',
       title: this.t('Việc làm tuyển gấp'),
       groupSize: this.state.isMobileMode ? 6 : 18,
       itemsPerLine: this.state.isMobileMode ? 1 : 3
@@ -301,7 +301,7 @@ class HomePage extends Base {
     const latestJob = {
       message: data && data.latestJobs.count !== undefined && this.t('XEM THÊM CÁC VIỆC LÀM MỚI NGÀY %date.'.replace('%number', data.latestJobs.count).replace('%date', Moment().format('DD/MM/YY'))),
       jobs: (data && data.latestJobs.jobs) || [],
-      redirectURL: '/search?sort=latest',
+      redirectURL: '/viec-lam/viec-lam-moi-nhat',
       title: this.t('Việc làm mới nhất'),
       groupSize: this.state.isMobileMode ? 6 : 18,
       itemsPerLine: this.state.isMobileMode ? 1 : 3,
