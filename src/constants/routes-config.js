@@ -160,7 +160,9 @@ export default {
           othersMatch = slugArr[1];
         }
       } else {
-        matchCategory = slug.trim();
+        const slugArr = slug.split('--');
+        matchCategory = slugArr[0].trim();
+        if (slugArr[1]) othersMatch = slugArr[1].trim();
       }
 
       return { matchCategory, matchProvince, othersMatch };
