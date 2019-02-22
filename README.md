@@ -1,3 +1,3 @@
-# JobNowEmployer
+# JobNow Candidate
 
-Nhà tuyển dụng cho JobNow
+Ứng 
