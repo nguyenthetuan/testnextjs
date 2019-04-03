@@ -1,8 +1,8 @@
 /*
- * @Author: CuongHx 
- * @Desc: Base API 
- * @Date: 2018-07-11 11:04:29 
- * @Last Modified by: 
+ * @Author: CuongHx
+ * @Desc: Base API
+ * @Date: 2018-07-11 11:04:29
+ * @Last Modified by:
  * @Last Modified time: 2018-09-11 20:29:12
  */
 
@@ -92,7 +92,6 @@ class _api {
       method: 'GET',
       url,
       headers: { ...this.headers, ...headers },
-      timeout: 3600
     };
     return this.request(opts, cbSuccess, cbError);
   };
