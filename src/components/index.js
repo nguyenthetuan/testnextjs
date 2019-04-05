@@ -34,6 +34,7 @@ import ImagePicker from './ImagePicker';
 import SearchInput from './SearchInput';
 import Image from './Image';
 import Pagination from './Pagination';
+import LangPopup from './LangPopup';
 
 export {
   Base,
@@ -63,5 +64,6 @@ export {
   ApplyPopup,
   ImagePicker,
   SearchInput,
-  Pagination
+  Pagination,
+  LangPopup,
 };

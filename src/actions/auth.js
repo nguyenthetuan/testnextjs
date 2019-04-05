@@ -22,7 +22,9 @@ import {
   DELETE_RESUME_SUCCESS,
   CHANGE_RESUME_SEARCHING_STATUS,
   CHANGE_RESUME_SEARCHING_STATUS_FAILED,
-  CHANGE_RESUME_SEARCHING_STATUS_SUCCESS
+  CHANGE_RESUME_SEARCHING_STATUS_SUCCESS,
+  SHOW_LANGUAGE,
+  HIDE_LANGUAGE
 } from './types';
 
 export const login = (email, password, rememberPassword) => {
@@ -82,6 +84,19 @@ export const showAuthPopup = (form = 'login', data = null) => {
 export const hideAuthPopup = () => {
   return {
     type: HIDE_AUTH_POPUP
+  };
+};
+
+export const showLanguage = (form = 'language', data = null) => {
+  return {
+    type: SHOW_LANGUAGE,
+    payload: { form, data }
+  };
+};
+
+export const hideLanguage = () => {
+  return {
+    type: HIDE_LANGUAGE
   };
 };
 

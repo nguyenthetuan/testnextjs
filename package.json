@@ -47,6 +47,7 @@
     "react-google-login": "^3.2.1",
     "react-google-maps": "^9.4.5",
     "react-helmet": "^5.2.0",
+    "react-localization": "^1.0.13",
     "react-paginate": "^5.2.4",
     "react-pdf": "^3.0.5",
     "react-redux": "^5.0.7",
