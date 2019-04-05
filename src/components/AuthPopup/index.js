@@ -304,12 +304,6 @@ class AuthPopup extends Base {
       <div className="login-form-container">
         <div className="header">{this.t('Đăng nhập vào JobNow')}</div>
         <div className="socials-wrapper">
-          <Button className="jn-btn__normal zalo-login" onClick={this._zaloLogin}>
-            <div className="icon-image zalo-icon">
-              <img src="/assets/img/zalo-icon.png" alt="" />
-            </div>
-            <div className="title">{this.t('Tiếp tục với Zalo')}</div>
-          </Button>
           <FacebookLogin
             appId={FB_APP_ID}
             callback={this._loginByFacebook}
