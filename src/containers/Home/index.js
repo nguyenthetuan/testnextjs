@@ -324,7 +324,10 @@ class HomePage extends Base {
 
 export default createPage(
   connect(
-    state => ({ location: state.auth.currentLocation }),
+    state => ({
+      location: state.auth.currentLocation,
+      constants: state.constants,
+    }),
     { updateLocation, showAuthPopup }
   )(HomePage)
 );

@@ -7,12 +7,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import _ from 'lodash';
 import Base from '../Base';
 import Loading from '../Loading';
 import Popup from '../Popup';
 import MobileMenu from './MobileMenu';
 import { fetchNotifications } from '../../actions/notification';
-import { signOut, showAuthPopup } from '../../actions/auth';
+import { signOut, showAuthPopup, showLanguage } from '../../actions/auth';
+import { getLanguage } from '../../utils/localData';
+import language from '../../config/language/index';
 
 class RightMenu extends Base {
   constructor(props) {
@@ -182,6 +185,46 @@ class RightMenu extends Base {
             </li>
           ))}
         </ul> */}
+      </li>
+    );
+  };
+
+  _renderFlag = () => {
+    let src = '';
+    let l = _.isEmpty(getLanguage()) ? language._language : getLanguage().language;
+    switch (l) {
+      case 'en': {
+        src = '/assets/img/flagEnglish.png';
+        break;
+      }
+      case 'vi': {
+        src = '/assets/img/vietnam.png';
+        break;
+      }
+      case 'jp': {
+        src = '/assets/img/flagJapan.jpg';
+        break;
+      }
+      default:
+        break;
+    }
+    return src;
+  };
+
+  _renderLanguageMenu = () => {
+    return (
+      <li className="dropdown candidate-menu">
+        <a
+          href="#"
+          onClick={event => {
+            event.preventDefault();
+            this.props.showLanguage();
+          }}
+        >
+          <div className="flag">
+            <img src={this._renderFlag()} alt="" />
+          </div>
+        </a>
       </li>
     );
   };
@@ -453,6 +496,7 @@ class RightMenu extends Base {
           {isLoggedIn && this._renderNotificationMenu()}
           {isLoggedIn && !mobileMode && this._renderApplicationMenu()}
           {isLoggedIn && !mobileMode && this._renderAccountMenu()}
+          {this._renderLanguageMenu()}
           {mobileMode &&
             !isLoggedIn && (
               <li className="candidate-mobile-menu">
@@ -512,6 +556,6 @@ const mapStateToProps = state => {
 export default withRouter(
   connect(
     mapStateToProps,
-    { signOut, showAuthPopup, fetchNotifications }
+    { signOut, showAuthPopup, fetchNotifications, showLanguage }
   )(RightMenu)
 );
