@@ -1,0 +1,149 @@
+.language-pop-wrapper {
+
+  .modal-dialog {
+    width: 45rem;
+  }
+  .test {
+    margin-top: 20rem;
+  }
+  .modal-body {
+    margin-top: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2.4rem 3.6rem;
+
+    .close-btn {
+      display: inline;
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+
+      a {
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: #9b9b9b;
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: #fc5830;
+        }
+      }
+    }
+
+    .header {
+      height: 2.4rem;
+      font-family: Roboto;
+      font-size: 2rem;
+      font-weight: bold;
+      line-height: 2.4rem;
+      color: #4a4a4a;
+      text-align: center;
+    }
+
+    .success-message {
+      text-align: center;
+      line-height: 2.5rem;
+      font-size: 1.8rem;
+      color: #4a4a4a;
+
+      span {
+        width: 2.5rem;
+        height: 2.5rem;
+        border: 0.1rem solid #1ebea5;
+        border-radius: 1.3rem;
+        display: inline-block;
+        text-align: center;
+        line-height: 2.5rem;
+        margin-right: 0.8rem;
+      }
+    }
+
+    .socials-wrapper {
+      .jn-btn {
+        position: relative;
+        margin: 1.5rem 0;
+        a {
+          align-items: center;
+          display: flex;
+          padding: 0;
+          height: 4rem;
+
+          .title {
+            text-transform: none;
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-align: center;
+            color: #ffffff;
+            flex: 1;
+          }
+
+          .text {
+            text-transform: none;
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-align: left;
+            margin-left: 5rem;
+            color: #0f0707;
+            flex: 1;
+          }
+
+          .icon-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 4rem;
+            height: 4rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+
+        &.flag {
+          background-color: #ffffff;
+          align-content: center;
+          .icon-image {
+            img {
+              background-color: rgba(0, 0, 0, 0.5);
+              border-radius: 0.5rem;
+              width: 2.2rem;
+              height: 2.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    .modal-dialog {
+      margin: 10px auto;
+
+      .separator-wrapper {
+        margin-top: 2.4rem;
+        margin-bottom: 1.2rem;
+      }
+      .register-legend {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 1.8rem;
+
+        .register-link {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .modal-dialog {
+      width: auto;
+      margin: 10px;
+
+      .modal-body {
+        padding: 2rem;
+      }
+    }
+  }
+}

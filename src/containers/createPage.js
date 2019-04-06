@@ -8,12 +8,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter, Redirect } from 'react-router-dom';
 import { fetchFirstToken, fetchListResumes, signOut } from '../actions/auth';
-import { fetchConstants, fetchCategories, fetchCities } from '../actions/constants';
-import { Base, MenuBar, SideBar, Footer, AuthPopup, Button } from '../components';
+import { fetchConstants, fetchConstantsSuccess, fetchCategories, fetchCities } from '../actions/constants';
+import { Base, MenuBar, SideBar, Footer, AuthPopup, Button, LangPopup } from '../components';
 import { deleteRemberAuthData, getRememberAuthData, saveRememberAuthData } from '../utils/localData';
 import './style.scss';
+import setting from '../constants/setting';
 
-export default function(ComposedComponent, isSearchPage = false) {
+export default function (ComposedComponent, isSearchPage = false) {
   class Layout extends Base {
     constructor(props) {
       super(props);
@@ -27,7 +28,7 @@ export default function(ComposedComponent, isSearchPage = false) {
       if (!this.props.firstToken) {
         this.props.fetchFirstToken();
       } else {
-        this.props.fetchConstants();
+        this.props.fetchConstantsSuccess(setting.creatSetting());
         this.props.fetchCities();
         this.props.fetchCategories();
       }
@@ -87,11 +88,12 @@ export default function(ComposedComponent, isSearchPage = false) {
                   </div>
                 ) : (
                   <ComposedComponent {...this.props} />
-                )}
+                  )}
               </div>
             </div>
           </section>
           {!isSearchPage && <Footer />}
+          <LangPopup />
           <AuthPopup />
         </div>
       );
@@ -111,7 +113,7 @@ export default function(ComposedComponent, isSearchPage = false) {
   return withRouter(
     connect(
       mapStateToProps,
-      { fetchFirstToken, fetchConstants, fetchCategories, fetchCities, fetchListResumes, signOut }
+      { fetchFirstToken, fetchConstantsSuccess, fetchCategories, fetchCities, fetchListResumes, signOut }
     )(Layout)
   );
 }
