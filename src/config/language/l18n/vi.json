@@ -1010,5 +1010,265 @@
       "message": "Có lỗi kết nối với máy chủ. Vui lòng ",
       "reload": "thử lại"
     }
+  },
+  "setting": {
+    "billing_information": {
+      "account_holder": "CÔNG TY CỔ PHẦN ADT QUỐC TẾ",
+      "account_number": "0711000250468",
+      "bank": "Vietcombank - Chi nhánh Thanh Xuân - Hà Nội"
+    },
+    "companies": {
+      "size": {
+        "size1": "Dưới 10 người",
+        "size2": "Từ 10 đến 50 người",
+        "size3": "Từ 50 đến 100 người",
+        "size4": "Từ 100 đến 200 người",
+        "size5": "Từ 200 đến 300 người",
+        "size6": "Từ 300 đến 500 người",
+        "size7": "Trên 500 người"
+      }
+    },
+    "employer_save_profiles": {
+      "status1": "Chưa liên hệ",
+      "status2": "Đã liên hệ",
+      "status3": "Đã test",
+      "status4": "Đã phỏng vấn",
+      "status5": "Trúng tuyển",
+      "status6": "Không trúng"
+    },
+    "job_applications": {
+      "comment_status": {
+        "status1": "Đủ điều kiện",
+        "status2": "Không đủ điều kiện"
+      },
+      "status": {
+        "status1": "Chưa liên hệ",
+        "status2": "Đã liên hệ",
+        "status3": "Đã lên lịch phỏng vấn",
+        "status4": "Đã phỏng vấn",
+        "status5": "Đã có việc",
+        "status6": "Đã từ chối"
+      }
+    },
+    "jobs": {
+      "experience": {
+        "experience1": "Chưa có kinh nghiệm",
+        "experience2": "Dưới 1 năm",
+        "experience3": "1 năm",
+        "experience4": "2 năm",
+        "experience5": "3 năm",
+        "experience6": "4 năm",
+        "experience7": "5 năm",
+        "experience8": "Trên 5 năm"
+      },
+      "gender": {
+        "female": "Nữ",
+        "male": "Nam",
+        "male_female": "Không yêu cầu"
+      },
+      "level": {
+        "level1": "Trên đại học",
+        "level2": "Đại học",
+        "level3": "Cao đẳng",
+        "level4": "Trung cấp",
+        "level5": "Trung học",
+        "level6": "Chứng chỉ nghề",
+        "level7": "Không yêu cầu bằng cấp"
+      },
+      "rank": {
+        "rank1": "Quản lý cấp cao",
+        "rank2": "Quản lý cấp trung",
+        "rank3": "Quản lý nhóm - giám sát",
+        "rank4": "Chuyên gia",
+        "rank5": "Chuyên viên - Nhân viên",
+        "rank6": "Cộng tác viên"
+      },
+      "salary": {
+        "salary1": "1 - 3 triệu",
+        "salary2": "3 - 5 triệu",
+        "salary3": "5 - 7 triệu",
+        "salary4": "7 - 10 triệu",
+        "salary5": "10 - 15 triệu",
+        "salary6": "15 - 20 triệu",
+        "salary7": "20 - 30 triệu",
+        "salary8": "30 - 40 triệu",
+        "salary9": "40 - 50 triệu",
+        "salary10": "Trên 50 triệu",
+        "salary11": "Thoả thuận"
+      },
+      "source": {
+        "affiliate": "affiliate",
+        "google": "google",
+        "marketing": "marketing",
+        "sale": "sale"
+      },
+      "status": {
+        "active": "Đang tuyển",
+        "expires": "Đã hết hạn",
+        "hide": "Đang ẩn",
+        "pending": "Chờ xét duyệt"
+      },
+      "type": {
+        "type1": "Toàn thời gian",
+        "type2": "Bán thời gian",
+        "type3": "Theo hợp đồng",
+        "type4": "Thực tập",
+        "type5": "Khác"
+      },
+      "view_type": {
+        "full": "Mẫu tin đầy đủ",
+        "standard": "Mẫu tin cơ bản"
+      }
+    },
+    "order": {
+      "payment_methods": {
+        "payment1": "Chuyển khoản ngân hàng",
+        "payment2": "Thanh toán bằng Paypal",
+        "payment3": "Thẻ ATM nội địa, Internet Banking",
+        "payment4": "Thanh toán bằng thẻ quốc tế Visa, Master, JSB"
+      },
+      "status": {
+        "cancelled": "cancelled",
+        "completed": "completed",
+        "failed": "failed",
+        "on_hold": "on hold",
+        "pending_payment": "pending payment",
+        "processing": "processing",
+        "refunded": "refunded"
+      }
+    },
+    "products": {
+      "package": {
+        "package1": "Gói đăng tin",
+        "package2": "Gói lọc hồ sơ",
+        "package3": "Gói marketing"
+      },
+      "status": {
+        "active": "active",
+        "pending": "pending"
+      }
+    },
+    "resumes": {
+      "classification": {
+        "classification1": "Xuất sắc",
+        "classification2": "Giỏi",
+        "classification3": "Khá",
+        "classification4": "Trung bình khá",
+        "classification5": "Trung bình"
+      },
+      "experience": {
+        "experience1": "Chưa có kinh nghiệm",
+        "experience2": "Dưới 1 năm",
+        "experience3": "1 năm",
+        "experience4": "2 năm",
+        "experience5": "3 năm",
+        "experience6": "4 năm",
+        "experience7": "5 năm",
+        "experience8": "Trên 5 năm"
+      },
+      "gender": {
+        "female": "Nữ",
+        "male": "Nam",
+        "male_female": "Nam và Nữ"
+      },
+      "languages": {
+        "languages1": "Tiếng Anh",
+        "languages2": "Tiếng Nhật",
+        "languages3": "Tiếng Pháp",
+        "languages4": "Tiếng Trung",
+        "languages5": "Tiếng Nga",
+        "languages6": "Tiếng Hàn",
+        "languages7": "Tiếng Đức",
+        "languages8": "Tiếng Ý",
+        "languages9": "Tiếng Ả Rập",
+        "languages10": "Ngoại ngữ khác"
+      },
+      "languages_level": {
+        "languages_level1": "Tốt",
+        "languages_level2": "Khá",
+        "languages_level3": "Trung bình",
+        "languages_level4": "Kém"
+      },
+      "level": {
+        "level1": "Phổ thông",
+        "level2": "Trung cấp",
+        "level3": "Chứng chỉ",
+        "level4": "Cao đẳng",
+        "level5": "Đại học",
+        "level6": "Trên đại học"
+      },
+      "marital_status": {
+        "marital_status1": "Độc thân",
+        "marital_status2": "Có gia đình"
+      },
+      "rank": {
+        "rank1": "Quản lý cấp cao",
+        "rank2": "Quản lý cấp trung",
+        "rank3": "Quản lý nhóm - giám sát",
+        "rank4": "Chuyên gia",
+        "rank5": "Chuyên viên - Nhân viên",
+        "rank6": "Cộng tác viên"
+      },
+      "resume_type": {
+        "resume_type1": "Bán thời gian",
+        "resume_type2": "Freelance",
+        "resume_type3": "Thời vụ",
+        "resume_type4": "Thực tập sinh",
+        "resume_type5": "Toàn thời gian",
+        "resume_type6": "Việc làm Online"
+      },
+      "salary": {
+        "salary1": "1 - 3 triệu",
+        "salary2": "3 - 5 triệu",
+        "salary3": "5 - 7 triệu",
+        "salary4": "7 - 10 triệu",
+        "salary5": "10 - 15 triệu",
+        "salary6": "15 - 20 triệu",
+        "salary7": "20 - 30 triệu",
+        "salary8": "30 - 40 triệu",
+        "salary9": "40 - 50 triệu",
+        "salary10": "Trên 50 triệu",
+        "salary11": "Thoả thuận"
+      },
+      "status": {
+        "active": "active",
+        "hide": "hide",
+        "pending": "pending"
+      },
+      "type": {
+        "type0": "Tạo từng bước",
+        "type1": "Upload CV"
+      },
+      "users": {
+        "gender": {
+          "female": "Nữ",
+          "male": "Nam",
+          "male_female": "Nam và Nữ"
+        },
+        "level": {
+          "level1": "Phổ thông",
+          "level2": "Trung cấp",
+          "level3": "Chứng chỉ",
+          "level4": "Cao đẳng",
+          "level5": "Đại học",
+          "level6": "Trên đại học"
+        },
+        "marital_status": {
+          "marital_status1": "Độc thân",
+          "marital_status2": "Có gia đình"
+        },
+        "role": {
+          "admin": "admin",
+          "candidate": "candidate",
+          "employer": "employer",
+          "support": "support"
+        },
+        "status": {
+          "active": "active",
+          "block": "block",
+          "pending": "pending"
+        }
+      }
+    }
   }
 }
