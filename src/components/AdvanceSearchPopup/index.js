@@ -1,6 +1,6 @@
 /*
  * File: undefined
- * Desc: 
+ * Desc:
  * Author: DuyNg (duy@megadrupal.com)
  * Created: 2018-08-29 13:51:38
  */
@@ -220,7 +220,7 @@ class AdvanceSearchPopup extends Base {
               }}
             />
             <Select
-              placeholder={this.t('Chọn cấp bậc')}
+              placeholder={this.t('Chọn trình độ')}
               options={levelOpts}
               value={[level]}
               onChange={value => {
