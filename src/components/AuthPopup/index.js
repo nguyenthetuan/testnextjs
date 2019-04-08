@@ -103,24 +103,24 @@ class AuthPopup extends Base {
         }
       },
       messages: {
-        companyName: this.t('Nhập tên công ty.'),
-        contact: this.t('Nhập tên người liên hệ.'),
-        verify_code: this.t('Nhập mã xác minh.'),
+        companyName: this.t('components').AuthPopup.index.messages.companyName,
+        contact: this.t('components').AuthPopup.index.messages.contact,
+        verify_code: this.t('components').AuthPopup.index.messages.verifyCode,
         password: {
-          required: this.t(showRegisterForm ? 'Nhập mật khẩu có độ dài tối thiểu 6 ký tự.' : 'Nhập mật khẩu.'),
-          minlength: this.t('Nhập tối thiểu 6 ký tự.')
+          required: this.t(showRegisterForm ? this.t('components').AuthPopup.index.messages.minPassword : this.t('components').AuthPopup.index.messages.requiredPassword),
+          minlength: this.t('components').AuthPopup.index.messages.minlength
         },
         password_confirm: {
-          required: this.t('Nhập lại mật khẩu.'),
-          equalTo: this.t('Nhập mật khẩu không khớp.')
+          required: this.t('components').AuthPopup.index.messages.passwordConfirm,
+          equalTo: this.t('components').AuthPopup.index.messages.equalTo
         },
         email: {
-          required: this.t(showRegisterForm || showForgotPwdForm ? 'Nhập địa chỉ email.' : 'Nhập địa chỉ email/số điện thoại.'),
-          email: this.t('Không đúng định dạng email.')
+          required: this.t(showRegisterForm || showForgotPwdForm ? this.t('components').AuthPopup.index.messages.showRegisterFormEmail : this.t('components').AuthPopup.index.messages.requiredEmail),
+          email: this.t('components').AuthPopup.index.messages.emailError
         },
         phone: {
-          required: this.t('Nhập số điện thoại.'),
-          phoneVN: this.t('Không đúng định dạng số điện thoại')
+          required: this.t('components').AuthPopup.index.messages.requiredPhone,
+          phoneVN: this.t('components').AuthPopup.index.messages.phoneVN
         }
       }
     };
@@ -205,7 +205,7 @@ class AuthPopup extends Base {
           }, 1000);
         } else {
           const errorMessage = (response && response.data && response.data.errors && response.data.errors.message) || '';
-          this.setState({ message: { code: 1, message: `${this.t('* Đăng ký không thành công.')} ${errorMessage}` }, loading: false });
+          this.setState({ message: { code: 1, message: `${this.t('components').AuthPopup.index.return.register} ${errorMessage}` }, loading: false });
         }
       });
     }
@@ -267,7 +267,7 @@ class AuthPopup extends Base {
           if (fbLoginResponse && fbLoginResponse.token) {
             this.props.loginSuccess({ info: fbLoginResponse.user, token: fbLoginResponse.token });
           } else {
-            this.setState({ message: { code: 1, message: 'Đăng nhập không thành công.' } });
+            this.setState({ message: { code: 1, message: this.t('components').AuthPopup.index.return.loginByFacebook } });
           }
         });
       });
@@ -285,7 +285,7 @@ class AuthPopup extends Base {
         if (response && response.token && response.user) {
           this.props.loginSuccess({ token: response.token, info: response.user });
         } else {
-          this.setState({ message: { code: 1, message: 'Đăng nhập không thành công.' } });
+          this.setState({ message: { code: 1, message: this.t('components').AuthPopup.index.return.googleLogin } });
         }
       });
     });
@@ -302,8 +302,17 @@ class AuthPopup extends Base {
 
     return (
       <div className="login-form-container">
-        <div className="header">{this.t('Đăng nhập vào JobNow')}</div>
+        <div className="header">{this.t('components').AuthPopup.index.return.header}</div>
         <div className="socials-wrapper">
+<<<<<<< HEAD
+=======
+          <Button className="jn-btn__normal zalo-login" onClick={this._zaloLogin}>
+            <div className="icon-image zalo-icon">
+              <img src="/assets/img/zalo-icon.png" alt="" />
+            </div>
+            <div className="title">{this.t('components').AuthPopup.index.return.titleZalo}</div>
+          </Button>
+>>>>>>> issue06
           <FacebookLogin
             appId={FB_APP_ID}
             callback={this._loginByFacebook}
@@ -312,7 +321,7 @@ class AuthPopup extends Base {
                 <div className="icon-image fb-icon">
                   <img src="/assets/img/fb-icon.png" alt="" />
                 </div>
-                <div className="title">{this.t('Tiếp tục với Facebook')}</div>
+                <div className="title">{this.t('components').AuthPopup.index.return.titleFacebook}</div>
               </Button>
             )}
           />
@@ -329,19 +338,19 @@ class AuthPopup extends Base {
               <div className="icon-image google-icon">
                 <img src="/assets/img/google-icon.png" alt="" />
               </div>
-              <div className="title">{this.t('Tiếp tục với Google')}</div>
+              <div className="title">{this.t('components').AuthPopup.index.return.titleGoogle}</div>
             </GoogleLogin>
           </div>
         </div>
 
         <div className="separator-wrapper">
           <div className="separator-line" />
-          <div className="separator-text">{this.t('hoặc')}</div>
+          <div className="separator-text">{this.t('components').AuthPopup.index.return.or}</div>
           <div className="separator-line" />
         </div>
 
         <div className={`login-form-wrapper${message && message.code ? ' has-error-msg' : ''}`}>
-          {message && message.code && <div className="error-message">* {this.t(message.message || 'Đăng nhập không thành công. Vui lòng kiểm tra lại thông tin đăng nhập.')}</div>}
+          {message && message.code && <div className="error-message">* {this.t(message.message || this.t('components').AuthPopup.index.return.errorLogin)}</div>}
           <form
             id="auth-form"
             ref={r => {
@@ -350,7 +359,7 @@ class AuthPopup extends Base {
           >
             <Input
               name="email"
-              placeholder={this.t('Email hoặc số điện thoại')}
+              placeholder={this.t('components').AuthPopup.index.return.inputEmail}
               floatingLabel
               value={email}
               onChange={value => {
@@ -360,7 +369,7 @@ class AuthPopup extends Base {
             <Input
               name="password"
               type="password"
-              placeholder={this.t('Mật khẩu')}
+              placeholder={this.t('components').AuthPopup.index.return.inputPassword}
               floatingLabel
               value={password}
               onChange={value => {
@@ -369,7 +378,7 @@ class AuthPopup extends Base {
             />
             <div className="extra-options">
               <CheckBox
-                label={this.t('Ghi nhớ đăng nhập')}
+                label={this.t('components').AuthPopup.index.return.rememberPassword}
                 checked={rememberPassword}
                 onChange={value => {
                   this.setState({ loginForm: { ...loginForm, rememberPassword: value } });
@@ -385,16 +394,16 @@ class AuthPopup extends Base {
                     }, 0);
                   }}
                 >
-                  {this.t('Quên mật khẩu')}
+                  {this.t('components').AuthPopup.index.return.forgotPassword}
                 </a>
               </div>
             </div>
-            <Button className="jn-btn__yellow" label={this.t('Đăng nhập')} onClick={this._submitForm} />
+            <Button className="jn-btn__yellow" label={this.t('components').AuthPopup.index.return.submitForm} onClick={this._submitForm} />
           </form>
         </div>
 
         <div className="register-legend">
-          <span className="legend">{this.t('Bạn chưa có tài khoản ?')}</span>
+          <span className="legend">{this.t('components').AuthPopup.index.return.registerLegend}</span>
           <a
             href="#"
             className="register-link"
@@ -405,7 +414,7 @@ class AuthPopup extends Base {
               }, 0);
             }}
           >
-            {this.t('Đăng ký tài khoản')}
+            {this.t('components').AuthPopup.index.return.registerAccount}
           </a>
         </div>
       </div>
@@ -427,7 +436,7 @@ class AuthPopup extends Base {
         } else {
           this.setState({ loading: false }, () => {
             this._validator.showErrors({
-              phone: this.t('Gửi mã xác minh không thành công. Vui lòng kiểm tra lại số điện thoại.')
+              phone: this.t('components').AuthPopup.index.return.getSMSCode
             });
           });
         }
@@ -445,7 +454,7 @@ class AuthPopup extends Base {
           const response = await authApi.verifyPhoneEmail(registerForm.phone);
           this.setState({ phoneValid: (response && response.unique && 2) || -1 }, () => {
             if (this.state.phoneValid === -1) {
-              this._phoneInputRef.showError(this.t('Số điện thoại này đã đăng ký, vui lòng sử dụng số điện thoại khác.'));
+              this._phoneInputRef.showError(this.t('components').AuthPopup.index.return.phoneInputRef);
             }
           });
         });
@@ -458,7 +467,7 @@ class AuthPopup extends Base {
           const response = await authApi.verifyPhoneEmail(registerForm.email);
           this.setState({ emailValid: (response && response.unique && 2) || -1 }, () => {
             if (this.state.emailValid === -1) {
-              this._emailInputRef.showError(this.t('Email này đã đăng ký, vui lòng sử dụng email khác.'));
+              this._emailInputRef.showError(this.t('components').AuthPopup.index.return.emailInputRef);
             }
           });
         });
@@ -477,7 +486,7 @@ class AuthPopup extends Base {
       return (
         <div className="success-message">
           <span className="icon-jn-checked" />
-          {this.t('Đăng ký thành công.')}
+          {this.t('components').AuthPopup.index.return.successMessage}
         </div>
       );
     }
@@ -492,7 +501,7 @@ class AuthPopup extends Base {
       veifyBtnClasses.push('inactive');
     }
 
-    const VerifiedBtn = <Button label={this.t(message && message.sentSMSCode ? 'Đã gửi mã xác minh' : 'Gửi mã xác minh')} className={veifyBtnClasses.join(' ')} onClick={this._getSMSCode} />;
+    const VerifiedBtn = <Button label={this.t(message && message.sentSMSCode ? this.t('components').AuthPopup.index.return.sentSMSCode : this.t('components').AuthPopup.index.return.sentSMSCode)} className={veifyBtnClasses.join(' ')} onClick={this._getSMSCode} />;
 
     return (
       <div className={`register-form-container${message && message.code ? ' has-error-msg' : ''}`}>
@@ -508,7 +517,7 @@ class AuthPopup extends Base {
             <div className="phone-wrapper">
               <Input
                 name="phone"
-                placeholder={this.t('Số di động')}
+                placeholder={this.t('components').AuthPopup.index.return.phone}
                 floatingLabel
                 required
                 value={phone}
@@ -522,11 +531,11 @@ class AuthPopup extends Base {
                   this._phoneInputRef = r;
                 }}
               />
-              {message && message.code === 0 && <div className="sent-code-success">{this.t('Mã xác thực đã được gửi đến tin nhắn của bạn.')}</div>}
+              {message && message.code === 0 && <div className="sent-code-success">{this.t('components').AuthPopup.index.return.verification}</div>}
             </div>
             <Input
               name="verify_code"
-              placeholder={this.t('Mã xác minh')}
+              placeholder={this.t('components').AuthPopup.index.return.pinCode}
               floatingLabel
               required
               value={pinCode}
@@ -536,7 +545,7 @@ class AuthPopup extends Base {
             />
             <Input
               name="email"
-              placeholder={this.t('Email')}
+              placeholder={this.t('components').AuthPopup.index.return.email}
               floatingLabel
               required
               value={email}
@@ -551,7 +560,7 @@ class AuthPopup extends Base {
               name="password"
               type="password"
               value={password}
-              placeholder={this.t('Mật khẩu')}
+              placeholder={this.t('components').AuthPopup.index.return.inputPassword}
               floatingLabel
               required
               onChange={value => {
@@ -563,14 +572,14 @@ class AuthPopup extends Base {
               type="password"
               required
               value={passwordConfirm}
-              placeholder={this.t('Nhắc lại mật khẩu')}
+              placeholder={this.t('components').AuthPopup.index.return.passwordConfirm}
               floatingLabel
               onChange={value => {
                 this.setState({ registerForm: { ...registerForm, passwordConfirm: value } });
               }}
             />
 
-            <Button className="jn-btn__yellow register-btn" label={this.t('Đăng ký')} onClick={this._submitForm} />
+            <Button className="jn-btn__yellow register-btn" label={this.t('components').AuthPopup.index.return.registerBtn} onClick={this._submitForm} />
           </form>
         </div>
       </div>
@@ -587,7 +596,7 @@ class AuthPopup extends Base {
 
         output.children.unshift({
           value: city,
-          label: 'Tất cả',
+          label: this.t('components').AuthPopup.index.return.all,
           selectParent: true
         });
       }
@@ -607,8 +616,8 @@ class AuthPopup extends Base {
 
     return (
       <div className="register-form-container step-2">
-        <div className="header">{this.t('Việc làm phù hợp')}</div>
-        <div className="annotation">{this.t('Vui lòng chọn các thông tin công việc bạn đang quan tâm để JobNow gợi ý cho bạn các việc làm phù hợp')}</div>
+        <div className="header">{this.t('components').AuthPopup.index.return.suitableJobs}</div>
+        <div className="annotation">{this.t('components').AuthPopup.index.return.annotation}</div>
         <div className="form-wrapper">
           <form
             id="auth-form"
@@ -617,7 +626,7 @@ class AuthPopup extends Base {
             }}
           >
             <Select
-              placeholder={this.t('Chọn ngành nghề')}
+              placeholder={this.t('components').AuthPopup.index.return.categories}
               value={categories}
               options={[]}
               onChange={value => {
@@ -628,14 +637,14 @@ class AuthPopup extends Base {
               options={locationOpts}
               selectSubLevel
               multiple
-              placeholder={this.t('Địa điểm')}
+              placeholder={this.t('components').AuthPopup.index.return.locations}
               value={locations}
               onChange={value => {
                 this.setState({ registerForm: { ...registerForm, locations: value } });
               }}
             />
             <Select
-              placeholder={this.t('Chọn mức lương tối thiểu')}
+              placeholder={this.t('components').AuthPopup.index.return.salary}
               options={salaryOptions}
               value={[salary]}
               onChange={value => {
@@ -643,8 +652,8 @@ class AuthPopup extends Base {
               }}
             />
             <div className="buttons-wrapper">
-              <Button className="jn-btn__normal">{this.t('Trở lại')}</Button>
-              <Button className={savedBtnClasses.join(' ')}>{this.t('Lưu lại')}</Button>
+              <Button className="jn-btn__normal">{this.t('components').AuthPopup.index.return.back}</Button>
+              <Button className={savedBtnClasses.join(' ')}>{this.t('components').AuthPopup.index.return.save}</Button>
             </div>
           </form>
         </div>
@@ -665,13 +674,13 @@ class AuthPopup extends Base {
           name="email"
           value={this.state.forgotPwd.email}
           required
-          placeholder={this.t('Email của bạn')}
+          placeholder={this.t('components').AuthPopup.index.return.forgotPwdEmail}
           floatingLabel
           onChange={value => {
             this.setState({ forgotPwd: { ...forgotPwd, email: value } });
           }}
         />
-        <Button className="jn-btn__yellow" label={this.t('Lấy lại mật khẩu')} onClick={this._submitForm} />
+        <Button className="jn-btn__yellow" label={this.t('components').AuthPopup.index.return.forgotPwd} onClick={this._submitForm} />
       </form>
     );
   };
@@ -684,7 +693,7 @@ class AuthPopup extends Base {
         <div className="invalid-code-msg">
           <span className="message">
             <span className="icon-close" />
-            <span className="text">{this.t('Đường dẫn thay đổi mật khẩu không đúng hoặc quá hạn. Vui lòng thử lại')}</span>
+            <span className="text">{this.t('components').AuthPopup.index.return.text}</span>
           </span>
           <div className="button-wrapper">
             <Button
@@ -695,7 +704,7 @@ class AuthPopup extends Base {
                 }, 0);
               }}
             >
-              {this.t('Gửi lại')}
+              {this.t('components').AuthPopup.index.return.sendTo}
             </Button>
           </div>
         </div>
@@ -714,7 +723,7 @@ class AuthPopup extends Base {
           type="password"
           value={this.state.forgotPwd.password}
           required
-          placeholder={this.t('Mật khẩu')}
+          placeholder={this.t('components').AuthPopup.index.return.inputPassword}
           floatingLabel
           onChange={value => {
             this.setState({ forgotPwd: { ...forgotPwd, password: value } });
@@ -725,13 +734,13 @@ class AuthPopup extends Base {
           type="password"
           value={this.state.forgotPwd.passwordConfirm}
           required
-          placeholder={this.t('Nhắc lại mật khẩu')}
+          placeholder={this.t('components').AuthPopup.index.return.passwordConfirm}
           floatingLabel
           onChange={value => {
             this.setState({ forgotPwd: { ...forgotPwd, passwordConfirm: value } });
           }}
         />
-        <Button className="jn-btn__yellow" label={this.t('Lấy lại mật khẩu')} onClick={this._submitForm} />
+        <Button className="jn-btn__yellow" label={this.t('components').AuthPopup.index.return.forgotContainer} onClick={this._submitForm} />
       </form>
     );
   };
@@ -745,8 +754,8 @@ class AuthPopup extends Base {
     if (forgotPwd.step === 2) {
       renderedForm = (
         <div className="sent-mail-msg">
-          <p>{this.t('JobNow vừa gửi vào email bạn đã đăng ký đường link để kích hoạt lại mật khẩu.')}</p>
-          <p>{this.t('Vui lòng check email và làm theo hướng dẫn')}</p>
+          <p>{this.t('components').AuthPopup.index.return.sentMail}</p>
+          <p>{this.t('components').AuthPopup.index.return.sentMail2}</p>
         </div>
       );
     } else if (forgotPwd.step === 3) {
@@ -755,15 +764,15 @@ class AuthPopup extends Base {
       return (
         <div className="success-message">
           <span className="icon-jn-checked" />
-          {this.t('Đổi mật khẩu thành công.')}
+          {this.t('components').AuthPopup.index.return.successPassword}
         </div>
       );
     }
 
     return (
       <div className={`forgot-form-container${message && message.code ? ' has-error-msg' : ''}`}>
-        <div className="header">{this.t('Lấy lại mật khẩu')}</div>
-        {message && message.code && <div className="error-message">{this.t('Không tìm thấy email trong hệ thống. Vui lòng kiểm tra lại.')}</div>}
+        <div className="header">{this.t('components').AuthPopup.index.return.forgotContainer}</div>
+        {message && message.code && <div className="error-message">{this.t('components').AuthPopup.index.return.errorMessage}</div>}
         <div className="form-wrapper">{renderedForm}</div>
       </div>
     );

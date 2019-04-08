@@ -15,8 +15,8 @@ export default class AddressInput extends Base {
     super(props);
     const { province, district, street, _id } = props.value || {};
     this.state = {
-      province: [{ value: province || undefined, label: province || this.t('Tỉnh/TP') }],
-      district: [{ value: district || (_id && -1) || undefined, label: district || (_id && this.t('Tất cả')) || this.t('Quận/Huyện') }],
+      province: [{ value: province || undefined, label: province || this.t('components').AddressInput.citiesOpts.city }],
+      district: [{ value: district || (_id && -1) || undefined, label: district || (_id && this.t('components').AddressInput.citiesOpts.district) || this.t('components').AddressInput.citiesOpts.district }],
       street: street || ''
     };
   }
@@ -88,12 +88,12 @@ export default class AddressInput extends Base {
       }
       return { value: location.city, label: location.city };
     });
-    citiesOpts.unshift({ value: undefined, label: this.t('Tỉnh/TP') });
+    citiesOpts.unshift({ value: undefined, label: `${this.t('components').AddressInput.citiesOpts.city}` });
     if (districtOpts.length) {
       if (showAllDistrictOpt) {
-        districtOpts.unshift({ value: -1, label: this.t('Tất cả') });
+        districtOpts.unshift({ value: -1, label: `${this.t('components').AddressInput.citiesOpts.all}` });
       }
-      districtOpts.unshift({ value: undefined, label: this.t('Quận/Huyện') });
+      districtOpts.unshift({ value: undefined, label: `${this.t('components').AddressInput.citiesOpts.district}` });
     }
 
     const { street, district, province } = this.state;
@@ -118,7 +118,7 @@ export default class AddressInput extends Base {
                   this.setState(
                     {
                       province: selected,
-                      district: [{ value: undefined, label: this.t('Quận/Huyện') }]
+                      district: [{ value: undefined, label: `${this.t('components').AddressInput.citiesOpts.district}` }]
                     },
                     this._checkValues
                   );
@@ -128,7 +128,7 @@ export default class AddressInput extends Base {
             <div className="field-wrapper">
               {fieldsLabel && fieldsLabel.district && <label>{fieldsLabel.district}</label>}
               <Select
-                placeholder={this.t('Quận/Huyện')}
+                placeholder={this.t('components').AddressInput.citiesOpts.district}
                 value={district}
                 options={districtOpts}
                 name="address[district]"
@@ -143,7 +143,7 @@ export default class AddressInput extends Base {
                 <Input
                   type="text"
                   name="address[street]"
-                  placeholder={this.t('Số nhà, đường ...')}
+                  placeholder={this.t('components').AddressInput.citiesOpts.street}
                   onChange={value => this.setState({ street: value }, this._checkValues)}
                   value={(street !== undefined && street !== 'undefined' && street) || ''}
                   floatingLabel
@@ -153,7 +153,7 @@ export default class AddressInput extends Base {
           </div>
           {this.state.showError && (
             <div className="help-block" style={{ display: 'block' }}>
-              {this.t('Cần nhập đủ thông tin địa chỉ.')}
+              {this.t('components').AddressInput.citiesOpts.showError}
             </div>
           )}
         </div>

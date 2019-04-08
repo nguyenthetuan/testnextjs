@@ -47,7 +47,7 @@
           "login": "Đăng nhập/Đăng ký tài khoản",
           "fieldTitle": "Bạn chưa tạo hồ sơ trên JobNow",
           "creatingCV": "Tạo ngay hồ sơ để ứng tuyển",
-          "btnTitle": "Tôi đã có file CV",
+          "btnTitle": " đã có file CV",
           "fastApply": "Nộp hồ sơ nhanh - Không cần tạo hồ sơ",
           "successMsg": "Nộp hồ sơ thành công."
         }
@@ -70,6 +70,7 @@
           "showRegisterForm": "Nhập mật khẩu có độ dài tối thiểu 6 ký tự.",
           "requiredPassword": "Nhập mật khẩu.",
           "minlength": "Nhập tối thiểu 6 ký tự.",
+          "minPassword":"Nhập mật khẩu có độ dài tối thiểu 6 ký tự.",
           "passwordConfirm": "Nhập lại mật khẩu.",
           "equalTo": "Nhập mật khẩu không khớp.",
           "showRegisterFormEmail": "Nhập địa chỉ email.",
@@ -102,6 +103,7 @@
           "SMSCode": "Gửi mã xác minh",
           "registerAccount": "Đăng ký tài khoản",
           "phone": "Số di động",
+          "verification":"Mã xác thực đã được gửi đến tin nhắn của bạn.",
           "pinCode": "Mã xác minh",
           "email": "Email",
           "passwordConfirm": "Nhập lại mật khẩu",
@@ -154,7 +156,7 @@
         "contact": "Email: support@jobnow.com.vn",
         "companyNo1": "MST: 0107272126 do Sở Kế hoạch",
         "companyNo2": "Đầu tư TP Hà Nội cấp lần đầu ngày 29-12-2015",
-        "cp-right": "© 2018 - Bản quyền thuộc về Công ty cổ phần ADT Quốc Tế"
+        "cpright": "© 2018 - Bản quyền thuộc về Công ty cổ phần ADT Quốc Tế"
       }
     },
     "ImagePicker": {
@@ -1121,7 +1123,7 @@
       }
     },
     "order": {
-      "payment_methods": {
+      "paymentmethods": {
         "payment1": "Chuyển khoản ngân hàng",
         "payment2": "Thanh toán bằng Paypal",
         "payment3": "Thẻ ATM nội địa, Internet Banking",

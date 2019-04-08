@@ -70,15 +70,15 @@ class FastApply extends Base {
       },
       messages: {
         fullname: {
-          required: this.t('Nhập họ tên đầy đủ.')
+          required: `${this.t('components').AdvancedSearch.FastApply.index.requiredFullname}`
         },
         email: {
-          required: this.t('Nhập địa chỉ email.'),
-          email: this.t('Không đúng định dạng email.')
+          required: `${this.t('components').AdvancedSearch.FastApply.index.requiredEmail}`,
+          email: `${this.t('components').AdvancedSearch.FastApply.index.errorEmail}`
         },
         phone: {
-          required: this.t('Nhập số điện thoại.'),
-          phoneVN: this.t('Không đúng định dạng số điện thoại')
+          required: `${this.t('components').AdvancedSearch.FastApply.index.requiredPhone}`,
+          phoneVN: `${this.t('components').AdvancedSearch.FastApply.index.errorPhone}`
         }
       }
     };
@@ -143,13 +143,13 @@ class FastApply extends Base {
       <div className="step2-wrapper">
         {message &&
           message.code && (
-            <div className="error-msg">{this.t('* Nộp hồ sơ không thành công.')}</div>
-        )}
+            <div className="error-msg">{this.t('components').AdvancedSearch.FastApply.index.message}</div>
+          )}
         <form className="fast-apply-form" id="apply-form">
           {!isLoggedIn && (
             <Input
               name="fullname"
-              placeholder={this.t('Họ tên')}
+              placeholder={this.t('components').AdvancedSearch.FastApply.index.fullname}
               required
               value={fullname}
               floatingLabel
@@ -161,7 +161,7 @@ class FastApply extends Base {
           {!isLoggedIn && (
             <Input
               name="email"
-              placeholder={this.t('Email')}
+              placeholder={this.t('components').AdvancedSearch.FastApply.index.email}
               required
               value={email}
               floatingLabel
@@ -173,7 +173,7 @@ class FastApply extends Base {
           {!isLoggedIn && (
             <Input
               name="phone"
-              placeholder={this.t('Số điện thoại')}
+              placeholder={this.t('components').AdvancedSearch.FastApply.index.phone}
               required
               value={phone}
               floatingLabel
@@ -193,7 +193,7 @@ class FastApply extends Base {
 
           <Button
             className="jn-btn__yellow"
-            label={this.t('Nộp hồ sơ')}
+            label={this.t('components').AdvancedSearch.FastApply.index.handleApplyClick}
             onClick={this._handleApplyClick}
           />
         </form>
@@ -213,26 +213,26 @@ class FastApply extends Base {
               this.props.showAuthPopup('login');
             }}
           >
-            {this.t('Đăng nhập/Đăng ký tài khoản')}
+            {this.t('components').AdvancedSearch.FastApply.index.login}
           </Button>
         )}
 
         {isLoggedIn && (
           <div className="creating-cv-wrapper">
-            <div className="field-title">{this.t('Bạn chưa tạo hồ sơ trên JobNow')}</div>
+            <div className="field-title">{this.t('components').AdvancedSearch.FastApply.index.fieldTitle}</div>
             <Button
               className="jn-btn__yellow creating-cv-btn"
               onClick={() => {
                 this.props.history.push('/');
               }}
             >
-              {this.t('Tạo ngay hồ sơ để ứng tuyển')}
+              {this.t('components').AdvancedSearch.FastApply.index.creatingCV}
             </Button>
           </div>
         )}
 
         <div className="fast-apply-btn-wrapper">
-          <div className="btn-title">{this.t('Tôi đã có file CV')}</div>
+          <div className="btn-title">{this.t('components').AdvancedSearch.FastApply.index.btnTitle}</div>
           <Button
             className="jn-btn__normal fast-apply-btn"
             onClick={() => {
@@ -241,7 +241,7 @@ class FastApply extends Base {
               }, 0);
             }}
           >
-            {this.t('Nộp hồ sơ nhanh - Không cần tạo hồ sơ')}
+            {this.t('components').AdvancedSearch.FastApply.index.fastApply}
           </Button>
         </div>
       </div>
@@ -253,7 +253,7 @@ class FastApply extends Base {
     const { title, company } = this.props.job || {};
     return (
       <div className={`fast-apply-wrapper step-${step}`}>
-        {step === 3 && <div className="success-msg">{this.t('Nộp hồ sơ thành công.')}</div>}
+        {step === 3 && <div className="success-msg">{this.t('components').AdvancedSearch.FastApply.index.successMsg}</div>}
         {step !== 3 && (
           <div className="job-info">
             <div className="job-title">{title}</div>

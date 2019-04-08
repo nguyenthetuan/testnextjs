@@ -5,89 +5,89 @@ export default class Setting extends Component {
   static creatSetting = () => {
     let str = {
       billing_information: {
-        test: language.components.AddressInput.index.citiesOpts.all,
+        test: language.components.AddressInput.citiesOpts.all,
         account_holder: 'CÔNG TY CỔ PHẦN ADT QUỐC TẾ',
         account_number: '0711000250468',
         bank: 'Vietcombank - Chi nhánh Thanh Xuân - Hà Nội'
       },
       companies: {
         size: {
-          1: 'Dưới 10 người',
-          2: 'Từ 10 đến 50 người',
-          3: 'Từ 50 đến 100 người',
-          4: 'Từ 100 đến 200 người',
-          5: 'Từ 200 đến 300 người',
-          6: 'Từ 300 đến 500 người',
-          7: 'Trên 500 người'
+          1: language.setting.companies.size.size1,
+          2: language.setting.companies.size.size2,
+          3: language.setting.companies.size.size3,
+          4: language.setting.companies.size.size4,
+          5: language.setting.companies.size.size5,
+          6: language.setting.companies.size.size6,
+          7: language.setting.companies.size.size7
         }
       },
       employer_save_profiles: {
-        1: 'Chưa liên hệ',
-        2: 'Đã liên hệ',
-        3: 'Đã test',
-        4: 'Đã phỏng vấn',
-        5: 'Trúng tuyển',
-        6: 'Không trúng'
+        1: language.setting.employersaveprofiles.status1,
+        2: language.setting.employersaveprofiles.status2,
+        3: language.setting.employersaveprofiles.status3,
+        4: language.setting.employersaveprofiles.status4,
+        5: language.setting.employersaveprofiles.status5,
+        6: language.setting.employersaveprofiles.status6
       },
       job_applications: {
         comment_status: {
-          1: 'Đủ điều kiện',
-          2: 'Không đủ điều kiện'
+          1: language.setting.jobApplications.comment_status.status1,
+          2: language.setting.jobApplications.comment_status.status2
         },
         status: {
-          1: 'Chưa liên hệ',
-          2: 'Đã liên hệ',
-          3: 'Đã lên lịch phỏng vấn',
-          4: 'Đã phỏng vấn',
-          5: 'Đã có việc',
-          6: 'Đã từ chối'
+          1: language.setting.jobApplications.status.status1,
+          2: language.setting.jobApplications.status.status2,
+          3: language.setting.jobApplications.status.status3,
+          4: language.setting.jobApplications.status.status4,
+          5: language.setting.jobApplications.status.status5,
+          6: language.setting.jobApplications.status.status6
         }
       },
       jobs: {
         experience: {
-          1: 'Chưa có kinh nghiệm',
-          2: 'Dưới 1 năm',
-          3: '1 năm',
-          4: '2 năm',
-          5: '3 năm',
-          6: '4 năm',
-          7: '5 năm',
-          8: 'Trên 5 năm'
+          1: language.setting.jobs.experience.experience1,
+          2: language.setting.jobs.experience.experience2,
+          3: language.setting.jobs.experience.experience3,
+          4: language.setting.jobs.experience.experience4,
+          5: language.setting.jobs.experience.experience5,
+          6: language.setting.jobs.experience.experience6,
+          7: language.setting.jobs.experience.experience7,
+          8: language.setting.jobs.experience.experience8,
         },
         gender: {
-          female: 'Nữ',
-          male: 'Nam',
-          male_female: 'Không yêu cầu'
+          female: language.setting.jobs.gender.female,
+          male: language.setting.jobs.gender.male,
+          male_female: language.setting.jobs.gender.male_female,
         },
         level: {
-          1: 'Trên đại học',
-          2: 'Đại học',
-          3: 'Cao đẳng',
-          4: 'Trung cấp',
-          5: 'Trung học',
-          6: 'Chứng chỉ nghề',
-          7: 'Không yêu cầu bằng cấp'
+          1: language.setting.jobs.level.level1,
+          2: language.setting.jobs.level.level2,
+          3: language.setting.jobs.level.level3,
+          4: language.setting.jobs.level.level4,
+          5: language.setting.jobs.level.level5,
+          6: language.setting.jobs.level.level6,
+          7: language.setting.jobs.level.level7
         },
         rank: {
-          1: 'Quản lý cấp cao',
-          2: 'Quản lý cấp trung',
-          3: 'Quản lý nhóm - giám sát',
-          4: 'Chuyên gia',
-          5: 'Chuyên viên - Nhân viên',
-          6: 'Cộng tác viên'
+          1: language.setting.jobs.rank.rank1,
+          2: language.setting.jobs.rank.rank2,
+          3: language.setting.jobs.rank.rank3,
+          4: language.setting.jobs.rank.rank4,
+          5: language.setting.jobs.rank.rank5,
+          6: language.setting.jobs.rank.rank6
         },
         salary: {
-          1: '1 - 3 triệu',
-          2: '3 - 5 triệu',
-          3: '5 - 7 triệu',
-          4: '7 - 10 triệu',
-          5: '10 - 15 triệu',
-          6: '15 - 20 triệu',
-          7: '20 - 30 triệu',
-          8: '30 - 40 triệu',
-          9: '40 - 50 triệu',
-          10: 'Trên 50 triệu',
-          11: 'Thoả thuận'
+          1: language.setting.jobs.salary.salary1,
+          2: language.setting.jobs.salary.salary2,
+          3: language.setting.jobs.salary.salary3,
+          4: language.setting.jobs.salary.salary4,
+          5: language.setting.jobs.salary.salary5,
+          6: language.setting.jobs.salary.salary6,
+          7: language.setting.jobs.salary.salary7,
+          8: language.setting.jobs.salary.salary8,
+          9: language.setting.jobs.salary.salary9,
+          10: language.setting.jobs.salary.salary10,
+          11: language.setting.jobs.salary.salary11,
         },
         source: {
           affiliate: 'affiliate',
@@ -96,141 +96,141 @@ export default class Setting extends Component {
           sale: 'sale'
         },
         status: {
-          active: 'Đang tuyển',
-          expires: 'Đã hết hạn',
-          hide: 'Đang ẩn',
-          pending: 'Chờ xét duyệt'
+          active: language.setting.jobs.status.active,
+          expires: language.setting.jobs.status.expires,
+          hide: language.setting.jobs.status.hide,
+          pending: language.setting.jobs.status.pending
         },
         type: {
-          1: 'Toàn thời gian',
-          2: 'Bán thời gian',
-          3: 'Theo hợp đồng',
-          4: 'Thực tập',
-          5: 'Khác'
+          1: language.setting.jobs.type.type1,
+          2: language.setting.jobs.type.type2,
+          3: language.setting.jobs.type.type3,
+          4: language.setting.jobs.type.type4,
+          5: language.setting.jobs.type.type5
         },
         view_type: {
-          full: 'Mẫu tin đầy đủ',
-          standard: 'Mẫu tin cơ bản'
+          full: language.setting.jobs.viewType.full,
+          standard: language.setting.jobs.viewType.full
         }
       },
       order: {
         payment_methods: {
-          1: 'Chuyển khoản ngân hàng',
-          2: 'Thanh toán bằng Paypal',
-          3: 'Thẻ ATM nội địa, Internet Banking',
-          4: 'Thanh toán bằng thẻ quốc tế Visa, Master, JSB'
+          1: language.setting.order.paymentMethods.payment1,
+          2: language.setting.order.paymentMethods.payment2,
+          3: language.setting.order.paymentMethods.payment3,
+          4: language.setting.order.paymentMethods.payment4,
         },
         status: {
-          cancelled: 'cancelled',
-          completed: 'completed',
-          failed: 'failed',
-          on_hold: 'on hold',
-          pending_payment: 'pending payment',
-          processing: 'processing',
-          refunded: 'refunded'
+          cancelled: language.setting.order.status.cancelled,
+          completed: language.setting.order.status.completed,
+          failed: language.setting.order.status.failed,
+          on_hold: language.setting.order.status.on_hold,
+          pending_payment: language.setting.order.status.pending_payment,
+          processing: language.setting.order.status.processing,
+          refunded: language.setting.order.status.refunded
         }
       },
       products: {
         package: {
-          1: 'Gói đăng tin',
-          2: 'Gói lọc hồ sơ',
-          3: 'Gói marketing'
+          1: language.setting.products.package.package1,
+          2: language.setting.products.package.package2,
+          3: language.setting.products.package.package3
         },
         status: {
-          active: 'active',
-          pending: 'pending'
+          active: language.setting.products.status.active,
+          pending: language.setting.products.status.pending
         }
       },
       resumes: {
         classification: {
-          1: 'Xuất sắc',
-          2: 'Giỏi',
-          3: 'Khá',
-          4: 'Trung bình khá',
-          5: 'Trung bình'
+          1: language.setting.resumes.classification.classification1,
+          2: language.setting.resumes.classification.classification2,
+          3: language.setting.resumes.classification.classification3,
+          4: language.setting.resumes.classification.classification4,
+          5: language.setting.resumes.classification.classification5
         },
         experience: {
-          1: 'Chưa có kinh nghiệm',
-          2: 'Dưới 1 năm',
-          3: '1 năm',
-          4: '2 năm',
-          5: '3 năm',
-          6: '4 năm',
-          7: '5 năm',
-          8: 'Trên 5 năm'
+          1: language.setting.resumes.experience.experience1,
+          2: language.setting.resumes.experience.experience2,
+          3: language.setting.resumes.experience.experience3,
+          4: language.setting.resumes.experience.experience4,
+          5: language.setting.resumes.experience.experience5,
+          6: language.setting.resumes.experience.experience6,
+          7: language.setting.resumes.experience.experience7,
+          8: language.setting.resumes.experience.experience8
         },
         gender: {
-          female: 'Nữ',
-          male: 'Nam',
-          male_female: 'Nam và Nữ'
+          female: language.setting.resumes.gender.female,
+          male: language.setting.resumes.gender.male,
+          male_female: language.setting.resumes.gender.male_female,
         },
         languages: {
-          1: 'Tiếng Anh',
-          2: 'Tiếng Nhật',
-          3: 'Tiếng Pháp',
-          4: 'Tiếng Trung',
-          5: 'Tiếng Nga',
-          6: 'Tiếng Hàn',
-          7: 'Tiếng Đức',
-          8: 'Tiếng Ý',
-          9: 'Tiếng Ả Rập',
-          10: 'Ngoại ngữ khác'
+          1: language.setting.resumes.languages.languages1,
+          2: language.setting.resumes.languages.languages2,
+          3: language.setting.resumes.languages.languages3,
+          4: language.setting.resumes.languages.languages4,
+          5: language.setting.resumes.languages.languages5,
+          6: language.setting.resumes.languages.languages6,
+          7: language.setting.resumes.languages.languages7,
+          8: language.setting.resumes.languages.languages8,
+          9: language.setting.resumes.languages.languages9,
+          10: language.setting.resumes.languages.languages10,
         },
         languages_level: {
-          1: 'Tốt',
-          2: 'Khá',
-          3: 'Trung bình',
-          4: 'Kém'
+          1: language.setting.resumes.languagesLevel.languages_level1,
+          2: language.setting.resumes.languagesLevel.languages_level2,
+          3: language.setting.resumes.languagesLevel.languages_level3,
+          4: language.setting.resumes.languagesLevel.languages_level4
         },
         level: {
-          1: 'Phổ thông',
-          2: 'Trung cấp',
-          3: 'Chứng chỉ',
-          4: 'Cao đẳng',
-          5: 'Đại học',
-          6: 'Trên đại học'
+          1: language.setting.resumes.level.level1,
+          2: language.setting.resumes.level.level2,
+          3: language.setting.resumes.level.level3,
+          4: language.setting.resumes.level.level4,
+          5: language.setting.resumes.level.level5,
+          6: language.setting.resumes.level.level6
         },
         marital_status: {
-          1: 'Độc thân',
-          2: 'Có gia đình'
+          1: language.setting.resumes.maritalStatus.marital_status1,
+          2: language.setting.resumes.maritalStatus.marital_status2
         },
         rank: {
-          1: 'Quản lý cấp cao',
-          2: 'Quản lý cấp trung',
-          3: 'Quản lý nhóm - giám sát',
-          4: 'Chuyên gia',
-          5: 'Chuyên viên - Nhân viên',
-          6: 'Cộng tác viên'
+          1: language.setting.resumes.rank.rank1,
+          2: language.setting.resumes.rank.rank2,
+          3: language.setting.resumes.rank.rank3,
+          4: language.setting.resumes.rank.rank4,
+          5: language.setting.resumes.rank.rank5,
+          6: language.setting.resumes.rank.rank6
         },
         resume_type: {
-          1: 'Bán thời gian',
-          2: 'Freelance',
-          3: 'Thời vụ',
-          4: 'Thực tập sinh',
-          5: 'Toàn thời gian',
-          6: 'Việc làm Online'
+          1: language.setting.resumes.resumeType.resume_type1,
+          2: language.setting.resumes.resumeType.resume_type2,
+          3: language.setting.resumes.resumeType.resume_type3,
+          4: language.setting.resumes.resumeType.resume_type4,
+          5: language.setting.resumes.resumeType.resume_type5,
+          6: language.setting.resumes.resumeType.resume_type6
         },
         salary: {
-          1: '1 - 3 triệu',
-          2: '3 - 5 triệu',
-          3: '5 - 7 triệu',
-          4: '7 - 10 triệu',
-          5: '10 - 15 triệu',
-          6: '15 - 20 triệu',
-          7: '20 - 30 triệu',
-          8: '30 - 40 triệu',
-          9: '40 - 50 triệu',
-          10: 'Trên 50 triệu',
-          11: 'Thoả thuận'
+          1: language.setting.resumes.salary.salary1,
+          2: language.setting.resumes.salary.salary2,
+          3: language.setting.resumes.salary.salary3,
+          4: language.setting.resumes.salary.salary4,
+          5: language.setting.resumes.salary.salary5,
+          6: language.setting.resumes.salary.salary6,
+          7: language.setting.resumes.salary.salary7,
+          8: language.setting.resumes.salary.salary8,
+          9: language.setting.resumes.salary.salary9,
+          10: language.setting.resumes.salary.salary10,
+          11: language.setting.resumes.salary.salary11
         },
         status: {
-          active: 'active',
-          hide: 'hide',
-          pending: 'pending'
+          active: language.setting.resumes.status.active,
+          hide: language.setting.resumes.status.hide,
+          pending: language.setting.resumes.status.pending
         },
         type: {
-          0: 'Tạo từng bước',
-          1: 'Upload CV'
+          0: language.setting.resumes.type.type0,
+          1: language.setting.resumes.type.type1
         },
         years: {
           1970: '1970',
@@ -274,21 +274,21 @@ export default class Setting extends Component {
       },
       users: {
         gender: {
-          female: 'Nữ',
-          male: 'Nam',
-          male_female: 'Nam và Nữ'
+          female: language.setting.resumes.users.gender.female,
+          male: language.setting.resumes.users.gender.male,
+          male_female: language.setting.resumes.users.gender.male_female
         },
         level: {
-          1: 'Phổ thông',
-          2: 'Trung cấp',
-          3: 'Chứng chỉ',
-          4: 'Cao đẳng',
-          5: 'Đại học',
-          6: 'Trên đại học'
+          1: language.setting.resumes.users.level.level1,
+          2: language.setting.resumes.users.level.level2,
+          3: language.setting.resumes.users.level.level3,
+          4: language.setting.resumes.users.level.level4,
+          5: language.setting.resumes.users.level.level5,
+          6: language.setting.resumes.users.level.level6
         },
         marital_status: {
-          1: 'Độc thân',
-          2: 'Có gia đình'
+          1: language.setting.resumes.users.maritalStatus.marital_status1,
+          2: language.setting.resumes.users.maritalStatus.marital_status2
         },
         role: {
           admin: 'admin',
