@@ -116,14 +116,14 @@ export default class Table extends Base {
     event.preventDefault();
     window
       .swal({
-        title: this.t('Are you sure?'),
-        text: this.t('You will not be able to recover this data.'),
+        title: this.t('components').table.title,
+        text: this.t('components').table.text,
         icon: 'warning',
         dangerMode: true,
         buttons: {
-          cancel: this.t('Cancel'),
+          cancel: this.t('components').table.cancel,
           confirm: {
-            text: this.t('Delete'),
+            text: this.t('components').table.delete,
             value: true,
             visible: true,
             className: '',
@@ -217,7 +217,7 @@ export default class Table extends Base {
 
   _renderColumnFilterMenu = (field, options, selected, icon, addClearOption = false) => {
     const { columns } = this.props;
-    let columnLabels = { entries: this.t('Entries') };
+    let columnLabels = { entries: this.t('components').table.entries };
     columns.map(col => {
       columnLabels[col.field] = col.label;
       return null;
@@ -244,7 +244,7 @@ export default class Table extends Base {
                   key={`table-filter-${field}-clear`}
                   onClick={() => this._onFilterSelect(field, 'clear')}
                 >
-                  {this.t('Clear')}
+                  {this.t('components').table.clear}
                 </li>
               )}
               {Object.keys(options).map(option => {
@@ -278,14 +278,14 @@ export default class Table extends Base {
           key="filter-item-by-date"
         >
           <a href="#" data-toggle="dropdown" onClick={event => this._toggleDropdown(event, 'date')}>
-            <span style={{ marginLeft: 10 }}>{this.t('Date')}</span>
+            <span style={{ marginLeft: 10 }}>{this.t('components').table.date}</span>
           </a>
           <div className="filter-menu">
             <div className="dropdownjs country-icons">
               <ul className="dropdown-menu dropdown-menu-right">
                 <li>
                   <div className="form-group">
-                    <span className="date-label">{this.t('From')}</span>
+                    <span className="date-label">{this.t('components').table.from}</span>
                     <span className="start-date">
                       <DatePicker
                         showHour={false}
@@ -308,7 +308,7 @@ export default class Table extends Base {
                     </span>
                   </div>
                   <div className="form-group">
-                    <span className="date-label">{this.t('To')}</span>
+                    <span className="date-label">{this.t('components').table.to}</span>
                     <span className="end-date">
                       <DatePicker
                         showHour={false}
@@ -390,7 +390,7 @@ export default class Table extends Base {
             style={{ display: this.state.selectedRows.length > 0 ? 'inline-block' : 'none' }}
           >
             <span className="label label-info pull-left m-t-5 m-r-10 text-white">
-              {this.state.selectedRows.length} {this.t('items selected')}
+              {this.state.selectedRows.length} {this.t('components').table.itemsSelected}
             </span>
             <a href="#" onClick={this._onDeleteItemsClick}>
               <i className="zmdi zmdi-delete" />
@@ -562,7 +562,7 @@ export default class Table extends Base {
             });
           }}
         >
-          {this.t('Previous')}
+          {this.t('components').table.previous}
         </button>
         {pageArray.map(index => (
           <button
@@ -589,7 +589,7 @@ export default class Table extends Base {
             });
           }}
         >
-          {this.t('Next')}
+          {this.t('components').table.next}
         </button>
       </div>
     );
@@ -600,7 +600,7 @@ export default class Table extends Base {
     const { total } = this.props;
     const { data } = this.state;
     const start = page * pageSize;
-    const displayStatusText = this.t('Showing %start to %end of %total entries');
+    const displayStatusText = this.t('components').table.displayStatusText;
 
     return (
       <div className="mdl-grid">

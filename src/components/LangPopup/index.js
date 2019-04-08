@@ -21,12 +21,7 @@ class LangPopup extends Base {
 
     this.state = {
       loading: false,
-      message: null,
-      arrary: [
-        { value: 'en', checked: false },
-        { value: 'vi', checked: false },
-        { value: 'jp', checked: false }
-      ],
+      message: null
     };
   }
 
@@ -55,7 +50,7 @@ class LangPopup extends Base {
     }
   }
 
-  _renderSignForm = () => {
+  _renderLangForm = () => {
     return (
       <div className="login-form-container">
         <div className="header">{this.t('Chọn ngôn ngữ')}</div>
@@ -100,7 +95,7 @@ class LangPopup extends Base {
           }
           this.props.hideLanguage();
         }}
-        toggleButton=".candidate-menu a.candidate-signin, .actions-menu a.register-toggle, .login-form-container a.register-link, .fast-apply-wrapper .login-register-btn a, .candidate-mobile-menu a, .job-header-wrapper .jn-saved-job a, .actions-menu a.make-cv, .candidate-menu .make-cv, .candidate-menu > a"
+        toggleButton=".candidate-mobile-menu a, .job-header-wrapper .jn-saved-job a, .actions-menu a.make-cv, .candidate-menu .make-cv, .candidate-menu > a"
       >
         {(!message || message.code !== 0) && (
           <div className="close-btn">
@@ -115,7 +110,7 @@ class LangPopup extends Base {
             </a>
           </div>
         )}
-        {this._renderSignForm()}
+        {this._renderLangForm()}
       </Popup>
     );
   }
@@ -126,7 +121,6 @@ export default withRouter(
     state => ({
       message: state.auth.message,
       showlanguage: state.auth.showLanguage,
-      data: state.auth.popupData,
     }),
     { showLanguage, hideLanguage }
   )(LangPopup)

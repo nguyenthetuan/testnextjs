@@ -47,7 +47,7 @@ export default class MobileMenu extends Base {
         <ul className="mobile-menu">
           {!isLoggedIn && (
             <li className="candidate-menu">
-              <div className="menu-label">{this.t('Ứng viên')}</div>
+              <div className="menu-label">{this.t('components').menubar.MobileMenu.candidate}</div>
               <ul>
                 {candidateMenu.map((item, index) => (
                   <li key={`mobile-menu-candidate-item-${index}`}>
@@ -61,7 +61,7 @@ export default class MobileMenu extends Base {
           )}
           {!isLoggedIn && (
             <li className="employer-menu">
-              <div className="menu-label">{this.t('Nhà tuyển dụng')}</div>
+              <div className="menu-label">{this.t('components').menubar.MobileMenu.employer}</div>
               <ul>
                 {employerMenu.map((item, index) => (
                   <li key={`mobile-menu-employer-item-${index}`}>
@@ -75,7 +75,7 @@ export default class MobileMenu extends Base {
           )}
           {isLoggedIn && (
             <li className="application-menu">
-              <div className="menu-label">{this.t('Lựa chọn chức năng')}</div>
+              <div className="menu-label">{this.t('components').menubar.MobileMenu.application}</div>
               <ul>
                 {applicationMenu.map((item, index) => (
                   <li key={`mobile-menu-app-item-${index}`}>
@@ -87,7 +87,7 @@ export default class MobileMenu extends Base {
 
                 <li>
                   <a href="#" onClick={this.props.onSignoutClick}>
-                    {this.t('Đăng xuất')}
+                    {this.t('components').menubar.MobileMenu.signOut}
                   </a>
                 </li>
               </ul>

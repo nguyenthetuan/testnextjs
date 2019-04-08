@@ -299,7 +299,7 @@ class HomePage extends Base {
     };
 
     const latestJob = {
-      message: data && data.latestJobs.count !== undefined && this.t('XEM THÊM CÁC VIỆC LÀM MỚI NGÀY %date.'.replace('%number', data.latestJobs.count).replace('%date', Moment().format('DD/MM/YY'))),
+      message: data && data.latestJobs.count !== undefined && this.t('XEM THÊM CÁC VIỆC LÀM MỚI NGÀY %date.'.replace(data.latestJobs.count).replace(Moment().format('DD/MM/YY'))),
       jobs: (data && data.latestJobs.jobs) || [],
       redirectURL: '/viec-lam/viec-lam-moi-nhat',
       title: this.t('Việc làm mới nhất'),

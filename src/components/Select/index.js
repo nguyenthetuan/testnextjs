@@ -148,7 +148,7 @@ export default class Select extends Base {
 
     return (
       <div className="selected-wrapper">
-        <div className="title">{this.t('Đang chọn')}</div>
+        <div className="title">{ this.t('components').select.title}</div>
         <div className="selected-opts">
           {selected.map((selectedOpt, index) => {
             if (!selectedOpt || !selectedOpt.value) return null;
