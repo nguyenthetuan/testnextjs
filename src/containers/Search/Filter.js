@@ -76,7 +76,7 @@ export default class Filter extends Base {
           }}
         />
         <Select
-          placeholder={this.t('Chọn cấp bậc')}
+          placeholder={this.t('Chọn trình độ')}
           options={this._addDefaultOpt(levelOpts)}
           value={this._updateLabel(level, levelOpts)}
           onChange={value => {
