@@ -24,7 +24,7 @@ const _$ = window.jQuery;
 
 const GOOGLE_CLIENT_ID = '560403396608-ejfu34fi2ktib679kfdr5v66505ndn0t.apps.googleusercontent.com';
 const ZALO_APP_ID = '1554572497263353061';
-const FB_APP_ID = '1060870910781241';
+const FB_APP_ID = '2708440305839896';
 
 class AuthPopup extends Base {
   constructor(props) {
