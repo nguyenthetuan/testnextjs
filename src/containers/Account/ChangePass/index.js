@@ -57,14 +57,14 @@ class AccountPage extends Base {
       }
     },
     messages: {
-      current_password: this.t('Nhập mật khẩu hiện tại.'),
+      current_password: this.t('containers').Account.ChangePass.currentPassword,
       password: {
-        required: this.t('Nhập mật khẩu mới.'),
-        minlength: this.t('Nhập tối thiểu 6 ký tự.')
+        required: this.t('containers').Account.ChangePass.requiredPassword,
+        minlength: this.t('containers').Account.ChangePass.minlength
       },
       confirm_password: {
-        required: this.t('Nhập lại mật khẩu.'),
-        equalTo: this.t('Nhập mật khẩu không khớp.')
+        required: this.t('containers').Account.ChangePass.confirmPassword,
+        equalTo: this.t('containers').Account.ChangePass.equalTo
       }
     }
   };
@@ -92,7 +92,7 @@ class AccountPage extends Base {
         this.setState({
           message: {
             code: 0,
-            message: this.t('Thay đổi mật khẩu thành công.')
+            message: this.t('containers').Account.ChangePass.changePassword
           },
           currentPassword: '',
           password: '',
@@ -102,7 +102,7 @@ class AccountPage extends Base {
         this.setState({
           message: {
             code: 1,
-            message: this.t('Thay đổi mật khẩu không thành công.')
+            message: this.t('containers').Account.ChangePass.messageError
           }
         });
       }
@@ -113,9 +113,9 @@ class AccountPage extends Base {
     return (
       <div className="content-wrapper">
         <div className="form-header">
-          <h2>{this.t('Đổi mật khẩu')}</h2>
+          <h2>{this.t('containers').Account.ChangePass.formHeader}</h2>
           <div className="legend">
-            {this.t('Để bảo mật tài khoản, vui lòng không chia sẻ mật khẩu cho người khác')}
+            {this.t('containers').Account.ChangePass.legend}
           </div>
         </div>
         <div className="form-wrapper">
@@ -124,14 +124,14 @@ class AccountPage extends Base {
               type="password"
               name="current_password"
               required
-              placeholder={this.t('Mật khẩu hiện tại')}
+              placeholder={this.t('containers').Account.ChangePass.password}
               value={this.state.currentPassword}
               onChange={value => this.setState({ currentPassword: value })}
             />
             <Input
               type="password"
               name="password"
-              placeholder={this.t('Mật khẩu mới')}
+              placeholder={this.t('containers').Account.ChangePass.newPassword}
               required
               value={this.state.password}
               onChange={value => this.setState({ password: value })}
@@ -141,12 +141,12 @@ class AccountPage extends Base {
               name="confirm_password"
               value={this.state.confirmPassword}
               required
-              placeholder={this.t('Xác nhận mật khẩu')}
+              placeholder={this.t('containers').Account.ChangePass.confirmNewPassword}
               onChange={value => this.setState({ confirmPassword: value })}
             />
             <div className="button-wrapper">
               <Button className="jn-btn__yellow" onClick={this._changePassword}>
-                {this.t('Lưu')}
+                {this.t('containers').Account.ChangePass.save}
               </Button>
             </div>
           </form>

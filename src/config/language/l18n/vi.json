@@ -244,9 +244,9 @@
     }
   },
   "containers": {
-    "404": {
+    "errorinternet": {
       "index": {
-        "404": "404 ! Oops...",
+        "error": "404 ! Oops...",
         "message": "Rất tiếc trang này không tồn tại.",
         "backHome": "Quay lại trang chủ"
       }
@@ -283,6 +283,8 @@
             "levelError": "Bạn chưa chọn trình độ.",
             "male": "Nam",
             "female": "Nữ",
+            "showErrorPhone": "Số điện thoại này đã đăng ký trên JobNow, vui lòng sử dụng số điện thoại khác.",
+            "showErrorEmail": "Email này đã đăng ký trên JobNow, vui lòng sử dụng số email khác.",
             "inputFullname": "Họ tên",
             "inputEmail": "Email",
             "inputPhone": "Số điện thoại",
@@ -533,7 +535,7 @@
             "write": "Viết",
             "delete": "Xóa",
             "edit": "Sửa",
-            "language": "ngoại ngữ",
+            "language": "Ngoại ngữ",
             "langOpts": "Chọn tiếng",
             "level": "Trình độ"
           }
@@ -697,6 +699,7 @@
           "message": "Upload filecv không thành công. Vui lòng chọn file có dung lượng nhỏ hơn 1MB.",
           "handleUploadCv": "Chọn hoặc kéo file CV vào đây",
           "annotation": "định dạng .doc, .docx, .pdf",
+          "title": "File đã upload",
           "click": "CHỌN FILE CV",
           "continue": "TIẾP TỤC",
           "message2": "Vui lòng nhập ít nhất 1 kỹ năng.",
@@ -782,6 +785,7 @@
             "refresh": "Làm mới",
             "edit": "Sửa",
             "delete": "Xóa",
+            "message": "Bạn chắc chắn xoá hồ sơ này ?",
             "back": "Trở lại"
           }
         },
@@ -900,8 +904,8 @@
       "SimilarJobs": {
         "index": {
           "job": "Việc làm tương tự",
-          "have": "Có",
-          "newJob": "việc làm mới ngành",
+          "have": "Có ",
+          "newJob": "việc làm mới ngành ",
           "view": "Bấm xem ngay"
         }
       },
@@ -915,10 +919,14 @@
     "Jobs": {
       "JobListContainer": {
         "index": {
+          "Highlights": "Nổi bật",
+          "Urgent": "Tuyển gấp",
           "status": "Đã ứng tuyển",
           "reply": "Phàn hồi từ NTD",
           "applyStatus": "Đã lưu ngày",
-          "suitableJobs": "Việc làm phù hợp"
+          "suitableJobs": "Việc làm phù hợp",
+          "appliedJobs": "Việc làm đã ứng tuyển",
+          "savedJobs": "Việc làm đã lưu"
         }
       }
     },
@@ -1004,8 +1012,8 @@
         "distance": "Gần bạn nhất",
         "featured": "Tuyển gấp",
         "latest": "Mới nhất",
-        "find": "Tìm thấy",
-        "result": "kết quả"
+        "find": "Tìm thấy ",
+        "result": " kết quả"
       }
     },
     "createPage": {

@@ -84,7 +84,7 @@ class ListCV extends Base {
     } else {
       content = (
         <div className="empty-resume-wrapper">
-          <div className="message">{this.t('Bạn chưa có hồ sơ nào. Tạo hồ sơ để ứng tuyển.')}</div>
+          <div className="message">{this.t('containers').CV.ListCV.index.message}</div>
           <div className="btn-wrapper">
             <Button
               className="jn-btn__yellow"
@@ -92,7 +92,7 @@ class ListCV extends Base {
                 this.props.history.push('/cv/create');
               }}
             >
-              {this.t('Tạo hồ sơ')}
+              {this.t('containers').CV.ListCV.index.createCV}
             </Button>
           </div>
         </div>
@@ -120,7 +120,7 @@ class ListCV extends Base {
           <div className="header-content">
             <span className="page-label">
               <div className="main-label">
-                <div className="label-text">{this.t('QUẢN LÝ HỒ SƠ')}</div>
+                <div className="label-text">{this.t('containers').CV.ListCV.index.cv}</div>
               </div>
             </span>
             {cvList &&
@@ -132,8 +132,8 @@ class ListCV extends Base {
                     }}
                     className="jn-btn__yellow customize"
                   >
-                    <div>{this.t('TẠO THÊM HỒ SƠ MỚI')}</div>
-                    <div>{this.t('Tối đa 3 hồ sơ')}</div>
+                    <div>{this.t('containers').CV.ListCV.index.addCV}</div>
+                    <div>{this.t('containers').CV.ListCV.index.maxCV}</div>
                   </Button>
                 </div>
               )}

@@ -21,7 +21,7 @@ class InformationPage extends Base {
     return (
       <div className="user-information-container">
         <div className="header-page">
-          <div className="label-text">{this.t('THÔNG TIN CƠ BẢN')}</div>
+          <div className="label-text">{this.t('containers').Account.Information.index.labelText}</div>
         </div>
         <div className="body-page">
           <div className="content-wrapper">
@@ -46,7 +46,7 @@ class InformationPage extends Base {
           }}
         >
           {message && (
-            <div className={message.code ? 'error-msg' : 'success-msg'}>{this.t(message.code ? 'Cập nhật thông tin tài khoản không thành công.' : 'Cập nhật thông tin tài khoản thành công.')}</div>
+            <div className={message.code ? 'error-msg' : 'success-msg'}>{this.t(message.code ? this.t('containers').Account.Information.index.errorMsg : this.t('containers').Account.Information.index.successMsg)}</div>
           )}
         </Popup>
       </div>

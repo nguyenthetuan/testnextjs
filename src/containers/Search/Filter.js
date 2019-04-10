@@ -7,7 +7,7 @@ export default class Filter extends Base {
   };
 
   _addDefaultOpt = opts => {
-    return [{ value: null, label: this.t('Tất cả') }, ...opts];
+    return [{ value: null, label: this.t('containers').Search.Filter.all }, ...opts];
   };
 
   _updateLabel = (value, opts) => {
@@ -52,7 +52,7 @@ export default class Filter extends Base {
     return (
       <div className="filters-wrapper">
         <Select
-          placeholder={this.t('Chọn ngành nghề')}
+          placeholder={this.t('containers').Search.Filter.catOpts}
           options={this._addDefaultOpt(catOpts)}
           value={categories}
           onChange={value => {
@@ -60,7 +60,7 @@ export default class Filter extends Base {
           }}
         />
         <Select
-          placeholder={this.t('Chọn địa điểm')}
+          placeholder={this.t('containers').Search.Filter.provinceOpts}
           options={this._addDefaultOpt(provinceOpts)}
           value={selectedProvince}
           onChange={value => {
@@ -68,7 +68,7 @@ export default class Filter extends Base {
           }}
         />
         <Select
-          placeholder={this.t('Chọn mức lương')}
+          placeholder={this.t('containers').Search.Filter.salary}
           options={this._addDefaultOpt(salaryOpts)}
           value={this._updateLabel(salary, salaryOpts)}
           onChange={value => {
@@ -76,7 +76,7 @@ export default class Filter extends Base {
           }}
         />
         <Select
-          placeholder={this.t('Chọn trình độ')}
+          placeholder={this.t('containers').Search.Filter.levelOpts}
           options={this._addDefaultOpt(levelOpts)}
           value={this._updateLabel(level, levelOpts)}
           onChange={value => {
@@ -84,7 +84,7 @@ export default class Filter extends Base {
           }}
         />
         <Select
-          placeholder={this.t('Chọn kinh nghiệm')}
+          placeholder={this.t('containers').Search.Filter.expOpts}
           options={this._addDefaultOpt(expOpts)}
           value={this._updateLabel(experience, expOpts)}
           onChange={value => {
@@ -92,7 +92,7 @@ export default class Filter extends Base {
           }}
         />
         <Select
-          placeholder={this.t('Chọn hình thức làm việc')}
+          placeholder={this.t('containers').Search.Filter.typeOpts}
           options={this._addDefaultOpt(typeOpts)}
           value={this._updateLabel(type, typeOpts)}
           onChange={value => {
@@ -100,7 +100,7 @@ export default class Filter extends Base {
           }}
         />
         <Select
-          placeholder={this.t('Sắp xếp kết quả')}
+          placeholder={this.t('containers').Search.Filter.sortOpts}
           options={this._addDefaultOpt(sortOpts)}
           value={this._updateLabel(sort, sortOpts)}
           onChange={value => {
@@ -127,7 +127,7 @@ export default class Filter extends Base {
               );
             }}
           >
-            {this.t('Xoá các lựa chọn')}
+            {this.t('containers').Search.Filter.delete}
           </a>
         </div>
       </div>

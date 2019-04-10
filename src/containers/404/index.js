@@ -19,10 +19,10 @@ export default class NotFoundPage extends Base {
             <img src="/assets/img/logo-full.png" alt="" />
           </div>
           <div className="message-wrapper">
-            <h2>{this.t('404 ! Oops...')}</h2>
-            <div className="message">{this.t('Rất tiếc trang này không tồn tại.')}</div>
+            <h2>{this.t('containers').errorinternet.index.error}</h2>
+            <div className="message">{this.t('containers').errorinternet.index.message}</div>
             <div className="home-link">
-              <a href="/">{this.t('Quay lại trang chủ')}</a>
+              <a href="/">{this.t('containers').errorinternet.index.backHome}</a>
             </div>
           </div>
         </div>

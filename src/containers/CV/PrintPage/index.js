@@ -50,33 +50,33 @@ const GeneralInfo = props => {
   const { t } = props;
   return (
     <div className="cv-section general-section">
-      <div className="section-label">{t('Thông tin cơ bản')}</div>
+      <div className="section-label">{t('containers').CV.PrintPage.info}</div>
       <div className="section-content">
         <div className="col">
           <div className="info-line">
             <div className="info-title">
-              <span className="title">{t('Giới tính')}</span>
+              <span className="title">{t('containers').CV.PrintPage.genderOpts}</span>
               <span>:</span>
             </div>
             <div className="info-value">{props.constants.gender[infomation.gender]}</div>
           </div>
           <div className="info-line">
             <div className="info-title">
-              <span className="title">{t('Ngày sinh')}</span>
+              <span className="title">{t('containers').CV.PrintPage.date}</span>
               <span>:</span>
             </div>
             <div className="info-value">{Moment(infomation.dateofbirth).format('DD/MM/YYYY')}</div>
           </div>
           <div className="info-line">
             <div className="info-title">
-              <span className="title">{t('Hôn nhân')}</span>
+              <span className="title">{t('containers').CV.PrintPage.marital}</span>
               <span>:</span>
             </div>
             <div className="info-value">{props.constants.marital_status[infomation.marital_status]}</div>
           </div>
           <div className="info-line">
             <div className="info-title">
-              <span className="title">{t('Trình độ')}</span>
+              <span className="title">{t('containers').CV.PrintPage.level}</span>
               <span>:</span>
             </div>
             <div className="info-value">{props.constants.level[infomation.level]}</div>
@@ -86,28 +86,28 @@ const GeneralInfo = props => {
         <div className="col">
           <div className="info-line">
             <div className="info-title">
-              <span className="title">{t('Kinh nghiệm làm việc')}</span>
+              <span className="title">{t('containers').CV.PrintPage.exp}</span>
               <span>:</span>
             </div>
             <div className="info-value">{props.constants.experience[job_need.year_experience]}</div>
           </div>
           <div className="info-line">
             <div className="info-title">
-              <span className="title">{t('Mức lương mong muốn')}</span>
+              <span className="title">{t('containers').CV.PrintPage.salary}</span>
               <span>:</span>
             </div>
             <div className="info-value">{props.constants.salary[job_need.salary]}</div>
           </div>
           <div className="info-line">
             <div className="info-title">
-              <span className="title">{t('Nơi làm việc mong muốn')}</span>
+              <span className="title">{t('containers').CV.PrintPage.worklocation}</span>
               <span>:</span>
             </div>
             <div className="info-value">{job_need.worklocation.map(wp => wp.province).join(', ')}</div>
           </div>
           <div className="info-line">
             <div className="info-title">
-              <span className="title">{t('Hình thức làm việc')}</span>
+              <span className="title">{t('containers').CV.PrintPage.title}</span>
               <span>:</span>
             </div>
             <div className="info-value">{props.constants.resume_type[job_need.resume_type]}</div>
@@ -122,7 +122,7 @@ const EducationInfo = props => {
   const { t, constants } = props;
   return (
     <div className="cv-section edu-section">
-      <div className="section-label">{t('Học vấn - Chứng chỉ')}</div>
+      <div className="section-label">{t('containers').CV.PrintPage.edu}</div>
       <div className="section-content">
         {props.data.map((edu, index) => {
           return (
@@ -136,11 +136,11 @@ const EducationInfo = props => {
               <div className="detail-info">
                 <div className="major-info">
                   <div className="bold-dot" />
-                  <div className="major-name">{`${t('Chuyên ngành')}: ${edu.certificate}`}</div>
+                  <div className="major-name">{`${t('containers').CV.PrintPage.specialized}: ${edu.certificate}`}</div>
                 </div>
                 <div className="details">
-                  <div className="line">{`${t('Bằng cấp')}: ${edu.certificate}`}</div>
-                  <div className="line">{`${t('Tốt nghiệp loại')} ${constants.classification[edu.classification]}`}}</div>
+                  <div className="line">{`${t('containers').CV.PrintPage.rank}: ${edu.certificate}`}</div>
+                  <div className="line">{`${t('containers').CV.PrintPage.classification} ${constants.classification[edu.classification]}`}}</div>
                 </div>
               </div>
             </div>
@@ -155,7 +155,7 @@ const ExperienceInfo = props => {
   const { t, data } = props;
   return (
     <div className="cv-section edu-section">
-      <div className="section-label">{t('Kinh nghiệm làm việc')}</div>
+      <div className="section-label">{t('containers').CV.PrintPage.exp}</div>
       <div className="section-content">
         {data.map((exp, index) => {
           return (
@@ -163,7 +163,7 @@ const ExperienceInfo = props => {
               <div className="main-info">
                 <div className="time-title">{exp.company}</div>
                 <div className="time">
-                  {Moment(exp.time_start).format('MM/YYYY')} - {exp.current ? t('Hiện tại') : Moment(exp.time_end).format('MM/YYYY')}
+                  {Moment(exp.time_start).format('MM/YYYY')} - {exp.current ? t('containers').CV.PrintPage.current : Moment(exp.time_end).format('MM/YYYY')}
                 </div>
               </div>
               <div className="detail-info">
@@ -185,7 +185,7 @@ const ForeignLanguagesInfo = props => {
   const { constants, t, data } = props;
   return (
     <div className="cv-section foreign-langs">
-      <div className="section-label">{t('Ngoại ngữ')}</div>
+      <div className="section-label">{t('containers').CV.PrintPage.language}</div>
       <div className="section-content">
         {data.map((lang, index) => {
           return (
@@ -193,25 +193,25 @@ const ForeignLanguagesInfo = props => {
               <div className="lang-name">{t(constants.languages[lang.title])}</div>
               <div className="skills-wrapper">
                 <div className="skill-item">
-                  <div className="skill-title">{t('Nghe')}</div>
+                  <div className="skill-title">{t('containers').CV.PrintPage.listen}</div>
                   <div className="skill-level">
                     <div className="skill-level-value" style={{ width: `${100 / lang.listen}%` }} />
                   </div>
                 </div>
                 <div className="skill-item">
-                  <div className="skill-title">{t('Đọc')}</div>
+                  <div className="skill-title">{t('containers').CV.PrintPage.read}</div>
                   <div className="skill-level">
                     <div className="skill-level-value" style={{ width: `${100 / lang.read}%` }} />
                   </div>
                 </div>
                 <div className="skill-item">
-                  <div className="skill-title">{t('Nói')}</div>
+                  <div className="skill-title">{t('containers').CV.PrintPage.speak}</div>
                   <div className="skill-level">
                     <div className="skill-level-value" style={{ width: `${100 / lang.talk}%` }} />
                   </div>
                 </div>
                 <div className="skill-item">
-                  <div className="skill-title">{t('Viết')}</div>
+                  <div className="skill-title">{t('containers').CV.PrintPage.write}</div>
                   <div className="skill-level">
                     <div className="skill-level-value" style={{ width: `${100 / lang.write}%` }} />
                   </div>
@@ -301,7 +301,7 @@ class PrintPage extends Base {
 
   _generateReferencerInfo = () => {
     const { name, title, company, phone, email } = this.props.data.referenced;
-    return `${name}<br />${title}<br/>${company}<br />${this.t('Điện thoại')}: ${phone}<br />${this.t('Email')}: ${email}`;
+    return `${name}<br />${title}<br/>${company}<br />${this.t('containers').CV.PrintPage.phone}: ${phone}<br />${this.t('containers').CV.PrintPage.email}: ${email}`;
   };
 
   _renderResumeContent() {
@@ -321,12 +321,12 @@ class PrintPage extends Base {
           <ExperienceInfo data={work_experience} constants={this.props.constants} t={this.t} />
           {language.length > 0 && <ForeignLanguagesInfo data={language} constants={this.props.constants} t={this.t} />}
           {skills.length > 0 && (
-            <ExtraInfo label={this.t('Kỹ năng')}>
+            <ExtraInfo label={this.t('containers').CV.PrintPage.skill}>
               <div className="skills-info" dangerouslySetInnerHTML={{ __html: skills.map(skill => `- ${skill.title}<br />`).join(' ') }} />
             </ExtraInfo>
           )}
           {Object.keys(referenced).length > 0 && (
-            <ExtraInfo label={this.t('Người tham chiếu')}>
+            <ExtraInfo label={this.t('containers').CV.PrintPage.referenceUser}>
               <div className="referenced-info" dangerouslySetInnerHTML={{ __html: this._generateReferencerInfo() }} />
             </ExtraInfo>
           )}

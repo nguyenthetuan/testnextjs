@@ -56,7 +56,7 @@ class ExpItem extends Base {
               });
             }}
             showCurrentWorking
-            label={this.t('Thời gian')}
+            label={this.t('containers').CV.CreateCV.ExpForm.ExpItem.time}
             data={{ time_start, time_end, current }}
             required={_id !== undefined}
           />
@@ -64,7 +64,7 @@ class ExpItem extends Base {
           <Input
             type="text"
             name="title"
-            placeholder={this.t('Vị trí/ chức danh')}
+            placeholder={this.t('containers').CV.CreateCV.ExpForm.ExpItem.title}
             value={title}
             required={_id !== undefined}
             onChange={value =>
@@ -76,7 +76,7 @@ class ExpItem extends Base {
           <Input
             type="text"
             name="company"
-            placeholder={this.t('Công ty')}
+            placeholder={this.t('containers').CV.CreateCV.ExpForm.ExpItem.company}
             value={company}
             required={_id !== undefined}
             onChange={value =>
@@ -89,7 +89,7 @@ class ExpItem extends Base {
             name="description"
             required={_id !== undefined}
             multiline
-            placeholder={this.t('Mô tả công việc')}
+            placeholder={this.t('containers').CV.CreateCV.ExpForm.ExpItem.description}
             value={description}
             onChange={value => {
               this.setState({ description: value }, () => {
@@ -101,7 +101,7 @@ class ExpItem extends Base {
         <div className="delete-btn-wrapper">
           <Button className="delete-btn" onClick={this.props.onDelete}>
             <span className="icon-trash" />
-            {this.t('Xoá')}
+            {this.t('containers').CV.CreateCV.ExpForm.ExpItem.delete}
           </Button>
         </div>
       </div>

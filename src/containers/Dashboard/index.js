@@ -128,13 +128,13 @@ class Dashboard extends Base {
                 <p>{info.phone || ''}</p>
                 <p>{info.email || ''}</p>
                 <p>
-                  <Link to="/change-information">{this.t('Sửa thông tin')}</Link>
+                  <Link to="/change-information">{this.t('containers').Dashboard.editInfo}</Link>
                 </p>
                 <p>
-                  <Link to="/change-password">{this.t('Thay đổi mật khẩu')}</Link>
+                  <Link to="/change-password">{this.t('containers').Dashboard.changePassword}</Link>
                 </p>
                 <p>
-                  <Link to="/setting-notification">{this.t('Cài đặt thông báo')}</Link>
+                  <Link to="/setting-notification">{this.t('containers').Dashboard.settingNotification}</Link>
                 </p>
               </div>
             </div>
@@ -145,27 +145,27 @@ class Dashboard extends Base {
                 <p>
                   <Link to="/cv">
                     <strong>
-                      {this.t('HỒ SƠ ĐÃ TẠO ')}({countCV})
+                      {this.t('containers').Dashboard.countCV}({countCV})
                     </strong>
                   </Link>
                 </p>
                 <p>
                   <strong>
-                    {this.t('Hồ sơ')}: {firstCV.title}
+                    {this.t('containers').Dashboard.cv}: {firstCV.title}
                   </strong>
                 </p>
                 <p>
-                  {this.t('Ngày tạo')}: <strong>{Moment(firstCV.createdAt).format('DD/MM/YYYY')}</strong>
+                  {this.t('containers').Dashboard.timeStart}: <strong>{Moment(firstCV.createdAt).format('DD/MM/YYYY')}</strong>
                 </p>
                 <p>
-                  {this.t('Loại hồ sơ')}: <strong>{this.props.type[firstCV.type]}</strong>
+                  {this.t('containers').Dashboard.type}: <strong>{this.props.type[firstCV.type]}</strong>
                 </p>
 
                 <p>
-                  {this.t('Tình trạng')}: <strong>{firstCV.status}</strong>
+                  {this.t('containers').Dashboard.status}: <strong>{firstCV.status}</strong>
                 </p>
                 <p>
-                  {this.t('Lượt xem')}: <strong>{firstCV.view_counts}</strong>
+                  {this.t('containers').Dashboard.viewCounts}: <strong>{firstCV.view_counts}</strong>
                 </p>
               </div>
             </div>
@@ -176,7 +176,7 @@ class Dashboard extends Base {
               <div className="col-item col-item-3">
                 <p>
                   <Link to="/notification">
-                    <strong>THÔNG BÁO ({notifications.totalUnread})</strong>
+                    <strong>{this.t('containers').Dashboard.notification} ({notifications.totalUnread})</strong>
                   </Link>
                 </p>
                 {this._renderNotiItem()}

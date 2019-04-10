@@ -37,8 +37,8 @@ export default class CreateEduForm extends Base {
       }
     },
     messages: {
-      fullname: 'Nhập họ tên đầy đủ.',
-      address: 'Nhập địa chỉ hiện tại của bạn.'
+      fullname: this.t('containers').CV.CreateCV.EduForm.index.fullname,
+      address: this.t('containers').CV.CreateCV.EduForm.index.address
     }
   };
 
@@ -88,7 +88,7 @@ export default class CreateEduForm extends Base {
     if (!this.validateWorkExp()) {
       this.setState({
         showPopup: true,
-        message: { code: 1, message: 'Vui lòng nhập đầy đủ thông tin.' }
+        message: { code: 1, message: this.t('containers').CV.CreateCV.EduForm.index.message }
       });
     } else {
       this.setState({ updating: true }, async () => {
@@ -111,7 +111,7 @@ export default class CreateEduForm extends Base {
               showPopup: true,
               message: {
                 code: 1,
-                message: 'Không thành công. Vui lòng kiểm lại thông tin nhập liệu.'
+                message: this.t('containers').CV.CreateCV.EduForm.index.messageError
               }
             },
             () => {
@@ -166,7 +166,7 @@ export default class CreateEduForm extends Base {
   };
 
   _generateSelectableOpts = () => {
-    const genderOpts = [{ value: 'male', label: this.t('Nam') }, { value: 'female', label: this.t('Nữ') }];
+    const genderOpts = [{ value: 'male', label: this.t('containers').CV.CreateCV.EduForm.index.male }, { value: 'female', label: this.t('containers').CV.CreateCV.EduForm.index.female }];
     const { classification, marital_status } = this.props.constants || {};
     const matialOptions = Object.keys(marital_status || {}).map(key => ({
       value: key,
@@ -231,7 +231,7 @@ export default class CreateEduForm extends Base {
           <div className="add-btn-wrapper">
             <Button className="jn-btn__normal" onClick={this.addNewEducation}>
               <span className="icon-jn-plus" />
-              <span className="btn-title">{this.t('THÊM HỌC VẤN/CHỨNG CHỈ')}</span>
+              <span className="btn-title">{this.t('containers').CV.CreateCV.EduForm.index.addNewEducation}</span>
             </Button>
           </div>
         )}
@@ -247,14 +247,14 @@ export default class CreateEduForm extends Base {
           onClick={() => {
             this.props.onBack();
           }}
-          label={this.t('QUAY LẠI')}
+          label={this.t('containers').CV.CreateCV.EduForm.index.back}
           className="jn-btn__normal"
         />
         <Button
           onClick={() => {
             this._save();
           }}
-          label={this.t('TIẾP TỤC')}
+          label={this.t('containers').CV.CreateCV.EduForm.index.continue}
           className="jn-btn__yellow"
         />
       </div>
@@ -266,7 +266,7 @@ export default class CreateEduForm extends Base {
     if (this.props.showFooter === false && editData.length > 0) {
       return (
         <div className="edit-footer-wrapper">
-          <Button onClick={this._save} label={this.t('Lưu')} className="jn-btn__yellow" />
+          <Button onClick={this._save} label={this.t('containers').CV.CreateCV.EduForm.index.save} className="jn-btn__yellow" />
           <Button
             onClick={() => {
               if (this.props.showFooter === false) {
@@ -274,7 +274,7 @@ export default class CreateEduForm extends Base {
               }
               this.props.onSuccess(false);
             }}
-            label={this.t('Huỷ')}
+            label={this.t('containers').CV.CreateCV.EduForm.index.cancel}
             className="jn-btn__normal"
           />
         </div>
@@ -309,7 +309,7 @@ export default class CreateEduForm extends Base {
                   this.setState({ message: null, showPopup: false });
                 }}
               >
-                {this.t('Trở lại')}
+                {this.t('containers').CV.CreateCV.EduForm.index.back2}
               </Button>
             </div>
           </Popup>

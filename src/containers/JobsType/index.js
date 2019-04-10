@@ -91,10 +91,10 @@ class JobsTypePage extends Base {
         <div className="title">
           <div className="main-title">
             <span className="jn-awesome-bolt" />
-            <span className="title-text">{this.t('FLASH JOBS')}</span>
+            <span className="title-text">{this.t('containers').JobsType.flashJob}</span>
           </div>
           <div className="countdown-wrapper">
-            <span className="sub-title">{this.t('Kết thúc sau')}</span>
+            <span className="sub-title">{this.t('containers').JobsType.end}</span>
             <Countdown date={countdown && countdown.end} />
           </div>
         </div>
@@ -160,7 +160,7 @@ class JobsTypePage extends Base {
           <div className="filter-wrapper">
             <span className="icon-magnifier" />
             <Input
-              placeholder={this.t('Tìm nhanh...')}
+              placeholder={this.t('containers').JobsType.filterText}
               floatingLabel
               value={filterText}
               onChange={value => {

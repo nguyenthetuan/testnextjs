@@ -79,7 +79,82 @@ const strings = new LocalizedStrings({
           status: en.setting.resumes.users.status
         }
 
-      }
+      },
+      AddressInput: en.components.AddressInput,
+    },
+    containers: {
+      errorinternet: en.containers.errorinternet,
+      Account: {
+        ChangePass: en.containers.Account.ChangePass.index,
+        Information: {
+          AccountForm: en.containers.Account.Information.AccountForm.index,
+          index: en.containers.Account.Information.index
+        }
+      },
+      CV: {
+        components: {
+          CVFileLoader: en.containers.CV.components.CVFileLoader.index,
+          ForeignLanguage: {
+            index: en.containers.CV.components.ForeignLanguage.index,
+            Languague: en.containers.CV.components.ForeignLanguage.Languague
+          },
+          ReferenceUser: en.containers.CV.components.ReferenceUser.index,
+          SkillInfo: en.containers.CV.components.SkillInfo.index,
+          TimeDistance: en.containers.CV.components.TimeDistance.index,
+          UpdateAccountMessage: en.containers.CV.components.UpdateAccountMessage.index,
+        },
+        CreateCV: {
+          CreateSuccessfull: en.containers.CV.CreateCV.CreateSuccessfull.index,
+          EduForm: {
+            EduItem: en.containers.CV.CreateCV.EduForm.EduItem,
+            index: en.containers.CV.CreateCV.EduForm.index
+          },
+          ExpForm: {
+            ExpItem: en.containers.CV.CreateCV.ExpForm.ExpItem,
+            index: en.containers.CV.CreateCV.ExpForm.index
+          },
+          HobbyWithCV: en.containers.CV.CreateCV.HobbyWithCV.index,
+          InitCreation: en.containers.CV.CreateCV.InitCreation.index,
+          index: en.containers.CV.CreateCV.index
+        },
+        EditCV: {
+          EducationInfo: en.containers.CV.EditCV.EducationInfo.index,
+          ExperienceInfo: en.containers.CV.EditCV.ExperienceInfo.index,
+          GeneralInfo: en.containers.CV.EditCV.GeneralInfo.index,
+          InterestedWork: en.containers.CV.EditCV.InterestedWork.index,
+          index: en.containers.CV.EditCV.index,
+        },
+        ListCV: {
+          CVItem: en.containers.CV.ListCV.CVItem.index,
+          index: en.containers.CV.ListCV.index
+        },
+        PrintPage: en.containers.CV.PrintPage.index
+      },
+      Dashboard: en.containers.Dashboard.index,
+      Home: {
+        TopBlock: en.containers.Home.TopBlock.index,
+        index: en.containers.Home.index
+      },
+      JobDetail: {
+        Body: {
+          LeftCol: en.containers.JobDetail.Body.LeftCol,
+          RightCol: en.containers.JobDetail.Body.RightCol
+        },
+        Header: en.containers.JobDetail.Header.index,
+        SimilarJobs: en.containers.JobDetail.SimilarJobs.index,
+        index: en.containers.JobDetail.index
+      },
+      Jobs: en.containers.Jobs.JobListContainer.index,
+      JobsType: en.containers.JobsType.index,
+      Notification: {
+        AllNotification: en.containers.Notification.AllNotification.index,
+        SettingNotification: en.containers.Notification.SettingNotification.index
+      },
+      Search: {
+        Filter: en.containers.Search.Filter,
+        index: en.containers.Search.index
+      },
+      createPage: en.containers.createPage
     }
   },
   vi: {
@@ -158,7 +233,82 @@ const strings = new LocalizedStrings({
           status: vi.setting.resumes.users.status
         }
 
-      }
+      },
+      AddressInput: vi.components.AddressInput,
+    },
+    containers: {
+      errorinternet: vi.containers.errorinternet,
+      Account: {
+        ChangePass: vi.containers.Account.ChangePass.index,
+        Information: {
+          AccountForm: vi.containers.Account.Information.AccountForm.index,
+          index: vi.containers.Account.Information.index
+        }
+      },
+      CV: {
+        components: {
+          CVFileLoader: vi.containers.CV.components.CVFileLoader.index,
+          ForeignLanguage: {
+            index: vi.containers.CV.components.ForeignLanguage.index,
+            Languague: vi.containers.CV.components.ForeignLanguage.Languague
+          },
+          ReferenceUser: vi.containers.CV.components.ReferenceUser.index,
+          SkillInfo: vi.containers.CV.components.SkillInfo.index,
+          TimeDistance: vi.containers.CV.components.TimeDistance.index,
+          UpdateAccountMessage: vi.containers.CV.components.UpdateAccountMessage.index,
+        },
+        CreateCV: {
+          CreateSuccessfull: vi.containers.CV.CreateCV.CreateSuccessfull.index,
+          EduForm: {
+            EduItem: vi.containers.CV.CreateCV.EduForm.EduItem,
+            index: vi.containers.CV.CreateCV.EduForm.index
+          },
+          ExpForm: {
+            ExpItem: vi.containers.CV.CreateCV.ExpForm.ExpItem,
+            index: vi.containers.CV.CreateCV.ExpForm.index
+          },
+          HobbyWithCV: vi.containers.CV.CreateCV.HobbyWithCV.index,
+          InitCreation: vi.containers.CV.CreateCV.InitCreation.index,
+          index: vi.containers.CV.CreateCV.index
+        },
+        EditCV: {
+          EducationInfo: vi.containers.CV.EditCV.EducationInfo.index,
+          ExperienceInfo: vi.containers.CV.EditCV.ExperienceInfo.index,
+          GeneralInfo: vi.containers.CV.EditCV.GeneralInfo.index,
+          InterestedWork: vi.containers.CV.EditCV.InterestedWork.index,
+          index: vi.containers.CV.EditCV.index,
+        },
+        ListCV: {
+          CVItem: vi.containers.CV.ListCV.CVItem.index,
+          index: vi.containers.CV.ListCV.index
+        },
+        PrintPage: vi.containers.CV.PrintPage.index
+      },
+      Dashboard: vi.containers.Dashboard.index,
+      Home: {
+        TopBlock: vi.containers.Home.TopBlock.index,
+        index: vi.containers.Home.index
+      },
+      JobDetail: {
+        Body: {
+          LeftCol: vi.containers.JobDetail.Body.LeftCol,
+          RightCol: vi.containers.JobDetail.Body.RightCol
+        },
+        Header: vi.containers.JobDetail.Header.index,
+        SimilarJobs: vi.containers.JobDetail.SimilarJobs.index,
+        index: vi.containers.JobDetail.index
+      },
+      Jobs: vi.containers.Jobs.JobListContainer.index,
+      JobsType: vi.containers.JobsType.index,
+      Notification: {
+        AllNotification: vi.containers.Notification.AllNotification.index,
+        SettingNotification: vi.containers.Notification.SettingNotification.index
+      },
+      Search: {
+        Filter: vi.containers.Search.Filter,
+        index: vi.containers.Search.index
+      },
+      createPage: vi.containers.createPage
     }
   },
   jp: {
@@ -167,5 +317,6 @@ const strings = new LocalizedStrings({
     }
   }
 });
+
 
 export default strings;

@@ -82,13 +82,13 @@ export default function (ComposedComponent, isSearchPage = false) {
               <div className="main-content">
                 {(constants.message && constants.message.code) || (locations.message && locations.message.code) || (categories.message && categories.message.code) ? (
                   <div className="error-connect">
-                    {this.t('Có lỗi kết nối với máy chủ. Vui lòng ')}
+                    {this.t('containers').createPage.message}
                     <Button
                       onClick={() => {
                         window.location.reload();
                       }}
                     >
-                      {this.t('thử lại')}
+                      {this.t('containers').createPage.reload}
                     </Button>
                   </div>
                 ) : (

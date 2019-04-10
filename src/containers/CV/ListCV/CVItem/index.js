@@ -30,7 +30,7 @@ class CVItem extends Base {
           this.props.deleteResumeSuccess(this.props.index);
         });
       } else {
-        this.setState({ message: { code: 1, message: this.t('Xoá hồ sơ không thành công.') } });
+        this.setState({ message: { code: 1, message: this.t('containers').CV.ListCV.CVItem.messageError } });
       }
       this._deleting = false;
     }
@@ -39,13 +39,13 @@ class CVItem extends Base {
   _refreshResume = async id => {
     const response = await authApi.refreshResume(id);
     if (response && response.result) {
-      this.setState({ refreshMessage: { code: 0, message: 'Hồ sơ của bạn vừa được làm mới.' } }, () => {
+      this.setState({ refreshMessage: { code: 0, message: this.t('containers').CV.ListCV.CVItem.refreshMessage } }, () => {
         setTimeout(() => {
           this.setState({ refreshMessage: null });
         }, 5000);
       });
     } else {
-      this.setState({ showDeletePopup: true, refreshMessage: { code: 0, message: 'Hồ sơ của bạn vừa được làm mới không thành công.' } });
+      this.setState({ showDeletePopup: true, refreshMessage: { code: 0, message: this.t('containers').CV.ListCV.CVItem.refreshMessageError } });
     }
   };
 
@@ -83,26 +83,26 @@ class CVItem extends Base {
     return (
       <div className="cv-info-item">
         <div className="title">
-          {this.t('Hồ sơ')}:{` ${title}`}
+          {this.t('containers').CV.ListCV.CVItem.cv}:{` ${title}`}
         </div>
         <div className="info-container">
           <div className="left-column">
             <div>
-              <span>{this.t('Ngày tạo')}:</span>
+              <span>{this.t('containers').CV.ListCV.CVItem.timeStart}:</span>
               <strong>{` ${Moment(createdAt).format('DD/MM/YYYY')}`}</strong>
             </div>
             <div>
-              <span className="resume-type-label">{this.t('Loại hồ sơ')}:</span>
+              <span className="resume-type-label">{this.t('containers').CV.ListCV.CVItem.type}:</span>
               <strong>{constants && constants.type[type]}</strong>
             </div>
           </div>
           <div className="right-column">
             <div>
-              <span>{this.t('Tình trạng')}: </span>
+              <span>{this.t('containers').CV.ListCV.CVItem.status}: </span>
               <span>{` ${status}`}</span>
             </div>
             <div>
-              <span>{this.t('Lượt xem')}: </span>
+              <span>{this.t('containers').CV.ListCV.CVItem.viewCounts}: </span>
               <span>{` ${view_counts}`}</span>
             </div>
           </div>
@@ -110,7 +110,7 @@ class CVItem extends Base {
 
         <div>
           <CheckBox
-            label={this.t('Cho phép nhà tuyển dụng tìm kiếm thông tin và chủ động liên hệ phỏng vấn.')}
+            label={this.t('containers').CV.ListCV.CVItem.label}
             checked={allow_search}
             onChange={value => {
               this.props.changeResumeSearchingStatus({ id: _id, status: value, index });
@@ -129,7 +129,7 @@ class CVItem extends Base {
           <div className="line">
             <Button className="btn-edit" onClick={this.props.onDownload}>
               <span className="icon-star" />
-              {this.t('Download CV')}
+              {this.t('containers').CV.ListCV.CVItem.dowload}
             </Button>
             <Button
               className="btn-edit"
@@ -138,7 +138,7 @@ class CVItem extends Base {
               }}
             >
               <span className="icon-star" />
-              {this.t('Làm mới')}
+              {this.t('containers').CV.ListCV.CVItem.refresh}
             </Button>
           </div>
           <div className="line">
@@ -149,7 +149,7 @@ class CVItem extends Base {
               }}
             >
               <span className="icon-note" />
-              {this.t('Sửa')}
+              {this.t('containers').CV.ListCV.CVItem.edit}
             </Button>
             <Button
               className="btn-edit"
@@ -158,7 +158,7 @@ class CVItem extends Base {
               }}
             >
               <span className="icon-trash" />
-              {this.t('Xoá')}
+              {this.t('containers').CV.ListCV.CVItem.delete}
             </Button>
           </div>
         </div>
@@ -167,7 +167,7 @@ class CVItem extends Base {
         <Popup show={showDeletePopup} showBox className={`delete-resume-popup${(refreshMessage && refreshMessage.code && ' refresh-failed') || ''}`}>
           <div className="delete-msg">
             <span className="icon-close" />
-            {this.t(refreshMessage && refreshMessage.code ? refreshMessage.message : 'Bạn chắc chắn xoá hồ sơ này ?')}
+            {this.t(refreshMessage && refreshMessage.code ? refreshMessage.message : this.t('containers').CV.ListCV.CVItem.message)}
           </div>
           {!refreshMessage && <div className="cv-title">{title}</div>}
           <div className="btn-wrapper">
@@ -177,11 +177,11 @@ class CVItem extends Base {
                 this.setState({ showDeletePopup: false });
               }}
             >
-              {this.t('Trở lại')}
+              {this.t('containers').CV.ListCV.CVItem.back}
             </Button>
             {!refreshMessage && (
               <Button className="jn-btn__yellow btn-delete" onClick={this._deleteResume}>
-                {this.t('Xoá')}
+                {this.t('containers').CV.ListCV.CVItem.delete}
               </Button>
             )}
           </div>

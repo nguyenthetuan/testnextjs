@@ -51,7 +51,7 @@ class AllNotification extends Base {
         </div>
 
         <div className="col col-status">
-          <Button onClick={() => this.markAsRead(item, idx)} label={this.t('Xem chi tiết')} className={`jn-btn__yellow jn-detail${!read ? '' : ' read'} `} />
+          <Button onClick={() => this.markAsRead(item, idx)} label={this.t('containers').Notification.AllNotification.view} className={`jn-btn__yellow jn-detail${!read ? '' : ' read'} `} />
         </div>
       </div>
     );
@@ -64,11 +64,11 @@ class AllNotification extends Base {
           <div className="header-content">
             <span className="page-label">
               <div className="main-label">
-                <div className="label-text">{this.t('Thông báo')}</div>
+                <div className="label-text">{this.t('containers').Notification.AllNotification.notification}</div>
               </div>
             </span>
             <div className="right-button">
-              <Button onClick={this.markAllAsRead} label="Đánh dấu tất cả đã đọc" className="jn-btn__normal" />
+              <Button onClick={this.markAllAsRead} label={this.t('containers').Notification.AllNotification.markAll} className="jn-btn__normal" />
             </div>
           </div>
         </div>

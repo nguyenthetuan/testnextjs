@@ -39,7 +39,7 @@ class EduItem extends Base {
                 this.props.onChange(this.state);
               });
             }}
-            label={this.t('Thời gian')}
+            label={this.t('containers').CV.CreateCV.EduForm.EduItem.time}
             data={{ time_start, time_end }}
             required
           />
@@ -47,7 +47,7 @@ class EduItem extends Base {
           <Input
             type="text"
             name="school"
-            placeholder={this.t('Trường/ Đơn vị đào tạo')}
+            placeholder={this.t('containers').CV.CreateCV.EduForm.EduItem.school}
             value={school}
             required
             onChange={value =>
@@ -59,7 +59,7 @@ class EduItem extends Base {
           <Input
             name="certificate"
             required
-            placeholder={this.t('Bằng cấp/ Chứng chỉ')}
+            placeholder={this.t('containers').CV.CreateCV.EduForm.EduItem.certificate}
             value={certificate}
             onChange={value => {
               this.setState({ certificate: value }, () => {
@@ -69,8 +69,8 @@ class EduItem extends Base {
           />
 
           <Select
-            label={this.t('Loại tốt nghiệp')}
-            placeholder={this.t('Chọn loại tốt nghiệp')}
+            label={this.t('containers').CV.CreateCV.EduForm.EduItem.classification}
+            placeholder={this.t('containers').CV.CreateCV.EduForm.EduItem.classificationOpts}
             required
             options={classificationOpts}
             value={[classification]}
@@ -88,7 +88,7 @@ class EduItem extends Base {
         <div className="delete-btn-wrapper">
           <Button className="delete-btn" onClick={this.props.onDelete}>
             <span className="icon-trash" />
-            {this.t('Xoá')}
+            {this.t('containers').CV.CreateCV.EduForm.EduItem.delete}
           </Button>
         </div>
       </div>

@@ -45,7 +45,7 @@ export default class CVFileLoader extends Base {
       if (response && response.code === undefined) {
         this.setState({ filecv: response.filecv, selectedFile: null });
       } else {
-        this.setState({ message: { code: 1, message: this.t('Cập nhật filecv không thành công.') } });
+        this.setState({ message: { code: 1, message: this.t('containers').CV.components.CVFileLoader.updateFilecv } });
       }
 
       this._updating = false;
@@ -64,7 +64,7 @@ export default class CVFileLoader extends Base {
       <div className="filecv-info">
         <div className="block-container">
           <div className="block-header">
-            <div className="header-text">{this.t('CV ĐÍNH KÈM')}</div>
+            <div className="header-text">{this.t('containers').CV.components.CVFileLoader.infoCV}</div>
           </div>
           {message && message.code !== 0 && <div className="error-message">* {message.message}</div>}
           <div className="block-body">
@@ -97,7 +97,7 @@ export default class CVFileLoader extends Base {
                     this.inputRef.click();
                   }}
                 >
-                  {this.t('Đổi file CV')}
+                  {this.t('containers').CV.components.CVFileLoader.changeCV}
                 </Button>
                 <input
                   ref={c => {
@@ -118,7 +118,7 @@ export default class CVFileLoader extends Base {
               {this.state.selectedFile !== null && (
                 <div className="update-actions-wrapper">
                   <Button className="jn-btn__yellow" onClick={this._updateFilecv}>
-                    {this.t('Lưu')}
+                    {this.t('containers').CV.components.CVFileLoader.save}
                   </Button>
                   <Button
                     className="jn-btn__normal"
@@ -126,7 +126,7 @@ export default class CVFileLoader extends Base {
                       this.setState({ selectedFile: null });
                     }}
                   >
-                    {this.t('Huỷ')}
+                    {this.t('containers').CV.components.CVFileLoader.cancel}
                   </Button>
                 </div>
               )}

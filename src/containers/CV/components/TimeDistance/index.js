@@ -57,7 +57,7 @@ class TimeDistance extends Base {
                 this.setState({ time_start: value }, this._updateTime);
               }}
             />
-            <div className="seperate">{this.t('đến')}</div>
+            <div className="seperate">{this.t('containers').CV.components.TimeDistance.end}</div>
             {!current ? (
               <DateSelector
                 value={time_end}
@@ -66,13 +66,13 @@ class TimeDistance extends Base {
                 }}
               />
             ) : (
-              <div className="current-job">{this.t('hiện tại')}</div>
+              <div className="current-job">{this.t('containers').CV.components.TimeDistance.current}</div>
             )}
           </div>
           {showCurrentWorking && (
             <div className="working-checkbox">
               <CheckBox
-                label={this.t('Công việc hiện tại')}
+                label={this.t('containers').CV.components.TimeDistance.working}
                 checked={current}
                 onChange={value => {
                   this.setState({ current: value }, this._updateTime);

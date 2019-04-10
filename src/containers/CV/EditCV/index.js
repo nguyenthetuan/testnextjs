@@ -93,7 +93,7 @@ class EditCVPage extends Base {
         <EducationInfo data={education} resumeID={id} />
         <SkillInfo updateMode data={skills} resumeID={id} />
         <ForeignLanguage updateMode data={language || []} resumeID={id} />
-        <ReferenceUser updateMode data={referenced} header={this.t('NGƯỜI THAM CHIẾU')} resumeID={id} />
+        <ReferenceUser updateMode data={referenced} header={this.t('containers').CV.EditCV.index.referenced} resumeID={id} />
       </div>
     );
   }

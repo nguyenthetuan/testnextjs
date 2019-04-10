@@ -10,24 +10,24 @@ class CreateSuccessfull extends Base {
       <div className="create-cv-container">
         <div className="body-page">
           <div className="successfull-create-cv">
-            <div className="content-header ">{this.t('TẠO HỒ SƠ THÀNH CÔNG')}</div>
+            <div className="content-header ">{this.t('containers').CV.CreateCV.CreateSuccessfull.createCV}</div>
             <div className="content-label ">
-              <div>{this.t('Bạn đã tạo xong hồ sơ. Hồ sơ của bạn sẽ được JobNow kiểm duyệt trong vòng 24h. ')}</div>
-              <div>{this.t('Ngay bây giờ, bạn có thể dùng hồ sơ vừa tạo để “NỘP HỒ SƠ” vào các việc làm phù hợp trên JobNow.')}</div>
+              <div>{this.t('containers').CV.CreateCV.CreateSuccessfull.label1}</div>
+              <div>{this.t('containers').CV.CreateCV.CreateSuccessfull.label2}</div>
             </div>
 
             <Button
               onClick={() => {
                 this.props.history.replace('/cv');
               }}
-              label={this.t('QUẢN LÝ HỒ SƠ')}
+              label={this.t('containers').CV.CreateCV.CreateSuccessfull.cv}
               className="jn-btn__yellow"
             />
             <Button
               onClick={() => {
                 this.props.history.push('/suitable-jobs');
               }}
-              label={this.t('XEM CÁC VIỆC LÀM PHÙ HỢP')}
+              label={this.t('containers').CV.CreateCV.CreateSuccessfull.suitableJobs}
               className="jn-btn__normal"
             />
           </div>

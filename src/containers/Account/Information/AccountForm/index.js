@@ -65,15 +65,15 @@ class AccountForm extends Base {
       }
     },
     messages: {
-      fullname: this.t('Nhập họ tên đầy đủ.'),
-      address: this.t('Nhập địa chỉ hiện tại của bạn.'),
+      fullname: this.t('containers').Account.Information.AccountForm.fullname,
+      address: this.t('containers').Account.Information.AccountForm.address,
       email: {
-        required: this.t('Nhập địa chỉ email.'),
-        email: this.t('Định dạng email không đúng.')
+        required: this.t('containers').Account.Information.AccountForm.email,
+        email: this.t('containers').Account.Information.AccountForm.errorEmail
       },
       phone: {
-        required: this.t('Nhập số điện thoại.'),
-        phoneVN: this.t('Số điện thoại không đúng định dạng.')
+        required: this.t('containers').Account.Information.AccountForm.phoneVN,
+        phoneVN: this.t('containers').Account.Information.AccountForm.errorPhone
       }
     }
   };
@@ -98,17 +98,17 @@ class AccountForm extends Base {
     const { fullname, dateofbirth, gender, marital_status, address, level, avatar, phone, email } = this.state;
     let hasError = false;
     if (!gender) {
-      this._genderRadio.showError(this.t('Bạn chưa chọn giới tính.'));
+      this._genderRadio.showError(this.t('containers').Account.Information.AccountForm.genderRadio);
       hasError = true;
     }
 
     if (!dateofbirth) {
-      this._dateRef.showError(this.t('Bạn chưa chọn ngày sinh.'));
+      this._dateRef.showError(this.t('containers').Account.Information.AccountForm.dateofbirth);
       hasError = true;
     }
 
     if (!level) {
-      this._levelRef.showError(this.t('Bạn chưa chọn trình độ.'));
+      this._levelRef.showError(this.t('containers').Account.Information.AccountForm.levelError);
       hasError = true;
     }
     this._validator.form();
@@ -146,7 +146,7 @@ class AccountForm extends Base {
   };
 
   _generateSelectableOpts = () => {
-    const genderOpts = [{ value: 'male', label: this.t('Nam') }, { value: 'female', label: this.t('Nữ') }];
+    const genderOpts = [{ value: 'male', label: this.t('containers').Account.Information.AccountForm.male }, { value: 'female', label: this.t('containers').Account.Information.AccountForm.female }];
     const { level, marital_status } = this.props.constants || {};
     const matialOptions = Object.keys(marital_status || {}).map(key => ({
       value: key,
@@ -174,7 +174,7 @@ class AccountForm extends Base {
         const response = await authApi.verifyPhoneEmail(fieldValue);
         if (response && !response.unique) {
           this[`_${fieldName}Ref`].showError(
-            fieldName === 'phone' ? 'Số điện thoại này đã đăng ký trên JobNow, vui lòng sử dụng số điện thoại khác.' : 'Email này đã đăng ký trên JobNow, vui lòng sử dụng số email khác.'
+            fieldName === 'phone' ? `${this.t('containers').Account.Information.AccountForm.showErrorPhone}` : `${this.t('containers').Account.Information.AccountForm.showErrorEmail}`
           );
         }
       }
@@ -190,11 +190,18 @@ class AccountForm extends Base {
       <div className="account-form input-section">
         <div className="left-section">
           <form id="account-form">
-            <Input type="text" name="fullname" placeholder={this.t('Họ tên')} value={fullname} required onChange={value => this.setState({ fullname: value, nameError: '' })} />
+            <Input
+              type="text"
+              name="fullname"
+              placeholder={this.t('containers').Account.Information.AccountForm.inputFullname}
+              value={fullname}
+              required
+              onChange={value => this.setState({ fullname: value, nameError: '' })}
+            />
             <Input
               type="text"
               name="email"
-              placeholder={this.t('Email')}
+              placeholder={this.t('containers').Account.Information.AccountForm.inputEmail}
               value={email}
               required
               onChange={value =>
@@ -209,7 +216,7 @@ class AccountForm extends Base {
             <Input
               type="text"
               name="phone"
-              placeholder={this.t('Số điện thoại')}
+              placeholder={this.t('containers').Account.Information.AccountForm.inputPhone}
               value={phone}
               required
               onChange={value =>
@@ -223,7 +230,7 @@ class AccountForm extends Base {
             />
             <DatePicker
               showHour={false}
-              label={this.t('Ngày sinh')}
+              label={this.t('containers').Account.Information.AccountForm.inputDate}
               required
               format="YYYY/MM/DD"
               defaultCreatedAt={dateofbirth}
@@ -237,7 +244,7 @@ class AccountForm extends Base {
             />
 
             <Radio
-              label="Giới tính"
+              label={this.t('containers').Account.Information.AccountForm.genderOpts}
               required
               options={genderOpts}
               value={gender}
@@ -251,7 +258,7 @@ class AccountForm extends Base {
             />
 
             <Radio
-              label="Tình trạng hôn nhân"
+              label={this.t('containers').Account.Information.AccountForm.matialOptions}
               options={matialOptions}
               value={`${marital_status}`}
               onChange={value => {
@@ -262,10 +269,10 @@ class AccountForm extends Base {
                 this._maritalRadio = r;
               }}
             />
-            <Input type="text" name="address" placeholder={this.t('Địa chỉ hiện tại')} value={address} required onChange={value => this.setState({ address: value })} />
+            <Input type="text" name="address" placeholder={this.t('containers').Account.Information.AccountForm.inputAddress} value={address} required onChange={value => this.setState({ address: value })} />
             <Select
-              label={this.t('Trình độ')}
-              placeholder={this.t('Chọn trình độ')}
+              label={this.t('containers').Account.Information.AccountForm.level}
+              placeholder={this.t('containers').Account.Information.AccountForm.levelOptions}
               required
               options={levelOptions}
               value={[level]}
@@ -279,8 +286,8 @@ class AccountForm extends Base {
             />
 
             <div className={`buttons-wrapper${showCancelBtn ? ' has-cancel' : ''}`}>
-              <Button label={this.t('Lưu')} className="jn-btn__yellow" onClick={this._save} />
-              {showCancelBtn && <Button label={this.t('Huỷ')} className="jn-btn__normal btn-cancel" onClick={onCancelClick} />}
+              <Button label={this.t('containers').Account.Information.AccountForm.save} className="jn-btn__yellow" onClick={this._save} />
+              {showCancelBtn && <Button label={this.t('containers').Account.Information.AccountForm.cancel} className="jn-btn__normal btn-cancel" onClick={onCancelClick} />}
             </div>
           </form>
         </div>
@@ -288,7 +295,7 @@ class AccountForm extends Base {
         <div className="right-section">
           <ImagePicker
             images={avatar}
-            label={this.t('Ảnh đại diện')}
+            label={this.t('containers').Account.Information.AccountForm.avatar}
             onChange={images => {
               this.setState({ avatar: images });
             }}

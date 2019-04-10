@@ -30,7 +30,7 @@ const queryMap = {
 class SearchPage extends Base {
   static wrapperClasses = 'search-page';
 
-  sortOptions = [{ label: this.t('Gần bạn nhất'), value: 'distance' }, { label: this.t('Tuyển gấp'), value: 'featured' }, { label: this.t('Mới nhất'), value: 'latest' }];
+  sortOptions = [{ label: this.t('containers').Search.index.distance, value: 'distance' }, { label: this.t('containers').Search.index.featured, value: 'featured' }, { label: this.t('containers').Search.index.latest, value: 'latest' }];
 
   constructor(props) {
     super(props);
@@ -364,7 +364,7 @@ class SearchPage extends Base {
                       <div
                         className="result-number"
                         dangerouslySetInnerHTML={{
-                          __html: this.t('Tìm thấy <span class="number">%d</span> kết quả'.replace('%d', count))
+                          __html: this.t(this.t('containers').Search.index.find + this.t('<span class="number">') + this.t(`${'%d'.replace('%d', count)}`) + this.t('</span>') + this.t('containers').Search.index.result)
                         }}
                       />
                     </div>

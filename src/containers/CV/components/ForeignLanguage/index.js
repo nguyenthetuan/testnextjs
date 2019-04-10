@@ -114,8 +114,8 @@ class ForeignLanguage extends Base {
         <div className="block-container">
           <div className="block-header">
             <div className="header-text">
-              <span>{this.t('NGOẠI NGỮ')}</span>
-              <span className="optional">({this.t('Không bắt buộc')})</span>
+              <span>{this.t('containers').CV.components.ForeignLanguage.index.language}</span>
+              <span className="optional">({this.t('containers').CV.components.ForeignLanguage.index.optional})</span>
             </div>
           </div>
 
@@ -146,7 +146,7 @@ class ForeignLanguage extends Base {
               editData.length > 0 && (
                 <div className="update-actions-wrapper">
                   <Button className="jn-btn__yellow" onClick={this._saveLanguages}>
-                    {this.t('Lưu')}
+                    {this.t('containers').CV.components.ForeignLanguage.index.save}
                   </Button>
                   <Button
                     className="jn-btn__normal"
@@ -154,14 +154,14 @@ class ForeignLanguage extends Base {
                       this.setState({ data: this.props.data.map(lang => ({ ...lang, noChange: true })) });
                     }}
                   >
-                    {this.t('Huỷ')}
+                    {this.t('containers').CV.components.ForeignLanguage.index.cancel}
                   </Button>
                 </div>
               )}
             <div className="add-btn-wrapper">
               <Button className="jn-btn__normal" onClick={this._addLanguage}>
                 <span className="icon-jn-plus" />
-                <span className="btn-title">{this.t('THÊM NGOẠI NGỮ')}</span>
+                <span className="btn-title">{this.t('containers').CV.components.ForeignLanguage.index.addLanguage}</span>
               </Button>
             </div>
           </div>

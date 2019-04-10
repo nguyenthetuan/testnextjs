@@ -36,14 +36,14 @@ export default class Language extends Base {
   };
 
   showError = () => {
-    this._languageRef.showError(this.t('Bạn chưa chọn ngoại ngữ.'));
+    this._languageRef.showError(this.t('containers').CV.components.ForeignLanguage.Languague.showError);
   };
 
   _saveLanguage = () => {
     const { title } = this.state;
     let hasError = false;
     if (title === '') {
-      this._languageRef.showError(this.t('Bạn chưa chọn ngoại ngữ.'));
+      this._languageRef.showError(this.t('containers').CV.components.ForeignLanguage.Languague.showError);
       hasError = true;
     }
     if (!hasError) {
@@ -68,19 +68,19 @@ export default class Language extends Base {
           <div className="name">{languages && languages[title]}</div>
           <div className="summary-skills">
             <div className="line-info">
-              <div className="info-title">{this.t('Nghe')}:</div>
+              <div className="info-title">{this.t('containers').CV.components.ForeignLanguage.Languague.listen}:</div>
               <div className="info-value">{languages_level && languages_level[listen]}</div>
             </div>
             <div className="line-info">
-              <div className="info-title">{this.t('Nói')}:</div>
+              <div className="info-title">{this.t('containers').CV.components.ForeignLanguage.Languague.speak}:</div>
               <div className="info-value">{languages_level && languages_level[talk]}</div>
             </div>
             <div className="line-info">
-              <div className="info-title">{this.t('Đọc')}:</div>
+              <div className="info-title">{this.t('containers').CV.components.ForeignLanguage.Languague.read}:</div>
               <div className="info-value">{languages_level && languages_level[read]}</div>
             </div>
             <div className="line-info">
-              <div className="info-title">{this.t('Viết')}:</div>
+              <div className="info-title">{this.t('containers').CV.components.ForeignLanguage.Languague.write}:</div>
               <div className="info-value">{languages_level && languages_level[write]}</div>
             </div>
           </div>
@@ -88,7 +88,7 @@ export default class Language extends Base {
         <div className="actions-wrapper">
           <Button className="btn-delete" onClick={this.props.onDelete}>
             <span className="icon-trash" />
-            {this.t('Xoá')}
+            {this.t('containers').CV.components.ForeignLanguage.Languague.delete}
           </Button>
           <Button
             className="btn-edit"
@@ -97,7 +97,7 @@ export default class Language extends Base {
             }}
           >
             <span className="icon-pencil" />
-            {this.t('Sửa')}
+            {this.t('containers').CV.components.ForeignLanguage.Languague.edit}
           </Button>
         </div>
       </div>
@@ -134,8 +134,8 @@ export default class Language extends Base {
           <div className="lang-selection">
             <Select
               options={langOpts}
-              label={this.t('Ngoại ngữ')}
-              placeholder={this.t('Chọn tiếng')}
+              label={this.t('containers').CV.components.ForeignLanguage.Languague.language}
+              placeholder={this.t('containers').CV.components.ForeignLanguage.Languague.langOpts}
               value={[selectedValue]}
               required
               onChange={value => {
@@ -149,7 +149,7 @@ export default class Language extends Base {
           </div>
           <div className="skills-level">
             <div className="label-wrapper">
-              <div className="col">{this.t('Trình độ')}</div>
+              <div className="col">{this.t('containers').CV.components.ForeignLanguage.Languague.level}</div>
               {levelsText.map((text, index) => (
                 <div className="col" key={`level-text-lang-${this._id}-${index}`}>
                   {this.t(text)}
@@ -159,7 +159,7 @@ export default class Language extends Base {
             <div className="skills">
               <Radio
                 options={levelOpts}
-                label={this.t('Nghe')}
+                label={this.t('containers').CV.components.ForeignLanguage.Languague.listen}
                 value={`${listen}`}
                 onChange={value => {
                   this.setState({ listen: parseInt(value, 10) }, this._updateData);
@@ -167,7 +167,7 @@ export default class Language extends Base {
               />
               <Radio
                 options={levelOpts}
-                label={this.t('Nói')}
+                label={this.t('containers').CV.components.ForeignLanguage.Languague.speak}
                 value={`${talk}`}
                 onChange={value => {
                   this.setState({ talk: parseInt(value, 10) }, this._updateData);
@@ -175,7 +175,7 @@ export default class Language extends Base {
               />
               <Radio
                 options={levelOpts}
-                label={this.t('Đọc')}
+                label={this.t('containers').CV.components.ForeignLanguage.Languague.read}
                 value={`${read}`}
                 onChange={value => {
                   this.setState({ read: parseInt(value, 10) }, this._updateData);
@@ -183,7 +183,7 @@ export default class Language extends Base {
               />
               <Radio
                 options={levelOpts}
-                label={this.t('Viết')}
+                label={this.t('containers').CV.components.ForeignLanguage.Languague.write}
                 value={`${write}`}
                 onChange={value => {
                   this.setState({ write: parseInt(value, 10) }, this._updateData);

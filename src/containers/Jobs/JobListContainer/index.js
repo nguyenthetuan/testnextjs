@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { TabBar, Base, Loading } from '../../../components';
 import List from '../../Candidate/components/List';
 import { jobApi } from '../../../services';
+import language from '../../../config/language/index';
 
 const SUITABLE_JOBS = 'SUITABLE_JOBS';
 const APPLIED_JOBS = 'APPLIED_JOBS';
@@ -12,10 +13,10 @@ const SAVED_JOBS = 'SAVED_JOBS';
 
 const getStatus = status => {
   if (!status) {
-    return 'Nổi bật';
+    return language.containers.Jobs.Highlights;
   }
   if (status) {
-    return 'Tuyển gấp';
+    return language.containers.Jobs.Urgent;
   }
   return '';
 };
@@ -184,13 +185,13 @@ class JobListContainer extends Component {
         </div>
         <div className="col col-apply-status">
           <div className="money">
-            <i className="icon-calendar" /> Đã ứng tuyển
+            <i className="icon-calendar" /> {language.containers.Jobs.status}
           </div>
           <div className="important"> {Moment(item.createdAt).format('DD/MM/YYYY')}</div>
         </div>
 
         <div className="col col-reply">
-          <div className="distance">Phản hồi từ NTD</div>
+          <div className="distance">{language.containers.Jobs.reply}</div>
           <div className="important">{item.ep_note}</div>
         </div>
       </Link>
@@ -228,7 +229,7 @@ class JobListContainer extends Component {
         </div>
         <div className="col col-apply-status">
           <div className="money">
-            <i className="icon-calendar" /> Đã lưu ngày
+            <i className="icon-calendar" /> {language.containers.Jobs.applyStatus}
           </div>
           <div className="important"> {Moment(item.createdAt).format('DD/MM/YYYY')}</div>
         </div>
@@ -268,7 +269,7 @@ class JobListContainer extends Component {
             <div className="tabs-wrapper">
               <div>
                 <TabBar
-                  data={[{ key: SUITABLE_JOBS, label: this.t('Việc làm phù hợp') }, { key: APPLIED_JOBS, label: 'Việc làm đã ứng tuyển' }, { key: SAVED_JOBS, label: 'Việc làm đã lưu' }]}
+                  data={[{ key: SUITABLE_JOBS, label: language.containers.Jobs.suitableJobs }, { key: APPLIED_JOBS, label: language.containers.Jobs.appliedJobs }, { key: SAVED_JOBS, label: language.containers.Jobs.savedJobs }]}
                   onChange={this._onChangeTab}
                 />
               </div>

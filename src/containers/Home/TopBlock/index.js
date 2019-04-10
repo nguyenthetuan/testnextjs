@@ -110,7 +110,7 @@ class TopBlock extends Base {
                 <div className="icon-wrapper">
                   <i className="icon-briefcase" />
                 </div>
-                <div className="title">{this.t('Việc làm theo ngành nghề')}</div>
+                <div className="title">{this.t('containers').Home.TopBlock.job}</div>
               </a>
             </div>
             <div className="col loc-jobs">
@@ -118,7 +118,7 @@ class TopBlock extends Base {
                 <div className="icon-wrapper">
                   <i className="icon-location-pin" />
                 </div>
-                <div className="title">{this.t('Việc làm theo địa điểm')}</div>
+                <div className="title">{this.t('containers').Home.TopBlock.address}</div>
               </a>
             </div>
             <div className="col nearest-jobs">
@@ -126,7 +126,7 @@ class TopBlock extends Base {
                 <div className="icon-wrapper">
                   <i className="icon-map" />
                 </div>
-                <div className="title">{this.t('Việc làm gần nhà')}</div>
+                <div className="title">{this.t('containers').Home.TopBlock.nearJob}</div>
               </a>
             </div>
             <div className="col hot-jobs">
@@ -134,7 +134,7 @@ class TopBlock extends Base {
                 <div className="icon-wrapper">
                   <i className="icon-fire" />
                 </div>
-                <div className="title">{this.t('Việc làm hấp dẫn')}</div>
+                <div className="title">{this.t('containers').Home.TopBlock.hotJob}</div>
               </a>
             </div>
             <div className="col fast-jobs">
@@ -142,7 +142,7 @@ class TopBlock extends Base {
                 <div className="icon-wrapper">
                   <i className="icon-rocket" />
                 </div>
-                <div className="title">{this.t('Việc làm tuyển gấp')}</div>
+                <div className="title">{this.t('containers').Home.TopBlock.fastJob}</div>
               </a>
             </div>
             <div className="col new-jobs">
@@ -150,7 +150,7 @@ class TopBlock extends Base {
                 <div className="icon-wrapper">
                   <i className="icon-tag" />
                 </div>
-                <div className="title">{this.t('Việc làm mới nhất')}</div>
+                <div className="title">{this.t('containers').Home.TopBlock.newJob}</div>
               </a>
             </div>
             <div className="col note-job">
@@ -158,7 +158,7 @@ class TopBlock extends Base {
                 <div className="icon-wrapper">
                   <i className="icon-compass" />
                 </div>
-                <div className="title">{this.t('Cẩm nang nghề nghiệp')}</div>
+                <div className="title">{this.t('containers').Home.TopBlock.noteJob}</div>
               </div>
             </div>
             <div className="col video-job">
@@ -166,7 +166,7 @@ class TopBlock extends Base {
                 <div className="icon-wrapper">
                   <i className="icon-social-youtube" />
                 </div>
-                <div className="title">{this.t('Video hấp dẫn')}</div>
+                <div className="title">{this.t('containers').Home.TopBlock.videoJob}</div>
               </div>
             </div>
           </div> */}

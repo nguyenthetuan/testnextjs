@@ -46,21 +46,21 @@ class SettingNotification extends Base {
           <div className="header-content">
             <span className="page-label">
               <div className="main-label">
-                <div className="label-text">{this.t('Cài đặt thông báo')}</div>
+                <div className="label-text">{this.t('containers').Notification.SettingNotification.setting}</div>
               </div>
             </span>
           </div>
         </div>
         <div className="body-page">
           <CheckBox
-            label="Gửi thông tin về việc làm cho tôi"
+            label={this.t('containers').Notification.SettingNotification.isNewJobNoti}
             checked={isNewJobNoti}
             onChange={value => {
               this._onChange({ isNewJobNoti: value });
             }}
           />
           <CheckBox
-            label="Gửi cho tôi các thông tin về cẩm nang nghề nghiệp"
+            label={this.t('containers').Notification.SettingNotification.isJobDocNoti}
             checked={isJobDocNoti}
             onChange={value => {
               this._onChange({ isJobDocNoti: value });
