@@ -70,7 +70,7 @@
           "showRegisterForm": "Nhập mật khẩu có độ dài tối thiểu 6 ký tự.",
           "requiredPassword": "Nhập mật khẩu.",
           "minlength": "Nhập tối thiểu 6 ký tự.",
-          "minPassword":"Nhập mật khẩu có độ dài tối thiểu 6 ký tự.",
+          "minPassword": "Nhập mật khẩu có độ dài tối thiểu 6 ký tự.",
           "passwordConfirm": "Nhập lại mật khẩu.",
           "equalTo": "Nhập mật khẩu không khớp.",
           "showRegisterFormEmail": "Nhập địa chỉ email.",
@@ -103,7 +103,7 @@
           "SMSCode": "Gửi mã xác minh",
           "registerAccount": "Đăng ký tài khoản",
           "phone": "Số di động",
-          "verification":"Mã xác thực đã được gửi đến tin nhắn của bạn.",
+          "verification": "Mã xác thực đã được gửi đến tin nhắn của bạn.",
           "pinCode": "Mã xác minh",
           "email": "Email",
           "passwordConfirm": "Nhập lại mật khẩu",
@@ -836,7 +836,8 @@
         "type": "Loại hồ sơ",
         "status": "Tình trạng",
         "viewCounts": "Lượt xem",
-        "notification": "THÔNG BÁO"
+        "notification": "THÔNG BÁO",
+        "avatar": "Đổi ảnh đại diện"
       }
     },
     "Home": {

@@ -18,7 +18,7 @@ export default class EducationInfoBlock extends Base {
           <div className="block-header">
             <div className="title">
               <i className="icon-graduation" />
-              {this.t('Học vấn')}
+              {this.t('Học vấn của ban')}
             </div>
           </div>
           <div className="block-body info-wrapper">

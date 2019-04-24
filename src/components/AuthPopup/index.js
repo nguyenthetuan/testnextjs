@@ -22,9 +22,9 @@ import './style.scss';
 
 const _$ = window.jQuery;
 
-const GOOGLE_CLIENT_ID = '560403396608-ejfu34fi2ktib679kfdr5v66505ndn0t.apps.googleusercontent.com';
+const GOOGLE_CLIENT_ID = '781299732715-fn6q95s6a6scluvru85j3prj6lc2n8ae.apps.googleusercontent.com';
 const ZALO_APP_ID = '1554572497263353061';
-const FB_APP_ID = '2708440305839896';
+const FB_APP_ID = '252478468792538';
 
 class AuthPopup extends Base {
   constructor(props) {

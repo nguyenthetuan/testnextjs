@@ -54,13 +54,13 @@ class Dashboard extends Base {
     });
   };
 
-  renderImageOnUpload = () => {};
+  renderImageOnUpload = () => { };
 
   handleUploadSuccess = (url, fileKey) => {
     this.setState({ avatar: url });
   };
 
-  _handleAvatarChange = file => {};
+  _handleAvatarChange = file => { };
 
   _renderNotiItem = () => {
     const { notifications } = this.props;
@@ -109,7 +109,7 @@ class Dashboard extends Base {
                     this.imageRef.openFileBrowser();
                   }}
                 >
-                  Đổi ảnh đại diện
+                  {this.t('containers').Dashboard.avatar}
                 </a>
                 {/* Hidden input */}
                 <ImgInput

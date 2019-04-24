@@ -9,7 +9,7 @@ import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import Helmet from 'react-helmet';
 import { Base, Countdown, JobItem, Loading, Input } from '../../components';
-import SEOConfig from '../../constants/SEOConfig.json';
+import SEOConfig from '../../constants/SEOConfig';
 import { jobApi } from '../../services';
 import { convertViCharToEngChar } from '../../utils/commonFunctions';
 import createPage from '../createPage';
@@ -128,7 +128,7 @@ class JobsTypePage extends Base {
 
     const { pathname } = this.props.location;
     const otherSEOMap = {};
-    SEOConfig.others.map(item => {
+    SEOConfig.creatSEO().others.map(item => {
       otherSEOMap[item.url] = item;
     });
     const pageSEOConf = otherSEOMap[pathname.trim().replace('/viec-lam/', '')];
@@ -148,7 +148,7 @@ class JobsTypePage extends Base {
     }
 
     const categoriesSEOData = {};
-    SEOConfig.categories.map(cat => {
+    SEOConfig.creatSEO().categories.map(cat => {
       categoriesSEOData[cat.id] = cat;
     });
 

@@ -10,7 +10,7 @@ import _ from 'lodash';
 import { Redirect } from 'react-router-dom';
 import Helmet from 'react-helmet';
 
-import SEOConfig from '../../constants/SEOConfig.json';
+import SEOConfig from '../../constants/SEOConfig';
 import { Base, Pagination, GMap, Footer, JobItem, Input } from '../../components';
 import { searchJob } from '../../actions/search';
 import { convertViCharToEngChar } from '../../utils/commonFunctions';
@@ -122,7 +122,7 @@ class SearchPage extends Base {
 
     // process handle category and provice in pathname
     const SEOMap = {};
-    SEOConfig.categories.map(cate => {
+    SEOConfig.creatSEO().categories.map(cate => {
       SEOMap[cate.url] = cate;
     });
     const provinceMap = {};
@@ -200,7 +200,7 @@ class SearchPage extends Base {
     if (categories.length) {
       queryObj['categories[]'] = categories[0].value;
       const SEOMap = {};
-      SEOConfig.categories.map(cate => {
+      SEOConfig.creatSEO().categories.map(cate => {
         SEOMap[cate.id] = cate;
       });
       catPath = SEOMap[categories[0].value].url;
@@ -247,7 +247,7 @@ class SearchPage extends Base {
     let provincePath;
     if (categories.length) {
       const SEOMap = {};
-      SEOConfig.categories.map(cate => {
+      SEOConfig.creatSEO().categories.map(cate => {
         SEOMap[cate.id] = cate;
       });
       catPath = SEOMap[categories[0].value].url;
@@ -277,11 +277,11 @@ class SearchPage extends Base {
 
       if (path.match(/^\/viec-lam-/)) {
         let catSEOMap = {};
-        SEOConfig.categories.map(cate => {
+        SEOConfig.creatSEO().categories.map(cate => {
           catSEOMap[cate.id] = cate;
         });
         let provinceSEOMap = {};
-        [...SEOConfig.provinces, ...SEOConfig.others].map(prov => {
+        [...SEOConfig.creatSEO().provinces, ...SEOConfig.creatSEO().others].map(prov => {
           provinceSEOMap[prov.url] = prov;
         });
 
@@ -298,7 +298,7 @@ class SearchPage extends Base {
       } else {
         const secondPath = path.replace('/viec-lam/', '');
         let otherSEOMap = {};
-        SEOConfig.others.map(item => {
+        SEOConfig.creatSEO().others.map(item => {
           otherSEOMap[item.url] = item;
         });
 
@@ -327,7 +327,7 @@ class SearchPage extends Base {
     const wrapperClasses = ['page-wrapper'];
     const { firstLoad, categories, salary, experience, level, type, sort, currentPage, province, path } = this.state;
     const SEOMap = {};
-    SEOConfig.categories.map(cate => {
+    SEOConfig.creatSEO().categories.map(cate => {
       SEOMap[cate.url] = cate;
     });
     const provinceMap = {};

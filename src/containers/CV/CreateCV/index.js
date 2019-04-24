@@ -33,22 +33,6 @@ const ADD_SKILL_STEP = 5;
 const ADD_HOBBY_WITH_CV = 6;
 const CREATE_SUCCESSFUL = 7;
 
-const mapKeyToValueHeader = {
-  [INIT_STATE]: language.containers.CV.CreateCV.index.createCV,
-  [UPLOAD_CV_STEP]: language.containers.CV.CreateCV.index.createCV,
-  [ADD_HOBBY_JOB_STEP]: language.containers.CV.CreateCV.index.addHobby,
-  [ADD_EXPERIENCE_STEP]: language.containers.CV.CreateCV.index.addExp,
-  [ADD_EDUCATION_STEP]: language.containers.CV.CreateCV.index.edu,
-  [ADD_SKILL_STEP]: language.containers.CV.CreateCV.index.addSkill
-};
-
-const TAB_LIST = [
-  { id: ADD_HOBBY_JOB_STEP, value: mapKeyToValueHeader[ADD_HOBBY_JOB_STEP], icon: 'icon-briefcase' },
-  { id: ADD_EXPERIENCE_STEP, value: mapKeyToValueHeader[ADD_EXPERIENCE_STEP], icon: 'icon-badge' },
-  { id: ADD_EDUCATION_STEP, value: mapKeyToValueHeader[ADD_EDUCATION_STEP], icon: 'icon-graduation' },
-  { id: ADD_SKILL_STEP, value: mapKeyToValueHeader[ADD_SKILL_STEP], icon: 'icon-bulb' }
-];
-
 class CreateCV extends Base {
   static wrapperClasses = 'create-resume-page';
 
@@ -65,6 +49,22 @@ class CreateCV extends Base {
       params[match[1]] = decodeURI(match[2]);
     }
 
+    const mapKeyToValueHeader = {
+      [INIT_STATE]: language.containers.CV.CreateCV.index.createCV,
+      [UPLOAD_CV_STEP]: language.containers.CV.CreateCV.index.createCV,
+      [ADD_HOBBY_JOB_STEP]: language.containers.CV.CreateCV.index.addHobby,
+      [ADD_EXPERIENCE_STEP]: language.containers.CV.CreateCV.index.addExp,
+      [ADD_EDUCATION_STEP]: language.containers.CV.CreateCV.index.edu,
+      [ADD_SKILL_STEP]: language.containers.CV.CreateCV.index.addSkill
+    };
+
+    const TAB_LIST = [
+      { id: ADD_HOBBY_JOB_STEP, value: mapKeyToValueHeader[ADD_HOBBY_JOB_STEP], icon: 'icon-briefcase' },
+      { id: ADD_EXPERIENCE_STEP, value: mapKeyToValueHeader[ADD_EXPERIENCE_STEP], icon: 'icon-badge' },
+      { id: ADD_EDUCATION_STEP, value: mapKeyToValueHeader[ADD_EDUCATION_STEP], icon: 'icon-graduation' },
+      { id: ADD_SKILL_STEP, value: mapKeyToValueHeader[ADD_SKILL_STEP], icon: 'icon-bulb' }
+    ];
+
     this.state = {
       resume_id: params.id || null,
       hobbyState: null,
@@ -77,6 +77,8 @@ class CreateCV extends Base {
       message: null,
       referenced: {}
     };
+    global.TAB_LIST = TAB_LIST;
+    global.mapKeyToValueHeader = mapKeyToValueHeader;
   }
 
   onChangeWizardTab = item => {
@@ -189,7 +191,7 @@ class CreateCV extends Base {
         {currentStep >= 2 &&
           currentStep < 6 && (
             <div className="create-wizard-tab">
-              <WizardTabs onChange={this.onChangeWizardTab} tabList={TAB_LIST} selected={currentStep} />
+              <WizardTabs onChange={this.onChangeWizardTab} tabList={global.TAB_LIST} selected={currentStep} />
             </div>
           )}
         <HobbyWithCV
@@ -198,7 +200,7 @@ class CreateCV extends Base {
           onSuccess={(hobbyState, resume_id) => {
             this.setState({
               currentStep: ADD_EXPERIENCE_STEP,
-              currentTextHeader: mapKeyToValueHeader[ADD_EXPERIENCE_STEP],
+              currentTextHeader: global.mapKeyToValueHeader[ADD_EXPERIENCE_STEP],
               resume_id: resume_id,
               hobbyState: hobbyState
             });
@@ -212,7 +214,7 @@ class CreateCV extends Base {
   };
 
   updateNewStep = id => {
-    this.setState({ currentStep: id, currentTextHeader: mapKeyToValueHeader[id] });
+    this.setState({ currentStep: id, currentTextHeader: global.mapKeyToValueHeader[id] });
   };
 
   _renderAddExperience = () => {
@@ -223,7 +225,7 @@ class CreateCV extends Base {
         {currentStep >= 2 &&
           currentStep < 6 && (
             <div className="create-wizard-tab">
-              <WizardTabs onChange={this.onChangeWizardTab} tabList={TAB_LIST} selected={currentStep} />
+              <WizardTabs onChange={this.onChangeWizardTab} tabList={global.TAB_LIST} selected={currentStep} />
             </div>
           )}
         <ExpForm
@@ -251,7 +253,7 @@ class CreateCV extends Base {
         {currentStep >= 2 &&
           currentStep < 6 && (
             <div className="create-wizard-tab">
-              <WizardTabs onChange={this.onChangeWizardTab} tabList={TAB_LIST} selected={currentStep} />
+              <WizardTabs onChange={this.onChangeWizardTab} tabList={global.TAB_LIST} selected={currentStep} />
             </div>
           )}
         <EduForm
@@ -345,7 +347,7 @@ class CreateCV extends Base {
         {currentStep >= 2 &&
           currentStep < 6 && (
             <div className="create-wizard-tab">
-              <WizardTabs onChange={this.onChangeWizardTab} tabList={TAB_LIST} selected={currentStep} />
+              <WizardTabs onChange={this.onChangeWizardTab} tabList={global.TAB_LIST} selected={currentStep} />
             </div>
           )}
         <div className="page-wrapper">
