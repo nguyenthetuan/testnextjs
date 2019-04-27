@@ -105,7 +105,8 @@ class JobsTypePage extends Base {
         )}
         <div className="block-content">
           {jobs.map((job, index) => {
-            return <JobItem data={job} flashJob key={`marketing-job-${index}`} />;
+            const history = this.props.history;
+            return <JobItem data={job} history={history} flashJob key={`marketing-job-${index}`} />;
           })}
         </div>
       </div>

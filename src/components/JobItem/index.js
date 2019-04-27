@@ -78,10 +78,10 @@ class JobItem extends Base {
     }
 
     if (flashJob) wrapperClasses.push('flashjob-item');
-
     return (
       <div className={wrapperClasses.join(' ')} style={style}>
         {!showJobInfoOnly && <div className="company-logo">{data && <img src={logo} alt="" />}</div>}
+
         <div className="info-wrapper">
           <div className="job-info">
             <a href={`/viec-lam/${slug || _id}`} target="_blank" rel="noopener noreferrer">
@@ -124,7 +124,7 @@ class JobItem extends Base {
               )}
               {flashJob && (
                 <div className="button-wrapper">
-                  <Button className="jn-btn__yellow">{this.t('components').jobitem.watchNow}</Button>
+                  <Button className="jn-btn__yellow" onClick={() => this.props.history.replace(`/viec-lam/${slug || _id}`)}>{this.t('components').jobitem.applyNow}</Button>
                 </div>
               )}
             </div>

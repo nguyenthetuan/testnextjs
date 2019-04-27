@@ -166,7 +166,8 @@
       "index": {
         "salaryOpts": "Thương lượng",
         "text": "còn tuyển",
-        "watchNow": "Xem ngay"
+        "watchNow": "Xem ngay",
+        "applyNow": "Ứng tuyển ngay"
       }
     },
     "MenuBar": {

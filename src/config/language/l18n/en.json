@@ -166,7 +166,8 @@
       "index": {
         "salaryOpts": "Negotiate",
         "text": "still recruiting",
-        "watchNow": "Watch now"
+        "watchNow": "Watch now",
+        "applyNow": "Apply Now"
       }
     },
     "MenuBar": {
