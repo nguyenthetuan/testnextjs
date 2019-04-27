@@ -900,7 +900,9 @@
           "exp": "Yêu cầu kinh nghiệm",
           "gender": "Yêu cầu giới tính",
           "share": "Chia sẻ",
-          "applyCV": "Nộp hồ sơ"
+          "applyCV": "Nộp hồ sơ",
+          "save":"Đã lưu",
+          "savedJobs":"Lưu việc làm"
         }
       },
       "SimilarJobs": {

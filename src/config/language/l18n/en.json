@@ -42,7 +42,7 @@
           "message": "* Apply failed.",
           "fullname": "Full name",
           "email": "Email",
-          "phone": "phone number",
+          "phone": "Phone number",
           "handleApplyClick": "Submit",
           "login": "Login / Register an account",
           "fieldTitle": "You have not created a profile on JobNow",
@@ -70,7 +70,7 @@
           "showRegisterForm": "Enter a password of at least 6 characters long.",
           "requiredPassword": "Enter password.",
           "minlength": "Enter at minimum of 6 characters.",
-          "minPassword":"Enter a password of at least 6 characters long.",
+          "minPassword": "Enter a password of at least 6 characters long.",
           "passwordConfirm": "Enter password.",
           "equalTo": "Password does not match.",
           "showRegisterFormEmail": "Enter your email address.",
@@ -103,7 +103,7 @@
           "SMSCode": "Submit verification code",
           "registerAccount": "Register an account",
           "phone": "Mobile number",
-          "verification":"Mã xác th?c dã du?c g?i d?n tin nh?n c?a b?n.",
+          "verification": "Mã xác th?c dã du?c g?i d?n tin nh?n c?a b?n.",
           "pinCode": "Verification code",
           "email": "Email",
           "passwordConfirm": "Enter the password",
@@ -204,7 +204,7 @@
         "postNews": "Post news & recruit people",
         "notiBox": "Notice received",
         "notiView": "See all notifications",
-        "information": "account information",
+        "information": "Account Information",
         "changePassword": "Change Password",
         "signOut": "Log out"
       }
@@ -264,7 +264,7 @@
           "messageError": "Password change failed.",
           "formHeader": "Change Password",
           "legend": "To protect your account, please do not share your password with others",
-          "password": "current password",
+          "password": "Current password",
           "newPassword": "A new password",
           "confirmNewPassword": "Confirm password",
           "save": "Save"
@@ -282,13 +282,13 @@
             "genderRadio": "You have not selected a gender.",
             "dateofbirth": "You have not selected a birthday.",
             "levelError": "You have not selected a level.",
-            "male": "male",
+            "male": "Male",
             "female": "Female",
-            "showErrorPhone":"This phone number is registered on JobNow, please use another phone number.",
-            "showErrorEmail":"This email is registered on JobNow, please use another email number.",
+            "showErrorPhone": "This phone number is registered on JobNow, please use another phone number.",
+            "showErrorEmail": "This email is registered on JobNow, please use another email number.",
             "inputFullname": "Full name",
             "inputEmail": "Email",
-            "inputPhone": "phone number",
+            "inputPhone": "Phone number",
             "inputDate": "Birthday",
             "genderOpts": "Gender",
             "matialOptions": "Marital status",
@@ -536,7 +536,7 @@
             "write": "Write",
             "delete": "Delete",
             "edit": "Edit",
-            "language": "foreign Language",
+            "language": "Foreign Language",
             "langOpts": "Choose language",
             "level": "Level"
           }
@@ -700,7 +700,7 @@
           "message": "Upload filecv failed. Please select a file smaller than 1MB.",
           "handleUploadCv": "Select or drag CV file here",
           "annotation": ".doc, .docx, .pdf format",
-          "title":"File uploaded",
+          "title": "File uploaded",
           "click": "CHOOSE FILE CV",
           "continue": "CONTINUE",
           "message2": "Please enter at least 1 skill.",
@@ -710,7 +710,7 @@
           "cv": "Records management",
           "back": "Back"
         }
-      }, 
+      },
       "EditCV": {
         "EducationInfo": {
           "index": {
@@ -786,7 +786,7 @@
             "refresh": "Refresh",
             "edit": "Edit",
             "delete": "Delete",
-            "message":"Are you sure to delete this profile ?",
+            "message": "Are you sure to delete this profile ?",
             "back": "Back"
           }
         },
@@ -838,7 +838,7 @@
         "status": "Status",
         "viewCounts": "View",
         "notification": "NOTIFICATION",
-        "avatar":"Change your avatar"
+        "avatar": "Change your avatar"
       }
     },
     "Home": {
@@ -900,13 +900,15 @@
           "exp": "Experience required",
           "gender": "Gender requirements",
           "share": "Share",
-          "applyCV": "Submit CV"
+          "applyCV": "Submit CV",
+          "save": "Saved",
+          "savedJobs": "Saved jobs"
         }
       },
       "SimilarJobs": {
         "index": {
           "job": "Similar jobs",
-          "have": "Have",
+          "have": "Have ",
           "newJob": "new industry jobs ",
           "view": "Click to see  now"
         }
@@ -921,14 +923,14 @@
     "Jobs": {
       "JobListContainer": {
         "index": {
-          "Highlights":"Highlights",
-          "Urgent":"Urgent",
+          "Highlights": "Highlights",
+          "Urgent": "Urgent",
           "status": "Applyed",
           "reply": "Response  from recruiter",
           "applyStatus": "Saved date",
           "suitableJobs": "Suitable jobs",
-          "appliedJobs":"Jobs have applied",
-          "savedJobs":"Jobs saved"
+          "appliedJobs": "Jobs have applied",
+          "savedJobs": "Jobs saved"
         }
       }
     },
@@ -1001,12 +1003,12 @@
     "Search": {
       "Filter": {
         "all": "All",
-        "catOpts": "select career",
-        "provinceOpts": "select place",
-        "salary": "select salary",
-        "levelOpts": "select rank",
-        "expOpts": "select experience",
-        "typeOpts": "type of work",
+        "catOpts": "Select career",
+        "provinceOpts": "Select place",
+        "salary": "Select salary",
+        "levelOpts": "Select rank",
+        "expOpts": "Select experience",
+        "typeOpts": "Sype of work",
         "sortOpts": "Sort results",
         "delete": "Delete selections"
       },
@@ -1165,7 +1167,7 @@
         "classification1": "Excellent",
         "classification2": "Great",
         "classification3": "Rather",
-        "classification4": "above average",
+        "classification4": "Above average",
         "classification5": "Medium"
       },
       "experience": {
@@ -1198,7 +1200,7 @@
       "languages_level": {
         "languages_level1": "Good",
         "languages_level2": "Rather",
-        "languages_level3": "medium",
+        "languages_level3": "Medium",
         "languages_level4": "Least"
       },
       "level": {
@@ -1224,7 +1226,7 @@
       "resume_type": {
         "resume_type1": "Part-time",
         "resume_type2": "Freelance",
-        "resume_type3": "seasonal work",
+        "resume_type3": "Seasonal work",
         "resume_type4": "Interns",
         "resume_type5": "Full time",
         "resume_type6": "Online jobs"

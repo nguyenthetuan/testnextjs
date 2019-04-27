@@ -122,7 +122,7 @@ class JobListContainer extends Component {
     if (worklocation && worklocation.length > 0) {
       location = `${worklocation[0].province}`;
     }
-    location = km ? `${km}km` : location;
+    location = km ? `${km} km` : location;
 
     return (
       <Link to={`/viec-lam/${item.slug || item._id}`} className="job-suitable-item">
@@ -163,7 +163,7 @@ class JobListContainer extends Component {
     if (worklocation && worklocation.length > 0) {
       location = `${worklocation[0].province}`;
     }
-    location = km ? `${km}km` : location;
+    location = km ? `${km} km` : location;
     return (
       <Link to={`/viec-lam/${item.slug || item._id}`} className="job-suitable-item">
         <div className="col col-avatar">
@@ -207,7 +207,7 @@ class JobListContainer extends Component {
     if (worklocation && worklocation.length > 0) {
       location = `${worklocation[0].province}`;
     }
-    location = km ? `${km}km` : location;
+    location = km ? `${km} km` : location;
     return (
       <Link to={`/viec-lam/${item.slug || item._id}`} className="job-suitable-item">
         <div className="col col-avatar">

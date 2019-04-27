@@ -174,7 +174,7 @@ class Header extends Base {
                 <div className="company-name">{company && company.name}</div>
                 <div className="company-addr">
                   <span className="icon-jn-map-marker" />
-                  {(km && `${km}km`) || (company && company.address.province)}
+                  {(km && `${km} km`) || (company && company.address.province)}
                 </div>
               </div>
               {view_type === 'full' && this._renderJobInfo()}
@@ -183,7 +183,7 @@ class Header extends Base {
                   <div className="other-actions">
                     <Button requiredAuth className={`jn-btn__normal jn-saved-job${candidate_saved_job && candidate_saved_job.saved ? ' saved' : ''}`} onClick={this._saveJob}>
                       <span className="icon-heart" />
-                      <span className="btn-title">{this.t(candidate_saved_job && candidate_saved_job.saved ? 'Đã lưu' : 'Lưu việc làm')}</span>
+                      <span className="btn-title">{this.t(candidate_saved_job && candidate_saved_job.saved ? this.t('containers').JobDetail.Header.save : this.t('containers').JobDetail.Header.savedJobs)}</span>
                     </Button>
                     {this._renderShareButtons()}
                   </div>
@@ -199,7 +199,7 @@ class Header extends Base {
               <div className="other-actions">
                 <Button className={`jn-btn__normal jn-saved-job${candidate_saved_job && candidate_saved_job.saved ? ' saved' : ''}`} requiredAuth onClick={this._saveJob}>
                   <span className="icon-heart" />
-                  <span className="btn-title">{this.t(candidate_saved_job && candidate_saved_job.saved ? 'Đã lưu' : 'Lưu việc làm')}</span>
+                  <span className="btn-title">{this.t(candidate_saved_job && candidate_saved_job.saved ? this.t('containers').JobDetail.Header.save : this.t('containers').JobDetail.Header.savedJobs)}</span>
                 </Button>
                 {this._renderShareButtons()}
               </div>

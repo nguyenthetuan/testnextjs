@@ -33,7 +33,7 @@ class JobItem extends Base {
     if (className) wrapperClasses.push(className);
     const logo = (company && company.logo) || '/assets/img/logo-full.png';
     const salaryLevel = (salary && salaryOpts && salaryOpts[salary]) || this.t('components').jobitem.salaryOpts;
-    const location = km ? `${km}km` : worklocation && worklocation[0] && worklocation[0].province;
+    const location = km ? `${km} km` : worklocation && worklocation[0] && worklocation[0].province;
 
     if (data && data.featured) {
       wrapperClasses.push('featured-job');
