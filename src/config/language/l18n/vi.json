@@ -1284,5 +1284,421 @@
         }
       }
     }
+  },
+  "seo": {
+    "categories": {
+      "consulting": {
+        "heading": "Việc làm tư vấn/Chăm sóc khách hàng/Telesale"
+      },
+      "realEstate": {
+        "heading": "Việc làm Bất động sản"
+      },
+      "build": {
+        "heading": "Thông tin tuyển dụng tìm việc làm ngành xây dựng lương cao, uy tín"
+      },
+      "pharmacist": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Y tế/Dược sỹ lương cao, uy tín"
+      },
+      "warehouse": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Xuất nhập khẩu/ Ngoại thương lương cao uy tín"
+      },
+      "architecture": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Kiến trúc / Thiết kế nội thất lương cao, uy tín"
+      },
+      "hotel": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Nhà hàng / Khách sạn lương cao, uy tín"
+      },
+      "ecommerce": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Thương mại điện tử lương cao, uy tín"
+      },
+      "business": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Quản trị kinh doanh lương cao, uy tín"
+      },
+      "marketing": {
+        "heading": " Thông tin tuyển dụng tìm việc làm Tiếp thị/Quảng cáo lương cao, uy tín"
+      },
+      "service": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Thực phẩm/Dịch vụ ăn uống lương cao, uy tín"
+      },
+      "fashion": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Thời trang lương cao, uy tín"
+      },
+      "manager": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Công nghiệp lương cao, uy tín"
+      },
+      "invest": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Đầu tư lương cao, uy tín"
+      },
+      "technology": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Công nghệ cao lương cao, uy tín"
+      },
+      "stock": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Chứng khoán/Vàng lương cao, uy tín"
+      },
+      "zoning": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Hoạch định - Dự án lương cao, uy tín"
+      },
+      "delivery": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Logistic / Chuyển Phát Nhanh lương cao, uy tín"
+      },
+      "manufacturing": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Sản Xuất lương cao, uy tín"
+      },
+      "spa": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Spa/Làm đẹp/Thể lực lương cao, uy tín"
+      },
+      "art": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Nghệ Thuật/Điện Ảnh lương cao, uy tín"
+      },
+      "supervisor": {
+        "heading": "Thông tin tuyển dụng tìm việc làm QA/QC/Thẩm định/Giám sát lương cao, uy tín"
+      },
+      "audit": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Kế toán/Kiểm toán lương cao, uy tín"
+      },
+      "electron": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Điện/Điện tử/Điện lạnh lương cao, uy tín"
+      },
+      "it": {
+        "heading": "Thông tin tuyển dụng tìm việc làm IT Phần mềm lương cao, uy tín"
+      },
+      "finance": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Ngân hàng/Tài chính lương cao, uy tín"
+      },
+      "interpreters": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Biên dịch/Phiên dịch lương cao, uy tín"
+      },
+      "office": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Nhân sự lương cao, uy tín"
+      },
+      "design": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Thiết kế/Mỹ thuật lương cao, uy tín"
+      },
+      "depot": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Giao nhận/Vận chuyển kho bãi lương cao, uy tín"
+      },
+      "customerService": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Dịch vụ lương cao, uy tín"
+      },
+      "textile": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Dệt may/Da dày lương cao, uy tín"
+      },
+      "engineering": {
+        "heading": "Thông tin tuyển dụng tìm việc làm kỹ thuật ứng dụng lương cao, uy tín"
+      },
+      "carriage": {
+        "heading": "Thông tin tuyển dụng tìm việc làm vận tải lương cao, uy tín"
+      },
+      "newspaper": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Báo Chí Truyền Hình lương cao, uy tín"
+      },
+      "regulations": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Quan Hệ Đối Ngoại lương cao, uy tín"
+      },
+      "publish": {
+        "heading": "Thông tin tuyển dụng tìm việc làm In ấn/Xuất bản lương cao, uy tín"
+      },
+      "air": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Hàng Không lương cao, uy tín"
+      },
+      "synthetic": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Ngành nghề khác lương cao, uy tín"
+      },
+      "postal": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Bưu Chính Viễn Thông lương cao, uy tín"
+      },
+      "interns": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Sinh viên thực tập / Mới ra trường lương cao, uy tín"
+      },
+      "crafts": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Thủ Công Mỹ Nghệ lương cao, uy tín"
+      },
+      "graphic": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Thiết kế đồ họa lương cao, uy tín'"
+      },
+      "treatment": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Môi Trường lương cao, uy tín"
+      },
+      "sell": {
+        "heading": "Thông tin tuy?n d?ng tìm vi?c làm Kinh doanh/Bán hàng luong cao, uy tín"
+      },
+      "administration": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Hành chính/Văn phòng lương cao, uy tín"
+      },
+      "recruiter": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Marketing/PR lương cao, uy tín"
+      },
+      "education": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Giáo dục/Đào tạo lương cao, uy tín"
+      },
+      "mechanical": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Cơ khí/Chế tạo lương cao, uy tín"
+      },
+      "technicians": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Kỹ Thuật lương cao, uy tín"
+      },
+      "secretary": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Thư ký/Trợ lý lương cao, uy tín"
+      },
+      "communication": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Điện tử/Viễn thông lương cao, uy tín"
+      },
+      "hardware": {
+        "heading": "Thông tin tuyển dụng tìm việc làm IT phần cứng lương cao, uy tín"
+      },
+      "travel": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Du Lịch lương cao, uy tín"
+      },
+      "law": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Pháp Lý/Luật lương cao, uy tín"
+      },
+      "motorbike": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Ô Tô/Xe Máy lương cao, uy tín"
+      },
+      "chemistry": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Hóa Học/Sinh Học lương cao, uy tín"
+      },
+      "jewelry": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Mỹ phẩm/Trang sức lương cao, uy tín"
+      },
+      "security": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Bảo vệ an ninh/Vệ sĩ lương cao, uy tín"
+      },
+      "farmer": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Nông/Lâm/Ngư nghiệp lương cao, uy tín"
+      },
+      "executive": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Quản lý điều hành lương cao, uy tín"
+      },
+      "even": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Tổ chức sự kiện/Quà tặng lương cao, uy tín"
+      },
+      "labor": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Lao động phổ thông lương cao, uy tín"
+      },
+      "receptionist": {
+        "heading": "Thông tin tuyển dụng tìm việc làm PG/PB/Lễ tân lương cao, uy tín"
+      },
+      "diver": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Lái Xe lương cao, uy tín"
+      },
+      "household": {
+        "heading": "Thông tin tuyển dụng tìm việc làm Hàng Gia Dụng lương cao, uy tín"
+      }
+    },
+    "provinces": {
+      "angiang": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại An giang Lương cao, uy tín "
+      },
+      "cantho": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Cần Thơ Lương cao, uy tín"
+      },
+      "binhthuan": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Bình Thuận Lương cao, uy tín"
+      },
+      "dongthap": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Đồng Tháp Lương cao, uy tín"
+      },
+      "bacninh": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Bắc Ninh Lương cao, uy tín"
+      },
+      "hungyen": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Hưng Yên Lương cao, uy tín"
+      },
+      "haiphong": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Hải Phòng Lương cao, uy tín"
+      },
+      "hanoi": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Hà Nội Lương cao, uy tín"
+      },
+      "sonla": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Sơn La Lương cao, uy tín"
+      },
+      "binhphuoc": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Bình Phước Lương cao, uy tín"
+      },
+      "quangtri": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Quảng Trị Lương cao, uy tín"
+      },
+      "hue": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Thừa Thiên Huế Lương cao, uy tín"
+      },
+      "thainguyen": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Thái Nguyên Lương cao, uy tín"
+      },
+      "kontum": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Kon Tum Lương cao, uy tín"
+      },
+      "ninhthuan": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Ninh Thuận Lương cao, uy tín"
+      },
+      "kiengiang": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Kiên Giang Lương cao, uy tín"
+      },
+      "soctrang": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Sóc Trăng Lương cao, uy tín"
+      },
+      "hanam": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Hà Nam Lương cao, uy tín"
+      },
+      "quangngai": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Quảng Ngãi Lương cao, uy tín"
+      },
+      "quangbinh": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Quảng Bình Lương cao, uy tín"
+      },
+      "phuyen": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Phú Yên Lương cao, uy tín"
+      },
+      "vungtau": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Vũng Tàu Lương cao, uy tín"
+      },
+      "binhduong": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Bình Dương Lương cao, uy tín"
+      },
+      "khanhhoa": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Khánh Hòa Lương cao, uy tín"
+      },
+      "gialai": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Gia Lai Lương cao, uy tín"
+      },
+      "dienbien": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Điện Biên Lương cao, uy tín"
+      },
+      "thanhhoa": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Thanh Hóa Lương cao, uy tín"
+      },
+      "nghean": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Nghệ An Lương cao, uy tín"
+      },
+      "hatinh": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Hà Tĩnh Lương cao, uy tín"
+      },
+      "thaibinh": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Thái Bình Lương cao, uy tín"
+      },
+      "tuyenquang": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Tuyên Quang Lương cao, uy tín"
+      },
+      "quangnam": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Quảng Nam Lương cao, uy tín"
+      },
+      "baclieu": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Bạc Liêu Lương cao, uy tín"
+      },
+      "bacKan": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Bắc Kạn Lương cao, uy tín"
+      },
+      "daknong": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Đắk Nông Lương cao, uy tín"
+      },
+      "coabang": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Cao Bằng Lương cao, uy tín"
+      },
+      "camau": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Cà Mau Lương cao, uy tín"
+      },
+      "laocai":{
+        "laocai":"Thông tin tuyển dụng tìm việc làm tại Lào Cai Lương cao, uy tín"
+      },
+      "langson": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Lạng Sơn Lương cao, uy tín"
+      },
+      "quangninh": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Quảng Ninh Lương cao, uy tín"
+      },
+      "vinhlong": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Vĩnh Long Lương cao, uy tín"
+      },
+      "tiengiang": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Tiền Giang Lương cao, uy tín"
+      },
+      "bacgiang": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Hà Giang Lương cao, uy tín"
+      },
+      "hagiang": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Hà Giang Lương cao, uy tín"
+      },
+      "binhdinh": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Bình Định Lương cao, uy tín"
+      },
+      "phutho": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Phú Thọ Lương cao, uy tín"
+      },
+      "haiduong": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Hải Dương Lương cao, uy tín"
+      },
+      "danang": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Đà Nẵng Lương cao, uy tín"
+      },
+      "ninhbinh": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Ninh Bình Lương cao, uy tín"
+      },
+      "longan": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Long An Lương cao, uy tín"
+      },
+      "laichau": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Lai Châu Lương cao, uy tín"
+      },
+      "yenbai": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Yên Bái Lương cao, uy tín"
+      },
+      "daklak": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Dak Lak Lương cao, uy tín"
+      },
+      "bentre": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Bến Tre Lương cao, uy tín"
+      },
+      "dongnai": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Đồng Nai Lương cao, uy tín"
+      },
+      "hochiminh": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại thành phố Hồ Chí Minh Lương cao, uy tín"
+      },
+      "hoabinh": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Hòa Bình Lương cao, uy tín"
+      },
+      "haugiang": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Hậu Giang Lương cao, uy tín"
+      },
+      "namdinh": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Nam Định Lương cao, uy tín"
+      },
+      "vinhphuc": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Vĩnh Phúc Lương cao, uy tín"
+      },
+      "lamdong": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Lâm Đồng Lương cao, uy tín"
+      },
+      "travinh": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Trà Vinh Lương cao, uy tín"
+      },
+      "tayninh": {
+        "heading": "Thông tin tuyển dụng tìm việc làm tại Tây Ninh Lương cao, uy tín"
+      }
+    },
+    "other": {
+      "nerhouse": {
+        "heading": "Tìm việc làm gần nhà"
+      },
+      "attractivejobs": {
+        "heading": "Tìm việc làm hấp dẫn"
+      },
+      "flashjob": {
+        "heading": "Tìm việc làm tuyển gấp"
+      },
+      "newjob": {
+        "heading": "Tìm việc làm mới nhất"
+      },
+      "quickjob": {
+        "heading": "Flash Jobs tìm việc nhanh như chớp"
+      },
+      "joblocation": {
+        "heading": "Tìm việc làm theo địa điểm"
+      },
+      "category": {
+        "heading": "Tìm việc làm theo ngành nghề"
+      }
+    }
   }
 }

@@ -1085,7 +1085,7 @@
         "level2": "University",
         "level3": "Colleges",
         "level4": "Intermediate",
-        "level5": "high school",
+        "level5": "High school",
         "level6": "Vocational certificate",
         "level7": "Does not require  certificate"
       },
@@ -1282,6 +1282,422 @@
           "block": "block",
           "pending": "pending"
         }
+      }
+    }
+  },
+  "seo": {
+    "categories": {
+      "consulting": {
+        "heading": "Counseling/Customer Care/Telesale"
+      },
+      "realEstate": {
+        "heading": "Real Estate"
+      },
+      "build": {
+        "heading": "Recruitment for High paying Construction jobs"
+      },
+      "pharmacist": {
+        "heading": "Recruitment for High paying Physician/Pharmacist"
+      },
+      "warehouse": {
+        "heading": "Recruitment for High paying Export/Import/Foreign Trade"
+      },
+      "architecture": {
+        "heading": "Recruitment for High paying Architecture/Interior Design"
+      },
+      "hotel": {
+        "heading": "Recruitment for High paying Restaurant/Hotel jobs"
+      },
+      "ecommerce": {
+        "heading": "Recruitment for High paying Ecommerce"
+      },
+      "business": {
+        "heading": "Recruitment for High paying Business administration"
+      },
+      "marketing": {
+        "heading": "Recruitment for High paying Marketing/Advertising"
+      },
+      "service": {
+        "heading": "Recruitment for High paying Food/Catering"
+      },
+      "fashion": {
+        "heading": "Recruitment for High paying Fashion jobs"
+      },
+      "manager": {
+        "heading": "Recruitment for High paying Industrial jobs"
+      },
+      "invest": {
+        "heading": "Recruitment for High paying Investment"
+      },
+      "technology": {
+        "heading": "Recruitment for High paying High Technology Jobs"
+      },
+      "stock": {
+        "heading": "Recruitment for High paying stock market jobs"
+      },
+      "zoning": {
+        "heading": "Recruitment for High paying Planning/Project jobs"
+      },
+      "delivery": {
+        "heading": "Recruitment for High paying Logistic/Express delivery"
+      },
+      "manufacturing": {
+        "heading": "Recruitment for High paying Manufacturing"
+      },
+      "spa": {
+        "heading": "Recruitment for High paying Spa/Beauty/Fitness"
+      },
+      "art": {
+        "heading": "Recruitment for High paying Art/Film"
+      },
+      "supervisor": {
+        "heading": "Recruitment for High paying QA/QC/Verification/Monitoring"
+      },
+      "audit": {
+        "heading": "Recruitment for High paying Accounting/Auditing"
+      },
+      "electron": {
+        "heading": "Recruitment for High paying Electrical Engineer"
+      },
+      "it": {
+        "heading": "Recruitment for High paying IT"
+      },
+      "finance": {
+        "heading": "Recruitment for High paying Bank/Finance"
+      },
+      "interpreters": {
+        "heading": "Recruitment for High paying Translator"
+      },
+      "office": {
+        "heading": "Recruitment for High paying Human resources"
+      },
+      "design": {
+        "heading": "Recruitment for High paying Designer"
+      },
+      "depot": {
+        "heading": "Recruitment for High paying Warehousing/Transportation"
+      },
+      "customerService": {
+        "heading": "Recruitment for High paying Customer Service jobs"
+      },
+      "textile": {
+        "heading": "Recruitment for High paying Clothing/textile"
+      },
+      "engineering": {
+        "heading": "Recruitment for High paying Engineer"
+      },
+      "carriage": {
+        "heading": "Recruitment for High paying Carriage"
+      },
+      "newspaper": {
+        "heading": "Recruitment for High paying Press/Media"
+      },
+      "regulations": {
+        "heading": "Recruitment for High paying Foreign regulations"
+      },
+      "publish": {
+        "heading": "Recruitment for High paying Publish jobs"
+      },
+      "air": {
+        "heading": "Recruitment for High paying Aviation"
+      },
+      "synthetic": {
+        "heading": "Recruitment for High paying other category"
+      },
+      "postal": {
+        "heading": "Recruitment for High paying Post and Telecommunication"
+      },
+      "interns": {
+        "heading": "Recruitment for High paying Interns"
+      },
+      "crafts": {
+        "heading": "Recruitment for High paying Crafting"
+      },
+      "graphic": {
+        "heading": "Recruitment for High paying Graphic Desinger'"
+      },
+      "treatment": {
+        "heading": "Recruitment for High paying Environmental jobs"
+      },
+      "sell": {
+        "heading": "Recruitment for High paying Business/Sales"
+      },
+      "administration": {
+        "heading": "Recruitment for High paying Administration/Office"
+      },
+      "recruiter": {
+        "heading": "Recruitment for High paying Marketing/PR"
+      },
+      "education": {
+        "heading": "Recruitment for High paying Educating jobs"
+      },
+      "mechanical": {
+        "heading": "Recruitment for High paying Mechanical Engineering"
+      },
+      "technicians": {
+        "heading": "Recruitment for High paying Technicians"
+      },
+      "secretary": {
+        "heading": "Recruitment for High paying Secretary/Assistant"
+      },
+      "communication": {
+        "heading": "Recruitment for High paying Electronics/Telecommunication"
+      },
+      "hardware": {
+        "heading": "Recruitment for High paying IT/Hardware"
+      },
+      "travel": {
+        "heading": "Recruitment for High paying Tourism jobs"
+      },
+      "law": {
+        "heading": "Recruitment for High paying Law/Legal service jobs"
+      },
+      "motorbike": {
+        "heading": "Recruitment for High paying Car/Motobike"
+      },
+      "chemistry": {
+        "heading": "Recruitment for High paying Chemistry/Biology"
+      },
+      "jewelry": {
+        "heading": "Recruitment for High paying Cosmetics/Jewelry"
+      },
+      "security": {
+        "heading": "Recruitment for High paying Security guard/Bodyguard"
+      },
+      "farmer": {
+        "heading": "Recruitment for High paying Agriculture/Forestry/Fishery"
+      },
+      "executive": {
+        "heading": "Recruitment for High paying Executive Management"
+      },
+      "even": {
+        "heading": "Recruitment for High paying Event/Gift service"
+      },
+      "labor": {
+        "heading": "Recruitment for High paying Unskilled labor"
+      },
+      "receptionist": {
+        "heading": "Recruitment for High paying PG/PB/Receptionist"
+      },
+      "diver": {
+        "heading": "Recruitment for High paying Driver"
+      },
+      "household": {
+        "heading": "Recruitment for High paying Household appliances"
+      }
+    },
+    "provinces": {
+      "angiang": {
+        "heading": "Recruitment for High paying at An giang "
+      },
+      "cantho": {
+        "heading": "Recruitment for High paying at Cần Thơ"
+      },
+      "binhthuan": {
+        "heading": "Recruitment for High paying at Bình Thuận"
+      },
+      "dongthap": {
+        "heading": "Recruitment for High paying at Đồng Tháp"
+      },
+      "bacninh": {
+        "heading": "Recruitment for High paying at Bắc Ninh"
+      },
+      "hungyen": {
+        "heading": "Recruitment for High paying at Hưng Yên"
+      },
+      "haiphong": {
+        "heading": "Recruitment for High paying at Hải Phòng"
+      },
+      "hanoi": {
+        "heading": "Recruitment for High paying at Hà Nội"
+      },
+      "sonla": {
+        "heading": "Recruitment for High paying at Sơn La"
+      },
+      "binhphuoc": {
+        "heading": "Recruitment for High paying at Bình Phước"
+      },
+      "quangtri": {
+        "heading": "Recruitment for High paying at Quảng Trị"
+      },
+      "hue": {
+        "heading": "Recruitment for High paying at Thừa Thiên Huế"
+      },
+      "thainguyen": {
+        "heading": "Recruitment for High paying at Thái Nguyên"
+      },
+      "kontum": {
+        "heading": "Recruitment for High paying at Kon Tum"
+      },
+      "ninhthuan": {
+        "heading": "Recruitment for High paying at Ninh Thuận"
+      },
+      "kiengiang": {
+        "heading": "Recruitment for High paying at Kiên Giang"
+      },
+      "soctrang": {
+        "heading": "Recruitment for High paying at Sóc Trăng"
+      },
+      "hanam": {
+        "heading": "Recruitment for High paying at Hà Nam"
+      },
+      "quangngai": {
+        "heading": "Recruitment for High paying at Quảng Ngãi"
+      },
+      "quangbinh": {
+        "heading": "Recruitment for High paying at Quảng Bình"
+      },
+      "phuyen": {
+        "heading": "Recruitment for High paying at Phú Yên"
+      },
+      "vungtau": {
+        "heading": "Recruitment for High paying at Vũng Tàu"
+      },
+      "binhduong": {
+        "heading": "Recruitment for High paying at Bình Dương"
+      },
+      "khanhhoa": {
+        "heading": "Recruitment for High paying at Khánh Hòa"
+      },
+      "gialai": {
+        "heading": "Recruitment for High paying at Gia Lai"
+      },
+      "dienbien": {
+        "heading": "Recruitment for High paying at Điện Biên"
+      },
+      "thanhhoa": {
+        "heading": "Recruitment for High paying at Thanh Hóa"
+      },
+      "nghean": {
+        "heading": "Recruitment for High paying at Nghệ An"
+      },
+      "hatinh": {
+        "heading": "Recruitment for High paying at Hà Tĩnh"
+      },
+      "thaibinh": {
+        "heading": "Recruitment for High paying at Thái Bình"
+      },
+      "tuyenquang": {
+        "heading": "Recruitment for High paying at Tuyên Quang"
+      },
+      "quangnam": {
+        "heading": "Recruitment for High paying at Quảng Nam"
+      },
+      "baclieu": {
+        "heading": "Recruitment for High paying at Bạc Liêu"
+      },
+      "bacKan": {
+        "heading": "Recruitment for High paying at Bắc Kạn"
+      },
+      "daknong": {
+        "heading": "Recruitment for High paying at Đắk Nông"
+      },
+      "coabang": {
+        "heading": "Recruitment for High paying at Cao Bằng"
+      },
+      "camau": {
+        "heading": "Recruitment for High paying at Cà Mau"
+      },
+      "laocai":{
+        "laocai":"Recruitment for High paying at Lào Cai"
+      },
+      "langson": {
+        "heading": "Recruitment for High paying at Lạng Sơn"
+      },
+      "quangninh": {
+        "heading": "Recruitment for High paying at Quảng Ninh"
+      },
+      "vinhlong": {
+        "heading": "Recruitment for High paying at Vĩnh Long"
+      },
+      "tiengiang": {
+        "heading": "Recruitment for High paying at Tiền Giang"
+      },
+      "bacgiang": {
+        "heading": "Recruitment for High paying at Hà Giang"
+      },
+      "hagiang": {
+        "heading": "Recruitment for High paying at Hà Giang"
+      },
+      "binhdinh": {
+        "heading": "Recruitment for High paying at Bình Định"
+      },
+      "phutho": {
+        "heading": "Recruitment for High paying at Phú Thọ"
+      },
+      "haiduong": {
+        "heading": "Recruitment for High paying at Hải Dương"
+      },
+      "danang": {
+        "heading": "Recruitment for High paying at Đà Nẵng"
+      },
+      "ninhbinh": {
+        "heading": "Recruitment for High paying at Ninh Bình"
+      },
+      "longan": {
+        "heading": "Recruitment for High paying at Long An"
+      },
+      "laichau": {
+        "heading": "Recruitment for High paying at Lai Châu"
+      },
+      "yenbai": {
+        "heading": "Recruitment for High paying at Yên Bái"
+      },
+      "daklak": {
+        "heading": "Recruitment for High paying at Dak Lak"
+      },
+      "bentre": {
+        "heading": "Recruitment for High paying at Bến Tre"
+      },
+      "dongnai": {
+        "heading": "Recruitment for High paying at Đồng Nai"
+      },
+      "hochiminh": {
+        "heading": "Recruitment for High paying at thành phố Hồ Chí Minh"
+      },
+      "hoabinh": {
+        "heading": "Recruitment for High paying at Hòa Bình"
+      },
+      "haugiang": {
+        "heading": "Recruitment for High paying at Hậu Giang"
+      },
+      "namdinh": {
+        "heading": "Recruitment for High paying at Nam Định"
+      },
+      "vinhphuc": {
+        "heading": "Recruitment for High paying at Vĩnh Phúc"
+      },
+      "lamdong": {
+        "heading": "Recruitment for High paying at Lâm Đồng"
+      },
+      "travinh": {
+        "heading": "Recruitment for High paying at Trà Vinh"
+      },
+      "tayninh": {
+        "heading": "Recruitment for High paying at Tây Ninh"
+      }
+    },
+    "other":{
+      "nerhouse":{
+        "heading":"Find jobs near you"
+      },
+      "attractivejobs":{
+        "heading":"Find attractive jobs"
+      },
+      "flashjob":{
+        "heading":"Find high-demand jobs"
+      },
+      "newjob":{
+        "heading":"Find newest jobs"
+      },
+      "quickjob":{
+        "heading":"Find jobs with Flash Jobs"
+      },
+      "joblocation":{
+        "heading":"Search jobs with locataion"
+      },
+      "category":{
+        "heading":"Search jobs with category"
       }
     }
   }

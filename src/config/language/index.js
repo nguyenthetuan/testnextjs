@@ -155,6 +155,11 @@ const strings = new LocalizedStrings({
         index: en.containers.Search.index
       },
       createPage: en.containers.createPage
+    },
+    seo: {
+      categories: en.seo.categories,
+      provinces: en.seo.provinces,
+      other: en.seo.other
     }
   },
   vi: {
@@ -309,6 +314,11 @@ const strings = new LocalizedStrings({
         index: vi.containers.Search.index
       },
       createPage: vi.containers.createPage
+    },
+    seo: {
+      categories: vi.seo.categories,
+      provinces: vi.seo.provinces,
+      other: vi.seo.other
     }
   },
   jp: {
