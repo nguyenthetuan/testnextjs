@@ -14,6 +14,7 @@ import SearchPage from './Search';
 import EditCVPage from './CV/EditCV';
 import PrintPage from './CV/PrintPage';
 import ZaloRedirectPage from './ZaloRedirect';
+import RecruitmentDay from './RecruitmentDay';
 
 export {
   ZaloRedirectPage,
@@ -31,5 +32,6 @@ export {
   SearchPage,
   EditCVPage,
   PrintPage,
-  CreateCVPage
+  CreateCVPage,
+  RecruitmentDay,
 };

@@ -1,0 +1,14 @@
+.recruiment-jobs-wrapper {
+  box-shadow: 0.1rem 0.1rem 1rem 0 rgba(219, 219, 219, 0.5);
+  -webkit-box-shadow: 0.1rem 0.1rem 1rem 0 rgba(219, 219, 219, 0.5);
+  background-color: #fff;
+  .block-content {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+  }
+  .pagination-wrap  {
+    margin-top: 10px;
+    float: right;
+    margin-bottom: 10px;
+  }
+}

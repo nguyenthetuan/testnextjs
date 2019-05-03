@@ -22,7 +22,8 @@ import {
   SearchPage,
   PrintPage,
   CreateCVPage,
-  ZaloRedirectPage
+  ZaloRedirectPage,
+  RecruitmentDay,
 } from '../containers';
 import SEOConf from './SEOConfig.json';
 
@@ -177,6 +178,11 @@ export default {
   zaloRedirect: {
     path: '/zalo-redirect',
     component: ZaloRedirectPage,
+    exact: true
+  },
+  recruitmentDay: {
+    path: '/ngay-hoi-tuyen-dung-online',
+    component: RecruitmentDay,
     exact: true
   },
   others: { component: () => <Redirect to="/404" /> }

@@ -8,6 +8,26 @@ const fetchMaketingJobs = () => {
   return _api.GET(`${host}/client/apply_now`, _api.addTokenToHeader());
 };
 
+const fetchRecruitmentDays = () => {
+  return _api.GET(`${host}/client/home/recruitment_days`, _api.addTokenToHeader());
+};
+
+const fetchRecruitmentJobs = (queryString) => {
+  let url = `${host}/client/home/recruitment_jobs`;
+  if (queryString) {
+    url = `${url}?${queryString}`;
+  }
+  return _api.GET(url, _api.addTokenToHeader());
+};
+
+const fetchRecruitmentResumes = (queryString) => {
+  let url = `${host}/client/home/recruitment_resumes`;
+  if (queryString) {
+    url = `${url}?${queryString}`;
+  }
+  return _api.GET(url, _api.addTokenToHeader());
+};
+
 const fetchJobsByCategory = () => {
   return _api.GET(`${host}/client/categories`, _api.addTokenToHeader());
 };
@@ -61,5 +81,8 @@ export default {
   fetctSavedJob,
   fetctSuitableJob,
   saveJob,
-  applyJob
+  applyJob,
+  fetchRecruitmentDays,
+  fetchRecruitmentJobs,
+  fetchRecruitmentResumes,
 };
