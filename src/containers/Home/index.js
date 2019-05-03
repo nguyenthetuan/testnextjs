@@ -253,8 +253,121 @@ class HomePage extends Base {
     return this._renderListSliderBlock(marketingJobs, 'marketing');
   };
 
+  _renderRecruitmentJobs = () => {
+    const { data, loading, isMobileMode } = this.state;
+    const jobs = (data && data.recruitment_jobs.jobs) || [];
+    const countdown = (data && data.recruitment_jobs.countDown) || {};
+
+    if (loading || jobs.length === 0) return null;
+
+    const title = (
+      <div className="maketing-jobs-title">
+        <span>
+          <span className="jn-awesome-bolt" />
+          <span className="title-text">{this.t('JOB FAIR')}</span>
+        </span>
+        <div className="countdown-wrapper">
+          <span className="icon-jn-clock" />
+          <Countdown date={countdown && countdown.end} />
+        </div>
+      </div>
+    );
+    if (jobs.length <= 6) {
+      return (
+        <div className="marketing-jobs list-slider block-wrapper">
+          <div className="title">{title}</div>
+          <div className="block-content">
+            <div className="view-all-marketing-jobs">
+              <a href="/ngay-hoi-tuyen-dung-online">
+                <span>{this.t('Xem tất cả')}</span>
+                <span className="icon-arrow-right" />
+              </a>
+            </div>
+            <div className="slide-item-wrapper no-slider">
+              {jobs.map((job, index) => {
+                return <JobItem data={job} linkWrapper key={`marketing-job-${index}`} flashJob />;
+              })}
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    const marketingJobs = {
+      jobs: (data && data.recruitment_jobs.jobs) || [],
+      title,
+      flashJob: true,
+      top: (
+        <div className="view-all-marketing-jobs">
+          <a href="/ngay-hoi-tuyen-dung-online">
+            <span>{this.t('Xem tất cả')}</span>
+            <span className="icon-arrow-right" />
+          </a>
+        </div>
+      ),
+      showItems: 6,
+      scrollItems: 1,
+      autoplay: true,
+      showdots: false,
+      afterChange: () => {
+        const activeItem = document.querySelector('.marketing-jobs .slick-slide a.last-active');
+        if (activeItem) {
+          activeItem.classList.remove('last-active');
+          activeItem.classList.remove('first-active');
+        }
+        const actives = document.querySelectorAll('.marketing-jobs .slick-active a.job-item-wrapper');
+        const beforeActive = document.querySelector('a.disable-right-border');
+        if (beforeActive) {
+          beforeActive.classList.remove('disable-right-border');
+        }
+        if (actives.length) {
+          actives[actives.length - 1].classList.add('last-active');
+          actives[0].classList.add('first-active');
+          actives[0].parentElement.parentElement.parentElement.previousSibling.querySelector('a.job-item-wrapper').classList.add('disable-right-border');
+        }
+      },
+      // fixedWidth: true,
+      linkWrapper: true,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 5
+          }
+        },
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 4
+          }
+        },
+        {
+          breakpoint: 860,
+          settings: {
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1
+          }
+        }
+      ]
+    };
+
+    return this._renderListSliderBlock(marketingJobs, 'marketing');
+  };
+
   render() {
     const { data, loading, message } = this.state;
+    const countdown = (data && data.marketing_jobs.countDown) || null;
     if (loading) {
       return (
         <div className="page-wrapper loading-data">
@@ -313,6 +426,7 @@ class HomePage extends Base {
         <TopBlock events={data && data.events} />
         <div className="main-content-wrapper">
           {this._renderMarketingJobs()}
+          {!countdown && (this._renderRecruitmentJobs())}
           {this._renderListSliderBlock(fastJobs, 'fast')}
           {this._renderListSliderBlock(attractiveJobs, 'attractive')}
           {this._renderListSliderBlock(latestJob, 'latest')}
