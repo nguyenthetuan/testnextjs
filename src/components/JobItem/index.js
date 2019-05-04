@@ -124,7 +124,11 @@ class JobItem extends Base {
               )}
               {flashJob && (
                 <div className="button-wrapper">
-                  <Button className="jn-btn__yellow">{this.t('Xem ngay')}</Button>
+                  <div className="jn-btn jn-btn__yellow">
+                    <a href={`/viec-lam/${slug || _id}`}>
+                      {this.t('Xem ngay')}
+                    </a>
+                  </div>
                 </div>
               )}
             </div>
