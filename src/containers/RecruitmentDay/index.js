@@ -49,7 +49,7 @@ class RecruitmentDay extends Base {
     const { loading, recruitmentId, countDown } = this.state;
     let wrapperClasses = ['page-wrapper'];
     if (loading) wrapperClasses.push('loading');
-    if (countDown === null || countDown === 'null') return null; 
+    if (countDown === null || countDown === 'null') return null;
     return (
       <div className={wrapperClasses.join(' ')}>
         {loading && <Loading />}
@@ -64,13 +64,13 @@ class RecruitmentDay extends Base {
             </div>
           </div>
           <div className="flash-jobs-banner">
-            <img src="https://jobnow-data.s3.ap-southeast-1.amazonaws.com/marketings/5bac7f136b8e2325772953e1/AibuQl4iyHIyHT0kzhtGCGEVBjQL1e7JkqlDFdaypdYVB77QzbjkK1TewwxoB6Pkbanner-flash-jobs.jpg" alt="" />
+            <img src="/assets/img/recruitmentDay/ntd-banner.jpg" alt="" />
           </div>
           {recruitmentId && (
             <RJobs recruitmentId={recruitmentId} />
           )}
           <div className="flash-jobs-banner" style={{ marginTop: 20 }}>
-            <img src="https://jobnow-data.s3.ap-southeast-1.amazonaws.com/marketings/5bac7f136b8e2325772953e1/AibuQl4iyHIyHT0kzhtGCGEVBjQL1e7JkqlDFdaypdYVB77QzbjkK1TewwxoB6Pkbanner-flash-jobs.jpg" alt="" />
+            <img src="/assets/img/recruitmentDay/uv-banner.jpg" alt="" />
           </div>
           {recruitmentId && (
             <RResumes recruitmentId={recruitmentId} />
