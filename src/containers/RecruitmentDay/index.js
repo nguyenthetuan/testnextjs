@@ -64,13 +64,13 @@ class RecruitmentDay extends Base {
             </div>
           </div>
           <div className="flash-jobs-banner">
-            <img src="/assets/img/recruitmentDay/ntd-banner.jpg" alt="" />
+            <img src="/assets/img/recruitmentDay/Banner-NTD.jpg" alt="" />
           </div>
           {recruitmentId && (
             <RJobs recruitmentId={recruitmentId} />
           )}
           <div className="flash-jobs-banner" style={{ marginTop: 20 }}>
-            <img src="/assets/img/recruitmentDay/uv-banner.jpg" alt="" />
+            <img src="/assets/img/recruitmentDay/Banner-UV.jpg" alt="" />
           </div>
           {recruitmentId && (
             <RResumes recruitmentId={recruitmentId} />
