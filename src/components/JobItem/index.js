@@ -31,7 +31,7 @@ class JobItem extends Base {
     const { company, km, salary, title, _id, worklocation, slug, quantity } = data || {};
     const wrapperClasses = ['job-item-wrapper', `${type}-item`];
     if (className) wrapperClasses.push(className);
-    const logo = (company && company.logo) || '/assets/img/logo-full.png';
+    const logo = (company && company.logo) || '/assets/img/icon-company.png';
     const salaryLevel = (salary && salaryOpts && salaryOpts[salary]) || this.t('Thương lượng');
     const location = km ? `${km}km` : worklocation && worklocation[0] && worklocation[0].province;
 
@@ -41,7 +41,7 @@ class JobItem extends Base {
 
     if (linkWrapper) {
       return (
-        <a className={wrapperClasses.join(' ')} href={`/viec-lam/${slug || _id}`} style={style}>
+        <a className={wrapperClasses.join(' ')} href={`/viec-lam/${slug || _id}`} style={style} target="_blank" rel="noopener noreferrer">
           {!showJobInfoOnly && <div className="company-logo">{data && <CompanyLogo src={logo} displayFull={flashJob} />}</div>}
           <div className="info-wrapper">
             <div className="job-info">
@@ -84,7 +84,7 @@ class JobItem extends Base {
         {!showJobInfoOnly && <div className="company-logo">{data && <img src={logo} alt="" />}</div>}
         <div className="info-wrapper">
           <div className="job-info">
-            <a href={`/viec-lam/${slug || _id}`}>
+            <a href={`/viec-lam/${slug || _id}`} target="_blank" rel="noopener noreferrer">
               <div className="job-title">{title}</div>
               <div className="company-name">
                 <span>{company && company.name}</span>
