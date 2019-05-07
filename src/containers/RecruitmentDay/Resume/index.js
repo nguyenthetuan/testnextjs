@@ -74,9 +74,9 @@ class RResumes extends Base {
             const salaryText = (constants.resumes && constants.resumes.salary[resume.salary]) || '';
             const expText = (constants.resumes && constants.resumes.experience[resume.year_experience]) || '';
             const level = (constants.users && constants.users.level[resume.user && resume.user.level]) || '';
-            const logo = (resume.user && resume.user.avatar) || '/assets/img/logo-full.png';
+            const logo = (resume.user && resume.user.avatar) || '/assets/img/icon-candidate.png';
             return (
-              <div className="resume-item-wrapper" key={`recruiment-resume-${index}`}>
+              <a className="resume-item-wrapper" href={`https://employer.jobnow.com.vn/candidate/${resume._id}`} key={`recruiment-resume-${index}`} target="_blank" rel="noopener noreferrer">
                 <div className="information">
                   <div className="title">{resume.title}</div>
                   <div className="fullname">{resume.user && resume.user.fullname}</div>
@@ -94,7 +94,7 @@ class RResumes extends Base {
                 <div className="img">
                   <img src={logo} alt={resume.title} />
                 </div>
-              </div>
+              </a>
             );
           })}
         </div>
