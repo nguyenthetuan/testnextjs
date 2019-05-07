@@ -28,7 +28,7 @@
         .fullname {
           font-size: 15px;
           color: #fc5830;
-          font-weight: normal;
+          font-weight: bold;
         }
         .meta {
           display: flex;
@@ -53,6 +53,8 @@
             flex-direction: column;
             span {
               margin-bottom: 5px;
+              font-weight: normal;
+              font-size: 1.4rem;
               i {
                 margin-right: 5px;
               }
@@ -71,6 +73,7 @@
         justify-content: center;
         -ms-flex-align: center;
         align-items: center;
+        margin-bottom: 1.2rem
       }
     }
   }

@@ -88,6 +88,13 @@ class CVItem extends Base {
               this.props.changeResumeSearchingStatus({ id: _id, status: value, index });
             }}
           />
+          <CheckBox
+            label={this.t('Tham gia ngày hội tuyển dụng online.')}
+            // checked={allow_search}
+            // onChange={value => {
+            //   this.props.changeResumeSearchingStatus({ id: _id, status: value, index });
+            // }}
+          />
         </div>
 
         <div className="btn-container">
