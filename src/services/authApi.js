@@ -1,7 +1,7 @@
 /*
- * @Author: CuongHx 
- * @Date: 2018-07-13 11:41:27 
- * @Last Modified by: 
+ * @Author: CuongHx
+ * @Date: 2018-07-13 11:41:27
+ * @Last Modified by:
  * @Last Modified time: 2018-09-01 17:13:55
  */
 
@@ -72,6 +72,18 @@ const refreshResume = id => {
   return _api.POST(`${host}/candidate/resumes/refresh/${id}`, {}, _api.addTokenToHeader());
 };
 
+const recruitmentResumes = data => {
+  return _api.POST(`${host}/candidate/recruitment_resumes`, data, _api.addTokenToHeader());
+};
+
+const deleteRecruitment = data => {
+  return _api.POST(`${host}/candidate/recruitment_resumes/delete`, data, _api.addTokenToHeader());
+};
+
+const isRecruitmentResume = data => {
+  return _api.POST(`${host}/candidate/recruitment_resumes/isRecruitmentResume`, data, _api.addTokenToHeader());
+};
+
 export default {
   fetchFirstToken,
   setToken,
@@ -85,5 +97,8 @@ export default {
   verifyPhoneEmail,
   socialLogin,
   refreshResume,
-  changeResumeSearchingStatus
+  changeResumeSearchingStatus,
+  recruitmentResumes,
+  deleteRecruitment,
+  isRecruitmentResume,
 };
