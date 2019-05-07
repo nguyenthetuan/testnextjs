@@ -13,7 +13,8 @@ class CVItem extends Base {
     this.state = {
       allow: false,
       showDeletePopup: false,
-      refreshMessage: null
+      refreshMessage: null,
+      isCruitmentDay: false,
     };
     this._deleting = false;
   }
@@ -48,8 +49,35 @@ class CVItem extends Base {
     }
   };
 
+  _recruitmentResumes = async(checked, id) => {
+    const formData = new FormData();
+    formData.append('resume', id);
+    if (checked) {
+      const res = await authApi.recruitmentResumes(formData);
+      if (res && res.result === true) {
+        this.setState({ isCruitmentDay: checked });
+      }
+    } else {
+      const res = await authApi.deleteRecruitment(formData);
+      if (res && res.result === true) {
+        this.setState({ isCruitmentDay: checked });
+      }
+    }
+  }
+
+  async componentDidMount() {
+    if (this.props.data && this.props.data._id) {
+      const formData = new FormData();
+      formData.append('resume', this.props.data._id);
+      const res = await authApi.isRecruitmentResume(formData);
+      if (res && res.result === true) {
+        this.setState({ isCruitmentDay: true });
+      }
+    }
+  }
+
   render() {
-    const { showDeletePopup, refreshMessage } = this.state;
+    const { showDeletePopup, refreshMessage, isCruitmentDay } = this.state;
     const { data, constants, index } = this.props;
     const { createdAt, status, title, type, view_counts, _id, allow_search } = data;
     return (
@@ -90,10 +118,10 @@ class CVItem extends Base {
           />
           <CheckBox
             label={this.t('Tham gia ngày hội tuyển dụng online.')}
-            // checked={allow_search}
-            // onChange={value => {
-            //   this.props.changeResumeSearchingStatus({ id: _id, status: value, index });
-            // }}
+            checked={isCruitmentDay}
+            onChange={value => {
+              this._recruitmentResumes(value, _id);
+            }}
           />
         </div>
 
