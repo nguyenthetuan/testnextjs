@@ -48,14 +48,14 @@ export default class Pagination extends Component {
     if (this.props.total === 0) {
       return null;
     }
-
+    let pageRangeDisplayed = window.innerWidth >= 450 ? 3 : 1;
     return (
       <div className={`pagination-wrap ${this.props.className}`}>
         <ReactPaginate
           forcePage={this.props.currentPage}
           pageCount={Math.ceil(this.props.total / this.props.numberPerPage)}
-          pageRangeDisplayed={3}
-          marginPagesDisplayed={3}
+          pageRangeDisplayed={pageRangeDisplayed}
+          marginPagesDisplayed={pageRangeDisplayed}
           onPageChange={this._handlePageClick}
           nextLabel={<i className="icon-arrow-right" />}
           previousLabel={<i className="icon-arrow-left" />}
