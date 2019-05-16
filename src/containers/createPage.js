@@ -13,7 +13,7 @@ import { Base, MenuBar, SideBar, Footer, AuthPopup, Button } from '../components
 import { deleteRemberAuthData, getRememberAuthData, saveRememberAuthData } from '../utils/localData';
 import './style.scss';
 
-export default function(ComposedComponent, isSearchPage = false) {
+export default function(ComposedComponent, isSearchPage = false, isMenu = true) {
   class Layout extends Base {
     constructor(props) {
       super(props);
@@ -67,9 +67,10 @@ export default function(ComposedComponent, isSearchPage = false) {
         return <Redirect to={{ pathname: '/', state: { showLoginPopup: requiredAuth } }} />;
       }
 
+      console.log('is', isSearchPage);
       return (
         <div id="app_wrapper">
-          <MenuBar />
+          {isMenu && <MenuBar />}
           <section id="content_outer_wrapper">
             <div id="content_wrapper" className={(showSidebar ? ['has-sidebar'] : []).join(' ')}>
               {showSidebar && <SideBar />}

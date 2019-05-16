@@ -24,6 +24,9 @@ import {
   CreateCVPage,
   ZaloRedirectPage,
   RecruitmentDay,
+  SignIn,
+  SignUp,
+  ForgotPassword
 } from '../containers';
 import SEOConf from './SEOConfig.json';
 
@@ -183,6 +186,21 @@ export default {
   recruitmentDay: {
     path: '/ngay-hoi-tuyen-dung-online',
     component: RecruitmentDay,
+    exact: true
+  },
+  signIn: {
+    path: '/signin',
+    component: SignIn,
+    exact: true
+  },
+  signUp: {
+    path: '/signup',
+    component: SignUp,
+    exact: true
+  },
+  forgotPwd: {
+    path: '/forgotpassword',
+    component: ForgotPassword,
     exact: true
   },
   others: { component: () => <Redirect to="/404" /> }
