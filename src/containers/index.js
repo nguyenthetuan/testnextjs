@@ -15,6 +15,9 @@ import EditCVPage from './CV/EditCV';
 import PrintPage from './CV/PrintPage';
 import ZaloRedirectPage from './ZaloRedirect';
 import RecruitmentDay from './RecruitmentDay';
+import SignIn from './SignIn';
+import SignUp from './SignUp';
+import ForgotPassword from './ForgotPassword';
 
 export {
   ZaloRedirectPage,
@@ -34,4 +37,7 @@ export {
   PrintPage,
   CreateCVPage,
   RecruitmentDay,
+  SignIn,
+  SignUp,
+  ForgotPassword
 };
