@@ -49,11 +49,15 @@ class TopBlock extends Base {
       lazyLoad: true,
       infinite: true,
       speed: 500,
-      slidesToShow: 3,
+      slidesToShow: 1,
       slidesToScroll: 1,
-      initialSlide: 2,
+      initialSlide: 1,
       autoplay: true,
       responsive,
+      centerMode: true,
+      variableWidth: true,
+      centerPadding: 0,
+      dots: true,
       afterChange: () => {
         _$('.banner-wrapper .slick-active').removeClass('last-active');
         _$('.banner-wrapper .slick-active')
@@ -100,7 +104,7 @@ class TopBlock extends Base {
             </div>
           )}
 
-          <div className="job-types">
+          {/* <div className="job-types">
             <div className="col cat-jobs">
               <a className="item-wrapper" href="/viec-lam/tim-viec-lam" title={this.t('Việc làm theo ngành nghề')}>
                 <div className="icon-wrapper">
@@ -165,7 +169,7 @@ class TopBlock extends Base {
                 <div className="title">{this.t('Video hấp dẫn')}</div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     );
