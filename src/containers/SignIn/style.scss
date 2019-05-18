@@ -1,11 +1,15 @@
-.register-page {
+.signin-page {
   display: flex;
   flex: 1 1;
+  background-image: url('/assets/img/new-background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  #content_wrapper {
+    padding-top: 0 !important;
+  }
   .register-container {
     display: flex;
     flex: 1 1;
-    background-image: url('/assets/img/new-background.png');
-    background-size: cover;
     .modal-body {
       width: 550px;
       height: 780px;
@@ -22,6 +26,7 @@
         font-weight: bold;
         color: #4a4a4a;
         padding-top: 23px;
+        padding-bottom: 30px;
       }
       .back-button {
         text-align: left;
@@ -33,37 +38,69 @@
           align-items: center;
         }
       }
+       .icon-arrow-left:before {
+         font-size: 17px;
+       }
+       .error-message {
+         margin-bottom: 0.8rem;
+         margin-top: 0;
+         font-size: 1.4rem;
+         font-weight: 300;
+         color: #d0021d;
+       }
       #auth-form {
-        padding-top: 32px;
         .jn-input-wrapper {
-          padding-top: 23px !important;
+          padding-bottom: 29px !important;
+          a {
+            top: 10px;
+          }
+          .input-wrapper {
+            display: block;
+          }
+          .help-block {
+            margin-bottom: 0;
+            margin-top: .8rem;
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: #d0021b!important;
+          }
         }
         .form-control {
           background-color: #f5f5f5;
           font-size: 16px;
-          color: #4a4a4a;
+          color: #4a4a4a
         }
-        #phone {
-          margin-bottom: 84px;
-        }
-        .register-legend {
-          margin-top: 8px;
-          margin-bottom: 0;
-          display: flex;
-          justify-content: center;
-          span.legend {
-            font-family: Roboto;
+      }
+      .extra-options {
+        display: flex;
+        margin-bottom: 43px;
+        .jn-checkbox {
+          a {
             font-size: 1.4rem;
-            color: #464646;
+            font-weight: normal;
+            color: #444444;
           }
+          .checkbox .checkbox-material .check,
+          label.checkbox-inline .checkbox-material .check {
+            width: 1.8rem;
+            height: 1.8rem;
+            border: solid 1px #e1e1e1;
+          }
+        }
+
+        .forgot-pwd {
+          flex: 1;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
 
           a,
           a:hover,
           a:active,
           a:focus {
-            color: #fc5830;
             font-size: 1.4rem;
-            margin-left: 0.6rem;
+            font-weight: 300;
+            color: #2f0e73;
           }
         }
       }
@@ -73,8 +110,87 @@
         padding: 0;
         line-height: 4rem;
       }
-      .register-btn {
-        margin-top: 30px;
+      .register-legend {
+        margin-top: 19px;
+        margin-bottom: 1.2rem;
+        display: flex;
+        span.legend {
+          font-family: Roboto;
+          font-size: 1.4rem;
+          color: #464646;
+        }
+
+        a {
+          color: #fc5830;
+          font-size: 1.4rem;
+          margin-left: 0.6rem;
+          margin-right: 0.6rem;
+        }
+        a:hover,
+        a:active,
+        a:focus {
+          color: #262262;
+          font-size: 1.4rem;
+          margin-left: 0.6rem;
+          margin-right: 0.6rem;
+        }
+      }
+      .social-login {
+        margin-top: 158px;
+        display: flex;
+        align-items: center;
+        span.legend {
+          font-family: Roboto;
+          font-size: 1.4rem;
+          color: #464646;
+        }
+        .social-button {
+          display: flex;
+        }
+        .icon-jn-facebook {
+          width: 54px;
+          height: 54px;
+          background-color: #3b5998;
+          color: #ffffff;
+          align-items: center;
+          font-size: 25px;
+          text-align: center;
+          border-radius: 27px;
+          margin-left: 24px;
+          a {
+            height: 54px;
+            display: flex;
+          }
+        }
+        .icon-jn-facebook:before {
+          vertical-align: -50%;
+        }
+        .icon-social-google {
+          width: 54px;
+          height: 54px;
+          background-color: #ea4335;
+          color: #ffffff;
+          align-items: center;
+          font-size: 25px;
+          text-align: center;
+          border-radius: 27px;
+          margin-left: 24px;
+        }
+        .icon-social-google:before {
+          vertical-align: -50%;
+        }
+      }
+      @media (max-width: 767px) {
+        padding: 10px;
+        .modal-body {
+          width: 100%;
+          height: 100%;
+          padding: 30px;
+          margin-right: 0;
+          .social-login {
+            margin-top: 58px;
+          }
+        }
       }
   }
 }

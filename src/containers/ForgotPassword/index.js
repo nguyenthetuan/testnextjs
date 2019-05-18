@@ -16,7 +16,7 @@ import './style.scss';
 const _$ = window.jQuery;
 
 class RegisterPage extends Base {
-  static wrapperClasses = 'register-page';
+  static wrapperClasses = 'forgot-page';
 
   constructor(props) {
     super(props);
@@ -25,29 +25,92 @@ class RegisterPage extends Base {
         email: '',
         password: '',
         passwordConfirm: '',
-        step: 1,
         code: '',
         validCode: false
       },
-      phone: '',
-      companyName: '',
-      size: undefined,
-      contact: '',
-      condition: false
+      loading: false,
+      step2: false,
+      message: null,
     };
   }
 
   componentDidMount() {
+    this._validator = _$('#auth-form').validate(this.validationRules());
+  }
 
+  componentDidUpdate() {
+    if (this._validator) this._validator.destroy();
+    this._validator = _$('#auth-form').validate(this.validationRules());
   }
 
   componentWillReceiveProps(nextProps) {
 
   }
 
+  validationRules = () => {
+    const { showForgotPwdForm, showRegisterForm } = this.props;
+    return {
+      highlight: element => {
+        _$(element)
+          .closest('.form-group')
+          .addClass('has-error');
+      },
+      unhighlight: element => {
+        _$(element)
+          .closest('.form-group')
+          .removeClass('has-error');
+      },
+      errorElement: 'div',
+      errorClass: 'help-block',
+      errorPlacement: (element, e) => {
+        _$(e)
+          .parents('.form-group:first > .input-wrapper')
+          .append(element);
+      },
+      rules: {
+        email: {
+          required: true,
+          email: showRegisterForm || showForgotPwdForm
+        },
+      },
+      messages: {
+        email: {
+          required: this.t(showRegisterForm || showForgotPwdForm ? 'Nhập địa chỉ email.' : 'Nhập địa chỉ email/số điện thoại.'),
+          email: this.t('Không đúng định dạng email.')
+        },
+      }
+    };
+  };
+
+  _changePassword = () => {
+    if (this._validator.errorList.length === 0 && !this.state.loading) {
+      this.setState({ loading: true }, async () => {
+        if (!this.state.step2) {
+          const response = await authApi.sendForgotPasswordEmail(this.state.forgotPwd.email.trim());
+          if (response && response.code === undefined && (response.result || response.result === undefined)) {
+            this.setState({ step2: true, loading: false, message: null });
+          } else {
+            this.setState({ message: { code: 1 }, loading: false });
+          }
+        }
+      });
+    }
+  };
+
+  _submitForm = () => {
+    _$('#auth-form')
+      .on('submit', event => {
+        event.preventDefault();
+      })
+      .submit();
+    if (this._validator.errorList.length === 0) {
+      this._changePassword();
+    }
+  };
+
   _renderForgotPwd1 = () => {
-    const { forgotPwd } = this.state;
-    const { phone } = forgotPwd;
+    const { forgotPwd, message } = this.state;
+    const { email } = forgotPwd;
     return (
       <form
         id="auth-form"
@@ -55,14 +118,15 @@ class RegisterPage extends Base {
           this._authForm = r;
         }}
       >
+        {message && message.code && <div className="error-message">{this.t('Không tìm thấy email trong hệ thống. Vui lòng kiểm tra lại.')}</div>}
         <Input
-          name="phone"
-          placeholder={this.t('Số di động')}
-          floatingLabel
+          name="email"
+          value={email}
           required
-          value={phone}
-          ref={r => {
-            this._phoneInputRef = r;
+          placeholder={this.t('Email của bạn')}
+          floatingLabel
+          onChange={value => {
+            this.setState({ forgotPwd: { ...forgotPwd, email: value } });
           }}
         />
         <Button className="jn-btn__yellow" label={this.t('TIẾP TỤC')} onClick={this._submitForm} />
@@ -80,9 +144,7 @@ class RegisterPage extends Base {
               className="register-link"
               onClick={event => {
                 event.preventDefault();
-                setTimeout(() => {
-                  this.props.showAuthPopup('register'); // show register form
-                }, 0);
+                this.setState({ step2: false });
               }}
             >
               {this.t('Click vào đây')}
@@ -95,15 +157,24 @@ class RegisterPage extends Base {
     );
   }
 
+  _renderForgot = () => {
+    const { step2 } = this.state;
+    return step2 ? this._renderForgotPwd2() : this._renderForgotPwd1();
+  }
+
+  _onBackClick = () => {
+    this.props.history.goBack();
+  }
+
   render() {
     return (
       <div className="register-container">
         <div className="modal-body">
-          <Button className="back-button">
+          <Button className="back-button" onClick={this._onBackClick}>
             <div className="back-button-text icon-arrow-left">{this.t(' QUAY LẠI')}</div>
           </Button>
           <div className="header">{this.t('Lấy lại mật khẩu')}</div>
-          {this._renderForgotPwd2()}
+          {this._renderForgot()}
         </div>
       </div>
     );

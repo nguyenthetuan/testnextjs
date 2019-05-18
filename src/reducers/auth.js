@@ -14,7 +14,8 @@ import {
   UPDATE_LOCATION,
   UPDATE_USER_INFO,
   FETCH_RESUMES_SUCCESS,
-  DELETE_RESUME_SUCCESS
+  DELETE_RESUME_SUCCESS,
+  UPDATE_REDIRECT
 } from '../actions/types';
 
 const initState = {
@@ -27,7 +28,8 @@ const initState = {
   message: null,
   currentLocation: null,
   popupData: null,
-  cvList: []
+  cvList: [],
+  redirectPath: null,
 };
 
 export default function(state = initState, action) {
@@ -69,6 +71,9 @@ export default function(state = initState, action) {
 
     case UPDATE_LOCATION:
       return { ...state, currentLocation: action.payload };
+
+    case UPDATE_REDIRECT:
+      return { ...state, redirectPath: action.payload.pathname };
 
     default:
       return state;

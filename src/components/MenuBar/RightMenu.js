@@ -1,6 +1,6 @@
 /*
  * File: undefined
- * Desc: 
+ * Desc:
  * Author: DuyNg (duy@megadrupal.com)
  * Created: 2018-08-08 14:18:23
  */
@@ -12,7 +12,7 @@ import Loading from '../Loading';
 import Popup from '../Popup';
 import MobileMenu from './MobileMenu';
 import { fetchNotifications } from '../../actions/notification';
-import { signOut, showAuthPopup } from '../../actions/auth';
+import { signOut, showAuthPopup, updateRedirect } from '../../actions/auth';
 
 class RightMenu extends Base {
   constructor(props) {
@@ -59,15 +59,15 @@ class RightMenu extends Base {
 
   candidateMenu = [
     {
-      link: '#register',
+      link: 'https://jobnow.com.vn/signin',
       title: 'Đăng ký, đăng nhập',
       icon: 'signin-icon',
       linkAttributes: {
+        rel: 'noopener noreferrer nofollow',
         className: 'candidate-signin',
         onClick: event => {
-          event.preventDefault();
-          this.props.showAuthPopup(); // show login form
           this._toggleDropdownMenu(event, 'candidate-menu');
+          this.props.updateRedirect(this.props.history.location.pathname);
         }
       }
     },
@@ -161,10 +161,9 @@ class RightMenu extends Base {
     return (
       <li className="dropdown candidate-menu">
         <a
-          href="#"
+          href="/signin"
           onClick={event => {
-            event.preventDefault();
-            this.props.showAuthPopup();
+            this.props.updateRedirect(this.props.history.location.pathname);
           }}
         >
           <span className="main-text">{this.t('Ứng viên')}</span>
@@ -512,6 +511,6 @@ const mapStateToProps = state => {
 export default withRouter(
   connect(
     mapStateToProps,
-    { signOut, showAuthPopup, fetchNotifications }
+    { signOut, showAuthPopup, fetchNotifications, updateRedirect }
   )(RightMenu)
 );
