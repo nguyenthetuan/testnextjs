@@ -220,11 +220,7 @@ class AdvanceSearchPopup extends Base {
               }}
             />
             <Select
-<<<<<<< HEAD
-              placeholder={this.t('Chọn trình độ')}
-=======
               placeholder={this.t('components').AdvanceSearchPopup.levelOpts}
->>>>>>> issue06
               options={levelOpts}
               value={[level]}
               onChange={value => {

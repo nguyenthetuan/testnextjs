@@ -53,7 +53,7 @@ class LangPopup extends Base {
   _renderLangForm = () => {
     return (
       <div className="login-form-container">
-        <div className="header">{this.t('Chọn ngôn ngữ')}</div>
+        <div className="header">{this.t('Language')}</div>
         <div className="socials-wrapper">
           <Button className="jn-btn__normal flag" onClick={() => this.onClick('vi')}>
             <div className="icon-image icon">
@@ -67,12 +67,12 @@ class LangPopup extends Base {
             </div>
             <div className="text">{this.t('Tiếng Anh')}</div>
           </Button>
-          <Button className="jn-btn__normal flag" onClick={() => this.onClick('jp')}>
+          {/* <Button className="jn-btn__normal flag" onClick={() => this.onClick('jp')}>
             <div className="icon-image icon">
               <img src="/assets/img/flagJapan.jpg" alt="" />
             </div>
             <div className="text">{this.t('Tiếng nhật')}</div>
-          </Button>
+          </Button> */}
         </div>
       </div>
     );

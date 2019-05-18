@@ -14,11 +14,7 @@ import { deleteRemberAuthData, getRememberAuthData, saveRememberAuthData } from 
 import './style.scss';
 import setting from '../constants/setting';
 
-<<<<<<< HEAD
 export default function(ComposedComponent, isSearchPage = false, isMenu = true) {
-=======
-export default function (ComposedComponent, isSearchPage = false) {
->>>>>>> issue02
   class Layout extends Base {
     constructor(props) {
       super(props);

@@ -103,7 +103,7 @@
           "SMSCode": "Submit verification code",
           "registerAccount": "Register an account",
           "phone": "Mobile number",
-          "verification": "Mã xác th?c dã du?c g?i d?n tin nh?n c?a b?n.",
+          "verification": "The authentication code has been sent to your message.",
           "pinCode": "Verification code",
           "email": "Email",
           "passwordConfirm": "Enter the password",
