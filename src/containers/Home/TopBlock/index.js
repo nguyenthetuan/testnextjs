@@ -53,7 +53,7 @@ class TopBlock extends Base {
       slidesToScroll: 1,
       initialSlide: 1,
       autoplay: true,
-      responsive,
+      // responsive,
       centerMode: true,
       variableWidth: true,
       centerPadding: 0,
