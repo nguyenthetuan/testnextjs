@@ -47,7 +47,7 @@ export default class CVUploader extends Base {
       <div className="cv-upload-wrapper">
         <div className="field-wrapper">
           <div className="label">
-            <span className="text">{this.t('Đình kèm file CV')}</span>
+            <span className="text">{this.t('components').AdvancedSearch.FastApply.CVUploader.uploadCV}</span>
             <span className="required">*</span>
           </div>
           <div className={`upload-wrapper${matches ? ' selected-file' : ''}`}>
@@ -58,15 +58,15 @@ export default class CVUploader extends Base {
                   <div className="file-extension">{matches[2]}</div>
                 </div>
               ) : (
-                this.t('Chọn file CV')
-              )}
+                this.t('components').AdvancedSearch.FastApply.CVUploader.chooseFileCV
+                )}
               <input type="file" accept=".doc, .docx, .pdf" onChange={this._handleFileSelected} />
             </label>
           </div>
         </div>
         {this.state.showError && (
           <div className="help-block" style={{ display: 'block' }}>
-            {this.t('Chọn file CV để gửi tới nhà tuyển dụng.')}
+            {this.t('components').AdvancedSearch.FastApply.CVUploader.showErrorCV}
           </div>
         )}
       </div>

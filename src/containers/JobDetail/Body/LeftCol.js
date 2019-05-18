@@ -14,7 +14,7 @@ export default class LeftCol extends Base {
     return (
       <div className="col">
         <div className="block-wrapper">
-          <div className="block-title">{this.t('Các phúc lợi dành cho bạn')}</div>
+          <div className="block-title">{this.t('containers').JobDetail.Body.LeftCol.title}</div>
           <div
             className="block-content"
             dangerouslySetInnerHTML={{
@@ -23,7 +23,7 @@ export default class LeftCol extends Base {
           />
         </div>
         <div className="block-wrapper">
-          <div className="block-title">{this.t('Mô tả công việc')}</div>
+          <div className="block-title">{this.t('containers').JobDetail.Body.LeftCol.jobDescription}</div>
           <div
             className="block-content"
             dangerouslySetInnerHTML={{
@@ -32,7 +32,7 @@ export default class LeftCol extends Base {
           />
         </div>
         <div className="block-wrapper">
-          <div className="block-title">{this.t('Yêu cầu công việc')}</div>
+          <div className="block-title">{this.t('containers').JobDetail.Body.LeftCol.jobRequire}</div>
           <div
             className="block-content"
             dangerouslySetInnerHTML={{
@@ -41,7 +41,7 @@ export default class LeftCol extends Base {
           />
         </div>
         <div className="block-wrapper">
-          <div className="block-title">{this.t('Địa điểm làm việc')}</div>
+          <div className="block-title">{this.t('containers').JobDetail.Body.LeftCol.worklocation}</div>
           <div className="block-content">
             <GMap center={worklocation && worklocation[0] && worklocation[0].coord} positions={(worklocation || []).map(pos => pos.coord)} height={290} />
           </div>

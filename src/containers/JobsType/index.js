@@ -9,7 +9,7 @@ import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import Helmet from 'react-helmet';
 import { Base, Countdown, JobItem, Loading, Input } from '../../components';
-import SEOConfig from '../../constants/SEOConfig.json';
+import SEOConfig from '../../constants/SEOConfig';
 import { jobApi } from '../../services';
 import { convertViCharToEngChar } from '../../utils/commonFunctions';
 import createPage from '../createPage';
@@ -91,10 +91,10 @@ class JobsTypePage extends Base {
         <div className="title">
           <div className="main-title">
             <span className="jn-awesome-bolt" />
-            <span className="title-text">{this.t('FLASH JOBS')}</span>
+            <span className="title-text">{this.t('containers').JobsType.flashJob}</span>
           </div>
           <div className="countdown-wrapper">
-            <span className="sub-title">{this.t('Kết thúc sau')}</span>
+            <span className="sub-title">{this.t('containers').JobsType.end}</span>
             <Countdown date={countdown && countdown.end} />
           </div>
         </div>
@@ -105,7 +105,8 @@ class JobsTypePage extends Base {
         )}
         <div className="block-content">
           {jobs.map((job, index) => {
-            return <JobItem data={job} flashJob key={`marketing-job-${index}`} />;
+            const history = this.props.history;
+            return <JobItem data={job} history={history} flashJob key={`marketing-job-${index}`} />;
           })}
         </div>
       </div>
@@ -128,7 +129,7 @@ class JobsTypePage extends Base {
 
     const { pathname } = this.props.location;
     const otherSEOMap = {};
-    SEOConfig.others.map(item => {
+    SEOConfig.creatSEO().others.map(item => {
       otherSEOMap[item.url] = item;
     });
     const pageSEOConf = otherSEOMap[pathname.trim().replace('/viec-lam/', '')];
@@ -148,7 +149,7 @@ class JobsTypePage extends Base {
     }
 
     const categoriesSEOData = {};
-    SEOConfig.categories.map(cat => {
+    SEOConfig.creatSEO().categories.map(cat => {
       categoriesSEOData[cat.id] = cat;
     });
 
@@ -160,7 +161,7 @@ class JobsTypePage extends Base {
           <div className="filter-wrapper">
             <span className="icon-magnifier" />
             <Input
-              placeholder={this.t('Tìm nhanh...')}
+              placeholder={this.t('containers').JobsType.filterText}
               floatingLabel
               value={filterText}
               onChange={value => {

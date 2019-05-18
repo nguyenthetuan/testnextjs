@@ -30,37 +30,37 @@ class GeneralInfo extends Base {
         <div className="main-info-wrapper">
           <div className="col">
             <div className="info-line">
-              <div className="info-title">{this.t('Họ tên')}:</div>
+              <div className="info-title">{this.t('containers').CV.EditCV.GeneralInfo.name}:</div>
               <div className="info-value">{fullname}</div>
             </div>
             <div className="info-line">
-              <div className="info-title">{this.t('Số điện thoại')}:</div>
+              <div className="info-title">{this.t('containers').CV.EditCV.GeneralInfo.phone}:</div>
               <div className="info-value">{phone}</div>
             </div>
             <div className="info-line">
-              <div className="info-title">{this.t('Email')}:</div>
+              <div className="info-title">{this.t('containers').CV.EditCV.GeneralInfo.email}:</div>
               <div className="info-value">{email}</div>
             </div>
             <div className="info-line">
-              <div className="info-title">{this.t('Ngày sinh')}:</div>
+              <div className="info-title">{this.t('containers').CV.EditCV.GeneralInfo.date}:</div>
               <div className="info-value">{Moment(dateofbirth).format('DD/MM/YYYY')}</div>
             </div>
           </div>
           <div className="col">
             <div className="info-line">
-              <div className="info-title">{this.t('Giới tính')}:</div>
+              <div className="info-title">{this.t('containers').CV.EditCV.GeneralInfo.genderOpts}:</div>
               <div className="info-value">{(constants && constants.gender[gender]) || this.t('Không xác định')}</div>
             </div>
             <div className="info-line">
-              <div className="info-title">{this.t('Tình trạng hôn nhân')}:</div>
+              <div className="info-title">{this.t('containers').CV.EditCV.GeneralInfo.marital}:</div>
               <div className="info-value">{constants && constants.marital_status[marital_status]}</div>
             </div>
             <div className="info-line">
-              <div className="info-title">{this.t('Địa chỉ hiện tại')}:</div>
+              <div className="info-title">{this.t('containers').CV.EditCV.GeneralInfo.address}:</div>
               <div className="info-value">{address}</div>
             </div>
             <div className="info-line">
-              <div className="info-title">{this.t('Trình độ')}:</div>
+              <div className="info-title">{this.t('containers').CV.EditCV.GeneralInfo.level}:</div>
               <div className="info-value">{constants && constants.level[level]}</div>
             </div>
           </div>
@@ -71,7 +71,7 @@ class GeneralInfo extends Base {
               }}
             >
               <span className="icon-pencil" />
-              <span className="btn-title">{this.t('Sửa')}</span>
+              <span className="btn-title">{this.t('containers').CV.EditCV.GeneralInfo.edit}</span>
             </Button>
           </div>
         </div>
@@ -84,7 +84,7 @@ class GeneralInfo extends Base {
       <div className="general-info">
         <div className="block-container">
           <div className="block-header">
-            <div className="header-text">{this.t('THÔNG TIN CƠ BẢN')}</div>
+            <div className="header-text">{this.t('containers').CV.EditCV.GeneralInfo.info}</div>
           </div>
           {(this.state.isEditing && (
             <AccountForm

@@ -53,9 +53,9 @@ export default class CreateExpForm extends Base {
       }
     },
     messages: {
-      company: 'Nhập tên công ty.',
-      title: 'Nhập vị trí/chức danh.',
-      description: 'Nhập mô tả công việc.'
+      company: this.t('containers').CV.CreateCV.ExpForm.index.company,
+      title: this.t('containers').CV.CreateCV.ExpForm.index.title,
+      description: this.t('containers').CV.CreateCV.ExpForm.index.description
     }
   };
 
@@ -103,7 +103,7 @@ export default class CreateExpForm extends Base {
     if (!this.props.createForm && !this.validateWorkExp()) {
       this.setState({
         showPopup: true,
-        message: { code: 1, message: 'Vui lòng nhập đầy đủ thông tin.' }
+        message: { code: 1, message: this.t('containers').CV.CreateCV.ExpForm.index.message }
       });
     } else {
       this.setState({ updating: true }, async () => {
@@ -126,7 +126,7 @@ export default class CreateExpForm extends Base {
               showPopup: true,
               message: {
                 code: 1,
-                message: 'Không thành công. Vui lòng kiểm lại thông tin nhập liệu.'
+                message: this.t('containers').CV.CreateCV.ExpForm.index.messageError
               }
             },
             () => {
@@ -208,7 +208,7 @@ export default class CreateExpForm extends Base {
           <div className="add-btn-wrapper">
             <Button className="jn-btn__normal" onClick={this.addNewWork}>
               <span className="icon-jn-plus" />
-              <span className="btn-title">{this.t('THÊM KINH NGHIỆM LÀM VIỆC')}</span>
+              <span className="btn-title">{this.t('containers').CV.CreateCV.ExpForm.index.addNewWork}</span>
             </Button>
           </div>
         )}
@@ -223,14 +223,14 @@ export default class CreateExpForm extends Base {
           onClick={() => {
             this.props.onBack();
           }}
-          label={this.t('QUAY LẠI')}
+          label={this.t('containers').CV.CreateCV.ExpForm.index.back}
           className="jn-btn__normal"
         />
         <Button
           onClick={() => {
             this._save();
           }}
-          label={this.t('TIẾP TỤC')}
+          label={this.t('containers').CV.CreateCV.ExpForm.index.continue}
           className="jn-btn__yellow"
         />
       </div>
@@ -244,7 +244,7 @@ export default class CreateExpForm extends Base {
           onClick={() => {
             this._save();
           }}
-          label={this.t('Lưu')}
+          label={this.t('containers').CV.CreateCV.ExpForm.index.save}
           className="jn-btn__yellow"
         />
         <Button
@@ -253,7 +253,7 @@ export default class CreateExpForm extends Base {
               if (typeof this.props.onSuccess === 'function') this.props.onSuccess(false);
             });
           }}
-          label={this.t('Huỷ')}
+          label={this.t('containers').CV.CreateCV.ExpForm.index.cancel}
           className="jn-btn__normal"
         />
       </div>
@@ -285,7 +285,7 @@ export default class CreateExpForm extends Base {
                   this.setState({ message: null, showPopup: false });
                 }}
               >
-                {this.t('Trở lại')}
+                {this.t('containers').CV.CreateCV.ExpForm.index.back2}
               </Button>
             </div>
           </Popup>

@@ -28,7 +28,7 @@ import {
   SignUp,
   ForgotPassword
 } from '../containers';
-import SEOConf from './SEOConfig.json';
+import SEOConf from './SEOConfig';
 
 export default {
   notfound: { path: '/404', component: NotFoundPage },
@@ -147,7 +147,7 @@ export default {
     extraMatch: props => {
       const { match } = props;
       const mapSEOConf = {};
-      SEOConf.categories.map(catx => {
+      SEOConf.creatSEO().categories.map(catx => {
         mapSEOConf[catx.url] = catx;
       });
       const { slug } = match.params;

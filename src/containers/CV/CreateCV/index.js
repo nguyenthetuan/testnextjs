@@ -12,7 +12,7 @@ import SkillInfo from '../components/SkillInfo';
 import ForeignLanguage from '../components/ForeignLanguage';
 import CreateSuccessfull from './CreateSuccessfull';
 import UpdateAccountMessage from '../components/UpdateAccountMessage';
-
+import language from '../../../config/language/index';
 import createPage from '../../createPage';
 // apis
 import { userApi } from '../../../services';
@@ -33,22 +33,6 @@ const ADD_SKILL_STEP = 5;
 const ADD_HOBBY_WITH_CV = 6;
 const CREATE_SUCCESSFUL = 7;
 
-const mapKeyToValueHeader = {
-  [INIT_STATE]: 'Tạo hồ sơ',
-  [UPLOAD_CV_STEP]: 'Tạo hồ sơ',
-  [ADD_HOBBY_JOB_STEP]: 'Công việc mong muốn',
-  [ADD_EXPERIENCE_STEP]: 'Kinh nghiệm làm việc',
-  [ADD_EDUCATION_STEP]: 'Học vấn',
-  [ADD_SKILL_STEP]: 'Kỹ năng, ngoại ngữ'
-};
-
-const TAB_LIST = [
-  { id: ADD_HOBBY_JOB_STEP, value: mapKeyToValueHeader[ADD_HOBBY_JOB_STEP], icon: 'icon-briefcase' },
-  { id: ADD_EXPERIENCE_STEP, value: mapKeyToValueHeader[ADD_EXPERIENCE_STEP], icon: 'icon-badge' },
-  { id: ADD_EDUCATION_STEP, value: mapKeyToValueHeader[ADD_EDUCATION_STEP], icon: 'icon-graduation' },
-  { id: ADD_SKILL_STEP, value: mapKeyToValueHeader[ADD_SKILL_STEP], icon: 'icon-bulb' }
-];
-
 class CreateCV extends Base {
   static wrapperClasses = 'create-resume-page';
 
@@ -65,18 +49,36 @@ class CreateCV extends Base {
       params[match[1]] = decodeURI(match[2]);
     }
 
+    const mapKeyToValueHeader = {
+      [INIT_STATE]: language.containers.CV.CreateCV.index.createCV,
+      [UPLOAD_CV_STEP]: language.containers.CV.CreateCV.index.createCV,
+      [ADD_HOBBY_JOB_STEP]: language.containers.CV.CreateCV.index.addHobby,
+      [ADD_EXPERIENCE_STEP]: language.containers.CV.CreateCV.index.addExp,
+      [ADD_EDUCATION_STEP]: language.containers.CV.CreateCV.index.edu,
+      [ADD_SKILL_STEP]: language.containers.CV.CreateCV.index.addSkill
+    };
+
+    const TAB_LIST = [
+      { id: ADD_HOBBY_JOB_STEP, value: mapKeyToValueHeader[ADD_HOBBY_JOB_STEP], icon: 'icon-briefcase' },
+      { id: ADD_EXPERIENCE_STEP, value: mapKeyToValueHeader[ADD_EXPERIENCE_STEP], icon: 'icon-badge' },
+      { id: ADD_EDUCATION_STEP, value: mapKeyToValueHeader[ADD_EDUCATION_STEP], icon: 'icon-graduation' },
+      { id: ADD_SKILL_STEP, value: mapKeyToValueHeader[ADD_SKILL_STEP], icon: 'icon-bulb' }
+    ];
+
     this.state = {
       resume_id: params.id || null,
       hobbyState: null,
       currentStep: (params.step && params.step < 7 && params.step >= 0 && parseInt(params.step, 10)) || INIT_STATE,
       cvFile: null,
-      currentTextHeader: 'Tạo hồ sơ',
+      currentTextHeader: this.t('containers').CV.CreateCV.index.createCV,
       skills: [],
       languages: [],
       showPopup: false,
       message: null,
       referenced: {}
     };
+    global.TAB_LIST = TAB_LIST;
+    global.mapKeyToValueHeader = mapKeyToValueHeader;
   }
 
   onChangeWizardTab = item => {
@@ -101,7 +103,7 @@ class CreateCV extends Base {
     return (
       <InitCreation
         createByFill={() => {
-          this._nexStep(ADD_HOBBY_JOB_STEP, 'CÔNG VIỆC MONG MUỐN');
+          this._nexStep(ADD_HOBBY_JOB_STEP, this.t('containers').CV.CreateCV.index.addHobbyJob);
         }}
         createByCV={() => {
           this._nexStep(UPLOAD_CV_STEP);
@@ -116,7 +118,7 @@ class CreateCV extends Base {
     if (response && response.result) {
       this.setState({ currentStep: ADD_HOBBY_WITH_CV, resume_id: response.data.resume_id });
     } else {
-      this.setState({ message: { code: 1, message: this.t('Upload filecv không thành công. Vui lòng chọn file có dung lượng nhỏ hơn 1MB.') } });
+      this.setState({ message: { code: 1, message: this.t('containers').CV.CreateCV.index.message } });
     }
   };
 
@@ -135,8 +137,8 @@ class CreateCV extends Base {
             <FileUploader
               onChange={this._handleUploadCv}
               accept=".doc, .pdf, .png, .jpg, .jpeg"
-              label={this.t('Chọn hoặc kéo file CV vào đây')}
-              annotation={this.t('(định dạng .doc, .docx, .pdf )')}
+              label={this.t('containers').CV.CreateCV.index.handleUploadCv}
+              annotation={this.t('containers').CV.CreateCV.index.annotation}
             />
           )}
 
@@ -146,14 +148,14 @@ class CreateCV extends Base {
                 <img src="/assets/img/upload-icon.png" alt="" />
               </div>
               <div className="cv-info">
-                <div className="title">File đã upload</div>
+                <div className="title">{this.t('containers').CV.CreateCV.index.title}</div>
                 <div className="file-name">{cvFile.name}</div>
 
                 <Button
                   onClick={() => {
                     this.inputRef.click();
                   }}
-                  label={this.t('CHỌN FILE CV')}
+                  label={this.t('containers').CV.CreateCV.index.click}
                   className="jn-btn__normal"
                 />
 
@@ -172,7 +174,7 @@ class CreateCV extends Base {
                   }}
                 />
 
-                <Button onClick={this._createResumeWithFile} label={this.t('TIẾP TỤC')} className="jn-btn__yellow" />
+                <Button onClick={this._createResumeWithFile} label={this.t('containers').CV.CreateCV.index.continue} className="jn-btn__yellow" />
               </div>
             </div>
           )}
@@ -189,7 +191,7 @@ class CreateCV extends Base {
         {currentStep >= 2 &&
           currentStep < 6 && (
             <div className="create-wizard-tab">
-              <WizardTabs onChange={this.onChangeWizardTab} tabList={TAB_LIST} selected={currentStep} />
+              <WizardTabs onChange={this.onChangeWizardTab} tabList={global.TAB_LIST} selected={currentStep} />
             </div>
           )}
         <HobbyWithCV
@@ -198,7 +200,7 @@ class CreateCV extends Base {
           onSuccess={(hobbyState, resume_id) => {
             this.setState({
               currentStep: ADD_EXPERIENCE_STEP,
-              currentTextHeader: mapKeyToValueHeader[ADD_EXPERIENCE_STEP],
+              currentTextHeader: global.mapKeyToValueHeader[ADD_EXPERIENCE_STEP],
               resume_id: resume_id,
               hobbyState: hobbyState
             });
@@ -212,7 +214,7 @@ class CreateCV extends Base {
   };
 
   updateNewStep = id => {
-    this.setState({ currentStep: id, currentTextHeader: mapKeyToValueHeader[id] });
+    this.setState({ currentStep: id, currentTextHeader: global.mapKeyToValueHeader[id] });
   };
 
   _renderAddExperience = () => {
@@ -223,7 +225,7 @@ class CreateCV extends Base {
         {currentStep >= 2 &&
           currentStep < 6 && (
             <div className="create-wizard-tab">
-              <WizardTabs onChange={this.onChangeWizardTab} tabList={TAB_LIST} selected={currentStep} />
+              <WizardTabs onChange={this.onChangeWizardTab} tabList={global.TAB_LIST} selected={currentStep} />
             </div>
           )}
         <ExpForm
@@ -251,7 +253,7 @@ class CreateCV extends Base {
         {currentStep >= 2 &&
           currentStep < 6 && (
             <div className="create-wizard-tab">
-              <WizardTabs onChange={this.onChangeWizardTab} tabList={TAB_LIST} selected={currentStep} />
+              <WizardTabs onChange={this.onChangeWizardTab} tabList={global.TAB_LIST} selected={currentStep} />
             </div>
           )}
         <EduForm
@@ -306,7 +308,7 @@ class CreateCV extends Base {
     if (!this.state.skills || this.state.skills.length === 0) {
       this.setState({
         showPopup: true,
-        message: { code: 1, message: 'Vui lòng nhập ít nhất 1 kỹ năng.' }
+        message: { code: 1, message: this.t('containers').CV.CreateCV.index.message2 }
       });
     } else {
       this.setState({ updating: true }, async () => {
@@ -325,7 +327,7 @@ class CreateCV extends Base {
               showPopup: true,
               message: {
                 code: 1,
-                message: 'Không thành công. Vui lòng kiểm lại thông tin nhập liệu.'
+                message: this.t('containers').CV.CreateCV.index.messageError
               }
             },
             () => {
@@ -345,7 +347,7 @@ class CreateCV extends Base {
         {currentStep >= 2 &&
           currentStep < 6 && (
             <div className="create-wizard-tab">
-              <WizardTabs onChange={this.onChangeWizardTab} tabList={TAB_LIST} selected={currentStep} />
+              <WizardTabs onChange={this.onChangeWizardTab} tabList={global.TAB_LIST} selected={currentStep} />
             </div>
           )}
         <div className="page-wrapper">
@@ -364,7 +366,7 @@ class CreateCV extends Base {
             onBack={() => {
               this.updateNewStep(ADD_SKILL_STEP);
             }}
-            header={this.t('NGƯỜI THAM CHIẾU')}
+            header={this.t('containers').CV.CreateCV.index.referenceUser}
             onChange={data => {
               this.setState({ referenced: { ...data } });
             }}
@@ -382,7 +384,7 @@ class CreateCV extends Base {
   _renderAddHobbyWithCv = () => {
     return (
       <HobbyWithCV
-        header={this.t('Công việc mong muốn')}
+        header={this.t('containers').CV.CreateCV.index.addHobby}
         showFooter
         onSuccess={this.addHobbyWithCV}
         updateForFileMode
@@ -428,7 +430,7 @@ class CreateCV extends Base {
     if (cvList && cvList.length >= 3) {
       return (
         <div className="parent-cv-container full-resumes">
-          <div className="maximum-msg">{this.t('Bạn chỉ được tạo tối đa 3 hồ sơ.')}</div>
+          <div className="maximum-msg">{this.t('containers').CV.CreateCV.index.maximumMsg}</div>
           <div className="button-wrapper">
             <Button
               className="jn-btn__yellow"
@@ -436,7 +438,7 @@ class CreateCV extends Base {
                 this.props.history.replace('/cv');
               }}
             >
-              {this.t('Quản lý hồ sơ')}
+              {this.t('containers').CV.CreateCV.index.cv}
             </Button>
           </div>
         </div>
@@ -466,7 +468,7 @@ class CreateCV extends Base {
                 this.setState({ message: null, showPopup: false });
               }}
             >
-              {this.t('Trở lại')}
+              {this.t('containers').CV.CreateCV.index.back}
             </Button>
           </div>
         </Popup>

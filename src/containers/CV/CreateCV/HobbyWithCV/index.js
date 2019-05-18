@@ -45,8 +45,8 @@ class HobbyWithCV extends Base {
       }
     },
     messages: {
-      title: 'Nhập họ tên đầy đủ.',
-      address: 'Nhập địa chỉ hiện tại của bạn.'
+      title: this.t('containers').CV.CreateCV.HobbyWithCV.title,
+      address: this.t('containers').CV.CreateCV.HobbyWithCV.address
     }
   };
 
@@ -105,27 +105,27 @@ class HobbyWithCV extends Base {
 
     let hasError = !this._workLocationRef.validate();
     if (!worklocation) {
-      this._workLocationRef.showError(this.t('Bạn chưa chọn nơi làm việc.'));
+      this._workLocationRef.showError(this.t('containers').CV.CreateCV.HobbyWithCV.workLocation);
       hasError = true;
     }
     if (!year_experience) {
-      this._year_experienceRef.showError(this.t('Bạn chưa chọn số năm kinh nghiệm.'));
+      this._year_experienceRef.showError(this.t('containers').CV.CreateCV.HobbyWithCV.yearExperience);
       hasError = true;
     }
     if (!categories) {
-      this._categoriesRef.showError(this.t('Bạn chưa chọn ngành nghề.'));
+      this._categoriesRef.showError(this.t('containers').CV.CreateCV.HobbyWithCV.categoriesError);
       hasError = true;
     }
     if (!resume_type) {
-      this._resume_typeRef.showError(this.t('Bạn chưa chọn hình thức làm việc.'));
+      this._resume_typeRef.showError(this.t('containers').CV.CreateCV.HobbyWithCV.resumeType);
       hasError = true;
     }
     if (!salary) {
-      this._salaryRef.showError(this.t('Bạn chưa chọn mức lương tối thiểu.'));
+      this._salaryRef.showError(this.t('containers').CV.CreateCV.HobbyWithCV.salaryError);
       hasError = true;
     }
     if (!rank) {
-      this._rankRef.showError(this.t('Bạn chưa chọn cấp bậc mong muốn.'));
+      this._rankRef.showError(this.t('containers').CV.CreateCV.HobbyWithCV.rankError);
       hasError = true;
     }
 
@@ -144,7 +144,7 @@ class HobbyWithCV extends Base {
           if (response && response.code === undefined) {
             this.props.onEditDone(response.info.job_need);
           } else {
-            this.setState({ message: { code: 1, message: this.t('Cập nhật không thành công.') } });
+            this.setState({ message: { code: 1, message: this.t('containers').CV.CreateCV.HobbyWithCV.message } });
           }
         } else {
           response = await userApi.createResumeByFill(formData);
@@ -163,7 +163,7 @@ class HobbyWithCV extends Base {
   };
 
   _generateSelectableOpts = () => {
-    const genderOpts = [{ value: 'male', label: this.t('Nam') }, { value: 'female', label: this.t('Nữ') }];
+    const genderOpts = [{ value: 'male', label: this.t('containers').CV.CreateCV.HobbyWithCV.male }, { value: 'female', label: this.t('containers').CV.CreateCV.HobbyWithCV.female }];
     const { rank, marital_status } = this.props.constants.user || {};
     const matialOptions = Object.keys(marital_status || {}).map(key => ({
       value: key,
@@ -231,15 +231,15 @@ class HobbyWithCV extends Base {
           {message && message.code > 0 && <div className="error-message-wrapper">* {message.message}</div>}
           <div className="input-section">
             <form id="hobby-cv-form" className="hobby-cv-form">
-              <Input resume_type="text" name="title" placeholder={this.t('Vị trí/ chức danh')} value={title} required onChange={value => this.setState({ title: value, nameError: '' })} />
+              <Input resume_type="text" name="title" placeholder={this.t('containers').CV.CreateCV.HobbyWithCV.title2} value={title} required onChange={value => this.setState({ title: value, nameError: '' })} />
 
               <WorkLocation
                 values={worklocation}
                 locations={this.props.locations || []}
-                label={this.t('Nơi làm việc')}
-                addMoreLabel={this.t('Thêm nơi làm việc')}
+                label={this.t('containers').CV.CreateCV.HobbyWithCV.locations}
+                addMoreLabel={this.t('containers').CV.CreateCV.HobbyWithCV.addLocations}
                 required
-                errorMessage={this.t('Chọn địa điểm làm việc.')}
+                errorMessage={this.t('containers').CV.CreateCV.HobbyWithCV.worklocation}
                 onChange={values => {
                   // this._workLocationRef.hideError();
                   this.setState({ worklocation: values });
@@ -250,8 +250,8 @@ class HobbyWithCV extends Base {
               />
 
               <Select
-                label={this.t('Ngành nghề')}
-                placeholder={this.t('Chọn ngành nghề')}
+                label={this.t('containers').CV.CreateCV.HobbyWithCV.categories}
+                placeholder={this.t('containers').CV.CreateCV.HobbyWithCV.catOpts}
                 value={categories}
                 options={catOpts}
                 required
@@ -266,8 +266,8 @@ class HobbyWithCV extends Base {
               />
 
               <Select
-                label={this.t('Mức lương tối thiểu')}
-                placeholder={this.t('Chọn mức lương')}
+                label={this.t('containers').CV.CreateCV.HobbyWithCV.salary}
+                placeholder={this.t('containers').CV.CreateCV.HobbyWithCV.salaryOpts}
                 required
                 options={salaryOpts}
                 value={salary}
@@ -281,8 +281,8 @@ class HobbyWithCV extends Base {
               />
 
               <Select
-                label={this.t('Cấp bậc mong muốn')}
-                placeholder={this.t('Chọn cấp bậc')}
+                label={this.t('containers').CV.CreateCV.HobbyWithCV.rank}
+                placeholder={this.t('containers').CV.CreateCV.HobbyWithCV.rankOpts}
                 required
                 value={rank}
                 options={rankOpts}
@@ -295,8 +295,8 @@ class HobbyWithCV extends Base {
                 }}
               />
               <Select
-                label={this.t('Hình thức làm việc')}
-                placeholder={this.t('Chọn hình thức làm việc')}
+                label={this.t('containers').CV.CreateCV.HobbyWithCV.type}
+                placeholder={this.t('containers').CV.CreateCV.HobbyWithCV.typeOptions}
                 required
                 options={typeOptions}
                 value={resume_type}
@@ -309,8 +309,8 @@ class HobbyWithCV extends Base {
                 }}
               />
               <Select
-                label={this.t('Số năm kinh nghiệm')}
-                placeholder={this.t('Chọn số năm kinh nghiệm')}
+                label={this.t('containers').CV.CreateCV.HobbyWithCV.exp}
+                placeholder={this.t('containers').CV.CreateCV.HobbyWithCV.expOptions}
                 required
                 options={expOptions}
                 value={year_experience}
@@ -337,14 +337,14 @@ class HobbyWithCV extends Base {
           onClick={() => {
             this.props.onBack();
           }}
-          label={this.t('QUAY LẠI')}
+          label={this.t('containers').CV.CreateCV.HobbyWithCV.back}
           className="jn-btn__normal"
         />
         <Button
           onClick={() => {
             this._save();
           }}
-          label={this.t(this.props.updateForFileMode ? 'Đăng hồ sơ' : 'TIẾP TỤC')}
+          label={this.t(this.props.updateForFileMode ? this.t('containers').CV.CreateCV.HobbyWithCV.updateForfile : this.t('containers').CV.CreateCV.HobbyWithCV.continue)}
           className="jn-btn__yellow"
         />
       </div>
@@ -354,12 +354,12 @@ class HobbyWithCV extends Base {
   _renderEditFooter = () => {
     return (
       <div className="edit-footer-wrapper">
-        <Button onClick={this._save} label={this.t('Lưu')} className="jn-btn__yellow" />
+        <Button onClick={this._save} label={this.t('containers').CV.CreateCV.HobbyWithCV.save} className="jn-btn__yellow" />
         <Button
           onClick={() => {
             this.props.onEditDone(false);
           }}
-          label={this.t('Huỷ')}
+          label={this.t('containers').CV.CreateCV.HobbyWithCV.cancel}
           className="jn-btn__normal"
         />
       </div>

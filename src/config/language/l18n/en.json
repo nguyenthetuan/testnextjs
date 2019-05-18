@@ -1,0 +1,1704 @@
+{
+  "components": {
+    "AddressInput": {
+      "index": {
+        "citiesOpts": {
+          "city": "Province / City",
+          "all": "All",
+          "district": "District",
+          "street": "Street, Ward, District",
+          "showError": "Provide complete address information."
+        }
+      }
+    },
+    "AdvanceSearchPopup": {
+      "index": {
+        "all": "All",
+        "advancedSearch": "Advanced search",
+        "jobPosition": "Job position …",
+        "cityAnDistrict": "District / District, City / Province ...",
+        "categoryOpts": "Select a job category",
+        "salaryOptions": "Choose salary",
+        "levelOpts": "Choose a rank",
+        "expOpts": "Choose experience",
+        "typeOpts": "Choose the form of work",
+        "clearFilters": "Delete all search options",
+        "search": "Search"
+      }
+    },
+    "AdvancedSearch": {
+      "FastApply": {
+        "CVUploader": {
+          "uploadCV": "Attach the CV file",
+          "chooseFileCV": "Select the CV file",
+          "showErrorCV": "Select the CV file to send to the employer."
+        },
+        "index": {
+          "requiredFullname": "Enter your full name.",
+          "requiredEmail": "Enter your email address.",
+          "errorEmail": "Incorrect email format.",
+          "requiredPhone": "Enter your phone number.",
+          "errorPhone": "Incorrect phone number format",
+          "message": "* Apply failed.",
+          "fullname": "Full name",
+          "email": "Email",
+          "phone": "Phone number",
+          "handleApplyClick": "Submit",
+          "login": "Login / Register an account",
+          "fieldTitle": "You have not created a profile on JobNow",
+          "creatingCV": "Create profile to apply right now",
+          "btnTitle": " I have a CV file",
+          "fastApply": "Fast appy - No need to create profiles",
+          "successMsg": "Successful applied."
+        }
+      },
+      "LoggedInApply": {
+        "index": {
+          "applySuccess": "Successful applied.",
+          "errorMessage": "* Apply failed.",
+          "helpBlock": "Select the profile to send to employers.",
+          "btnApply": "Apply"
+        }
+      }
+    },
+    "AuthPopup": {
+      "index": {
+        "messages": {
+          "companyName": "Enter the company name.",
+          "contact": "Enter the contact name.",
+          "verifyCode": "Enter the verification code.",
+          "showRegisterForm": "Enter a password of at least 6 characters long.",
+          "requiredPassword": "Enter password.",
+          "minlength": "Enter at minimum of 6 characters.",
+          "minPassword": "Enter a password of at least 6 characters long.",
+          "passwordConfirm": "Enter password.",
+          "equalTo": "Password does not match.",
+          "showRegisterFormEmail": "Enter your email address.",
+          "requiredEmail": "Enter email address / phone number.",
+          "emailError": "Incorrect email format.",
+          "requiredPhone": "Enter your phone number.",
+          "phoneVN": "Incorrect phone number format"
+        },
+        "return": {
+          "register": "* Registration failed.",
+          "loginByFacebook": "Login unsuccessful.",
+          "googleLogin": "Login unsuccessful.",
+          "header": "Log in to JobNow",
+          "titleZalo": "Continue with Zalo",
+          "titleFacebook": "Continue with Facebook",
+          "titleGoogle": "Continue with Google",
+          "or": "or",
+          "errorLogin": "Login unsuccessful. Please check your login information.",
+          "inputEmail": "Email or phone number",
+          "inputPassword": "Password",
+          "rememberPassword": "Remember login",
+          "forgotPassword": "Forgot password",
+          "submitForm": "Log in",
+          "registerLegend": "Do not have an account ?",
+          "getSMSCode": "Sending verification code failed. Please check your phone number.",
+          "phoneInputRef": "This phone number is registered, please use another phone number.",
+          "emailInputRef": "This email is registered, please use another email.",
+          "successMessage": "Sign Up Success.",
+          "sentSMSCode": "Sent verification code",
+          "SMSCode": "Submit verification code",
+          "registerAccount": "Register an account",
+          "phone": "Mobile number",
+          "verification": "The authentication code has been sent to your message.",
+          "pinCode": "Verification code",
+          "email": "Email",
+          "passwordConfirm": "Enter the password",
+          "registerBtn": "Registration",
+          "all": "All",
+          "suitableJobs": "Suitable jobs",
+          "annotation": "Please select the job information you are interested in then  JobNow will suggest suitable jobs",
+          "categories": "Select a job category",
+          "locations": "Place",
+          "salary": "select the minimum wage",
+          "back": "Back",
+          "save": "Save",
+          "forgotPwdEmail": "Your email",
+          "forgotPwd": "Password recovery",
+          "text": "The path to change password is incorrect or overdue. Please try again",
+          "sendTo": "Send to",
+          "sentMail": "JobNow just sent to the email you have registered a link to activate your password.",
+          "sentMail2": "Please check your email and follow the instructions",
+          "successPassword": "Change password successfully",
+          "forgotContainer": "Password retrieval",
+          "errorMessage": "Not find the email in your system. Please check again."
+        }
+      }
+    },
+    "Footer": {
+      "index": {
+        "colTitle": "Customer support",
+        "support": "Help center",
+        "employers": "Employer's guide",
+        "service": "Service quote",
+        "candidates": "Candidate's guide",
+        "jobnow": "About JOBNOW",
+        "introduce": "Introduce",
+        "operation": "Operation regulations",
+        "dispute": "Dispute resolution",
+        "agreement": "Agreement to use",
+        "privacyPolicy": "Privacy policy",
+        "quickContact": "Quick contact with JOBNOW",
+        "phone1": "02462627729",
+        "phone2": "0986822046",
+        "phone3": "0986953948",
+        "phone4": "0986950621",
+        "follow": "Follow us on",
+        "dowload": "Get the app",
+        "fanpage": "Facebook Fanpage",
+        "group": "Facebook Group",
+        "youtube": "Youtube",
+        "company": "ADT International Joint Stock Company",
+        "addr": "Address: No. 7/6/121 Tran phu street , Van Quan Ward, Ha dong District, TP. Hanoi.",
+        "contact": "Email: support@jobnow.com.vn",
+        "companyNo1": "Tax code: 0107272126 by Department of Planning",
+        "companyNo2": "Investing in Hanoi City for the first time on December 29, 2015",
+        "cpright": "© 2018 - Copyright by ADT International Joint Stock Company"
+      }
+    },
+    "ImagePicker": {
+      "annotation": "File size <1MB"
+    },
+    "JobItem": {
+      "index": {
+        "salaryOpts": "Negotiate",
+        "text": "still recruiting",
+        "watchNow": "Watch now",
+        "applyNow": "Apply Now"
+      }
+    },
+    "MenuBar": {
+      "MobileMenu": {
+        "index": {
+          "candidate": "Candidate",
+          "employer": "Employer",
+          "application": "Select function",
+          "signOut": "Log out"
+        }
+      },
+      "index": {
+        "keyword": "Job position …",
+        "currentAddress": "City / Province",
+        "search": "Advanced search"
+      },
+      "RightMenu": {
+        "dashboard": "Dashboard",
+        "cv": "My profile",
+        "suitableJobs": "Job",
+        "notification": "Notification",
+        "settingNotification": "Notification settings",
+        "changeInformation": "Account",
+        "register": "Register, login",
+        "handbook": "Job handbook",
+        "support": "Support job seekers",
+        "login": "Register, login",
+        "priceQuote": "Service quote",
+        "supportEmployers": "Support employers",
+        "recruitmentHandbook": "Recruitment Handbook",
+        "candidate": "Candidate",
+        "createProfiles": "Create profiles & find jobs",
+        "employer": "Employer",
+        "postNews": "Post news & recruit people",
+        "notiBox": "Notice received",
+        "notiView": "See all notifications",
+        "information": "Account Information",
+        "changePassword": "Change Password",
+        "signOut": "Log out"
+      }
+    },
+    "Select": {
+      "index": {
+        "title": "Selecting"
+      }
+    },
+    "SideBar": {
+      "index": {
+        "dashboard": "Dashboard",
+        "cv": "My profile",
+        "suitableJobs": "Job",
+        "notification": "Notification",
+        "settingNotification": "Notification settings",
+        "account": "Account",
+        "information": "Personal information",
+        "changePassword": "Change Password"
+      }
+    },
+    "Table": {
+      "index": {
+        "title": "Are you sure?",
+        "text": "You will not be able to recover this data.",
+        "cancel": "Cancel",
+        "delete": "Delete",
+        "entries": "Entries",
+        "clear": "Clear",
+        "date": "Date",
+        "from": "From",
+        "to": "To",
+        "itemsSelected": "items selected",
+        "previous": "Previous",
+        "next": "Next",
+        "displayStatusText": "Showing %start to %end of %total entries"
+      }
+    }
+  },
+  "containers": {
+    "errorinternet": {
+      "index": {
+        "error": "404! Oops ...",
+        "message": "Sorry, this page does not exist.",
+        "backHome": "go back to the main page"
+      }
+    },
+    "Account": {
+      "ChangePass": {
+        "index": {
+          "currentPassword": "Enter current password.",
+          "requiredPassword": "Enter your new password.",
+          "minlength": "Enter a minimum of 6 characters.",
+          "confirmPassword": "Enter the password.",
+          "equalTo": "Enter the password does not match.",
+          "changePassword": "Change password successfully.",
+          "messageError": "Password change failed.",
+          "formHeader": "Change Password",
+          "legend": "To protect your account, please do not share your password with others",
+          "password": "Current password",
+          "newPassword": "A new password",
+          "confirmNewPassword": "Confirm password",
+          "save": "Save"
+        }
+      },
+      "Information": {
+        "AccountForm": {
+          "index": {
+            "fullname": "Enter your full name.",
+            "address": "Enter your current address.",
+            "email": "Enter your email address.",
+            "errorEmail": "Email format is incorrect.",
+            "phoneVN": "Enter your phone number.",
+            "errorPhone": "Phone number is incorrect.",
+            "genderRadio": "You have not selected a gender.",
+            "dateofbirth": "You have not selected a birthday.",
+            "levelError": "You have not selected a level.",
+            "male": "Male",
+            "female": "Female",
+            "showErrorPhone": "This phone number is registered on JobNow, please use another phone number.",
+            "showErrorEmail": "This email is registered on JobNow, please use another email number.",
+            "inputFullname": "Full name",
+            "inputEmail": "Email",
+            "inputPhone": "Phone number",
+            "inputDate": "Birthday",
+            "genderOpts": "Gender",
+            "matialOptions": "Marital status",
+            "inputAddress": "Current address",
+            "level": "Level",
+            "levelOptions": "Choose a level",
+            "save": "Save",
+            "cancel": "Cancel",
+            "avatar": "Avatar"
+          }
+        },
+        "index": {
+          "labelText": "BASIC INFORMATION",
+          "errorMsg": "Update account information failed.",
+          "successMsg": "Update your account information successfully."
+        }
+      }
+    },
+    "Candidate": {
+      "AllCandidates": {
+        "YearFilter": {
+          "index": {
+            "allYear": "All year of birth",
+            "startText": "from",
+            "endText": "to",
+            "start": "to the year",
+            "end": "from year"
+          }
+        },
+        "CandidateItem": {
+          "cvFile": "Attached CV"
+        },
+        "index": {
+          "connectServer": "Connection to the server failed.",
+          "genDefault": "All gender",
+          "salaryDefault": "All salary",
+          "levelOpts": "All qualifications",
+          "resumeTypes": "All time",
+          "expOpts": "All experience",
+          "categoriesOpts": "All trades",
+          "all": "All",
+          "locationOpts": "all the places",
+          "keyword": "Enter search keywords. Example: Sales staff",
+          "filterCandidates": "Find candidates",
+          "header1": "There is total",
+          "header2": "candidate"
+        }
+      },
+      "AppliedCandidates": {
+        "CandidateItem": {
+          "fastApplied": "Fast filing",
+          "see": "See",
+          "seeJob": "See news"
+        },
+        "index": {
+          "candidate": "Candidate",
+          "position": "Nominee",
+          "date": "Date of application",
+          "status": "Status",
+          "selectOpts": "All status",
+          "jobOpts": "All jobs",
+          "labelText": "Profile filter",
+          "find": "Find",
+          "file": "file",
+          "positionApplied": "Profile apply to position"
+        }
+      },
+      "components": {
+        "DateFilter": {
+          "index": {
+            "startDate": "Choose time",
+            "startText": "from",
+            "endText": "to",
+            "start": "From",
+            "end": "To"
+          }
+        },
+        "List": {
+          "index": {
+            "page": "Page"
+          }
+        },
+        "CVBlock": {
+          "fieldLabel": "The %name candidate has a attached profile with full qualification information",
+          "fieldValue": "Employer please click View contact information to view profile.",
+          "fileCV": "Attached file"
+        },
+        "EducationInfoBlock": {
+          "edu": "Education",
+          "present": "present",
+          "startTime": "From month",
+          "endTime": "up to month",
+          "certificate": "Degree",
+          "school": "School",
+          "major": "Specialized"
+        },
+        "ExperienceBlock": {
+          "expInfo": "Work experience",
+          "present": "present",
+          "startTime": "From month",
+          "endTime": "up to month",
+          "position": "Location",
+          "company": "Company",
+          "desc": "Job description"
+        },
+        "GeneralInfoBlock": {
+          "info": "Basic information",
+          "level": "Level",
+          "exp": "Work experience",
+          "position": "Level desired",
+          "marital": "Marriage status",
+          "location": "Location desired",
+          "briefcase": "Desired career",
+          "signal": "Minimum expected salary",
+          "calendar": "Work type"
+        },
+        "MainInfoBlock": {
+          "header": "Candidate profile",
+          "viewInformation": "See contact information",
+          "gender": "Sex",
+          "male": "Male",
+          "female": "Female",
+          "separator": "Birthday",
+          "address": "Address",
+          "phone": "Phone number",
+          "email": "Email"
+        },
+        "SkillBlock": {
+          "skill": "Skill"
+        }
+      },
+      "Detail": {
+        "ConfirmSavedInfo": {
+          "saveCandidate": "Save candidate profile",
+          "saveMsg": "Resume profile saved",
+          "back": "Come back",
+          "save": "Records"
+        },
+        "ConfirmViewInfo": {
+          "showConfirmPopup": "See contact information of candidates",
+          "restPoint": "Remaining points",
+          "point": "point",
+          "back": "Back",
+          "viewInfo": "See information"
+        },
+        "index": {
+          "contact": "Hotline supports employers",
+          "hotline": "0986822046",
+          "candidateNoFound": "The candidate does not exist or has been removed from the system.",
+          "saveCV": "Records",
+          "printCV": "Print records"
+        }
+      },
+      "SavedCandidates": {
+        "index": {
+          "candidate": "Candidate",
+          "date": "Save date",
+          "status": "Status",
+          "selectOpts": "All status",
+          "labelText": "Profile filter",
+          "find": "Find",
+          "file": "file"
+        }
+      },
+      "ViewedCandidates": {
+        "index": {
+          "candidate": "Candidate",
+          "date": "Viewed day",
+          "status": "Status",
+          "selectOpts": "All status",
+          "labelText": "Profile filter",
+          "find": "Find",
+          "file": "file"
+        }
+      }
+    },
+    "Company": {
+      "BusinessCertificate": {
+        "index": {
+          "connectServer": "Connection to the server failed.",
+          "changingCert": "Business license",
+          "legend": "Upload the business license file for full use on JobNow",
+          "change": "Change",
+          "uploadWrapper": "Select or drag the business license file here",
+          "back": "Come back"
+        }
+      },
+      "Info": {
+        "index": {
+          "company": "Enter the company name.",
+          "contact": "Enter the contact name.",
+          "phoneVN": "Enter your phone number.",
+          "errorPhone": "Incorrect phone number format",
+          "connectServer": "Connection to the server failed.",
+          "updateCompanyInfo": "Successfully updated.",
+          "fetchCompanyInfo": "Update information failed",
+          "companyName": "Company name",
+          "address": "Address",
+          "companySize": "Scale",
+          "introduction": "Introduce",
+          "contactName": "Contact name",
+          "phone": "phone number",
+          "taxNumber": "Tax code",
+          "workingTime": "Working time",
+          "website": "Website",
+          "fanpage": "Fanpage",
+          "introductionVideoLink": "Link introduction video",
+          "joinedReason": "Reasons for joining",
+          "save": "Save",
+          "addLogo": "Add a logo",
+          "logo": "Company's logo",
+          "addImg": "Add photos",
+          "banner": "Cover photo at the job page",
+          "imgCompany": "Company's image",
+          "companyInfo": "Company information",
+          "legend": "Fill out the information to attract applicants to apply for your company",
+          "back": "Back"
+        }
+      }
+    },
+    "CV": {
+      "components": {
+        "CVFileLoader": {
+          "index": {
+            "updateFilecv": "Update file CV failed.",
+            "infoCV": "CV ATTACHMENT",
+            "changeCV": "Change the CV file",
+            "save": "Save",
+            "cancel": "Cancel"
+          }
+        },
+        "ForeignLanguage": {
+          "index": {
+            "language": "FOREIGN LANGUAGE",
+            "optional": "Optional",
+            "save": "Save",
+            "cancel": "Cancel",
+            "addLanguage": "MORE FOREIGN LANGUAGES"
+          },
+          "Languague": {
+            "showError": "You have not selected a foreign language.",
+            "listen": "Listen",
+            "speak": "Speak",
+            "read": "Read",
+            "write": "Write",
+            "delete": "Delete",
+            "edit": "Edit",
+            "language": "Foreign Language",
+            "langOpts": "Choose language",
+            "level": "Level"
+          }
+        },
+        "ReferenceUser": {
+          "index": {
+            "nameMessages": "You need to enter the reference name",
+            "titleMessages": "You need to enter the reference person",
+            "companyMessages": "You need to enter a company name",
+            "requiredEmail": "Enter your email address.",
+            "emailError": "Incorrect email format.",
+            "phoneMessages": "You need to enter the reference phone number.",
+            "phoneVN": "Phone number format is incorrect",
+            "name": "Full name",
+            "title": "Title",
+            "company": "Company",
+            "phone": "phone number",
+            "email": "Email",
+            "save": "Save",
+            "cancel": "Cancel",
+            "infoContainer": "No reference information available.",
+            "position": "Position",
+            "at": "in",
+            "edit": "Edit",
+            "back": "BACK",
+            "success": "POST PROFILE",
+            "optional": "Optional"
+          }
+        },
+        "SkillInfo": {
+          "index": {
+            "message": "You must select at least 01 skill.",
+            "emptyMsg": "No skill information available.",
+            "skill": "SKILL",
+            "addWrapper": "Enter skills in your area of ??expertise ...",
+            "add": "Add",
+            "edit": "Edit",
+            "save": "Save",
+            "cancel": "Cancel"
+          }
+        },
+        "TimeDistance": {
+          "index": {
+            "end": "To",
+            "current": "present",
+            "working": "Current job"
+          }
+        },
+        "UpdateAccountMessage": {
+          "index": {
+            "messageUpdate": "To use the profile management feature, please update your personal information completely.",
+            "changeInformation": "Update personal information"
+          }
+        }
+      },
+      "CreateCV": {
+        "CreateSuccessfull": {
+          "index": {
+            "createCV": "CREATE SUCCESS PROFILE",
+            "label1": "You have created the profile. Your profile will be reviewed by JobNow within 24 hours.",
+            "label2": "Right now, you can use the newly created profile to SUBMIT THE DOCUMENT into appropriate jobs on JobNow.",
+            "cv": "RECORDS MANAGEMENT",
+            "suitableJobs": "VIEW THE SUITABLE JOBS"
+          }
+        },
+        "EduForm": {
+          "EduItem": {
+            "time": "Time",
+            "school": "School / Training Unit",
+            "certificate": "Qualifications",
+            "classification": "Graduation type",
+            "classificationOpts": "Choose graduation type",
+            "delete": "Delete"
+          },
+          "index": {
+            "fullname": "Enter your full name.",
+            "address": "Enter your current address.",
+            "message": "Please enter full information.",
+            "messageError": "Unsuccessful. Please check the input information.",
+            "male": "Male",
+            "female": "Female",
+            "addNewEducation": "MORE EDUCATION / CERTIFICATE",
+            "back": "BACK",
+            "continue": "CONTINUE",
+            "save": "Save",
+            "cancel": "Cancel",
+            "back2": "Back"
+          }
+        },
+        "ExpForm": {
+          "ExpItem": {
+            "time": "Time",
+            "title": "Position / title",
+            "company": "Company",
+            "description": "Job description",
+            "delete": "Delete"
+          },
+          "index": {
+            "company": "Enter the company name.",
+            "title": "Position / title",
+            "description": "Job description",
+            "message": "Please enter full information.",
+            "messageError": "Unsuccessful. Please check the input information.",
+            "addNewWork": "ADD WORK EXPERIENCE",
+            "back": "BACK",
+            "continue": "CONTINUE",
+            "save": "Save",
+            "cancel": "HCancel?y",
+            "back2": "Come back"
+          }
+        },
+        "HobbyWithCV": {
+          "index": {
+            "title": "Enter your full name.",
+            "address": "Enter your current address.",
+            "workLocation": "You have not selected a workplace.",
+            "yearExperience": "You have not selected the number of years of experience.",
+            "categoriesError": "You have not selected job categories.",
+            "resumeType": "You have not selected a working type.",
+            "salaryError": "You have not selected the minimum wage.",
+            "rankError": "You have not selected the desired rank.",
+            "message": "Update failed.",
+            "male": "Male",
+            "female": "Female",
+            "title2": "Position / title",
+            "locations": "Workplace",
+            "addLocations": "Add workplace",
+            "worklocation": "Select work location.",
+            "categories": "Jobs categories",
+            "catOpts": "Select jobs category",
+            "salary": "Minimum wage",
+            "salaryOpts": "Choose salary",
+            "rank": "Level desired",
+            "rankOpts": "Choose a rank",
+            "type": "Work mode",
+            "typeOptions": "Choose the form of work",
+            "exp": "Years of experience",
+            "expOptions": "Choose the number of years of experience",
+            "back": "BACK",
+            "updateForfile": "Post profile",
+            "continue": "CONTINUE",
+            "save": "Save",
+            "cancel": "Cancel"
+          }
+        },
+        "InitCreation": {
+          "index": {
+            "labelText": "I have not got a CV file",
+            "createByFill": "CREATE PROFILE BY COMPLETING INFORMATION",
+            "labelText2": "I had a CV file",
+            "createByCV": "CREATE A PROFILE BY UPLOADING CV"
+          }
+        },
+        "index": {
+          "createCV": "Create profile",
+          "addHobby": "Desired job",
+          "addExp": "Work experience",
+          "edu": "Education",
+          "addSkill": "Foreign language skill",
+          "addHobbyJob": "DESIRED JOB",
+          "message": "Upload filecv failed. Please select a file smaller than 1MB.",
+          "handleUploadCv": "Select or drag CV file here",
+          "annotation": ".doc, .docx, .pdf format",
+          "title": "File uploaded",
+          "click": "CHOOSE FILE CV",
+          "continue": "CONTINUE",
+          "message2": "Please enter at least 1 skill.",
+          "messageError": "Unsuccessful. Please check the input information.",
+          "referenceUser": "REFERENCE PERSON",
+          "maximumMsg": "You may only create up to 3 profiles.",
+          "cv": "Records management",
+          "back": "Back"
+        }
+      },
+      "EditCV": {
+        "EducationInfo": {
+          "index": {
+            "timeStart": "From month",
+            "timeEnd": "to",
+            "at": "in",
+            "classification": "Graduation grade",
+            "delete": "Delete",
+            "edit": "Edit",
+            "edu": "STUDY / CERTIFICATE",
+            "messageDelete": "Deleting this information will not be recoverable. Are you sure you want to delete?",
+            "back": "Back"
+          }
+        },
+        "ExperienceInfo": {
+          "index": {
+            "timeStart": "From month",
+            "timeEnd": "to",
+            "current": "present",
+            "at": "in",
+            "job": "Job",
+            "delete": "Delete",
+            "edit": "Edit",
+            "exp": "WORK EXPERIENCE",
+            "messageDelete": "Deleting this information will not be recoverable. Are you sure you want to delete?",
+            "back": "Come back"
+          }
+        },
+        "GeneralInfo": {
+          "index": {
+            "name": "Full name",
+            "phone": "Phone number",
+            "email": "Email",
+            "date": "Birthday",
+            "genderOpts": "Gender",
+            "marital": "Marital status",
+            "address": "Current address",
+            "level": "Level",
+            "edit": "Edit",
+            "info": "BASIC INFORMATION"
+          }
+        },
+        "InterestedWork": {
+          "index": {
+            "title": "Position / Title / Profile title",
+            "location": "Workplace",
+            "categories": "Jobs categories",
+            "salary": "Minimum wage",
+            "rank": "Level desired",
+            "resume": "Work mode",
+            "exp": "Years of experience",
+            "edit": "Repair",
+            "job": "DESIRED JOB"
+          }
+        },
+        "index": {
+          "referenced": "REFERENCE PERSON"
+        }
+      },
+      "ListCV": {
+        "CVItem": {
+          "index": {
+            "messageError": "Profile  removal failed.",
+            "refreshMessage": "Your profile has just been refreshed..",
+            "refreshMessageError": "Your newly refreshed  profile failed.",
+            "cv": "Profile",
+            "timeStart": "Date created",
+            "type": "Profile type",
+            "status": "Status",
+            "viewCounts": "View",
+            "label": "Allow employers to find information and actively contact to interview.",
+            "dowload": "Download CV",
+            "refresh": "Refresh",
+            "edit": "Edit",
+            "delete": "Delete",
+            "message": "Are you sure to delete this profile ?",
+            "back": "Back"
+          }
+        },
+        "index": {
+          "message": "You have no profile yet. Create profile to apply.",
+          "createCV": "Create profile",
+          "cv": "PROFILE MANAGEMENT",
+          "addCV": "CREATE MORE PROFILE NEW",
+          "maxCV": "Up to 3 Maximum profiles"
+        }
+      },
+      "PrintPage": {
+        "index": {
+          "info": "Basic information",
+          "genderOpts": "Gender",
+          "date": "Birthday",
+          "marital": "Marriage",
+          "level": "Level",
+          "exp": "Work experience",
+          "salary": "Desired salary",
+          "worklocation": "Workplace desired",
+          "title": "Work mode",
+          "edu": "Education - Certificate",
+          "specialized": "Specialized",
+          "rank": "Degree",
+          "classification": "Graduated",
+          "current": "Present",
+          "language": "Foreign Language",
+          "listen": "Listen",
+          "read": "Read",
+          "speak": "To speak",
+          "write": "Write",
+          "phone": "Phone",
+          "email": "Email",
+          "skill": "Skill",
+          "referenceUser": "Reference person"
+        }
+      }
+    },
+    "Dashboard": {
+      "index": {
+        "editInfo": "Edit information",
+        "changePassword": "Change the password",
+        "settingNotification": "Notification settings",
+        "countCV": "PROFILE CREATED",
+        "cv": "Profile",
+        "timeStart": "Date created",
+        "type": "Profile type",
+        "status": "Status",
+        "viewCounts": "View",
+        "notification": "NOTIFICATION",
+        "avatar": "Change your avatar"
+      }
+    },
+    "Home": {
+      "TopBlock": {
+        "index": {
+          "job": "Jobs by industry",
+          "address": "Jobs by location",
+          "nearJob": "Jobs near home",
+          "hotJob": "Attractive jobs",
+          "fastJob": "Recruitment urgently",
+          "newJob": "Latest jobs",
+          "noteJob": "Career handbook",
+          "videoJob": "Attractive videos"
+        }
+      },
+      "index": {
+        "flashJob": "FLASH JOBS",
+        "viewAll": "See all",
+        "errorConnect": "There was an error connecting to the server. Please",
+        "reload": "reload",
+        "viewHotJob": "READ MORE ATTRACTIVE WORKS",
+        "hotJob": "Attractive jobs",
+        "viewFastJob": "VIEW MORE URGENT JOBS",
+        "fastJob": "Recruitment urgently",
+        "viewNewJob": "SEE MORE UPDATE JOBS",
+        "newJob": "Latest jobs"
+      }
+    },
+    "JobDetail": {
+      "Body": {
+        "LeftCol": {
+          "title": "Benefits for you",
+          "jobDescription": "Job description",
+          "jobRequire": "Job requirements",
+          "worklocation": "Work location"
+        },
+        "RightCol": {
+          "salary": "Wage",
+          "location": "Workplace",
+          "level": "Qualification requirements",
+          "exp": "Experience required",
+          "gender": "Gender requirements",
+          "briefcase": "jobs categories",
+          "company": "Introduce about the company",
+          "taxID": "Tax code",
+          "size": "Scale",
+          "address": "Address",
+          "website": "Website",
+          "facebook": "Facebook",
+          "workingTime": "Working time",
+          "joinedReason": "The reason to join our company"
+        }
+      },
+      "Header": {
+        "index": {
+          "salary": "Wage",
+          "worklocation": "Workplace",
+          "level": "Qualification requirements",
+          "exp": "Experience required",
+          "gender": "Gender requirements",
+          "share": "Share",
+          "applyCV": "Submit CV",
+          "save": "Saved",
+          "savedJobs": "Saved jobs"
+        }
+      },
+      "SimilarJobs": {
+        "index": {
+          "job": "Similar jobs",
+          "have": "Have ",
+          "newJob": "new industry jobs ",
+          "view": "Click to see  now"
+        }
+      },
+      "index": {
+        "message": "Save jobs successfully.",
+        "messageError": "The job does not exist or has been deleted.",
+        "backHome": "Return to the home page",
+        "back": "Come back"
+      }
+    },
+    "Jobs": {
+      "JobListContainer": {
+        "index": {
+          "Highlights": "Highlights",
+          "Urgent": "Urgent",
+          "status": "Applyed",
+          "reply": "Response  from recruiter",
+          "applyStatus": "Saved date",
+          "suitableJobs": "Suitable jobs",
+          "appliedJobs": "Jobs have applied",
+          "savedJobs": "Jobs saved"
+        }
+      }
+    },
+    "JobsType": {
+      "index": {
+        "flashJob": "FLASH JOBS",
+        "end": "End on",
+        "filterText": "Quick search ..."
+      }
+    },
+    "Login": {
+      "index": {
+        "login": "Employer login",
+        "password": "Password",
+        "email": "Email",
+        "rememberPassword": "Remember the password",
+        "forgotPassword": "Forgot password",
+        "legend": "Do not have an account ?",
+        "register": "Register an account"
+      }
+    },
+    "Notification": {
+      "AllNotification": {
+        "index": {
+          "view": "See details",
+          "notification": "Notification",
+          "markAll": "Mark all read"
+        }
+      },
+      "SettingNotification": {
+        "index": {
+          "setting": "Notification settings",
+          "isNewJobNoti": "Send me job information",
+          "isJobDocNoti": "Send me information about the career handbook"
+        }
+      }
+    },
+    "Register": {
+      "index": {
+        "companyName": "Enter the company name.",
+        "contact": "Enter the contact name.",
+        "verifyCode1": "Enter the verification code.",
+        "requiredPassword": "Enter a password with a minimum length of 6 characters.",
+        "minlength": "Enter a minimum of 6 characters.",
+        "confirmPassword": "Enter the password.",
+        "equalTo": "Enter password does not match.",
+        "emailInput": "Enter your email address.",
+        "emailError": "Incorrect email format.",
+        "phoneVN": "Enter your phone number.",
+        "phoneError": "Incorrect phone number format",
+        "getSMSCodeError": "Sending verification code failed. Please check the phone number.",
+        "verifyCode": "Verification code is incorrect or expired.",
+        "registerError": "Registration failed.",
+        "successMessage": "Sign Up Success.",
+        "registerForm": "Register an Employer account",
+        "phone": "Mobile number",
+        "getSMSCode": "Verification code",
+        "email": "Email",
+        "password": "Password",
+        "company": "Company name",
+        "address": "Address",
+        "companySize": "Scale",
+        "contactName": "Contact name",
+        "label": "I have read and agreed with JobNow",
+        "condition": "Terms and condition",
+        "conditionError": "You need to agree to our terms.",
+        "register": "Registration"
+      }
+    },
+    "Search": {
+      "Filter": {
+        "all": "All",
+        "catOpts": "Select career",
+        "provinceOpts": "Select place",
+        "salary": "Select salary",
+        "levelOpts": "Select rank",
+        "expOpts": "Select experience",
+        "typeOpts": "Sype of work",
+        "sortOpts": "Sort results",
+        "delete": "Delete selections"
+      },
+      "index": {
+        "distance": "Nearest you",
+        "featured": "Urgent",
+        "latest": "Latest",
+        "find": "Find ",
+        "result": " result"
+      }
+    },
+    "createPage": {
+      "message": "There was an error connecting to the server. Please ",
+      "reload": "retry"
+    }
+  },
+  "setting": {
+    "billing_information": {
+      "account_holder": "ADT INTERNATIONAL JOINT STOCK COMPANY",
+      "account_number": "0711000250468",
+      "bank": "Vietcombank - Chi nhánh Thanh Xuân - Hà N?i"
+    },
+    "companies": {
+      "size": {
+        "size1": "Less than 10 people",
+        "size2": "From 10 to 50 people",
+        "size3": "From 50 to 100 people",
+        "size4": "From 100 to 200 people",
+        "size5": "From 200 to 300 people",
+        "size6": "From 300 to 500 people",
+        "size7": "More than 500 people"
+      }
+    },
+    "employer_save_profiles": {
+      "status1": "Not contacted yet",
+      "status2": "Contacted",
+      "status3": "Tested",
+      "status4": "Interviewed",
+      "status5": "Selected",
+      "status6": "Not hit"
+    },
+    "job_applications": {
+      "comment_status": {
+        "status1": "Eligible",
+        "status2": "Not eligible"
+      },
+      "status": {
+        "status1": "Not contacted yet",
+        "status2": "Contacted",
+        "status3": "Scheduled interview",
+        "status4": "Interviewed",
+        "status5": "Got a job",
+        "status6": "Refused"
+      }
+    },
+    "jobs": {
+      "experience": {
+        "experience1": "No experience",
+        "experience2": "Less than 1 year",
+        "experience3": "1 year",
+        "experience4": "2 year",
+        "experience5": "3 year",
+        "experience6": "4 year",
+        "experience7": "5 year",
+        "experience8": "Over 5 year"
+      },
+      "gender": {
+        "female": "Female",
+        "male": "Male",
+        "male_female": "Not required"
+      },
+      "level": {
+        "level1": "Graduate",
+        "level2": "University",
+        "level3": "Colleges",
+        "level4": "Intermediate",
+        "level5": "High school",
+        "level6": "Vocational certificate",
+        "level7": "Does not require  certificate"
+      },
+      "rank": {
+        "rank1": "Senior manager",
+        "rank2": "Middle managers",
+        "rank3": "Group management - monitoring",
+        "rank4": "Expert",
+        "rank5": "Specialist - Staff",
+        "rank6": "Collaborators"
+      },
+      "salary": {
+        "salary1": "1 - 3 million",
+        "salary2": "3 - 5 million",
+        "salary3": "5 - 7 million",
+        "salary4": "7 - 10 million",
+        "salary5": "10 - 15 million",
+        "salary6": "15 - 20 million",
+        "salary7": "20 - 30 million",
+        "salary8": "30 - 40 million",
+        "salary9": "40 - 50 million",
+        "salary10": "Over 50 million",
+        "salary11": "Negotiation"
+      },
+      "source": {
+        "affiliate": "affiliate",
+        "google": "google",
+        "marketing": "marketing",
+        "sale": "sale"
+      },
+      "status": {
+        "active": "Recruitment",
+        "expires": "Expired",
+        "hide": "Hidden",
+        "pending": "Wait for approval"
+      },
+      "type": {
+        "type1": "All the time",
+        "type2": "Part-time",
+        "type3": "According to the Contract",
+        "type4": "Intership",
+        "type5": "Other"
+      },
+      "view_type": {
+        "full": "Full message form",
+        "standard": "Basic message template"
+      }
+    },
+    "order": {
+      "paymentmethods": {
+        "payment1": "Bank transfer",
+        "payment2": "Pay by Paypal",
+        "payment3": "Domestic ATM card, Internet Banking",
+        "payment4": "Pay by international card Visa, Master, JSB"
+      },
+      "status": {
+        "cancelled": "cancelled",
+        "completed": "completed",
+        "failed": "failed",
+        "on_hold": "on hold",
+        "pending_payment": "pending payment",
+        "processing": "processing",
+        "refunded": "refunded"
+      }
+    },
+    "products": {
+      "package": {
+        "package1": "News package",
+        "package2": "Filter package",
+        "package3": "Marketing package"
+      },
+      "status": {
+        "active": "active",
+        "pending": "pending"
+      }
+    },
+    "resumes": {
+      "classification": {
+        "classification1": "Excellent",
+        "classification2": "Great",
+        "classification3": "Rather",
+        "classification4": "Above average",
+        "classification5": "Medium"
+      },
+      "experience": {
+        "experience1": "No experience",
+        "experience2": "Less than 1 year",
+        "experience3": "1 year",
+        "experience4": "2 year",
+        "experience5": "3 year",
+        "experience6": "4 year",
+        "experience7": "5 year",
+        "experience8": "Over 5 year"
+      },
+      "gender": {
+        "female": "N?",
+        "male": "Nam",
+        "male_female": "Nam và N?"
+      },
+      "languages": {
+        "languages1": "English",
+        "languages2": "Japanese",
+        "languages3": "French",
+        "languages4": "Chinese",
+        "languages5": "Russian",
+        "languages6": "Korean",
+        "languages7": "German",
+        "languages8": "Italian",
+        "languages9": "Arabic",
+        "languages10": "Other foreign languages"
+      },
+      "languages_level": {
+        "languages_level1": "Good",
+        "languages_level2": "Rather",
+        "languages_level3": "Medium",
+        "languages_level4": "Least"
+      },
+      "level": {
+        "level1": "Common",
+        "level2": "Intermediate",
+        "level3": "Certificate",
+        "level4": "Colleges",
+        "level5": "University",
+        "level6": "Graduate"
+      },
+      "marital_status": {
+        "marital_status1": "Single",
+        "marital_status2": "Married"
+      },
+      "rank": {
+        "rank1": "Senior manager",
+        "rank2": "Middle managers",
+        "rank3": "Group management - monitoring",
+        "rank4": "Expert",
+        "rank5": "Specialist - Staff",
+        "rank6": "Collaborators"
+      },
+      "resume_type": {
+        "resume_type1": "Part-time",
+        "resume_type2": "Freelance",
+        "resume_type3": "Seasonal work",
+        "resume_type4": "Interns",
+        "resume_type5": "Full time",
+        "resume_type6": "Online jobs"
+      },
+      "salary": {
+        "salary1": "1 - 3 million",
+        "salary2": "3 - 5 million",
+        "salary3": "5 - 7 million",
+        "salary4": "7 - 10 million",
+        "salary5": "10 - 15 million",
+        "salary6": "15 - 20 million",
+        "salary7": "20 - 30 million",
+        "salary8": "30 - 40 million",
+        "salary9": "40 - 50 million",
+        "salary10": "Over 50 million",
+        "salary11": "Negotiation"
+      },
+      "status": {
+        "active": "active",
+        "hide": "hide",
+        "pending": "pending"
+      },
+      "type": {
+        "type0": "Create step by step",
+        "type1": "Upload CV"
+      },
+      "users": {
+        "gender": {
+          "female": "Female",
+          "male": "male",
+          "male_female": "Man and woman"
+        },
+        "level": {
+          "level1": "High school",
+          "level2": "Intermediate",
+          "level3": "Certificate",
+          "level4": "Colleges",
+          "level5": "University",
+          "level6": "Graduate"
+        },
+        "marital_status": {
+          "marital_status1": "Alone",
+          "marital_status2": "Have family"
+        },
+        "role": {
+          "admin": "admin",
+          "candidate": "candidate",
+          "employer": "employer",
+          "support": "support"
+        },
+        "status": {
+          "active": "active",
+          "block": "block",
+          "pending": "pending"
+        }
+      }
+    }
+  },
+  "seo": {
+    "categories": {
+      "consulting": {
+        "heading": "Counseling/Customer Care/Telesale"
+      },
+      "realEstate": {
+        "heading": "Real Estate"
+      },
+      "build": {
+        "heading": "Recruitment for High paying Construction jobs"
+      },
+      "pharmacist": {
+        "heading": "Recruitment for High paying Physician/Pharmacist"
+      },
+      "warehouse": {
+        "heading": "Recruitment for High paying Export/Import/Foreign Trade"
+      },
+      "architecture": {
+        "heading": "Recruitment for High paying Architecture/Interior Design"
+      },
+      "hotel": {
+        "heading": "Recruitment for High paying Restaurant/Hotel jobs"
+      },
+      "ecommerce": {
+        "heading": "Recruitment for High paying Ecommerce"
+      },
+      "business": {
+        "heading": "Recruitment for High paying Business administration"
+      },
+      "marketing": {
+        "heading": "Recruitment for High paying Marketing/Advertising"
+      },
+      "service": {
+        "heading": "Recruitment for High paying Food/Catering"
+      },
+      "fashion": {
+        "heading": "Recruitment for High paying Fashion jobs"
+      },
+      "manager": {
+        "heading": "Recruitment for High paying Industrial jobs"
+      },
+      "invest": {
+        "heading": "Recruitment for High paying Investment"
+      },
+      "technology": {
+        "heading": "Recruitment for High paying High Technology Jobs"
+      },
+      "stock": {
+        "heading": "Recruitment for High paying stock market jobs"
+      },
+      "zoning": {
+        "heading": "Recruitment for High paying Planning/Project jobs"
+      },
+      "delivery": {
+        "heading": "Recruitment for High paying Logistic/Express delivery"
+      },
+      "manufacturing": {
+        "heading": "Recruitment for High paying Manufacturing"
+      },
+      "spa": {
+        "heading": "Recruitment for High paying Spa/Beauty/Fitness"
+      },
+      "art": {
+        "heading": "Recruitment for High paying Art/Film"
+      },
+      "supervisor": {
+        "heading": "Recruitment for High paying QA/QC/Verification/Monitoring"
+      },
+      "audit": {
+        "heading": "Recruitment for High paying Accounting/Auditing"
+      },
+      "electron": {
+        "heading": "Recruitment for High paying Electrical Engineer"
+      },
+      "it": {
+        "heading": "Recruitment for High paying IT"
+      },
+      "finance": {
+        "heading": "Recruitment for High paying Bank/Finance"
+      },
+      "interpreters": {
+        "heading": "Recruitment for High paying Translator"
+      },
+      "office": {
+        "heading": "Recruitment for High paying Human resources"
+      },
+      "design": {
+        "heading": "Recruitment for High paying Designer"
+      },
+      "depot": {
+        "heading": "Recruitment for High paying Warehousing/Transportation"
+      },
+      "customerService": {
+        "heading": "Recruitment for High paying Customer Service jobs"
+      },
+      "textile": {
+        "heading": "Recruitment for High paying Clothing/textile"
+      },
+      "engineering": {
+        "heading": "Recruitment for High paying Engineer"
+      },
+      "carriage": {
+        "heading": "Recruitment for High paying Carriage"
+      },
+      "newspaper": {
+        "heading": "Recruitment for High paying Press/Media"
+      },
+      "regulations": {
+        "heading": "Recruitment for High paying Foreign regulations"
+      },
+      "publish": {
+        "heading": "Recruitment for High paying Publish jobs"
+      },
+      "air": {
+        "heading": "Recruitment for High paying Aviation"
+      },
+      "synthetic": {
+        "heading": "Recruitment for High paying other category"
+      },
+      "postal": {
+        "heading": "Recruitment for High paying Post and Telecommunication"
+      },
+      "interns": {
+        "heading": "Recruitment for High paying Interns"
+      },
+      "crafts": {
+        "heading": "Recruitment for High paying Crafting"
+      },
+      "graphic": {
+        "heading": "Recruitment for High paying Graphic Desinger'"
+      },
+      "treatment": {
+        "heading": "Recruitment for High paying Environmental jobs"
+      },
+      "sell": {
+        "heading": "Recruitment for High paying Business/Sales"
+      },
+      "administration": {
+        "heading": "Recruitment for High paying Administration/Office"
+      },
+      "recruiter": {
+        "heading": "Recruitment for High paying Marketing/PR"
+      },
+      "education": {
+        "heading": "Recruitment for High paying Educating jobs"
+      },
+      "mechanical": {
+        "heading": "Recruitment for High paying Mechanical Engineering"
+      },
+      "technicians": {
+        "heading": "Recruitment for High paying Technicians"
+      },
+      "secretary": {
+        "heading": "Recruitment for High paying Secretary/Assistant"
+      },
+      "communication": {
+        "heading": "Recruitment for High paying Electronics/Telecommunication"
+      },
+      "hardware": {
+        "heading": "Recruitment for High paying IT/Hardware"
+      },
+      "travel": {
+        "heading": "Recruitment for High paying Tourism jobs"
+      },
+      "law": {
+        "heading": "Recruitment for High paying Law/Legal service jobs"
+      },
+      "motorbike": {
+        "heading": "Recruitment for High paying Car/Motobike"
+      },
+      "chemistry": {
+        "heading": "Recruitment for High paying Chemistry/Biology"
+      },
+      "jewelry": {
+        "heading": "Recruitment for High paying Cosmetics/Jewelry"
+      },
+      "security": {
+        "heading": "Recruitment for High paying Security guard/Bodyguard"
+      },
+      "farmer": {
+        "heading": "Recruitment for High paying Agriculture/Forestry/Fishery"
+      },
+      "executive": {
+        "heading": "Recruitment for High paying Executive Management"
+      },
+      "even": {
+        "heading": "Recruitment for High paying Event/Gift service"
+      },
+      "labor": {
+        "heading": "Recruitment for High paying Unskilled labor"
+      },
+      "receptionist": {
+        "heading": "Recruitment for High paying PG/PB/Receptionist"
+      },
+      "diver": {
+        "heading": "Recruitment for High paying Driver"
+      },
+      "household": {
+        "heading": "Recruitment for High paying Household appliances"
+      }
+    },
+    "provinces": {
+      "angiang": {
+        "heading": "Recruitment for High paying at An giang "
+      },
+      "cantho": {
+        "heading": "Recruitment for High paying at Cần Thơ"
+      },
+      "binhthuan": {
+        "heading": "Recruitment for High paying at Bình Thuận"
+      },
+      "dongthap": {
+        "heading": "Recruitment for High paying at Đồng Tháp"
+      },
+      "bacninh": {
+        "heading": "Recruitment for High paying at Bắc Ninh"
+      },
+      "hungyen": {
+        "heading": "Recruitment for High paying at Hưng Yên"
+      },
+      "haiphong": {
+        "heading": "Recruitment for High paying at Hải Phòng"
+      },
+      "hanoi": {
+        "heading": "Recruitment for High paying at Hà Nội"
+      },
+      "sonla": {
+        "heading": "Recruitment for High paying at Sơn La"
+      },
+      "binhphuoc": {
+        "heading": "Recruitment for High paying at Bình Phước"
+      },
+      "quangtri": {
+        "heading": "Recruitment for High paying at Quảng Trị"
+      },
+      "hue": {
+        "heading": "Recruitment for High paying at Thừa Thiên Huế"
+      },
+      "thainguyen": {
+        "heading": "Recruitment for High paying at Thái Nguyên"
+      },
+      "kontum": {
+        "heading": "Recruitment for High paying at Kon Tum"
+      },
+      "ninhthuan": {
+        "heading": "Recruitment for High paying at Ninh Thuận"
+      },
+      "kiengiang": {
+        "heading": "Recruitment for High paying at Kiên Giang"
+      },
+      "soctrang": {
+        "heading": "Recruitment for High paying at Sóc Trăng"
+      },
+      "hanam": {
+        "heading": "Recruitment for High paying at Hà Nam"
+      },
+      "quangngai": {
+        "heading": "Recruitment for High paying at Quảng Ngãi"
+      },
+      "quangbinh": {
+        "heading": "Recruitment for High paying at Quảng Bình"
+      },
+      "phuyen": {
+        "heading": "Recruitment for High paying at Phú Yên"
+      },
+      "vungtau": {
+        "heading": "Recruitment for High paying at Vũng Tàu"
+      },
+      "binhduong": {
+        "heading": "Recruitment for High paying at Bình Dương"
+      },
+      "khanhhoa": {
+        "heading": "Recruitment for High paying at Khánh Hòa"
+      },
+      "gialai": {
+        "heading": "Recruitment for High paying at Gia Lai"
+      },
+      "dienbien": {
+        "heading": "Recruitment for High paying at Điện Biên"
+      },
+      "thanhhoa": {
+        "heading": "Recruitment for High paying at Thanh Hóa"
+      },
+      "nghean": {
+        "heading": "Recruitment for High paying at Nghệ An"
+      },
+      "hatinh": {
+        "heading": "Recruitment for High paying at Hà Tĩnh"
+      },
+      "thaibinh": {
+        "heading": "Recruitment for High paying at Thái Bình"
+      },
+      "tuyenquang": {
+        "heading": "Recruitment for High paying at Tuyên Quang"
+      },
+      "quangnam": {
+        "heading": "Recruitment for High paying at Quảng Nam"
+      },
+      "baclieu": {
+        "heading": "Recruitment for High paying at Bạc Liêu"
+      },
+      "bacKan": {
+        "heading": "Recruitment for High paying at Bắc Kạn"
+      },
+      "daknong": {
+        "heading": "Recruitment for High paying at Đắk Nông"
+      },
+      "coabang": {
+        "heading": "Recruitment for High paying at Cao Bằng"
+      },
+      "camau": {
+        "heading": "Recruitment for High paying at Cà Mau"
+      },
+      "laocai":{
+        "laocai":"Recruitment for High paying at Lào Cai"
+      },
+      "langson": {
+        "heading": "Recruitment for High paying at Lạng Sơn"
+      },
+      "quangninh": {
+        "heading": "Recruitment for High paying at Quảng Ninh"
+      },
+      "vinhlong": {
+        "heading": "Recruitment for High paying at Vĩnh Long"
+      },
+      "tiengiang": {
+        "heading": "Recruitment for High paying at Tiền Giang"
+      },
+      "bacgiang": {
+        "heading": "Recruitment for High paying at Hà Giang"
+      },
+      "hagiang": {
+        "heading": "Recruitment for High paying at Hà Giang"
+      },
+      "binhdinh": {
+        "heading": "Recruitment for High paying at Bình Định"
+      },
+      "phutho": {
+        "heading": "Recruitment for High paying at Phú Thọ"
+      },
+      "haiduong": {
+        "heading": "Recruitment for High paying at Hải Dương"
+      },
+      "danang": {
+        "heading": "Recruitment for High paying at Đà Nẵng"
+      },
+      "ninhbinh": {
+        "heading": "Recruitment for High paying at Ninh Bình"
+      },
+      "longan": {
+        "heading": "Recruitment for High paying at Long An"
+      },
+      "laichau": {
+        "heading": "Recruitment for High paying at Lai Châu"
+      },
+      "yenbai": {
+        "heading": "Recruitment for High paying at Yên Bái"
+      },
+      "daklak": {
+        "heading": "Recruitment for High paying at Dak Lak"
+      },
+      "bentre": {
+        "heading": "Recruitment for High paying at Bến Tre"
+      },
+      "dongnai": {
+        "heading": "Recruitment for High paying at Đồng Nai"
+      },
+      "hochiminh": {
+        "heading": "Recruitment for High paying at thành phố Hồ Chí Minh"
+      },
+      "hoabinh": {
+        "heading": "Recruitment for High paying at Hòa Bình"
+      },
+      "haugiang": {
+        "heading": "Recruitment for High paying at Hậu Giang"
+      },
+      "namdinh": {
+        "heading": "Recruitment for High paying at Nam Định"
+      },
+      "vinhphuc": {
+        "heading": "Recruitment for High paying at Vĩnh Phúc"
+      },
+      "lamdong": {
+        "heading": "Recruitment for High paying at Lâm Đồng"
+      },
+      "travinh": {
+        "heading": "Recruitment for High paying at Trà Vinh"
+      },
+      "tayninh": {
+        "heading": "Recruitment for High paying at Tây Ninh"
+      }
+    },
+    "other":{
+      "nerhouse":{
+        "heading":"Find jobs near you"
+      },
+      "attractivejobs":{
+        "heading":"Find attractive jobs"
+      },
+      "flashjob":{
+        "heading":"Find high-demand jobs"
+      },
+      "newjob":{
+        "heading":"Find newest jobs"
+      },
+      "quickjob":{
+        "heading":"Find jobs with Flash Jobs"
+      },
+      "joblocation":{
+        "heading":"Search jobs with locataion"
+      },
+      "category":{
+        "heading":"Search jobs with category"
+      }
+    }
+  }
+}

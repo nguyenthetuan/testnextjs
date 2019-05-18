@@ -13,43 +13,43 @@ export default class SideBar extends Base {
   menuItems = [
     {
       link: '/dashboard',
-      title: this.t('Dashboard'),
+      title: this.t('components').sidebar.dashboard,
       icon: { name: 'icon-screen-desktop', bgColor: '#fc5830' }
     },
     {
       link: '/cv',
-      title: this.t('Hồ sơ của tôi'),
+      title: this.t('components').sidebar.cv,
       icon: { name: 'icon-briefcase', bgColor: '#f5a623' }
     },
     {
       link: '/suitable-jobs',
-      title: this.t('Việc làm'),
+      title: this.t('components').sidebar.suitableJobs,
       icon: { name: 'icon-people', bgColor: '' },
       children: []
     },
     {
       link: '/notification',
-      title: this.t('Thông báo'),
+      title: this.t('components').sidebar.notification,
       icon: { name: 'icon-bell', bgColor: '#400f62' }
     },
     {
       link: '/setting-notification',
-      title: this.t('Cài đặt thông báo'),
+      title: this.t('components').sidebar.settingNotification,
       icon: { name: 'icon-notebook', bgColor: '#6450e3' }
     },
 
     {
       link: '#',
-      title: this.t('Tài khoản'),
+      title: this.t('components').sidebar.account,
       icon: { name: 'icon-settings', bgColor: '#5f2393' },
       children: [
         {
           link: ['/change-information', '/'],
-          title: this.t('Thông tin cá nhân')
+          title: this.t('components').sidebar.information
         },
         {
           link: '/change-password',
-          title: this.t('Thay đổi mật khẩu')
+          title: this.t('components').sidebar.changePassword
         }
       ]
     }

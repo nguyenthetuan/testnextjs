@@ -70,7 +70,7 @@ class JobDetailPage extends Base {
                   this.setState({ showApplyPopup: true });
                 }}
                 onSaveJobSuccess={() => {
-                  this.setState({ message: { code: 0, message: this.t('Lưu việc làm thành công.') } });
+                  this.setState({ message: { code: 0, message: this.t('containers').JobDetail.index.message } });
                   this._fetchData();
                 }}
               />
@@ -88,7 +88,7 @@ class JobDetailPage extends Base {
         {message &&
           message.code === 1 && (
             <div className="error-message-wrapper">
-              <div className="message">{this.t('Công việc không tồn tại hoặc đã bị xoá.')}</div>
+              <div className="message">{this.t('containers').JobDetail.index.messageError}</div>
               <div className="btn-wrapper">
                 <Button
                   className="jn-btn__yellow"
@@ -96,7 +96,7 @@ class JobDetailPage extends Base {
                     this.props.history.replace('/');
                   }}
                 >
-                  {this.t('Trở lại trang chủ')}
+                  {this.t('containers').JobDetail.index.backHome}
                 </Button>
               </div>
             </div>
@@ -113,7 +113,7 @@ class JobDetailPage extends Base {
                     this.setState({ message: null });
                   }}
                 >
-                  {this.t('Trở lại')}
+                  {this.t('containers').JobDetail.index.back}
                 </Button>
               </div>
             </Popup>

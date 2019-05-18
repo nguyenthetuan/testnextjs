@@ -56,21 +56,21 @@ class ExperienceInfo extends Base {
         <div className="info-wrapper">
           <div className="time-wrapper">
             <span className="from-time">
-              {this.t('Từ tháng ')}
+              {this.t('containers').CV.EditCV.ExperienceInfo.timeStart}
               {Moment(item.time_start).format('MM/YYYY')}
             </span>
             <span className="end-time">
-              {this.t('đến ')}
-              {item.current ? this.t('hiện tại') : Moment(item.time_end).format('MM/YYYY')}
+              {this.t('containers').CV.EditCV.ExperienceInfo.timeEnd}
+              {item.current ? this.t('containers').CV.EditCV.ExperienceInfo.current : Moment(item.time_end).format('MM/YYYY')}
             </span>
           </div>
           <div className="job-info">
             <span className="job-title">{item.title}</span>
-            <span className="separator-text">{this.t(' tại ')}</span>
+            <span className="separator-text">{this.t('containers').CV.EditCV.ExperienceInfo.at}</span>
             <span className="job-title">{item.company}</span>
           </div>
           <div className="job-desc">
-            <div className="title">{this.t('Công việc')}:</div>
+            <div className="title">{this.t('containers').CV.EditCV.ExperienceInfo.job}:</div>
             <div
               className="content"
               dangerouslySetInnerHTML={{
@@ -88,7 +88,7 @@ class ExperienceInfo extends Base {
             }}
           >
             <span className="icon-trash" />
-            {this.t('Xoá')}
+            {this.t('containers').CV.EditCV.ExperienceInfo.delete}
           </Button>
           <Button
             className="btn-edit"
@@ -98,7 +98,7 @@ class ExperienceInfo extends Base {
             }}
           >
             <span className="icon-pencil" />
-            {this.t('Sửa')}
+            {this.t('containers').CV.EditCV.ExperienceInfo.edit}
           </Button>
         </div>
       </div>
@@ -123,7 +123,7 @@ class ExperienceInfo extends Base {
       <div className={wrapperClasses.join(' ')}>
         <div className="block-container">
           <div className="block-header">
-            <div className="header-text">{this.t('KINH NGHIỆM LÀM VIỆC')}</div>
+            <div className="header-text">{this.t('containers').CV.EditCV.ExperienceInfo.exp}</div>
           </div>
 
           <div className="block-body">
@@ -146,7 +146,7 @@ class ExperienceInfo extends Base {
           </div>
         </div>
         <Popup className="delete-popup" showBox show={this.state.showDeletePopup}>
-          <div className="message">{this.t('Xoá thông tin này sẽ không thể khôi phục. Bạn có chắc chắn muốn xoá?')}</div>
+          <div className="message">{this.t('containers').CV.EditCV.ExperienceInfo.messageDelete}</div>
           <div className="buttons-wrapper">
             <Button
               className="jn-btn__normal btn-cancel"
@@ -155,10 +155,10 @@ class ExperienceInfo extends Base {
                 this.setState({ showDeletePopup: false });
               }}
             >
-              {this.t('Trở lại')}
+              {this.t('containers').CV.EditCV.ExperienceInfo.back}
             </Button>
             <Button className="jn-btn__yellow btn-delete" onClick={this._deteleWorkExp}>
-              {this.t('Xoá')}
+              {this.t('containers').CV.EditCV.ExperienceInfo.delete}
             </Button>
           </div>
         </Popup>

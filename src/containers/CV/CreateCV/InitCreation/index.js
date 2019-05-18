@@ -18,7 +18,7 @@ class InitCreation extends Base {
             <div className="init-left">
               <div className="content-label ">
                 <div className="main-label">
-                  <span className="label-text">{this.t('Tôi chưa có file CV')}</span>
+                  <span className="label-text">{this.t('containers').CV.CreateCV.InitCreation.labelText}</span>
                 </div>
               </div>
               <div className="content-btn">
@@ -26,7 +26,7 @@ class InitCreation extends Base {
                   onClick={() => {
                     this.props.createByFill();
                   }}
-                  label={this.t('TẠO HỒ SƠ BẰNG ĐIỀN THÔNG TIN')}
+                  label={this.t('containers').CV.CreateCV.InitCreation.createByFill}
                   className="jn-btn__yellow"
                 />
               </div>
@@ -35,7 +35,7 @@ class InitCreation extends Base {
             <div className="init-right">
               <div className="content-label ">
                 <div className="main-label">
-                  <span className="label-text">{this.t('Tôi đã có file CV')}</span>
+                  <span className="label-text">{this.t('containers').CV.CreateCV.InitCreation.labelText2}</span>
                 </div>
               </div>
               <div className="content-btn">
@@ -43,7 +43,7 @@ class InitCreation extends Base {
                   onClick={() => {
                     this.props.createByCV();
                   }}
-                  label={this.t('TẠO HỒ SƠ BẰNG UPLOAD CV')}
+                  label={this.t('containers').CV.CreateCV.InitCreation.createByCV}
                   className="jn-btn__normal"
                 />
               </div>
