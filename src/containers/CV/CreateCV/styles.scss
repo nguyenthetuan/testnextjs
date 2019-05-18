@@ -201,6 +201,9 @@
             .content-btn {
               flex: 1 1 auto;
               // min-width: 31.5rem;
+              .jn-btn__yellow {
+                height: 5rem;
+              }
             }
           }
           .init-left {
@@ -208,6 +211,9 @@
           }
           .init-right {
             margin-left: 1.4rem;
+            .jn-btn__normal {
+              height: 5rem;
+            }
           }
         }
 
