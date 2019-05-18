@@ -31,9 +31,9 @@ class JobItem extends Base {
     const { company, km, salary, title, _id, worklocation, slug, quantity } = data || {};
     const wrapperClasses = ['job-item-wrapper', `${type}-item`];
     if (className) wrapperClasses.push(className);
-    const logo = (company && company.logo) || '/assets/img/icon-company.png';
-    const salaryLevel = (salary && salaryOpts && salaryOpts[salary]) || this.t('Thương lượng');
-    const location = km ? `${km}km` : worklocation && worklocation[0] && worklocation[0].province;
+    const logo = (company && company.logo) || '/assets/img/logo-full.png';
+    const salaryLevel = (salary && salaryOpts && salaryOpts[salary]) || this.t('components').jobitem.salaryOpts;
+    const location = km ? `${km} km` : worklocation && worklocation[0] && worklocation[0].province;
 
     if (data && data.featured) {
       wrapperClasses.push('featured-job');
@@ -66,7 +66,7 @@ class JobItem extends Base {
                 {flashJob && (
                   <div className="slot-number-wrapper">
                     <span className="jn-awesome-user-o" />
-                    <span className="text">{this.t('còn tuyển')}</span>
+                    <span className="text">{this.t('components').jobitem.text}</span>
                     <span className="number">{quantity || 0}</span>
                   </div>
                 )}
@@ -78,10 +78,10 @@ class JobItem extends Base {
     }
 
     if (flashJob) wrapperClasses.push('flashjob-item');
-
     return (
       <div className={wrapperClasses.join(' ')} style={style}>
         {!showJobInfoOnly && <div className="company-logo">{data && <img src={logo} alt="" />}</div>}
+
         <div className="info-wrapper">
           <div className="job-info">
             <a href={`/viec-lam/${slug || _id}`} target="_blank" rel="noopener noreferrer">
@@ -117,18 +117,14 @@ class JobItem extends Base {
                   </div>
                   <div className="slot-number-wrapper">
                     <span className="jn-awesome-user-o" />
-                    <span className="text">{this.t('còn tuyển')}</span>
+                    <span className="text">{this.t('components').jobitem.text}</span>
                     <span className="number">{quantity || 0}</span>
                   </div>
                 </div>
               )}
               {flashJob && (
                 <div className="button-wrapper">
-                  <div className="jn-btn jn-btn__yellow">
-                    <a href={`/viec-lam/${slug || _id}`}>
-                      {this.t('Xem ngay')}
-                    </a>
-                  </div>
+                  <Button className="jn-btn__yellow" onClick={() => this.props.history.replace(`/viec-lam/${slug || _id}`)}>{this.t('components').jobitem.applyNow}</Button>
                 </div>
               )}
             </div>

@@ -15,6 +15,8 @@ import {
   UPDATE_USER_INFO,
   FETCH_RESUMES_SUCCESS,
   DELETE_RESUME_SUCCESS,
+  SHOW_LANGUAGE,
+  HIDE_LANGUAGE,
   UPDATE_REDIRECT
 } from '../actions/types';
 
@@ -24,6 +26,7 @@ const initState = {
   info: null,
   rememberPassword: false,
   showAuthPopup: false,
+  showLanguage: false,
   currentForm: 'login', // login || register || forgot,
   message: null,
   currentLocation: null,
@@ -32,7 +35,7 @@ const initState = {
   redirectPath: null,
 };
 
-export default function(state = initState, action) {
+export default function (state = initState, action) {
   const { payload } = action;
   switch (action.type) {
     case 'persist/REHYDRATE':
@@ -74,6 +77,17 @@ export default function(state = initState, action) {
 
     case UPDATE_REDIRECT:
       return { ...state, redirectPath: action.payload.pathname };
+
+    case SHOW_LANGUAGE:
+      return {
+        ...state,
+        showLanguage: true,
+        currentForm: action.payload.form,
+        popupData: action.payload.data
+      };
+
+    case HIDE_LANGUAGE:
+      return { ...state, showLanguage: false, currentForm: 'language', popupData: null };
 
     default:
       return state;

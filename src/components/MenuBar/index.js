@@ -127,7 +127,7 @@ class MenuBar extends Base {
             <div className="search-wrapper">
               <div className="el-wrapper">
                 <SearchInput
-                  placeholder={this.t('Vị trí công việc …')}
+                  placeholder={this.t('components').menubar.index.keyword}
                   value={this.state.keyword}
                   onChange={value => {
                     this.setState({ keyword: value });
@@ -137,14 +137,14 @@ class MenuBar extends Base {
                 {this.state.currentAddress && (
                   <div className="current-address">
                     <span className="icon-jn-map-marker" />
-                    {this.state.currentAddress || this.t('TP/Tỉnh')}
+                    {this.state.currentAddress || this.t('components').menubar.index.currentAddress}
                   </div>
                 )}
                 <Button className="jn-btn__normal search-btn" onClick={this._search}>
                   <span className="icon-jn-search" />
                 </Button>
                 <Button className="jn-btn__normal adv-search-btn" onClick={this._showAdvanceSearch}>
-                  {this.t('Tìm kiếm nâng cao')}
+                  {this.t('components').menubar.index.search}
                 </Button>
               </div>
             </div>

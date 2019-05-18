@@ -14,44 +14,44 @@ export default class Footer extends Base {
       <footer>
         <div className="col-wrapper">
           <div className="col">
-            <div className="col-title">{this.t('Chăm sóc khách hàng')}</div>
+            <div className="col-title">{this.t('components').footer.colTitle}</div>
             <div className="col-content">
               <a href="https://hr.jobnow.com.vn/info/" target="_blank" rel="noopener noreferrer">
-                {this.t('Trung tâm trợ giúp')}
+                {this.t('components').footer.support}
               </a>
               <a href="https://hr.jobnow.com.vn/info/huong-dan-dang-tin/" target="_blank" rel="noopener noreferrer">
-                {this.t('Hướng dẫn nhà tuyển dụng')}
+                {this.t('components').footer.employers}
               </a>
               <a href="https://hr.jobnow.com.vn/info/bao-gia-dich-vu/" target="_blank" rel="noopener noreferrer">
-                {this.t('Báo giá dịch vụ')}
+                {this.t('components').footer.service}
               </a>
               <a href="https://hr.jobnow.com.vn/info/huong-dan-tao-ho-so/" target="_blank" rel="noopener noreferrer">
-                {this.t('Hướng dẫn ứng viên')}
+                {this.t('components').footer.candidates}
               </a>
             </div>
           </div>
           <div className="col">
-            <div className="col-title">{this.t('Về JOBNOW')}</div>
+            <div className="col-title">{this.t('components').footer.jobnow}</div>
             <div className="col-content">
               <a href="https://hr.jobnow.com.vn/info/gioi-thieu/" target="_blank" rel="noopener noreferrer">
-                {this.t('Giới thiệu')}
+                {this.t('components').footer.introduce}
               </a>
               <a href="https://hr.jobnow.com.vn/info/quy-che-hoat-dong/" target="_blank" rel="noopener noreferrer">
-                {this.t('Quy chế hoạt động')}
+                {this.t('components').footer.operation}
               </a>
               <a href="https://hr.jobnow.com.vn/info/giai-quyet-tranh-chap/" target="_blank" rel="noopener noreferrer">
-                {this.t('Giải quyết tranh chấp')}
+                {this.t('components').footer.dispute}
               </a>
               <a href="https://hr.jobnow.com.vn/info/thoa-thuan-su-dung/" target="_blank" rel="noopener noreferrer">
-                {this.t('Thoả thuận sử dụng')}
+                {this.t('components').footer.agreement}
               </a>
               <a href="https://hr.jobnow.com.vn/info/quy-dinh-bao-mat/" target="_blank" rel="noopener noreferrer">
-                {this.t('Quy định bảo mật')}
+                {this.t('components').footer.privacyPolicy}
               </a>
             </div>
           </div>
           <div className="col">
-            <div className="col-title">{this.t('Liên hệ nhanh với JOBNOW')}</div>
+            <div className="col-title">{this.t('components').footer.quickContact}</div>
             <div className="col-content">
               <a href="tel:+842462627729">
                 <span>
@@ -80,24 +80,24 @@ export default class Footer extends Base {
             </div>
           </div>
           <div className="col">
-            <div className="col-title">{this.t('Theo dõi chúng tôi trên')}</div>
+            <div className="col-title">{this.t('components').footer.follow}</div>
             <div className="col-content socials">
               <a href="https://www.facebook.com/JobNow.com.vn/" target="_blank" rel="noopener noreferrer">
                 <span className="icon-jn-facebook" />
-                Facebook Fanpage
+                {this.t('components').footer.fanpage}
               </a>
               <a href="https://www.facebook.com/groups/ADTJOB/" target="_blank" rel="noopener noreferrer">
                 <span className="icon-jn-facebook-official" />
-                Facebook Group
+                {this.t('components').footer.group}
               </a>
               <a href="https://www.youtube.com/channel/UC6sg0bre7xHqL5UyyrwzRFw" target="_blank" rel="noopener noreferrer">
                 <span className="icon-jn-youtube-square" />
-                Youtube
+                {this.t('components').footer.youtube}
               </a>
             </div>
           </div>
           <div className="col">
-            <div className="col-title">{this.t('Tải ứng dụng')}</div>
+            <div className="col-title">{this.t('components').footer.dowload}</div>
             <a className="col-content apps" href="https://hr.jobnow.com.vn/app" target="_blank" rel="noopener noreferrer">
               <div className="qr-img">
                 <img src="/assets/img/qr-code.png" alt="" />
@@ -116,14 +116,14 @@ export default class Footer extends Base {
         <div className="company-info">
           <div className="name">
             <img src="/assets/img/registered-logo.jpg" alt="" />
-            <h3>Công ty cổ phần ADT Quốc Tế</h3>
+            <h3>{this.t('components').footer.company}</h3>
           </div>
           <div className="addr-info">
-            <span className="addr">Địa chỉ: Số 7, ngách 6, ngõ 121 Trần Phú, Phường Văn Quán, quận Hà Đông, TP. Hà Nội.</span>
-            <span className="contact"> Email: support@jobnow.com.vn</span>
+            <span className="addr">{this.t('components').footer.addr}</span>
+            <span className="contact">{this.t('components').footer.contact}</span>
           </div>
-          <div className="company-no">MST: 0107272126 do Sở Kế hoạch &amp; Đầu tư TP Hà Nội cấp lần đầu ngày 29-12-2015</div>
-          <div className="cp-right">© 2018 - Bản quyền thuộc về Công ty cổ phần ADT Quốc Tế</div>
+          <div className="company-no">{this.t('components').footer.companyNo1} &amp; {this.t('components').footer.companyNo2}</div>
+          <div className="cp-right">{this.t('components').footer.cpright}</div>
         </div>
       </footer>
     );

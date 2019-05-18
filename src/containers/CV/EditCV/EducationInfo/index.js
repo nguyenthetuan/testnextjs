@@ -50,21 +50,21 @@ class EducationInfo extends Base {
         <div className="info-wrapper">
           <div className="time-wrapper">
             <span className="from-time">
-              {this.t('Từ tháng ')}
+              {this.t('containers').CV.EditCV.EducationInfo.timeStart}
               {Moment(time_start).format('MM/YYYY')}
             </span>
             <span className="end-time">
-              {this.t('đến ')}
+              {this.t('containers').CV.EditCV.EducationInfo.timeEnd}
               {Moment(time_end).format('MM/YYYY')}
             </span>
           </div>
           <div className="education-info">
             <span className="job-title">{certificate}</span>
-            <span className="text-separator">{this.t(' tại ')}</span>
+            <span className="text-separator">{this.t('containers').CV.EditCV.EducationInfo.at}</span>
             <span className="job-title">{school}</span>
           </div>
           <div className="edu-classification">
-            <div className="content">{this.t('Xếp loại tốt nghiệp')}:</div>
+            <div className="content">{this.t('containers').CV.EditCV.EducationInfo.classification}:</div>
             <div className="title">{constants && constants.classification && constants.classification[classification]}</div>
           </div>
         </div>
@@ -77,7 +77,7 @@ class EducationInfo extends Base {
             }}
           >
             <span className="icon-trash" />
-            {this.t('Xoá')}
+            {this.t('containers').CV.EditCV.EducationInfo.delete}
           </Button>
           <Button
             className="btn-edit"
@@ -87,7 +87,7 @@ class EducationInfo extends Base {
             }}
           >
             <span className="icon-pencil" />
-            {this.t('Sửa')}
+            {this.t('containers').CV.EditCV.EducationInfo.edit}
           </Button>
         </div>
       </div>
@@ -112,7 +112,7 @@ class EducationInfo extends Base {
       <div className="experience-info">
         <div className="block-container">
           <div className="block-header">
-            <div className="header-text">{this.t('HỌC VẤN/CHỨNG CHỈ')}</div>
+            <div className="header-text">{this.t('containers').CV.EditCV.EducationInfo.edu}</div>
           </div>
 
           <div className="block-body">
@@ -135,7 +135,7 @@ class EducationInfo extends Base {
           </div>
         </div>
         <Popup className="delete-popup" showBox show={showDeletePopup}>
-          <div className="message">{this.t('Xoá thông tin này sẽ không thể khôi phục. Bạn có chắc chắn muốn xoá?')}</div>
+          <div className="message">{this.t('containers').CV.EditCV.EducationInfo.messageDelete}</div>
           <div className="buttons-wrapper">
             <Button
               className="jn-btn__normal btn-cancel"
@@ -144,10 +144,10 @@ class EducationInfo extends Base {
                 this.setState({ showDeletePopup: false });
               }}
             >
-              {this.t('Trở lại')}
+              {this.t('containers').CV.EditCV.EducationInfo.back}
             </Button>
             <Button className="jn-btn__yellow btn-delete" onClick={this._deleteEducationItem}>
-              {this.t('Xoá')}
+              {this.t('containers').CV.EditCV.EducationInfo.delete}
             </Button>
           </div>
         </Popup>

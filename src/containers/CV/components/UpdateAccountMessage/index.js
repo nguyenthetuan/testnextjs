@@ -13,7 +13,7 @@ class UpdateAccountMessage extends Base {
   render() {
     return (
       <div className="update-message-wrapper">
-        <div className="message">{this.t('Để sử dụng được tính năng quản lý hồ sơ. Vui lòng cập nhật đầy đủ thông tin thông tin cá nhân.')}</div>
+        <div className="message">{this.t('containers').CV.components.UpdateAccountMessage.messageUpdate}</div>
         <div className="button-wrapper">
           <Button
             className="jn-btn__yellow"
@@ -22,7 +22,7 @@ class UpdateAccountMessage extends Base {
               this.props.history.replace('/change-information', { redirect });
             }}
           >
-            {this.t('Cập nhật thông tin cá nhân')}
+            {this.t('containers').CV.components.UpdateAccountMessage.changeInformation}
           </Button>
         </div>
       </div>

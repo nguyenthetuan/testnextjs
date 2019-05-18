@@ -14,7 +14,7 @@ export default class SimilarJobs extends Base {
     const { categories, jobs, count } = data;
     return (
       <div className="similar-jobs-wrapper">
-        <div className="title">{this.t('Việc làm tương tự')}</div>
+        <div className="title">{this.t('containers').JobDetail.SimilarJobs.job}</div>
         <div className="block-wrapper content">
           <div className="slide-group-items">
             {(jobs || []).map((item, index) => (
@@ -27,12 +27,10 @@ export default class SimilarJobs extends Base {
             <span
               className="similar-msg"
               dangerouslySetInnerHTML={{
-                __html: this.t(
-                  'Có <span class="highlight-number">%number</span> việc làm mới ngành %category.'.replace('%number', count).replace('%category', (similarCategory && similarCategory.title) || '')
-                )
+                __html: this.t(this.t('containers').JobDetail.SimilarJobs.have + this.t('<span class="highlight-number">') + this.t(`${'%number '.replace('%number', count)}`) + this.t('</span>') + this.t('containers').JobDetail.SimilarJobs.newJob + this.t(`${'%category'.replace('%category', (similarCategory && similarCategory.title) || '')}`))
               }}
             />
-            <a href={`/tim-kiem${similarCategory && `?categories[]=${similarCategory._id}`}`}>{this.t('Bấm xem ngay !')}</a>
+            <a href={`/tim-kiem${similarCategory && `?categories[]=${similarCategory._id}`}`}>{this.t('containers').JobDetail.SimilarJobs.view}</a>
           </div>
         </div>
       </div>

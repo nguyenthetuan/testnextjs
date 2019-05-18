@@ -152,7 +152,7 @@ class HomePage extends Base {
       <div className="maketing-jobs-title">
         <span>
           <span className="jn-awesome-bolt" />
-          <span className="title-text">{this.t('FLASH JOBS')}</span>
+          <span className="title-text">{this.t('containers').Home.index.flashJob}</span>
         </span>
         <div className="countdown-wrapper">
           <span className="icon-jn-clock" />
@@ -167,7 +167,7 @@ class HomePage extends Base {
           <div className="block-content">
             <div className="view-all-marketing-jobs">
               <a href="/viec-lam/flash-jobs">
-                <span>{this.t('Xem tất cả')}</span>
+                <span>{this.t('containers').Home.index.viewAll}</span>
                 <span className="icon-arrow-right" />
               </a>
             </div>
@@ -188,7 +188,7 @@ class HomePage extends Base {
       top: (
         <div className="view-all-marketing-jobs">
           <a href="/viec-lam/flash-jobs">
-            <span>{this.t('Xem tất cả')}</span>
+            <span>{this.t('containers').Home.index.viewAll}</span>
             <span className="icon-arrow-right" />
           </a>
         </div>
@@ -380,13 +380,13 @@ class HomePage extends Base {
       return (
         <div className="page-wrapper loading-data">
           <div className="error-connect">
-            {this.t('Có lỗi kết nối với máy chủ. Vui lòng ')}
+            {this.t('containers').Home.index.errorConnect}
             <Button
               onClick={() => {
                 window.location.reload();
               }}
             >
-              {this.t('thử lại')}
+              {this.t('containers').Home.index.reload}
             </Button>
           </div>
         </div>
@@ -394,28 +394,28 @@ class HomePage extends Base {
     }
 
     const attractiveJobs = {
-      message: data && data.attractiveJobs.count !== undefined && this.t('XEM THÊM CÁC VIỆC LÀM HẤP DẪN'),
+      message: data && data.attractiveJobs.count !== undefined && this.t('containers').Home.index.viewHotJob,
       jobs: (data && data.attractiveJobs.jobs) || [],
       redirectURL: '/viec-lam/viec-lam-hap-dan',
-      title: this.t('Việc làm hấp dẫn'),
+      title: this.t('containers').Home.index.hotJob,
       groupSize: this.state.isMobileMode ? 6 : 12,
       itemsPerLine: this.state.isMobileMode ? 1 : 2
     };
 
     const fastJobs = {
-      message: data && data.featuredJobs.count !== undefined && this.t('XEM THÊM CÁC VIỆC LÀM TUYỂN GẤP'),
+      message: data && data.featuredJobs.count !== undefined && this.t('containers').Home.index.viewFastJob,
       jobs: (data && data.featuredJobs.jobs) || [],
       redirectURL: '/viec-lam/viec-lam-tuyen-gap',
-      title: this.t('Việc làm tuyển gấp'),
+      title: this.t('containers').Home.index.fastJob,
       groupSize: this.state.isMobileMode ? 6 : 18,
       itemsPerLine: this.state.isMobileMode ? 1 : 3
     };
 
     const latestJob = {
-      message: data && data.latestJobs.count !== undefined && this.t('XEM THÊM CÁC VIỆC LÀM MỚI NGÀY %date.'.replace('%number', data.latestJobs.count).replace('%date', Moment().format('DD/MM/YY'))),
+      message: data && data.latestJobs.count !== undefined && this.t('containers').Home.index.viewFastJob + this.t(`${' %date'.replace('%number', data.latestJobs.count).replace('%date', Moment().format('DD/MM/YY'))}`),
       jobs: (data && data.latestJobs.jobs) || [],
       redirectURL: '/viec-lam/viec-lam-moi-nhat',
-      title: this.t('Việc làm mới nhất'),
+      title: this.t('containers').Home.index.newJob,
       groupSize: this.state.isMobileMode ? 6 : 18,
       itemsPerLine: this.state.isMobileMode ? 1 : 3,
       showJobInfoOnly: true
@@ -438,7 +438,10 @@ class HomePage extends Base {
 
 export default createPage(
   connect(
-    state => ({ location: state.auth.currentLocation }),
+    state => ({
+      location: state.auth.currentLocation,
+      constants: state.constants,
+    }),
     { updateLocation, showAuthPopup }
   )(HomePage)
 );

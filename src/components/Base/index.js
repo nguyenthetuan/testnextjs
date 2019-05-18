@@ -6,6 +6,9 @@
  */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import _ from 'lodash';
+import language from '../../config/language/index';
+import { getLanguage } from '../../utils/localData';
 
 export default class Base extends Component {
   static propsType = {
@@ -16,11 +19,24 @@ export default class Base extends Component {
   };
 
   static defaultProps = {
-    language: { langCode: 'en', data: {} }
+    language: { langCode: 'en', data: language }
   };
 
+  constructor(props) {
+    super(props);
+    if (!_.isEmpty(getLanguage()) && !_.isEmpty(getLanguage().language)) {
+      const locallanguage = getLanguage().language;
+      language.setLanguage(locallanguage);
+    } else {
+      language.setLanguage(language._language);
+    }
+  }
+
   t = originalString => {
-    const { data } = this.props.language || {};
+    let { data } = this.props.language || {};
+    if (_.isEmpty(data)) {
+      data = language;
+    }
     if (data && Object.keys(data).length > 0 && data[originalString] !== undefined) {
       return data[originalString];
     }

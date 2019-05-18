@@ -32,35 +32,35 @@ class RightCol extends Base {
           <div className="info-line">
             <div className="info-title">
               <span className="icon-wallet" />
-              <span className="title">{this.t('Mức lương')}:</span>
+              <span className="title">{this.t('containers').JobDetail.Body.RightCol.salary}:</span>
             </div>
             <div className="info-value">{salaryText}</div>
           </div>
           <div className="info-line">
             <div className="info-title">
               <span className="icon-location-pin" />
-              <span className="title">{this.t('Nơi làm việc')}:</span>
+              <span className="title">{this.t('containers').JobDetail.Body.RightCol.location}:</span>
             </div>
             <div className="info-value">{workLocations.join(', ')}</div>
           </div>
           <div className="info-line">
             <div className="info-title">
               <span className="icon-direction" />
-              <span className="title">{this.t('Yêu cầu trình độ')}:</span>
+              <span className="title">{this.t('containers').JobDetail.Body.RightCol.level}:</span>
             </div>
             <div className="info-value">{levelText}</div>
           </div>
           <div className="info-line">
             <div className="info-title">
               <span className="icon-layers" />
-              <span className="title">{this.t('Yêu cầu kinh nghiệm')}:</span>
+              <span className="title">{this.t('containers').JobDetail.Body.RightCol.exp}:</span>
             </div>
             <div className="info-value">{expText}</div>
           </div>
           <div className="info-line">
             <div className="info-title">
               <span className="icon-symbol-female" />
-              <span className="title"> {this.t('Yêu cầu giới tính')}:</span>
+              <span className="title"> {this.t('containers').JobDetail.Body.RightCol.gender}:</span>
             </div>
             <div className="info-value">{genderText}</div>
           </div>
@@ -74,7 +74,7 @@ class RightCol extends Base {
           <div className="info-line">
             <div className="info-title">
               <span className="icon-briefcase" />
-              <span className="title">{this.t('Ngành nghề')}:</span>
+              <span className="title">{this.t('containers').JobDetail.Body.RightCol.briefcase}:</span>
             </div>
             <div className="info-value">{catText.join(', ')}</div>
           </div>
@@ -98,18 +98,18 @@ class RightCol extends Base {
 
         <div className="block-wrapper">
           <div className="jn-section company-introduction">
-            <div className="section-title">{this.t('Giới thiệu về công ty')}</div>
+            <div className="section-title">{this.t('containers').JobDetail.Body.RightCol.company}</div>
             <div className="section-row">
               <div className="section-col">
                 {tax_id && (
                   <div className="info-line">
-                    <div className="info-title">{this.t('Mã số thuế')}:</div>
+                    <div className="info-title">{this.t('containers').JobDetail.Body.RightCol.taxID}:</div>
                     <div className="info-value">{tax_id}</div>
                   </div>
                 )}
                 {sizeText && (
                   <div className="info-line">
-                    <div className="info-title">{this.t('Quy mô')}:</div>
+                    <div className="info-title">{this.t('containers').JobDetail.Body.RightCol.size}:</div>
                     <div className="info-value">{sizeText}</div>
                   </div>
                 )}
@@ -117,7 +117,7 @@ class RightCol extends Base {
                   district &&
                   province && (
                     <div className="info-line">
-                      <div className="info-title">{this.t('Địa chỉ')}:</div>
+                      <div className="info-title">{this.t('containers').JobDetail.Body.RightCol.address}:</div>
                       <div className="info-value">{`${street}, ${district}, ${province}`}</div>
                     </div>
                   )}
@@ -125,7 +125,7 @@ class RightCol extends Base {
               <div className="section-col">
                 {website && (
                   <div className="info-line">
-                    <div className="info-title">{this.t('Website')}:</div>
+                    <div className="info-title">{this.t('containers').JobDetail.Body.RightCol.website}:</div>
                     <a href={website} className="info-value" target="_blank" rel="noopener noreferrer nofollow">
                       {website}
                     </a>
@@ -133,7 +133,7 @@ class RightCol extends Base {
                 )}
                 {fanpage && (
                   <div className="info-line">
-                    <div className="info-title">{this.t('Facebook')}:</div>
+                    <div className="info-title">{this.t('containers').JobDetail.Body.RightCol.facebook}:</div>
                     <a href={fanpage} className="info-value" target="_blank" rel="noopener noreferrer nofollow">
                       {fanpage}
                     </a>
@@ -141,7 +141,7 @@ class RightCol extends Base {
                 )}
                 {working_time && (
                   <div className="info-line">
-                    <div className="info-title">{this.t('Thời gian làm việc')}:</div>
+                    <div className="info-title">{this.t('containers').JobDetail.Body.RightCol.workingTime}:</div>
                     <div className="info-value">{working_time}</div>
                   </div>
                 )}
@@ -196,7 +196,7 @@ class RightCol extends Base {
           </div>
           {reason_join && (
             <div className="jn-section company-joined-reason">
-              <div className="section-title">{this.t('Lí do gia nhập công ty chúng tôi')}</div>
+              <div className="section-title">{this.t('containers').JobDetail.Body.RightCol.joinedReason}</div>
               <div
                 className="section-content"
                 dangerouslySetInnerHTML={{

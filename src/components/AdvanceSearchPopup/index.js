@@ -120,22 +120,22 @@ class AdvanceSearchPopup extends Base {
     }));
 
     const categoryOpts = catOpts.map(cat => ({ value: cat._id, label: cat.title }));
-    categoryOpts.unshift({ value: undefined, label: this.t('Tất cả') });
+    categoryOpts.unshift({ value: undefined, label: `${this.t('components').AdvanceSearchPopup.all}` });
     const levelOpts = Object.keys(constants.level || {}).map(key => ({
       value: key,
       label: constants.level[key]
     }));
-    levelOpts.unshift({ value: undefined, label: this.t('Tất cả') });
+    levelOpts.unshift({ value: undefined, label: `${this.t('components').AdvanceSearchPopup.all}` });
     const expOpts = Object.keys(constants.experience || {}).map(key => ({
       value: key,
       label: constants.experience[key]
     }));
-    expOpts.unshift({ value: undefined, label: this.t('Tất cả') });
+    expOpts.unshift({ value: undefined, label: `${this.t('components').AdvanceSearchPopup.all}` });
     const typeOpts = Object.keys(constants.type || {}).map(key => ({
       value: key,
       label: constants.type[key]
     }));
-    typeOpts.unshift({ value: undefined, label: this.t('Tất cả') });
+    typeOpts.unshift({ value: undefined, label: `${this.t('components').AdvanceSearchPopup.all}` });
     const { categories, salary, level, experience, type, keyword, province } = this.state;
 
     return (
@@ -160,12 +160,12 @@ class AdvanceSearchPopup extends Base {
             <i className="icon-jn-close" />
           </a>
         </div>
-        <div className="header">{this.t('Tìm kiếm nâng cao')}</div>
+        <div className="header">{this.t('components').AdvanceSearchPopup.advancedSearch}</div>
         <div className="form-wrapper">
           <div>
             <SearchInput
               icon="icon-jn-search"
-              placeholder={this.t('Vị trí công việc …')}
+              placeholder={this.t('components').AdvanceSearchPopup.jobPosition}
               value={keyword}
               onChange={value => {
                 this.setState({ keyword: value });
@@ -173,7 +173,7 @@ class AdvanceSearchPopup extends Base {
             />
             <SearchInput
               icon="icon-jn-map-marker"
-              placeholder={this.t('Quận/Huyện, TP/Tỉnh...')}
+              placeholder={this.t('components').AdvanceSearchPopup.cityAnDistrict}
               searchURL={`${host}/client/locations/byCounts`}
               value={province}
               formatResponseData={response => {
@@ -204,7 +204,7 @@ class AdvanceSearchPopup extends Base {
               }}
             />
             <Select
-              placeholder={this.t('Chọn ngành nghề')}
+              placeholder={this.t('components').AdvanceSearchPopup.categoryOpts}
               value={categories}
               options={categoryOpts}
               onChange={value => {
@@ -212,7 +212,7 @@ class AdvanceSearchPopup extends Base {
               }}
             />
             <Select
-              placeholder={this.t('Chọn mức lương')}
+              placeholder={this.t('components').AdvanceSearchPopup.salaryOptions}
               options={salaryOptions}
               value={[salary]}
               onChange={value => {
@@ -220,7 +220,7 @@ class AdvanceSearchPopup extends Base {
               }}
             />
             <Select
-              placeholder={this.t('Chọn trình độ')}
+              placeholder={this.t('components').AdvanceSearchPopup.levelOpts}
               options={levelOpts}
               value={[level]}
               onChange={value => {
@@ -229,7 +229,7 @@ class AdvanceSearchPopup extends Base {
             />
             <Select
               className="experience-filter"
-              placeholder={this.t('Chọn kinh nghiệm')}
+              placeholder={this.t('components').AdvanceSearchPopup.expOpts}
               options={expOpts}
               value={[experience]}
               onChange={value => {
@@ -237,7 +237,7 @@ class AdvanceSearchPopup extends Base {
               }}
             />
             <Select
-              placeholder={this.t('Chọn hình thức làm việc')}
+              placeholder={this.t('components').AdvanceSearchPopup.typeOpts}
               options={typeOpts}
               value={[type]}
               onChange={value => {
@@ -248,11 +248,11 @@ class AdvanceSearchPopup extends Base {
         </div>
         <div className="clear-filters">
           <a href="#" onClick={this._clearFilters}>
-            {this.t('Xoá tất cả các lựa chọn tìm kiếm')}
+            {this.t('components').AdvanceSearchPopup.clearFilters}
           </a>
         </div>
         <Button className="jn-btn__yellow" onClick={this._search}>
-          {this.t('Tìm kiếm')}
+          {this.t('components').AdvanceSearchPopup.search}
         </Button>
       </Popup>
     );

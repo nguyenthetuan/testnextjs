@@ -73,29 +73,29 @@ class Header extends Base {
       <div className="job-info">
         <div className="info-line">
           <span>
-            <span className="title">{this.t('Mức lương')}:</span>
+            <span className="title">{this.t('containers').JobDetail.Header.salary}:</span>
             <span className="value">{salaryText}</span>
           </span>
 
           <span className="separator">|</span>
           <span>
-            <span className="title">{this.t('Nơi làm việc')}:</span>
+            <span className="title">{this.t('containers').JobDetail.Header.worklocation}:</span>
             <span className="value worklocations">{workLocations.join(', ')}</span>
           </span>
         </div>
         <div className="info-line">
           <span>
-            <span className="title">{this.t('Yêu cầu trình độ')}:</span>
+            <span className="title">{this.t('containers').JobDetail.Header.level}:</span>
             <span className="value">{levelText}</span>
           </span>
           <span className="separator">|</span>
           <span>
-            <span className="title">{this.t('Yêu cầu kinh nghiệm')}:</span>
+            <span className="title">{this.t('containers').JobDetail.Header.exp}:</span>
             <span className="value">{expText}</span>
           </span>
           <span className="separator">|</span>
           <span>
-            <span className="title">{this.t('Yêu cầu giới tính')}:</span>
+            <span className="title">{this.t('containers').JobDetail.Header.gender}:</span>
             <span className="value">{genderText}</span>
           </span>
         </div>
@@ -120,7 +120,7 @@ class Header extends Base {
       <div className="jn-btn__normal jn-share-job">
         <div className="wrapper">
           <span className="icon-share-alt" />
-          <span className="btn-title">{this.t('Chia sẻ')}</span>
+          <span className="btn-title">{this.t('containers').JobDetail.Header.share}</span>
         </div>
         <div className="share-btn-wrapper">
           <FacebookShareButton url={url}>
@@ -174,7 +174,7 @@ class Header extends Base {
                 <div className="company-name">{company && company.name}</div>
                 <div className="company-addr">
                   <span className="icon-jn-map-marker" />
-                  {(km && `${km}km`) || (company && company.address.province)}
+                  {(km && `${km} km`) || (company && company.address.province)}
                 </div>
               </div>
               {view_type === 'full' && this._renderJobInfo()}
@@ -183,7 +183,7 @@ class Header extends Base {
                   <div className="other-actions">
                     <Button requiredAuth className={`jn-btn__normal jn-saved-job${candidate_saved_job && candidate_saved_job.saved ? ' saved' : ''}`} onClick={this._saveJob}>
                       <span className="icon-heart" />
-                      <span className="btn-title">{this.t(candidate_saved_job && candidate_saved_job.saved ? 'Đã lưu' : 'Lưu việc làm')}</span>
+                      <span className="btn-title">{this.t(candidate_saved_job && candidate_saved_job.saved ? this.t('containers').JobDetail.Header.save : this.t('containers').JobDetail.Header.savedJobs)}</span>
                     </Button>
                     {this._renderShareButtons()}
                   </div>
@@ -193,13 +193,13 @@ class Header extends Base {
           <div className="actions-wrapper">
             <Button className="jn-btn__yellow jn-apply-btn" onClick={this.props.onApplyClick}>
               <span className="icon-paper-plane" />
-              {this.t('Nộp hồ sơ')}
+              {this.t('containers').JobDetail.Header.applyCV}
             </Button>
             {(view_type === 'full' || this.state.mobileMode) && (
               <div className="other-actions">
                 <Button className={`jn-btn__normal jn-saved-job${candidate_saved_job && candidate_saved_job.saved ? ' saved' : ''}`} requiredAuth onClick={this._saveJob}>
                   <span className="icon-heart" />
-                  <span className="btn-title">{this.t(candidate_saved_job && candidate_saved_job.saved ? 'Đã lưu' : 'Lưu việc làm')}</span>
+                  <span className="btn-title">{this.t(candidate_saved_job && candidate_saved_job.saved ? this.t('containers').JobDetail.Header.save : this.t('containers').JobDetail.Header.savedJobs)}</span>
                 </Button>
                 {this._renderShareButtons()}
               </div>

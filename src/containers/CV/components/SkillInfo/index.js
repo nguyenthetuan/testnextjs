@@ -37,7 +37,7 @@ export default class SkillInfo extends Base {
   _updateSkills = async () => {
     const { data } = this.state;
     if (data.length === 0) {
-      this.state({ message: { code: 1, message: 'Bạn phải chọn ít nhất 01 kỹ năng.' } });
+      this.state({ message: { code: 1, message: this.t('containers').CV.components.SkillInfo.message } });
     } else {
       const response = await userApi.updateResume(this.props.resumeID, { skills: data });
       if (response && response.code === undefined) {
@@ -51,7 +51,7 @@ export default class SkillInfo extends Base {
 
     return (
       <div className={`items-wrapper${data.length > 0 ? ' not-empty' : ''}`}>
-        {data.length === 0 && <div className="empty-msg">{this.t('Chưa có thông tin kỹ năng.')}</div>}
+        {data.length === 0 && <div className="empty-msg">{this.t('containers').CV.components.SkillInfo.emptyMsg}</div>}
         {data.map((skill, index) => (
           <div className="skill-item" key={`skill-item-${index}`}>
             <div className="title">{skill.title}</div>
@@ -100,7 +100,7 @@ export default class SkillInfo extends Base {
       <div className={`skill-info${isEditing ? ' editing' : ''}`}>
         <div className="block-container">
           <div className="block-header">
-            <div className="header-text">{this.t('KỸ NĂNG')}</div>
+            <div className="header-text">{this.t('containers').CV.components.SkillInfo.skill}</div>
           </div>
 
           <div className="block-body">
@@ -109,7 +109,7 @@ export default class SkillInfo extends Base {
             {isEditing ? (
               <div className="add-wrapper">
                 <SearchInput
-                  placeholder={this.t('Nhập kỹ năng về lĩnh vực chuyên môn của bạn…')}
+                  placeholder={this.t('containers').CV.components.SkillInfo.addWrapper}
                   value={currentSkill && currentSkill.title}
                   maxlength={50}
                   searchURL={`${host}/candidate/skills`}
@@ -135,7 +135,7 @@ export default class SkillInfo extends Base {
                 />
                 <Button className="jn-btn__normal" onClick={this._addSkill}>
                   <span className="icon-jn-plus" />
-                  {this.t('Thêm')}
+                  {this.t('containers').CV.components.SkillInfo.add}
                 </Button>
               </div>
             ) : (
@@ -146,7 +146,7 @@ export default class SkillInfo extends Base {
                   }}
                 >
                   <span className="icon-pencil" />
-                  <span className="btn-title">{this.t('Sửa')}</span>
+                  <span className="btn-title">{this.t('containers').CV.components.SkillInfo.edit}</span>
                 </Button>
               </div>
             )}
@@ -155,7 +155,7 @@ export default class SkillInfo extends Base {
               isEditing && (
                 <div className="update-actions-wrapper">
                   <Button className="jn-btn__yellow" onClick={this._updateSkills}>
-                    {this.t('Lưu')}
+                    {this.t('containers').CV.components.SkillInfo.save}
                   </Button>
                   <Button
                     className="jn-btn__normal"
@@ -163,7 +163,7 @@ export default class SkillInfo extends Base {
                       this.setState({ isEditing: false });
                     }}
                   >
-                    {this.t('Huỷ')}
+                    {this.t('containers').CV.components.SkillInfo.cancel}
                   </Button>
                 </div>
               )}

@@ -47,16 +47,16 @@ class ReferenceUser extends Base {
       }
     },
     messages: {
-      name: this.t('Bạn cần nhập tên người tham chiếu'),
-      title: this.t('Bạn cần nhập chức danh người tham chiếu'),
-      company: this.t('Bạn cần nhập tên công ty'),
+      name: this.t('containers').CV.components.ReferenceUser.nameMessages,
+      title: this.t('containers').CV.components.ReferenceUser.titleMessages,
+      company: this.t('containers').CV.components.ReferenceUser.companyMessages,
       email: {
-        required: this.t('Nhập địa chỉ email.'),
-        email: this.t('Không đúng định dạng email.')
+        required: this.t('containers').CV.components.ReferenceUser.requiredEmail,
+        email: this.t('containers').CV.components.ReferenceUser.emailError
       },
       phone: {
-        required: this.t('Bạn cần nhập số điện thoại người tham chiếu.'),
-        phoneVN: this.t('Định dạng số điện thoại không đúng')
+        required: this.t('containers').CV.components.ReferenceUser.phoneMessages,
+        phoneVN: this.t('containers').CV.components.ReferenceUser.phoneVN
       }
     }
   };
@@ -114,17 +114,17 @@ class ReferenceUser extends Base {
         <div className="hobby-content-wrapper">
           <div className="input-section">
             <form id="reference-form" className="hobby-cv-form">
-              <Input type="text" name="name" placeholder={this.t('Họ tên')} value={name} onChange={value => this.setState({ data: { ...data, name: value } }, this._updateValue)} />
-              <Input type="text" name="title" placeholder={this.t('Chức danh')} value={title} onChange={value => this.setState({ data: { ...data, title: value } }, this._updateValue)} />
-              <Input type="text" name="company" placeholder={this.t('Công ty')} value={company} onChange={value => this.setState({ data: { ...data, company: value } }, this._updateValue)} />
-              <Input type="text" name="phone" placeholder={this.t('Số điện thoại')} value={phone} onChange={value => this.setState({ data: { ...data, phone: value } }, this._updateValue)} />
-              <Input type="text" name="email" placeholder={this.t('Email')} value={email} onChange={value => this.setState({ data: { ...data, email: value } }, this._updateValue)} />
+              <Input type="text" name="name" placeholder={this.t('containers').CV.components.ReferenceUser.name} value={name} onChange={value => this.setState({ data: { ...data, name: value } }, this._updateValue)} />
+              <Input type="text" name="title" placeholder={this.t('containers').CV.components.ReferenceUser.title} value={title} onChange={value => this.setState({ data: { ...data, title: value } }, this._updateValue)} />
+              <Input type="text" name="company" placeholder={this.t('containers').CV.components.ReferenceUser.company} value={company} onChange={value => this.setState({ data: { ...data, company: value } }, this._updateValue)} />
+              <Input type="text" name="phone" placeholder={this.t('containers').CV.components.ReferenceUser.phone} value={phone} onChange={value => this.setState({ data: { ...data, phone: value } }, this._updateValue)} />
+              <Input type="text" name="email" placeholder={this.t('containers').CV.components.ReferenceUser.email} value={email} onChange={value => this.setState({ data: { ...data, email: value } }, this._updateValue)} />
             </form>
 
             {this.props.updateMode && (
               <div className="update-actions-wrapper">
                 <Button className="jn-btn__yellow" onClick={this._updateReferenceInfo}>
-                  {this.t('Lưu')}
+                  {this.t('containers').CV.components.ReferenceUser.save}
                 </Button>
                 <Button
                   className="jn-btn__normal"
@@ -141,7 +141,7 @@ class ReferenceUser extends Base {
                     });
                   }}
                 >
-                  {this.t('Huỷ')}
+                  {this.t('containers').CV.components.ReferenceUser.cancel}
                 </Button>
               </div>
             )}
@@ -153,24 +153,24 @@ class ReferenceUser extends Base {
 
   _renderContentView = () => {
     const { title, company, phone, email, name } = this.state.data;
-    let content = <div className="ref-info-container">{this.t('Chưa có thông tin người tham chiếu.')}</div>;
+    let content = <div className="ref-info-container">{this.t('containers').CV.components.ReferenceUser.infoContainer}</div>;
 
     if (name && (email || phone)) {
       content = (
         <div className="ref-info-container">
           <div className="ref-name">{name}</div>
           <div className="ref-position">
-            <span className="field-label">{this.t('Chức vụ')}:</span>
+            <span className="field-label">{this.t('containers').CV.components.ReferenceUser.position}:</span>
             <span className="field-value">{title}</span>
-            <span className="separator-text">{this.t('tại')}</span>
+            <span className="separator-text">{this.t('containers').CV.components.ReferenceUser.at}</span>
             <span className="field-value">{company}</span>
           </div>
           <div className="ref-contact">
-            <span className="field-label">{this.t('Số điện thoại')}:</span>
+            <span className="field-label">{this.t('containers').CV.components.ReferenceUser.phone}:</span>
             <span className="field-value">{phone}</span>
           </div>
           <div className="ref-contact">
-            <span className="field-label">{this.t('Email')}:</span>
+            <span className="field-label">{this.t('containers').CV.components.ReferenceUser.email}:</span>
             <span className="field-value">{email}</span>
           </div>
         </div>
@@ -187,7 +187,7 @@ class ReferenceUser extends Base {
             }}
           >
             <span className="icon-pencil" />
-            <span className="btn-title">{this.t('Sửa')}</span>
+            <span className="btn-title">{this.t('containers').CV.components.ReferenceUser.edit}</span>
           </Button>
         </div>
       </div>
@@ -201,14 +201,14 @@ class ReferenceUser extends Base {
           onClick={() => {
             this.props.onBack();
           }}
-          label={this.t('QUAY LẠI')}
+          label={this.t('containers').CV.components.ReferenceUser.back}
           className="jn-btn__normal"
         />
         <Button
           onClick={() => {
             this.props.onSuccess(this.state);
           }}
-          label={this.t('ĐĂNG HỒ SƠ')}
+          label={this.t('containers').CV.components.ReferenceUser.success}
           className="jn-btn__yellow"
         />
       </div>
@@ -223,7 +223,7 @@ class ReferenceUser extends Base {
           <div className="header-page">
             <div className="header-content">
               <div className="label-text">{header}</div>
-              <div className="optional">({this.t('Không bắt buộc')})</div>
+              <div className="optional">({this.t('containers').CV.components.ReferenceUser.optional})</div>
             </div>
           </div>
           {(updateMode && this.state.editing) || !updateMode ? this._renderContentForm() : this._renderContentView()}
