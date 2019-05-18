@@ -127,7 +127,7 @@ class JobListContainer extends Component {
     return (
       <Link to={`/viec-lam/${item.slug || item._id}`} className="job-suitable-item">
         <div className="col col-avatar">
-          <img src={(company && company.logo) || '/assets/img/logo-full.png'} alt="" />
+          <img src={(company && company.logo) || '/assets/img/icon-company.png'} alt="" />
         </div>
 
         <div className="col col-title">
@@ -167,7 +167,7 @@ class JobListContainer extends Component {
     return (
       <Link to={`/viec-lam/${item.slug || item._id}`} className="job-suitable-item">
         <div className="col col-avatar">
-          <img src={(company && company.logo) || '/assets/img/logo-full.png'} alt="" />
+          <img src={(company && company.logo) || '/assets/img/icon-company.png'} alt="" />
         </div>
 
         <div className="col col-title">
@@ -211,7 +211,7 @@ class JobListContainer extends Component {
     return (
       <Link to={`/viec-lam/${item.slug || item._id}`} className="job-suitable-item">
         <div className="col col-avatar">
-          <img src={(company && company.logo) || '/assets/img/logo-full.png'} alt="" />
+          <img src={(company && company.logo) || '/assets/img/icon-company.png'} alt="" />
         </div>
 
         <div className="col col-title">
