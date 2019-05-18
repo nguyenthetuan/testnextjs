@@ -31,7 +31,7 @@ class JobItem extends Base {
     const { company, km, salary, title, _id, worklocation, slug, quantity } = data || {};
     const wrapperClasses = ['job-item-wrapper', `${type}-item`];
     if (className) wrapperClasses.push(className);
-    const logo = (company && company.logo) || '/assets/img/logo-full.png';
+    const logo = (company && company.logo) || '/assets/img/icon-company.png';
     const salaryLevel = (salary && salaryOpts && salaryOpts[salary]) || this.t('components').jobitem.salaryOpts;
     const location = km ? `${km} km` : worklocation && worklocation[0] && worklocation[0].province;
 

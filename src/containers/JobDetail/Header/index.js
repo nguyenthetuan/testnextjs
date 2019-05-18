@@ -1,6 +1,6 @@
 /*
  * File: undefined
- * Desc: 
+ * Desc:
  * Author: DuyNg (duy@megadrupal.com)
  * Created: 2018-08-31 18:10:16
  */
@@ -146,6 +146,7 @@ class Header extends Base {
   render() {
     const { info } = this.props;
     const { title, company, view_type, candidate_saved_job, km } = info || {};
+    const logo = (company && company.logo) || '/assets/img/icon-company.png';
 
     return (
       <div
@@ -165,7 +166,7 @@ class Header extends Base {
           <div className="main-info">
             {view_type === 'full' && (
               <div className="company-logo">
-                <img src={company.logo} alt="" />
+                <img src={logo} alt="" />
               </div>
             )}
             <div className="detail-info-wrapper">
