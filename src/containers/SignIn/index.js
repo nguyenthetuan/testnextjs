@@ -10,7 +10,7 @@ import { Redirect } from 'react-router-dom';
 import GoogleLogin from 'react-google-login';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
 import createPage from '../createPage';
-import { login } from '../../actions/auth';
+import { login, loginSuccess } from '../../actions/auth';
 import { Base, CheckBox, Input, Button, Select, AddressInput } from '../../components';
 import { authApi } from '../../services';
 import './style.scss';
@@ -237,7 +237,9 @@ class RegisterPage extends Base {
                 appId={FB_APP_ID}
                 callback={this._loginByFacebook}
                 render={renderProps => (
-                  <Button className="icon-jn-facebook" onClick={renderProps.onClick} />
+                  <a onClick={renderProps.onClick} href="#">
+                    <Button className="icon-jn-facebook" onClick={renderProps.onClick} />
+                  </a>
                 )}
               />
               <GoogleLogin
@@ -270,6 +272,6 @@ const mapStateToProps = state => {
 export default createPage(
   connect(
     mapStateToProps,
-    { login }
+    { login, loginSuccess }
   )(RegisterPage), true, false
 );
