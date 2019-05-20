@@ -1,4 +1,4 @@
-.register-page {
+.forgot-page {
   display: flex;
   flex: 1 1;
   background-image: url('/assets/img/new-background.png');
@@ -38,6 +38,9 @@
           align-items: center;
         }
       }
+      .icon-arrow-left:before {
+        font-size: 17px;
+      }
       #auth-form {
         padding-top: 32px;
         .jn-input-wrapper {
@@ -48,8 +51,14 @@
           font-size: 16px;
           color: #4a4a4a;
         }
-        #phone {
+        #email {
           margin-bottom: 84px;
+        }
+        .error-message {
+          margin-top: 0;
+          font-size: 1.4rem;
+          font-weight: 300;
+          color: #d0021d;
         }
       }
       .register-legend {
@@ -69,6 +78,7 @@
           color: #fc5830;
           font-size: 1.4rem;
           margin-left: 0.6rem;
+          margin-right: 0.6rem;
         }
       }
       .jn-btn__yellow a {
@@ -79,6 +89,14 @@
       }
       .register-btn {
         margin-top: 30px;
+      }
+      @media (max-width: 767px) {
+        padding: 10px;
+        .modal-body {
+          width: 100%;
+          padding: 30px;
+          margin-right: 0;
+        }
       }
   }
 }

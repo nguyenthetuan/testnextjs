@@ -1,6 +1,6 @@
 /*
  * File: undefined
- * Desc: 
+ * Desc:
  * Author: DuyNg (duy@megadrupal.com)
  * Created: 2018-08-08 14:18:23
  */
@@ -13,7 +13,7 @@ import Loading from '../Loading';
 import Popup from '../Popup';
 import MobileMenu from './MobileMenu';
 import { fetchNotifications } from '../../actions/notification';
-import { signOut, showAuthPopup, showLanguage } from '../../actions/auth';
+import { signOut, showAuthPopup, showLanguage, updateRedirect } from '../../actions/auth';
 import { getLanguage } from '../../utils/localData';
 import language from '../../config/language/index';
 
@@ -62,15 +62,15 @@ class RightMenu extends Base {
 
   candidateMenu = [
     {
-      link: '#register',
+      link: 'https://jobnow.com.vn/signin',
       title: this.t('components').menubar.RightMenu.register,
       icon: 'signin-icon',
       linkAttributes: {
+        rel: 'noopener noreferrer nofollow',
         className: 'candidate-signin',
         onClick: event => {
-          event.preventDefault();
-          this.props.showAuthPopup(); // show login form
           this._toggleDropdownMenu(event, 'candidate-menu');
+          this.props.updateRedirect(this.props.history.location.pathname);
         }
       }
     },
@@ -164,10 +164,9 @@ class RightMenu extends Base {
     return (
       <li className="dropdown candidate-menu">
         <a
-          href="#"
+          href="/signin"
           onClick={event => {
-            event.preventDefault();
-            this.props.showAuthPopup();
+            this.props.updateRedirect(this.props.history.location.pathname);
           }}
         >
           <span className="main-text">{this.t('components').menubar.RightMenu.candidate}</span>
@@ -556,6 +555,6 @@ const mapStateToProps = state => {
 export default withRouter(
   connect(
     mapStateToProps,
-    { signOut, showAuthPopup, fetchNotifications, showLanguage }
+    { signOut, showAuthPopup, fetchNotifications, showLanguage, updateRedirect }
   )(RightMenu)
 );

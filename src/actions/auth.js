@@ -24,7 +24,8 @@ import {
   CHANGE_RESUME_SEARCHING_STATUS_FAILED,
   CHANGE_RESUME_SEARCHING_STATUS_SUCCESS,
   SHOW_LANGUAGE,
-  HIDE_LANGUAGE
+  HIDE_LANGUAGE,
+  UPDATE_REDIRECT
 } from './types';
 
 export const login = (email, password, rememberPassword) => {
@@ -152,6 +153,13 @@ export const changeResumeSearchingStatusSuccess = info => {
   return {
     type: CHANGE_RESUME_SEARCHING_STATUS_SUCCESS,
     payload: { ...info }
+  };
+};
+
+export const updateRedirect = pathname => {
+  return {
+    type: UPDATE_REDIRECT,
+    payload: { pathname }
   };
 };
 

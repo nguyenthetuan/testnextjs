@@ -68,7 +68,6 @@ export default function(ComposedComponent, isSearchPage = false, isMenu = true) 
         return <Redirect to={{ pathname: '/', state: { showLoginPopup: requiredAuth } }} />;
       }
 
-      console.log('is', isSearchPage);
       return (
         <div id="app_wrapper">
           {isMenu && <MenuBar />}
