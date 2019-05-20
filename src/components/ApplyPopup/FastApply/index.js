@@ -8,7 +8,7 @@ import React from 'react';
 import _ from 'lodash';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { showAuthPopup } from '../../../actions/auth';
+import { showAuthPopup, updateRedirect } from '../../../actions/auth';
 import { jobApi } from '../../../services';
 import Base from '../../Base';
 import Button from '../../Button';
@@ -210,7 +210,8 @@ class FastApply extends Base {
           <Button
             className="jn-btn__yellow login-register-btn"
             onClick={() => {
-              this.props.showAuthPopup('login');
+              this.props.updateRedirect(this.props.history.location.pathname);
+              this.props.history.push('/signin');
             }}
           >
             {this.t('components').AdvancedSearch.FastApply.index.login}
@@ -273,6 +274,6 @@ export default withRouter(
       user: state.auth.info,
       isLoggedIn: state.auth.isLoggedIn
     }),
-    { showAuthPopup }
+    { showAuthPopup, updateRedirect }
   )(FastApply)
 );
