@@ -12,7 +12,7 @@
     flex: 1 1;
     .modal-body {
       width: 550px;
-      height: 780px;
+      height: 700px;
       padding: 4.5rem 5.4rem;
       border-radius: 3px;
       box-shadow: 1px 1px 10px 0 rgba(219, 219, 219, 0.5);
@@ -157,6 +157,8 @@
           text-align: center;
           border-radius: 27px;
           margin-left: 24px;
+          padding-top: 15px;
+          padding-right: 12px;
           a {
             height: 54px;
             display: flex;
@@ -164,6 +166,7 @@
         }
         .icon-jn-facebook:before {
           vertical-align: -50%;
+          position: absolute;
         }
         .icon-social-google {
           width: 54px;
