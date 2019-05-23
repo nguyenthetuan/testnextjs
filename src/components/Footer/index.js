@@ -1,6 +1,6 @@
 /*
  * File: undefined
- * Desc: 
+ * Desc:
  * Author: DuyNg (duy@megadrupal.com)
  * Created: 2018-08-26 19:43:54
  */
@@ -16,16 +16,16 @@ export default class Footer extends Base {
           <div className="col">
             <div className="col-title">{this.t('components').footer.colTitle}</div>
             <div className="col-content">
-              <a href="https://hr.jobnow.com.vn/info/" target="_blank" rel="noopener noreferrer">
+              <a href="https://hotro.jobnow.com.vn/" target="_blank" rel="noopener noreferrer">
                 {this.t('components').footer.support}
               </a>
-              <a href="https://hr.jobnow.com.vn/info/huong-dan-dang-tin/" target="_blank" rel="noopener noreferrer">
+              <a href="https://hotro.jobnow.com.vn/huong-dan-dang-tin/" target="_blank" rel="noopener noreferrer">
                 {this.t('components').footer.employers}
               </a>
-              <a href="https://hr.jobnow.com.vn/info/bao-gia-dich-vu/" target="_blank" rel="noopener noreferrer">
+              <a href="https://hotro.jobnow.com.vn/bao-gia-dich-vu/" target="_blank" rel="noopener noreferrer">
                 {this.t('components').footer.service}
               </a>
-              <a href="https://hr.jobnow.com.vn/info/huong-dan-tao-ho-so/" target="_blank" rel="noopener noreferrer">
+              <a href="https://hotro.jobnow.com.vn/huong-dan-tao-ho-so/" target="_blank" rel="noopener noreferrer">
                 {this.t('components').footer.candidates}
               </a>
             </div>
@@ -33,19 +33,19 @@ export default class Footer extends Base {
           <div className="col">
             <div className="col-title">{this.t('components').footer.jobnow}</div>
             <div className="col-content">
-              <a href="https://hr.jobnow.com.vn/info/gioi-thieu/" target="_blank" rel="noopener noreferrer">
+              <a href="https://hotro.jobnow.com.vn/gioi-thieu/" target="_blank" rel="noopener noreferrer">
                 {this.t('components').footer.introduce}
               </a>
-              <a href="https://hr.jobnow.com.vn/info/quy-che-hoat-dong/" target="_blank" rel="noopener noreferrer">
+              <a href="https://hotro.jobnow.com.vn/quy-che-hoat-dong/" target="_blank" rel="noopener noreferrer">
                 {this.t('components').footer.operation}
               </a>
-              <a href="https://hr.jobnow.com.vn/info/giai-quyet-tranh-chap/" target="_blank" rel="noopener noreferrer">
+              <a href="https://hotro.jobnow.com.vn/giai-quyet-tranh-chap/" target="_blank" rel="noopener noreferrer">
                 {this.t('components').footer.dispute}
               </a>
-              <a href="https://hr.jobnow.com.vn/info/thoa-thuan-su-dung/" target="_blank" rel="noopener noreferrer">
+              <a href="https://hotro.jobnow.com.vn/thoa-thuan-su-dung/" target="_blank" rel="noopener noreferrer">
                 {this.t('components').footer.agreement}
               </a>
-              <a href="https://hr.jobnow.com.vn/info/quy-dinh-bao-mat/" target="_blank" rel="noopener noreferrer">
+              <a href="https://hotro.jobnow.com.vn/quy-dinh-bao-mat/" target="_blank" rel="noopener noreferrer">
                 {this.t('components').footer.privacyPolicy}
               </a>
             </div>
