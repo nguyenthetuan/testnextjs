@@ -182,7 +182,12 @@
       "index": {
         "keyword": "Job position …",
         "currentAddress": "City / Province",
-        "search": "Advanced search"
+        "search": "Advanced search",
+        "job":"ALL",
+        "all":"JOBS",
+        "jobtype":"Jobs by categories",
+        "placejob":"Jobs by location",
+        "nearjob":"Jobs near home"
       },
       "RightMenu": {
         "dashboard": "Dashboard",

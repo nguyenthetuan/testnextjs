@@ -4,7 +4,20 @@
     height: auto;
     padding: 0.8rem 0;
     box-shadow: none;
-    z-index: 100;;
+    z-index: 100;
+
+    .dropdown {
+      .dropdown-menu {
+        margin-top: 1.2rem;
+        li {
+          list-style-type: none;
+          a {
+            color: #000;
+            font-size: 1.5rem !important;
+          }
+        }
+      }
+    }
 
     .topnavbar {
       border-radius: 0;
@@ -36,13 +49,28 @@
           justify-content: center;
           margin: 0 1.2rem;
 
+          .jobs {
+            flex: 1;
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+
+            .main-text {
+              color: #fff;
+              font-size: 1.2rem;
+              margin: 0.1rem 2rem;
+              text-align: center;
+            }
+          }
+
           .el-wrapper {
             flex: 1;
             display: flex;
             justify-content: center;
             height: 4rem;
             align-items: center;
-            max-width: 60rem;
+            max-width: 52rem;
+            list-style-type: none;
 
             .current-address {
               background: #fffefe;
@@ -56,10 +84,10 @@
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;
-              
+
               span {
-                margin-right: .5rem;
-                display: inline-block
+                margin-right: 0.5rem;
+                display: inline-block;
               }
             }
 

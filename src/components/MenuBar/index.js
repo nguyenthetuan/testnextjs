@@ -113,6 +113,47 @@ class MenuBar extends Base {
     }
   };
 
+  _renderSubMenuJob = () => {
+    return (
+      <li className="dropdown sub-menu">
+        <a
+          href="#"
+          onClick={event => {
+            this._toggleDropdownMenu(event, 'sub-menu');
+          }}
+        >
+          <div className="jobs">
+            <span className="main-text">{this.t('components').menubar.index.job}</span>
+            <span className="main-text">{this.t('components').menubar.index.all}</span>
+          </div>
+        </a>
+        <ul className="dropdown-menu dropdown-menu-r ight">
+          <li>
+            <a href="https://jobnow.com.vn/viec-lam/tim-viec-lam">
+              {this.t('components').menubar.index.jobtype}
+            </a>
+          </li>
+          <li>
+            <a href="https://jobnow.com.vn/viec-lam/tim-viec-lam-theo-dia-diem">{this.t('components').menubar.index.placejob}</a>
+          </li>
+          <li>
+            <a href="https://jobnow.com.vn/viec-lam/tim-viec-gan-nha">{this.t('components').menubar.index.nearjob}</a>
+          </li>
+        </ul>
+      </li>
+    );
+  };
+
+  _toggleDropdownMenu = (event, menu) => {
+    if (event) event.preventDefault();
+    const menuLi = document.querySelector(`header li.${menu}`);
+    if (menuLi.classList.contains('open')) {
+      menuLi.classList.remove('open');
+    } else {
+      menuLi.classList.add('open');
+    }
+  };
+
   render() {
     return (
       <header id="app_topnavbar-wrapper">
@@ -143,9 +184,10 @@ class MenuBar extends Base {
                 <Button className="jn-btn__normal search-btn" onClick={this._search}>
                   <span className="icon-jn-search" />
                 </Button>
-                <Button className="jn-btn__normal adv-search-btn" onClick={this._showAdvanceSearch}>
+                {/* <Button className="jn-btn__normal adv-search-btn" onClick={this._showAdvanceSearch}>
                   {this.t('components').menubar.index.search}
-                </Button>
+                </Button> */}
+                {this._renderSubMenuJob()}
               </div>
             </div>
             <RightMenu
@@ -154,7 +196,7 @@ class MenuBar extends Base {
                   this.setState({ showAdvanceSearch: true });
                 });
               }}
-              onMobileMenuClick={() => {}}
+              onMobileMenuClick={() => { }}
             />
           </div>
         </nav>
