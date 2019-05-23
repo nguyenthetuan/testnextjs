@@ -182,7 +182,12 @@
       "index": {
         "keyword": "Vị trí công việc …",
         "currentAddress": "TP/Tỉnh",
-        "search": "Tìm kiếm nâng cao"
+        "search": "Tìm kiếm nâng cao",
+        "job":"TẤT CẢ ",
+        "all":"VIỆC LÀM",
+        "jobtype":"Việc làm theo ngành nghề",
+        "placejob":"Việc làm theo địa điểm",
+        "nearjob":"Việc làm gần nhà"
       },
       "RightMenu": {
         "dashboard": "Dashboard",
