@@ -69,7 +69,6 @@ class RightMenu extends Base {
         rel: 'noopener noreferrer nofollow',
         className: 'candidate-signin',
         onClick: event => {
-          this._toggleDropdownMenu(event, 'candidate-menu');
           this.props.updateRedirect(this.props.history.location.pathname);
         }
       }
