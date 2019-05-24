@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Moment from 'moment';
 import { withRouter } from 'react-router-dom';
-import { userApi, authApi } from '../../../../services';
+import { userApi, authApi, homeApi } from '../../../../services';
 import { deleteResumeSuccess, changeResumeSearchingStatus } from '../../../../actions/auth';
 import { CheckBox, Button, Base, Popup } from '../../../../components';
 import './style.scss';
@@ -15,9 +15,22 @@ class CVItem extends Base {
       showDeletePopup: false,
       refreshMessage: null,
       isCruitmentDay: false,
+      showCheckBoxRecruimentDay: false
     };
     this._deleting = false;
   }
+
+
+  _fetchData = async location => {
+    this._fetchingLocation = location;
+    const response = await homeApi.fetchHomeData(location);
+    if (response && response.result === undefined && response.code === undefined) {
+      console.log('response:', response.recruitment_jobs);
+      if (response.recruitment_jobs.countDown !== null) {
+        this.setState({ showCheckBoxRecruimentDay: true });
+      }
+    }
+  };
 
   _deleteResume = async () => {
     if (!this._deleting) {
@@ -49,7 +62,7 @@ class CVItem extends Base {
     }
   };
 
-  _recruitmentResumes = async(checked, id) => {
+  _recruitmentResumes = async (checked, id) => {
     const formData = new FormData();
     formData.append('resume', id);
     if (checked) {
@@ -66,6 +79,7 @@ class CVItem extends Base {
   }
 
   async componentDidMount() {
+    this._fetchData();
     if (this.props.data && this.props.data._id) {
       const formData = new FormData();
       formData.append('resume', this.props.data._id);
@@ -77,6 +91,7 @@ class CVItem extends Base {
   }
 
   render() {
+    console.log('SFSDFSFSDFSDF', this.props.isJobFair);
     const { showDeletePopup, refreshMessage, isCruitmentDay } = this.state;
     const { data, constants, index } = this.props;
     const { createdAt, status, title, type, view_counts, _id, allow_search } = data;
@@ -116,13 +131,18 @@ class CVItem extends Base {
               this.props.changeResumeSearchingStatus({ id: _id, status: value, index });
             }}
           />
-          <CheckBox
-            label={this.t('Tham gia ngày hội tuyển dụng online.')}
-            checked={isCruitmentDay}
-            onChange={value => {
-              this._recruitmentResumes(value, _id);
-            }}
-          />
+          {this.state.showCheckBoxRecruimentDay ?
+            (
+              <CheckBox
+                label={this.t('containers').CV.ListCV.CVItem.joinJobFair}
+                checked={isCruitmentDay}
+                onChange={value => {
+                  this._recruitmentResumes(value, _id);
+                }}
+              />
+            )
+            : null}
+
         </div>
 
         <div className="btn-container">
@@ -193,7 +213,7 @@ class CVItem extends Base {
 
 export default withRouter(
   connect(
-    state => ({ constants: state.constants.data.resumes }),
+    state => ({ constants: state.constants.data.resumes, isJobFair: state }),
     { deleteResumeSuccess, changeResumeSearchingStatus }
   )(CVItem)
 );

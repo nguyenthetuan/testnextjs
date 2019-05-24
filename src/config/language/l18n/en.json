@@ -792,7 +792,8 @@
             "edit": "Edit",
             "delete": "Delete",
             "message": "Are you sure to delete this profile ?",
-            "back": "Back"
+            "back": "Back",
+            "joinJobFair":"Join the online Job Fair on JobNow application."
           }
         },
         "index": {
