@@ -792,7 +792,8 @@
             "edit": "Sửa",
             "delete": "Xóa",
             "message": "Bạn chắc chắn xoá hồ sơ này ?",
-            "back": "Trở lại"
+            "back": "Trở lại",
+            "joinJobFair":"Tham gia ngày hội tuyển dụng trực tuyến trên ứng dụng JobNow."
           }
         },
         "index": {
