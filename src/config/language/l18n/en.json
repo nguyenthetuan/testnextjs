@@ -384,7 +384,7 @@
         "EducationInfoBlock": {
           "edu": "Education",
           "present": "present",
-          "startTime": "From month",
+          "startTime": "From month ",
           "endTime": "up to month",
           "certificate": "Degree",
           "school": "School",
@@ -393,7 +393,7 @@
         "ExperienceBlock": {
           "expInfo": "Work experience",
           "present": "present",
-          "startTime": "From month",
+          "startTime": "From month ",
           "endTime": "up to month",
           "position": "Location",
           "company": "Company",
@@ -719,9 +719,9 @@
       "EditCV": {
         "EducationInfo": {
           "index": {
-            "timeStart": "From month",
-            "timeEnd": "to",
-            "at": "in",
+            "timeStart": "From month ",
+            "timeEnd": "to ",
+            "at": " in ",
             "classification": "Graduation grade",
             "delete": "Delete",
             "edit": "Edit",
@@ -732,10 +732,10 @@
         },
         "ExperienceInfo": {
           "index": {
-            "timeStart": "From month",
-            "timeEnd": "to",
+            "timeStart": "From month ",
+            "timeEnd": "to ",
             "current": "present",
-            "at": "in",
+            "at": " in ",
             "job": "Job",
             "delete": "Delete",
             "edit": "Edit",

@@ -1,4 +1,5 @@
 /*
+ *experienceInfor
  * File: undefined
  * Desc: 
  * Author: DuyNg (duy@megadrupal.com)
@@ -18,7 +19,8 @@ class ExperienceInfo extends Base {
 
     this.state = {
       data: props.data || [],
-      showDeletePopup: false
+      showDeletePopup: false,
+      edit: true
     };
   }
 
@@ -36,6 +38,7 @@ class ExperienceInfo extends Base {
       });
       return (
         <CreateExpForm
+          edit={this.state.edit}
           data={editingData}
           key={`exp-line-item-${index}`}
           updateMode
@@ -129,6 +132,8 @@ class ExperienceInfo extends Base {
           <div className="block-body">
             {(data || []).map((item, index) => this._renderExpLine(item, index))}
             <CreateExpForm
+              index={this._deletingItem}
+              edit={this.state.edit}
               showFooter={false}
               resume_id={this.props.resumeID}
               info={this.props.info}
@@ -137,7 +142,9 @@ class ExperienceInfo extends Base {
               // updateMode
               onSuccess={response => {
                 console.log('new exp info', response);
-                this.setState({ data: response });
+                if (response !== false) {
+                  this.setState({ data: response });
+                }
               }}
               ref={r => {
                 this._expFormRef = r;
