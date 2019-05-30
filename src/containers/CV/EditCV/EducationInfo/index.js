@@ -17,7 +17,8 @@ class EducationInfo extends Base {
     super(props);
 
     this.state = {
-      data: props.data || []
+      data: props.data || [],
+      edit: true
     };
   }
 
@@ -26,6 +27,8 @@ class EducationInfo extends Base {
       const editData = this.state.data.map((edu, idx) => (idx !== index && { ...edu, noChange: true }) || edu);
       return (
         <CreateEduForm
+          index={this._deletingItem}
+          edit={this.state.edit}
           data={editData}
           key={`exp-line-item-${index}`}
           showFooter={false}
@@ -119,6 +122,8 @@ class EducationInfo extends Base {
             {(data || []).map((item, index) => this._renderExpLine(item, index))}
 
             <CreateEduForm
+              index={this._deletingItem}
+              edit={this.state.edit}
               data={editData}
               resume_id={this.props.resumeID}
               showFooter={false}
@@ -126,7 +131,9 @@ class EducationInfo extends Base {
               info={this.props.info}
               constants={this.props.constants}
               onSuccess={response => {
-                this.setState({ data: response });
+                if (response !== false) {
+                  this.setState({ data: response });
+                }
               }}
               ref={r => {
                 this._educationFormRef = r;

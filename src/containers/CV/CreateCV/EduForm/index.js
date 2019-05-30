@@ -51,7 +51,8 @@ export default class CreateEduForm extends Base {
         code: 1,
         message: 1
       },
-      showPopup: false
+      showPopup: false,
+      edu: (data.length && data) || (!props.updateMode ? [this.initNewWork()] : []),
     };
   }
 
@@ -78,6 +79,7 @@ export default class CreateEduForm extends Base {
   };
 
   _save = () => {
+    const nochange = false;
     if (this.state.updating) return;
     // this._validator = _$('#experience-cv-form').validate(this.validationRules);
     // _$('#experience-cv-form').on('submit', event => {
@@ -96,7 +98,11 @@ export default class CreateEduForm extends Base {
         const response = await userApi.updateResume(this.props.resume_id, this.getFormData());
         if (response && response.code === undefined) {
           if (this.props.showFooter === false) {
-            this.setState({ updating: false, educations: [] }, () => {
+            this.setState({
+              updating: false,
+              educations: [],
+              edu: response.education.map(obj => ({ ...obj, nochange }))
+            }, () => {
               this.props.onSuccess(response.education);
             });
           } else {
@@ -165,6 +171,17 @@ export default class CreateEduForm extends Base {
     // }
   };
 
+  add = () => {
+    if (this.props.edit) {
+      const initObj = this.initNewWork();
+      this.setState({ educations: [...this.state.edu, initObj] });
+    } else {
+      const initObj = this.initNewWork();
+      const newEducations = [...this.state.educations, initObj];
+      this.setState({ educations: newEducations });
+    }
+  }
+
   _generateSelectableOpts = () => {
     const genderOpts = [{ value: 'male', label: this.t('containers').CV.CreateCV.EduForm.index.male }, { value: 'female', label: this.t('containers').CV.CreateCV.EduForm.index.female }];
     const { classification, marital_status } = this.props.constants || {};
@@ -192,23 +209,32 @@ export default class CreateEduForm extends Base {
     this.setState({ educations: newEducations });
   };
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.index >= 0 && this.props.data !== nextProps.data) {
+      this.setState({
+        edu: nextProps.data
+      });
+    }
+  }
+
   _renderDynamicEducationForm = () => {
     const { educations } = this.state;
     const { classificationOpts } = this._generateSelectableOpts();
-
     return educations.map((item, idx) => {
-      if (item.noChange) return null;
-      return (
-        <EduItem
-          classificationOpts={classificationOpts}
-          key={idx}
-          onDelete={() => this.removeEducation(idx)}
-          isShowDelete={educations.length > 1}
-          data={item}
-          resume_id={this.props.resume_id}
-          onChange={newData => this.handleChangeEducation(idx, newData)}
-        />
-      );
+      if (!item.noChange && (item.nochange === undefined)) {
+        return (
+          <EduItem
+            classificationOpts={classificationOpts}
+            key={idx}
+            onDelete={() => this.removeEducation(idx)}
+            isShowDelete={educations.length > 1}
+            data={item}
+            resume_id={this.props.resume_id}
+            onChange={newData => this.handleChangeEducation(idx, newData)}
+          />
+        );
+      }
+      return null;
     });
   };
 
@@ -229,7 +255,7 @@ export default class CreateEduForm extends Base {
         {this._renderEditFooter()}
         {!this.props.editFormItem && (
           <div className="add-btn-wrapper">
-            <Button className="jn-btn__normal" onClick={this.addNewEducation}>
+            <Button className="jn-btn__normal" onClick={this.add}>
               <span className="icon-jn-plus" />
               <span className="btn-title">{this.t('containers').CV.CreateCV.EduForm.index.addNewEducation}</span>
             </Button>
