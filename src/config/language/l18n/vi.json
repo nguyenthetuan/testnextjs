@@ -384,7 +384,7 @@
         "EducationInfoBlock": {
           "edu": "Học vấn",
           "present": "hiện tại",
-          "startTime": "Từ tháng",
+          "startTime": "Từ tháng ",
           "endTime": "đến tháng",
           "certificate": "Bằng cấp",
           "school": "Trường",
@@ -393,7 +393,7 @@
         "ExperienceBlock": {
           "expInfo": "Kinh nghiệm làm việc",
           "present": "hiện tại",
-          "startTime": "Từ tháng",
+          "startTime": "Từ tháng ",
           "endTime": "đến tháng",
           "position": "Vị trí",
           "company": "Công ty",
@@ -719,9 +719,9 @@
       "EditCV": {
         "EducationInfo": {
           "index": {
-            "timeStart": "Từ tháng",
-            "timeEnd": "đến",
-            "at": "tại",
+            "timeStart": "Từ tháng ",
+            "timeEnd": "đến ",
+            "at": " tại ",
             "classification": "Xếp loại tốt nghiệp",
             "delete": "Xóa",
             "edit": "Sửa",
@@ -732,10 +732,10 @@
         },
         "ExperienceInfo": {
           "index": {
-            "timeStart": "Từ tháng",
-            "timeEnd": "đến",
+            "timeStart": "Từ tháng ",
+            "timeEnd": "đến ",
             "current": "hiện tại",
-            "at": "tại",
+            "at": " tại ",
             "job": "Công việc",
             "delete": "Xóa",
             "edit": "Sửa",

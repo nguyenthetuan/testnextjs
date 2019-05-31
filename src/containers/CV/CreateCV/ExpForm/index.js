@@ -1,10 +1,10 @@
 import React from 'react';
 import Moment from 'moment';
+import _ from 'lodash';
 import { Base, Button, Popup } from '../../../../components';
 import validate from '../../../../utils/validate';
 import { userApi } from '../../../../services';
 import ExpItem from './ExpItem';
-
 import './styles.scss';
 
 const _$ = window.jQuery;
@@ -61,9 +61,9 @@ export default class CreateExpForm extends Base {
 
   constructor(props) {
     super(props);
-
     this.state = {
-      work_experience: props.data || [CreateExpForm.initNewWork()]
+      work_experience: props.data || [CreateExpForm.initNewWork()],
+      experience: this.props.data || [CreateExpForm.initNewWork()]
     };
   }
 
@@ -94,11 +94,19 @@ export default class CreateExpForm extends Base {
         formData.append(`work_experience[${index + indexOffset}][_id]`, _id);
       }
     });
-
     return formData;
   };
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.index >= 0 && this.props.data !== nextProps.data) {
+      this.setState({
+        experience: nextProps.data
+      });
+    }
+  }
+
   _save = () => {
+    const nochange = true;
     if (this.state.updating) return;
     if (!this.props.createForm && !this.validateWorkExp()) {
       this.setState({
@@ -112,7 +120,10 @@ export default class CreateExpForm extends Base {
         if (response && response.code === undefined) {
           this.setState({ updating: false }, () => {
             // if (this.props.updateMode) {
-            this.setState({ work_experience: [] }, () => {
+            this.setState({
+              work_experience: [],
+              experience: response.work_experience.map(obj => ({ ...obj, nochange }))
+            }, () => {
               this.props.onSuccess(response.work_experience);
             });
             // } else {
@@ -158,12 +169,6 @@ export default class CreateExpForm extends Base {
     return flag;
   };
 
-  addNewWork = () => {
-    const initObj = CreateExpForm.initNewWork();
-    const newWorkExperiences = [...this.state.work_experience, initObj];
-    this.setState({ work_experience: newWorkExperiences });
-  };
-
   handleChangeWork = (idx, newData) => {
     const { work_experience } = this.state;
     const newWorkExperiences = [...work_experience.slice(0, idx), newData, ...work_experience.slice(idx + 1)];
@@ -171,21 +176,36 @@ export default class CreateExpForm extends Base {
   };
 
   removeWork = idx => {
-    const { work_experience } = this.state;
+    const { work_experience, experience } = this.state;
     const newWorkExperiences = [...work_experience.slice(0, idx), ...work_experience.slice(idx + 1)];
-    this.setState({ work_experience: newWorkExperiences });
+    const newExperience = [...experience.slice(0, idx), ...experience.slice(idx + 1)];
+    this.setState({
+      work_experience: newWorkExperiences,
+      experience: newExperience
+    });
   };
 
   _renderDynamicWorkForm = () => {
     const { work_experience } = this.state;
     return work_experience.map((item, idx) => {
-      if (!item.noChange) {
+      if (!item.noChange && (item.nochange === undefined)) {
         return <ExpItem key={idx} onDelete={() => this.removeWork(idx)} isShowDelete={work_experience.length > 1} data={item} onChange={newData => this.handleChangeWork(idx, newData)} />;
       }
 
       return null;
     });
   };
+
+  add = () => {
+    if (this.props.edit) {
+      const initObj = CreateExpForm.initNewWork();
+      this.setState({ work_experience: [...this.state.experience, initObj] });
+    } else {
+      const initObj = CreateExpForm.initNewWork();
+      const newWorkExperiences = [...this.state.work_experience, initObj];
+      this.setState({ work_experience: newWorkExperiences });
+    }
+  }
 
   _renderContent = () => {
     const { showFooter, editFormItem, updateMode } = this.props;
@@ -206,7 +226,7 @@ export default class CreateExpForm extends Base {
 
         {!editFormItem && (
           <div className="add-btn-wrapper">
-            <Button className="jn-btn__normal" onClick={this.addNewWork}>
+            <Button className="jn-btn__normal" onClick={this.add}>
               <span className="icon-jn-plus" />
               <span className="btn-title">{this.t('containers').CV.CreateCV.ExpForm.index.addNewWork}</span>
             </Button>
@@ -249,7 +269,7 @@ export default class CreateExpForm extends Base {
         />
         <Button
           onClick={() => {
-            this.setState({ work_experience: [] }, () => {
+            this.setState({ work_experience: this.state.experience }, () => {
               if (typeof this.props.onSuccess === 'function') this.props.onSuccess(false);
             });
           }}
