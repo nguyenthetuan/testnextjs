@@ -7,12 +7,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import _ from 'lodash';
 import Base from '../Base';
 import Loading from '../Loading';
 import Popup from '../Popup';
 import MobileMenu from './MobileMenu';
 import { fetchNotifications } from '../../actions/notification';
-import { signOut, showAuthPopup } from '../../actions/auth';
+import { signOut, showAuthPopup, showLanguage } from '../../actions/auth';
+import { getLanguage } from '../../utils/localData';
+import language from '../../config/language/index';
 
 class RightMenu extends Base {
   constructor(props) {
@@ -27,32 +30,32 @@ class RightMenu extends Base {
   applicationMenu = [
     {
       link: '/dashboard',
-      title: 'Dashboard',
+      title: this.t('components').menubar.RightMenu.dashboard,
       icon: { name: 'icon-screen-desktop', bgColor: '#f5a623' }
     },
     {
       link: '/cv',
-      title: 'Hồ sơ của tôi',
+      title: this.t('components').menubar.RightMenu.cv,
       icon: { name: 'icon-people', bgColor: '#ea5e1e' }
     },
     {
       link: '/suitable-jobs',
-      title: 'Việc làm',
+      title: this.t('components').menubar.RightMenu.suitableJobs,
       icon: { name: 'icon-briefcase', bgColor: '#0d89bb' }
     },
     {
       link: '/notification',
-      title: 'Thông báo',
+      title: this.t('components').menubar.RightMenu.notification,
       icon: { name: 'icon-bell', bgColor: '#6450e3' }
     },
     {
       link: '/setting-notification',
-      title: 'Cài đặt thông báo',
+      title: this.t('components').menubar.RightMenu.settingNotification,
       icon: { name: 'icon-notebook', bgColor: '#400f62' }
     },
     {
       link: '/change-information',
-      title: 'Tài khoản',
+      title: this.t('components').menubar.RightMenu.changeInformation,
       icon: { name: 'icon-settings', bgColor: '#5f2393' }
     }
   ];
@@ -60,7 +63,7 @@ class RightMenu extends Base {
   candidateMenu = [
     {
       link: '#register',
-      title: 'Đăng ký, đăng nhập',
+      title: this.t('components').menubar.RightMenu.register,
       icon: 'signin-icon',
       linkAttributes: {
         className: 'candidate-signin',
@@ -73,7 +76,7 @@ class RightMenu extends Base {
     },
     {
       link: 'https://hr.jobnow.com.vn/ ',
-      title: 'Cẩm nang tìm việc',
+      title: this.t('components').menubar.RightMenu.handbook,
       linkAttributes: {
         target: '_blank',
         rel: 'noopener noreferrer nofollow'
@@ -81,7 +84,7 @@ class RightMenu extends Base {
     },
     {
       link: 'http://hr.jobnow.com.vn/info/ ',
-      title: 'Hỗ trợ người tìm việc',
+      title: this.t('components').menubar.RightMenu.support,
       linkAttributes: {
         target: '_blank',
         rel: 'noopener noreferrer nofollow'
@@ -92,7 +95,7 @@ class RightMenu extends Base {
   employerMenu = [
     {
       link: 'https://employer.joby.vn/login',
-      title: 'Đăng ký, đăng nhập',
+      title: this.t('components').menubar.RightMenu.login,
       linkAttributes: {
         target: '_blank',
         rel: 'noopener noreferrer nofollow'
@@ -100,7 +103,7 @@ class RightMenu extends Base {
     },
     {
       link: 'https://hr.jobnow.com.vn/info/bao-gia-dich-vu/',
-      title: 'Báo giá dịch vụ',
+      title: this.t('components').menubar.RightMenu.priceQuote,
       linkAttributes: {
         target: '_blank',
         rel: 'noopener noreferrer nofollow'
@@ -108,7 +111,7 @@ class RightMenu extends Base {
     },
     {
       link: ' https://hr.jobnow.com.vn/info/',
-      title: 'Hỗ trợ nhà tuyển dụng',
+      title: this.t('components').menubar.RightMenu.supportEmployers,
       linkAttributes: {
         target: '_blank',
         rel: 'noopener noreferrer nofollow'
@@ -116,7 +119,7 @@ class RightMenu extends Base {
     },
     {
       link: 'https://hr.jobnow.com.vn/',
-      title: 'Cẩm nang tuyển dụng',
+      title: this.t('components').menubar.RightMenu.recruitmentHandbook,
       linkAttributes: {
         target: '_blank',
         rel: 'noopener noreferrer nofollow'
@@ -167,8 +170,8 @@ class RightMenu extends Base {
             this.props.showAuthPopup();
           }}
         >
-          <span className="main-text">{this.t('Ứng viên')}</span>
-          <span className="desc-text">{this.t('Tạo hồ sơ & tìm việc')}</span>
+          <span className="main-text">{this.t('components').menubar.RightMenu.candidate}</span>
+          <span className="desc-text">{this.t('components').menubar.RightMenu.createProfiles}</span>
         </a>
         {/* <ul className="dropdown-menu dropdown-menu-right">
           {this.candidateMenu.map((item, index) => (
@@ -186,13 +189,53 @@ class RightMenu extends Base {
     );
   };
 
+  _renderFlag = () => {
+    let src = '';
+    let l = _.isEmpty(getLanguage()) ? language._language : getLanguage().language;
+    switch (l) {
+      case 'en': {
+        src = '/assets/img/flagEnglish.png';
+        break;
+      }
+      case 'vi': {
+        src = '/assets/img/vietnam.png';
+        break;
+      }
+      case 'jp': {
+        src = '/assets/img/flagJapan.jpg';
+        break;
+      }
+      default:
+        break;
+    }
+    return src;
+  };
+
+  _renderLanguageMenu = () => {
+    return (
+      <li className="dropdown candidate-menu">
+        <a
+          href="#"
+          onClick={event => {
+            event.preventDefault();
+            this.props.showLanguage();
+          }}
+        >
+          <div className="flag">
+            <img src={this._renderFlag()} alt="" />
+          </div>
+        </a>
+      </li>
+    );
+  };
+
   _renderEmployerMenu = () => {
     const { hostname, protocol } = window.location;
     return (
       <li className="dropdown employer-menu">
         <a href={`${protocol}//employer.${hostname}`} target="_blank" rel="noopener noreferrer">
-          <span className="main-text">{this.t('Nhà tuyển dụng')}</span>
-          <span className="desc-text">{this.t('Đăng tin & tuyển nhân sự')}</span>
+          <span className="main-text">{this.t('components').menubar.RightMenu.employer}</span>
+          <span className="desc-text">{this.t('components').menubar.RightMenu.postNews}</span>
         </a>
         <ul className="dropdown-menu dropdown-menu-right">
           {this.employerMenu.map((item, index) => (
@@ -291,7 +334,7 @@ class RightMenu extends Base {
                 >
                   <span className="icon-jn-close" />
                 </a>
-                <div className="noti-box-title">{this.t('Thông báo mới nhận')}</div>
+                <div className="noti-box-title">{this.t('components').menubar.RightMenu.notiBox}</div>
                 <div className="notis-wrapper">
                   {(data || []).slice(0, 4).map((noti, index) => {
                     const { description, link, logo, read, title, _id } = noti;
@@ -313,7 +356,7 @@ class RightMenu extends Base {
                   })}
                 </div>
                 <div className="noti-view-all">
-                  <a href="/notification">{this.t('Xem tất cả thông báo')}</a>
+                  <a href="/notification">{this.t('components').menubar.RightMenu.notiView}</a>
                 </div>
               </div>
             )}
@@ -344,7 +387,7 @@ class RightMenu extends Base {
         )}
         {!loading && (
           <ul className="dropdown-menu dropdown-menu-right">
-            <li className="noti-box-title">{this.t('Thông báo mới nhận')}</li>
+            <li className="noti-box-title">{this.t('components').menubar.RightMenu.notiBox}</li>
             {(data || []).slice(0, 4).map((noti, index) => {
               const { description, link, logo, read, title, _id } = noti;
               return (
@@ -364,7 +407,7 @@ class RightMenu extends Base {
               );
             })}
             <li className="noti-view-all">
-              <a href="/notification">{this.t('Xem tất cả thông báo')}</a>
+              <a href="/notification">{this.t('components').menubar.RightMenu.notiView}</a>
             </li>
           </ul>
         )}
@@ -391,10 +434,10 @@ class RightMenu extends Base {
         </a>
         <ul className="dropdown-menu dropdown-menu-right">
           <li>
-            <a href="/change-information">{this.t('Thông tin tài khoản')}</a>
+            <a href="/change-information">{this.t('components').menubar.RightMenu.information}</a>
           </li>
           <li>
-            <a href="/change-password">{this.t('Đổi mật khẩu')}</a>
+            <a href="/change-password">{this.t('components').menubar.RightMenu.changePassword}</a>
           </li>
           <li>
             <a
@@ -405,7 +448,7 @@ class RightMenu extends Base {
                 this.props.history.replace('/');
               }}
             >
-              {this.t('Đăng xuất')}
+              {this.t('components').menubar.RightMenu.signOut}
             </a>
           </li>
         </ul>
@@ -453,6 +496,7 @@ class RightMenu extends Base {
           {isLoggedIn && this._renderNotificationMenu()}
           {isLoggedIn && !mobileMode && this._renderApplicationMenu()}
           {isLoggedIn && !mobileMode && this._renderAccountMenu()}
+          {this._renderLanguageMenu()}
           {mobileMode &&
             !isLoggedIn && (
               <li className="candidate-mobile-menu">
@@ -512,6 +556,6 @@ const mapStateToProps = state => {
 export default withRouter(
   connect(
     mapStateToProps,
-    { signOut, showAuthPopup, fetchNotifications }
+    { signOut, showAuthPopup, fetchNotifications, showLanguage }
   )(RightMenu)
 );

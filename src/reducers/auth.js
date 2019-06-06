@@ -14,7 +14,9 @@ import {
   UPDATE_LOCATION,
   UPDATE_USER_INFO,
   FETCH_RESUMES_SUCCESS,
-  DELETE_RESUME_SUCCESS
+  DELETE_RESUME_SUCCESS,
+  SHOW_LANGUAGE,
+  HIDE_LANGUAGE
 } from '../actions/types';
 
 const initState = {
@@ -23,6 +25,7 @@ const initState = {
   info: null,
   rememberPassword: false,
   showAuthPopup: false,
+  showLanguage: false,
   currentForm: 'login', // login || register || forgot,
   message: null,
   currentLocation: null,
@@ -30,7 +33,7 @@ const initState = {
   cvList: []
 };
 
-export default function(state = initState, action) {
+export default function (state = initState, action) {
   const { payload } = action;
   switch (action.type) {
     case 'persist/REHYDRATE':
@@ -69,6 +72,17 @@ export default function(state = initState, action) {
 
     case UPDATE_LOCATION:
       return { ...state, currentLocation: action.payload };
+
+    case SHOW_LANGUAGE:
+      return {
+        ...state,
+        showLanguage: true,
+        currentForm: action.payload.form,
+        popupData: action.payload.data
+      };
+
+    case HIDE_LANGUAGE:
+      return { ...state, showLanguage: false, currentForm: 'language', popupData: null };
 
     default:
       return state;

@@ -17,6 +17,7 @@ module.exports = {
     }
   },
   rules: {
+    "eol-last": 0,
     'max-len': 0,
     cammelcase: 0,
     camelcase: 0,

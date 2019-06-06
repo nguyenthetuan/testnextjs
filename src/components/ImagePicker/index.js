@@ -101,7 +101,7 @@ export default class ImagePicker extends Base {
         <div className="placeholder">
           <img src="/assets/img/add-file.png" alt="" />
           <div className="text">{this.props.placeholder}</div>
-          <div className="annotation">{this.t('Dung lượng file < 1MB')}</div>
+          <div className="annotation">{this.t('components').imgpicker.annotation}</div>
         </div>
       );
     }
@@ -127,7 +127,7 @@ export default class ImagePicker extends Base {
           <div className="placeholder">
             <img src="/assets/img/add-file.png" alt="" />
             <div className="text">{this.props.placeholder}</div>
-            <div className="annotation">{this.t('Dung lượng file < 1MB')}</div>
+            <div className="annotation">{this.t('components').imgpicker.annotation}</div>
           </div>
         )}
       </div>

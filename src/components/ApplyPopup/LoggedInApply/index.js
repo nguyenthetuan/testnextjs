@@ -68,7 +68,7 @@ class LoggedInApply extends Base {
     return (
       <div className="loggedin-apply-wrapper">
         {message && message.code === 0 ? (
-          <div className="apply-success-msg">{this.t('Nộp hồ sơ thành công.')}</div>
+          <div className="apply-success-msg">{this.t('components').AdvancedSearch.LoggedInApply.applySuccess}</div>
         ) : (
           <div className="job-info">
             <div className="job-title">{title}</div>
@@ -77,7 +77,7 @@ class LoggedInApply extends Base {
         )}
         {(!message || message.code !== 0) && (
           <div className="form-wrapper">
-            {message && <div className="error-message">{this.t('* Nộp hồ sơ không thành công.')}</div>}
+            {message && <div className="error-message">{this.t('components').AdvancedSearch.LoggedInApply.errorMessage}</div>}
             <Radios
               options={opts}
               value={this.state.selectedCv}
@@ -87,10 +87,10 @@ class LoggedInApply extends Base {
             />
             {this.state.showError && (
               <div className="help-block" style={{ display: 'block' }}>
-                {this.t('Chọn hồ sơ để gửi tới nhà tuyển dụng.')}
+                {this.t('components').AdvancedSearch.LoggedInApply.helpBlock}
               </div>
             )}
-            <Button className="jn-btn__yellow jn-btn-apply" label={this.t('Nộp hồ sơ')} onClick={this._handleApplyClick} />
+            <Button className="jn-btn__yellow jn-btn-apply" label={this.t('components').AdvancedSearch.LoggedInApply.btnApply} onClick={this._handleApplyClick} />
           </div>
         )}
       </div>
